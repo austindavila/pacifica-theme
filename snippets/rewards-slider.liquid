@@ -1,0 +1,101 @@
+<style>
+
+	/* status bar */
+	.ll-progress-container {
+		width: 80%;
+		max-width: 600px;
+		margin: 20px auto;
+		position: relative;
+	  }
+	  
+	  .ll-progress-bar {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 8px;
+		background-color:white;
+		width: 100%;
+		transform: translateY(-50%);
+		z-index: 1;
+	  }
+	  
+	  .ll-progress-bar-fill {
+		height: 8px;
+		background-color: black;
+		width: 0%;
+		transition: width 0.5s;
+		z-index: 2;
+		position: absolute;
+		top: -4px;
+		left: 0;
+		border-radius:20px;
+	  }
+	  
+	  .ll-step {
+		z-index: 3;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		/* border: 2px solid #e0e0e0; */
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		color: black;
+		transform: translateY(-50%);
+	  }
+	  
+	  .ll-step.completed {
+		background-color: black;
+		/* border-color: black; */
+		color: #fff;
+	  }
+	  
+	  .ll-tier-labels {
+		text-transform: uppercase;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 50px;
+	  }
+	  
+	  .ll-tier-label {
+		text-align: center;
+		width: 33%;
+		color: #333;
+	  }
+	  
+	  #ll-step-1 {
+		left: 0;
+	  }
+	  
+	  #ll-step-2 {
+		left: 50%;
+		transform: translate(-50%, -50%);
+	  }
+	  
+	  #ll-step-3 {
+		right: 0;
+	  }
+	</style>
+
+
+<div class="ll-progress-container">
+	<div class="ll-progress-bar"></div>
+	<div class="ll-progress-bar-fill" id="ll-progress-bar-fill"></div>
+	<div class="ll-step font-melt" id="ll-step-1">
+		<span>1</span>
+	</div>
+	<div class="ll-step font-melt" id="ll-step-2">
+		<span>2</span>
+	</div>
+	<div class="ll-step font-melt" id="ll-step-3">
+		<span>3</span>
+	</div>
+</div>
+<div class="ll-tier-labels">
+	<div class="ll-tier-label">Friend Status</div>
+	<div class="ll-tier-label">Girl Crush</div>
+	<div class="ll-tier-label">Bestie Forever</div>
+</div>

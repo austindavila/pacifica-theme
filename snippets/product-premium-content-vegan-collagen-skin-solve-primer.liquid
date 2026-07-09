@@ -1,0 +1,207 @@
+{%- comment -%}{%- endcomment -%}
+
+<section aria-label="Premium Content" id="shopify-section-product-template-premium">
+
+{%- comment -%}  YOUR BEST SKIN, SOLVED.  {%- endcomment -%}
+<div class="row text-center premium-block premium-block-before-after center-xs middle-xs">
+  <div class="col-xs-12 col-md-12">
+    <div class="heading h1 gs_reveal">YOUR BEST SKIN, SOLVED.</div>
+    <p class="heading text--medium gs_reveal">3-in-1 primer serum. Prime, blur & hydrate. </p>
+  </div>
+  <div class="col-xs-4 col-md-4 col-lg-3">
+      <img src="{{ 'premium-pdp-vegan-collagen-skin-solve-primer-model1.jpg' | file_img_url: '600x' }}" alt="Vegan Collagen Skin Solve Primer" class="gs_reveal gs_reveal_fromLeft" loading="lazy">
+  </div>
+  <div class="col-xs-4 col-md-4 col-lg-3">
+      <img src="{{ 'premium-pdp-vegan-collagen-skin-solve-primer-model2.jpg' | file_img_url: '600x' }}" alt="Vegan Collagen Skin Solve Primer" class="gs_reveal gs_reveal_fromCenter" loading="lazy">
+  </div>
+  <div class="col-xs-4 col-md-4 col-lg-3">
+      <img src="{{ 'premium-pdp-vegan-collagen-skin-solve-primer-model3.jpg' | file_img_url: '600x' }}" alt="Vegan Collagen Skin Solve Primer" class="gs_reveal gs_reveal_fromRight" loading="lazy">
+  </div>
+</div>
+
+
+{%- comment -%}  SKIN LOVING INGREDIENTS  {%- endcomment -%}
+<div class="row text-center premium-block premium-block-2 column-reverse-mobile center-xs middle-xs">
+   <div class="col-xs-12 col-md-6 col-lg-5">
+    <div class="content-image">
+     <img src="{{ 'premium-pdp-vegan-collagen-skin-solve-primer-hands.jpg' | file_img_url: '600x' }}" alt="Vegan Collagen Skin Solve Primer" class="gs_reveal gs_reveal_fromCenter" loading="lazy">
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <div class="content-text">
+      <div class="gs_reveal illustration"><img src="{{ 'premium-pdp-vegan-collagen-fluffy-lash-mascara-results.png' | file_img_url: '150x' }}" loading="lazy"></div>
+      <div class="heading h1 gs_reveal pad-headline">Skin-Loving Ingredients</div>
+       <p class="heading text--medium gs_reveal"><span class="font-gotham-medium">Super Hydrating Vegan Collagen, Hyaluronic Acid & Floral Extracts</span> hydrate skin & help improve skin texture​</p>
+       <p class="heading text--medium gs_reveal"><span class="font-gotham-medium">Caffeine </span>helps de-puff</p>
+       <p class="heading text--medium gs_reveal"><span class="font-gotham-medium">Light-Reflecting </span>Pigments blur skin for a smooth, radiant finish.</p>
+    </div>
+  </div>
+</div>
+
+
+
+{%- comment -%}  RECYLABLE GLASS PACKAGING  {%- endcomment -%}
+<div class="row text-center premium-block premium-block-7 center-xs middle-xs">
+  <div class="col-xs-12">
+    <div class="heading h1 gs_reveal pad-headline">RECYCLABLE GLASS PACKAGING</div>
+  </div>
+   <div class="col-xs-6 col-md-4 col-lg-4">
+     <img src="{{ 'premium-pdp-vegan-collagen-skin-solve-primer-bottle.jpg' | file_img_url: '600x' }}" alt="Vegan Collagen Skin Solve Primer" class="gs_reveal gs_reveal_fromLeft gs_delay_short" loading="lazy">
+  </div>
+  <div class="col-xs-12 col-md-4 col-lg-3 text-center gs_reveal_fromRight">
+     <div class="gs_reveal illustration hide-mobile-block"><img src="{{ 'premium-pdp-vegan-collagen-fluffy-lash-mascara-recycle.png' | file_img_url: '150x' }}" loading="lazy"></div>
+     <p class="heading text--medium gs_reveal">What's more to love? <br>Comes in a 100% glass bottle <br>for easy curbside recycling*</p>
+     <p class="heading text--medium gs_reveal"><small><i>*check your local recycling policies</i></small></p>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- GSAP FOR ANIMATION -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions: "restart pause resume pause"
+});
+
+
+function animateFrom(elem, direction) {
+  direction = direction || 1;
+
+  var x = 0,
+      y = direction * 100
+      startscale = 1;
+      myDelay = 0;
+
+  if(elem.classList.contains("gs_reveal_fromLeft")) {
+    x = -200;
+    y = 0;
+    startscale = 1;
+  } 
+  else if (elem.classList.contains("gs_reveal_fromRight")) {
+    x = 200;
+    y = 0;
+    startscale = 1;
+  }
+  else if (elem.classList.contains("gs_reveal_fromCenter")) {
+    x = 0;
+    y = 0;
+    startscale = .5;
+  }
+  
+  //delay
+  if (elem.classList.contains("gs_delay")) {
+    myDelay = .6;
+  }
+  else if (elem.classList.contains("gs_delay_short")) {
+    myDelay = .3;
+  }
+
+  elem.style.transform = "translate(" + x + "px, " + y + "px)";
+  elem.style.opacity = "0";
+  gsap.set(elem, {scale: startscale});
+
+  gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
+    duration: 1.25, 
+    x: 0,
+    y: 0, 
+    scale:1,
+    autoAlpha: 1, 
+    delay:myDelay,
+    ease: "expo", 
+    overwrite: "auto"
+  });
+}
+
+function hide(elem) {
+  gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
+    hide(elem); // assure that the element is hidden when scrolled into view
+    
+    ScrollTrigger.create({
+      trigger: elem,
+      start:"top bottom",
+      onEnter: function() { animateFrom(elem) }, 
+      onEnterBack: function() { animateFrom(elem, -1) },
+      onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+    });
+  });
+
+  
+    // //scroll clouds
+    // let cloudimages = gsap.utils.toArray(".cloud-image");
+    // let cloudimages2 = gsap.utils.toArray(".cloud-image2");
+
+    // let containerWidth = window.innerWidth
+
+    // let additionalX = { val: 0 };
+    // let additionalXAnim;
+
+    // //clouds 1
+    // cloudimages.forEach(item => {
+    //   gsap.to(item, {
+    //     x: -containerWidth,
+    //     duration: 25,
+    //     repeat: -1,
+    //     ease: 'none',
+    //     modifiers: {
+    //       x: gsap.utils.unitize(x => {
+    //         additionalX.val  = 0
+    //         x = (parseFloat(x)  + additionalX.val) % -containerWidth
+    //         return x 
+    //       })
+    //     }
+    //   });
+    // });
+      
+    // //clouds 2
+    // cloudimages2.forEach(item => {
+    //   gsap.to(item, {
+    //     x: -containerWidth,
+    //     duration: 18,
+    //     repeat: -1,
+    //     ease: 'none',
+    //     modifiers: {
+    //       x: gsap.utils.unitize(x => {
+    //         additionalX.val  = 0
+    //         x = (parseFloat(x)  + additionalX.val) % -containerWidth
+    //         return x 
+    //       })
+    //     }
+    //   });
+    // });
+
+
+    // const imagesScrollerTrigger = ScrollTrigger.create({
+    //   trigger: '.floating-clouds',
+    //   start: "top 50%",
+    //   end: "bottom 50%",
+    //   markers: true,
+    //   ease: 'none',
+    //   onUpdate: function(self) {
+    //     const velocity = self.getVelocity();
+        
+    //     if(additionalXAnim) additionalXAnim.kill();
+        
+    //     additionalX.val = velocity/1000;
+        
+    //     if (velocity > 0) {   
+    //       additionalXAnim = gsap.to(additionalX, { y: 0 });
+    //     }
+    //   }
+    // });
+
+});
+
+
+</script>

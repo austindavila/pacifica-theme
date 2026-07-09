@@ -1,0 +1,436 @@
+{%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- assign color_white_label = 'general.label.white' | t | downcase -%}
+
+{%- if product.url contains '?' -%}
+  {%- assign product_url_contains_query = true -%}
+{%- else -%}
+  {%- assign product_url_contains_query = false -%}
+{%- endif -%}
+
+{% if is_travel_size %}
+  {% comment %} don't show hover image {% endcomment %}
+  {% assign hide_secondary_image = true %}
+  {% comment %} show second variant if more than one variant {% endcomment %}
+  {% if product.variants.size>1 %}
+    {% assign show_second_variant = true%}
+  {% endif%}
+{% endif %}
+
+
+<product-item class="product-item {% unless product.available %}product-item--sold-out{% endunless %}" {% if reveal %}reveal{% endif %}>
+  {%- capture product_labels -%}
+    {%- for tag in product.tags -%}
+      {%- if tag contains '__label' -%}
+        <span class="label label--custom{% if tag contains '__label2' %}2{% endif %}  {% if collection.handle == 'new' and tag contains '__label:new' %} hidden-all {% endif %}">{{ tag | split: ':' | last }}</span>
+      {%- endif -%}
+      {%- if tag contains 'bundle-builder-dummy' -%}
+        {% assign isCustomBundle = true %}
+      {%- endif -%}
+      {%- if tag contains 'coming-soon' -%}
+        {% assign isComingSoon = true %}
+      {%- endif -%}
+      
+    {%- endfor -%}
+
+    {%- unless product.available -%}
+      <span class="label label--subdued">{{ 'collection.product.sold_out' | t }}</span>
+    {%- endunless -%}
+
+    {%- if settings.show_discount and product.available and product.price < product.compare_at_price -%}
+      {%- if settings.discount_mode == 'percentage' -%}
+        {%- assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%' -%}
+      {%- else -%}
+        {%- capture savings -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+      {%- endif -%}
+
+      <span class="label label--highlight"><span>{{ 'collection.product.discount_html' | t }}</span> <span class="label--smaller">{{ savings }}</span>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  <div class="product-item__image-wrapper {% if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true %}product-item__image-wrapper--multiple{% endif %}">
+    {%- if product_labels != blank and full_button == true -%}
+      <div class="product-item__label-list label-list">
+        {{- product_labels -}}
+      </div>
+    {%- endif -%}
+
+    {% unless prevent_link %}<a href="{{ product.url | within: collection }}" class="product-item__aspect-ratio aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}">{% endunless %}
+
+      {% if show_second_variant %}
+         <img class="product-item__primary-image" loading="lazy" data-media-id="{{ product.variants[1].featured_media.id | escape }}" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: product.variants[1].featured_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+      {% else %}
+        <img class="product-item__primary-image" loading="lazy" data-media-id="{{ product.featured_media.id | escape }}" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: product.featured_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>      
+      {% endif %}
+
+
+      {%- if settings.product_color_display == 'swatch' -%}
+        {%- assign featured_media = product.variants | map: 'featured_media' -%}
+
+        {%- for media in featured_media -%}
+          {%- unless media == product.featured_media -%}
+            <img class="product-item__primary-image" hidden data-media-id="{{ media.id | escape }}" loading="lazy" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true -%}
+        <img class="product-item__secondary-image" loading="lazy" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: product.media[1], sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+      {%- endif -%}
+    {% unless prevent_link %}</a>{% endunless %}
+
+    {%- if request.page_type != 'password' and settings.product_add_to_cart and product.available and reduced_content != true and show_cta != true -%}
+      {%- if product.variants.size == 1 -%}
+        {%- capture form_id -%}product_form_{{ section.id }}_{{ block.id }}_{{ product.id }}_{% increment product_form_index %}{%- endcapture -%}
+        {%- form 'product', product, is: 'product-form', id: form_id, class: 'product-item__quick-form' -%}
+          <input type="hidden" name="quantity" value="1">
+          <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+          <button is="loader-button" type="submit" class="button button--outline button--text button--full {% if section.settings.desktop_products_per_row >= 5 %}button--small{% endif %} hidden-touch">{{ 'collection.product.add_to_cart_short' | t }}</button>
+          <button type="submit" class="product-item__quick-buy-button hidden-no-touch">
+            <span class="visually-hidden">{{ 'collection.product.add_to_cart_short' | t }}</span>
+            {%- render 'icon' with 'quick-buy' -%}
+          </button>
+        {%- endform -%}
+      {%- else -%}
+        {%- comment -%}
+        IMPLEMENTATION NOTE: Depending on the device we show a different icon or open a different mode (either popover or drawer)
+        {%- endcomment -%}
+
+        <div class="product-item__quick-form">
+          <button is="toggle-button" loader aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" aria-expanded="false" class="button button--outline button--text button--full {% if section.settings.desktop_products_per_row >= 5 %}button--small{% endif %} hidden-touch hidden-phone">{{ 'collection.product.quick_view' | t }}</button>
+          <button is="toggle-button" aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" aria-expanded="false" class="product-item__quick-buy-button hidden-no-touch hidden-phone">
+            <span class="visually-hidden">{{ 'collection.product.quick_view' | t }}</span>
+            {%- render 'icon' with 'quick-buy' -%}
+          </button>
+
+          <button is="toggle-button" aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-popover" aria-expanded="false" class="product-item__quick-buy-button hidden-tablet-and-up">
+            <span class="visually-hidden">{{ 'collection.product.quick_view' | t }}</span>
+            {%- render 'icon' with 'quick-buy' -%}
+          </button>
+        </div>
+
+        <quick-buy-popover id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-popover" href="{{ product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-popover" class="popover popover--quick-buy hidden-tablet-and-up"></quick-buy-popover>
+        <quick-buy-drawer id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" href="{{ product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-drawer" class="drawer drawer--large drawer--quick-buy hidden-phone"></quick-buy-drawer>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+
+  <div class="product-item__info {% if show_cta %}product-item__info--with-button{% endif %} {% if reduced_font_size %}text--small{% endif %}">
+    <div class="product-item-meta">
+      {%- if settings.show_vendor -%}
+        {%- assign vendor_handle = product.vendor | handle -%}
+        {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+        {%- unless collection_for_vendor.empty? -%}
+          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+        {%- else -%}
+          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+        {%- endunless -%}
+      {%- endif -%}
+
+      <a href="{{ product.url | within: collection }}">
+        {% if product.metafields.custom_fields["title_product_family"] != blank %}
+            <div class="product-item-meta__family">{{ product.metafields.custom_fields["title_product_family"] }}</div>
+          {% else %}
+            <div class="product-item-meta__family">{{ product.title }}</div>
+        {% endif %}
+        {% if product.metafields.custom_fields["title_product_name"] != blank %}
+            <div class="product-item-meta__title ">{{ product.metafields.custom_fields["title_product_name"] }}</div>
+        {% endif %}
+        
+      </a>
+
+
+
+      {% comment %}  ==================== RATINGS ====================  {% endcomment %}
+      {%- if settings.show_product_rating -%}
+
+       {% comment %}
+        <a class="product-item-meta__reviews-badge text--small" href="{{ product.url | within: collection }}">
+          {%- render 'product-rating', product: product -%}
+        </a>
+        {% endcomment %} 
+
+         {% comment %}INLINE RATING{% endcomment %} 
+          <div id="bv_inline_reviews">
+            <div style="padding-bottom: 5px;" data-bv-show="inline_rating"
+              data-bv-product-id= {{ product.id }}
+              data-bv-redirect-url={{ product.url }}
+              data-bv-seo="false">
+            </div>
+          </div>
+
+      {%- endif -%}
+
+
+      {% comment %}  ==================== SALE MESSAGES ====================  {% endcomment %}
+      {% unless hide_sale_messages %}{% render 'sale-messages', product: product %}{% endunless %}
+  
+
+      {% comment %}  PRICE  {% endcomment %}
+      <div class="product-item-meta__price-list-container" {% if hide_price %}style="display:none;"{% endif %}>
+        <div class="price-list price-list--centered">
+          {%- if product.price_varies and product.compare_at_price -%}
+            {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
+
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                {{- cheapest_variant.price | money_with_currency -}}
+              {%- else -%}
+                {{- cheapest_variant.price | money -}}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- if cheapest_variant.price < cheapest_variant.compare_at_price -%}
+              <span class="price price--highlight">
+                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+              </span>
+
+              <span class="price price--compare">
+                <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+                {%- if settings.currency_code_enabled -%}
+                  {{- cheapest_variant.compare_at_price | money_with_currency -}}
+                {%- else -%}
+                  {{- cheapest_variant.compare_at_price | money -}}
+                {%- endif -%}
+              </span>
+            {%- else -%}
+              <span class="price">
+                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+              </span>
+            {%- endif -%}
+          {%- elsif product.price < product.compare_at_price -%}
+            <span class="price price--highlight">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {{- product.price | money_with_currency -}}
+              {%- else -%}
+                {{- product.price | money -}}
+              {%- endif -%}
+            </span>
+
+            <span class="price price--compare">
+              <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+              {%- if settings.currency_code_enabled -%}
+                {{- product.compare_at_price | money_with_currency -}}
+              {%- else -%}
+                {{- product.compare_at_price | money -}}
+              {%- endif -%}
+            </span>
+          {%- elsif product.price_varies -%}
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                {{ product.price_min | money_with_currency }}
+              {%- else -%}
+                {{ product.price_min | money }}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- capture price_max -%}
+              {%- if settings.currency_code_enabled -%}
+                {{- product.price_max | money_with_currency -}}
+              {%- else -%}
+                {{- product.price_max | money -}}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <span class="price">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+              {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
+            </span>
+          {%- else -%}
+            <span class="price">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {{- product.price | money_with_currency -}}
+              {%- else -%}
+                {{- product.price | money -}}
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+
+          {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+            <div class="price price--block text--xsmall text--subdued">
+              <div class="unit-price-measurement">
+                <span class="unit-price-measurement__price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+                <span class="unit-price-measurement__separator">/</span>
+
+                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                  <span class="unit-price-measurement__reference-value">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
+                {%- endif -%}
+
+                <span class="unit-price-measurement__reference-unit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    {% comment %}duplicate this for reduced content and show full button on collection pages{% endcomment %}
+    {%- if settings.product_color_display != 'hide' and reduced_content == true and full_button == true -%}
+        {%- for color_label in color_label_list -%}
+          {%- if product.options_by_name[color_label] != blank -%}
+            {%- assign product_option = product.options_by_name[color_label] -%}
+
+            {%- case settings.product_color_display -%}
+              {%- when 'count' -%}
+                <p class="product-item-meta__color-count text--small text--subdued">{{- 'collection.product.available_colors_count' | t: count: product_option.values.size -}}</p>
+
+              {%- when 'swatch' -%}
+                <div class="product-item-meta__swatch-list color-swatch-list color-swatch-list--mini">
+                  {%- assign variant_option = 'option' | append: product_option.position -%}
+                  {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+                  {%- capture color_name -%}{{ section.id }}-{{ block.id }}-{{ product.id }}{%- endcapture -%}
+
+                  {% comment %}modified this to show proper swatches, but won't use since we have quickview. too many swatches for a product tile on certain products. and it seems to slow down page to process all of these swatches{% endcomment %}
+                  {%- for value in product_option.values -%}
+
+                    {%- capture color_id -%}{{ color_name }}-{{ forloop.index }}{%- endcapture -%}
+                    {%- assign variant_for_value = product.variants | where: variant_option, value | first -%}
+
+                    {%- assign color_value_downcase = value | downcase | handle -%}
+                    {% assign swatch_name = color_value_downcase | append: "-" | append: product.id %}
+                    {%- assign color_swatch_name = swatch_name | append: '.png' -%}
+
+                    <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                      <input class="color-swatch__radio visually-hidden" type="radio" name="{{ color_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if product_option.selected_value == value %}checked="checked"{% endif %} data-variant-id="{{ variant_for_value.id }}" {% if variant_for_value.featured_media %}data-variant-featured-media="{{ variant_for_value.featured_media.id }}"{% endif %}>
+                      <label class="color-swatch__item" for="{{ color_id }}" style="background-image: url({{ color_swatch_name | asset_url }})">
+                        <span class="visually-hidden">{{ value }}</span>
+                      </label>
+                    </div>
+                  {%- endfor -%}
+                </div>
+            {%- endcase -%}
+
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+
+      {%- if settings.product_color_display != 'hide' and reduced_content != true -%}
+        {%- for color_label in color_label_list -%}
+          {%- if product.options_by_name[color_label] != blank -%}
+            {%- assign product_option = product.options_by_name[color_label] -%}
+
+            {%- case settings.product_color_display -%}
+              {%- when 'count' -%}
+                <p class="product-item-meta__color-count text--small text--subdued">{{- 'collection.product.available_colors_count' | t: count: product_option.values.size -}}</p>
+
+              {%- when 'swatch' -%}
+                <div class="product-item-meta__swatch-list color-swatch-list color-swatch-list--mini">
+                  {%- assign variant_option = 'option' | append: product_option.position -%}
+                  {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+                  {%- capture color_name -%}{{ section.id }}-{{ block.id }}-{{ product.id }}{%- endcapture -%}
+
+                  {%- for value in product_option.values -%}
+                    {%- capture color_id -%}{{ color_name }}-{{ forloop.index }}{%- endcapture -%}
+                    {%- assign color_value_downcase = value | downcase -%}
+                    {%- assign variant_for_value = product.variants | where: variant_option, value | first -%}
+
+                    <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                      <input class="color-swatch__radio visually-hidden" type="radio" name="{{ color_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if product_option.selected_value == value %}checked="checked"{% endif %} data-variant-id="{{ variant_for_value.id }}" {% if variant_for_value.featured_media %}data-variant-featured-media="{{ variant_for_value.featured_media.id }}"{% endif %}>
+                      <label class="color-swatch__item" for="{{ color_id }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}">
+                        <span class="visually-hidden">{{ value }}</span>
+                      </label>
+                    </div>
+                  {%- endfor -%}
+                </div>
+            {%- endcase -%}
+
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+
+    {%- if product.available and reduced_content or show_cta -%}
+      <div class="product-item__cta-wrapper">
+
+        {% comment %} If only one variant or if bundle {% endcomment %}
+        {%- if product.variants.size == 1 or isCustomBundle -%}
+
+          {% if isCustomBundle %}
+
+          {% comment %} 
+          TODO remove unnecessary code here if we aren't going to put price in CTA on collection pages etc. right now it's there but hidden by css with code 'hide-temp'. can revert back to original maybe and get the loading/add to cart animation in button back
+          {% endcomment %}
+
+          <form action="{{ product.url }}" method="get"> 
+                <button type="submit" class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %}"><div>{{ 'collection.product.custom_kit' | t }}</div>{% if full_button %}<div class="hide-temp"><span class="hidden-phone">&nbsp; – &nbsp;</span>{{ product.price | money_without_trailing_zeros }}</div>{% endif %}</button>
+            </form>
+
+          {% elsif isComingSoon %}
+
+          <form action="{{ product.url }}" method="get"> 
+                <button type="submit" class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %}"><div>{{ 'collection.product.coming_soon' | t }}</div></button>
+            </form>
+            
+          {% else %}
+
+            {%- capture form_id -%}product_form_{{ section.id }}_{{ block.id }}_{{ product.id }}_{% increment product_form_index %}{%- endcapture -%}
+            {%- form 'product', product, is: 'product-form', id: form_id -%}
+              <input type="hidden" name="quantity" value="1">
+              <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+              <button type="submit" {% if show_cta %}is="loader-button"{% endif %} class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %}"><div>{{ 'collection.product.add_to_cart_short' | t }}</div>{% if full_button %}<div class="hide-temp"><span class="hidden-phone">&nbsp; – &nbsp;</span><span class="price">{{ product.price | money_without_trailing_zeros }}</span>{% if product.compare_at_price %}<span class="price price--compare">{{ product.compare_at_price | money_without_trailing_zeros }}</span>{% endif %}</div>{% endif %}</button>
+            {%- endform -%}
+
+          {% endif %}
+
+        {%- else -%}
+        {% comment %} If more than one variant - two versions, one for desktop one for mobile{% endcomment %}
+          
+        
+        {% if is_travel_size != true  %}
+          {%- assign lowest_variant = product.variants | sort: 'price' | first -%}
+
+          <button type="button" {% if show_cta %}loader{% endif %} is="toggle-button" aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" aria-expanded="false" class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %} hidden-phone"><div>{{ 'collection.product.quick_view' | t }}</div>{% if full_button %}<div class="hide-temp"><span class="hidden-phone">&nbsp; – &nbsp;</span><span class="price">{% if product.price_varies %}From {{ lowest_variant.price | money_without_trailing_zeros }}{% else %}{{ product.price | money_without_trailing_zeros }}{% endif %}</span>{% if product.compare_at_price %}<span class="price price--compare">{{ product.compare_at_price | money_without_trailing_zeros }}</span>{% endif %}</div>{% endif %}</button>
+         
+          <button type="button" {% if show_cta %}loader{% endif %} is="toggle-button" aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-popover" aria-expanded="false" class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %} hidden-tablet-and-up"><div>{{ 'collection.product.quick_view' | t }}</div>{% if full_button %}<div class="hide-temp"><span class="hidden-phone">&nbsp; – &nbsp;</span><span class="price">{% if product.price_varies %}From {{ lowest_variant.price | money_without_trailing_zeros }}{% else %}{{ product.price | money_without_trailing_zeros }}{% endif %}</span>{% if product.compare_at_price %}<span class="price price--compare">{{ product.compare_at_price | money_without_trailing_zeros }}</span>{% endif %}</div>{% endif %}</button>
+
+          <quick-buy-popover id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-popover" href="{{ product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-popover" class="popover popover--quick-buy hidden-tablet-and-up"></quick-buy-popover>
+          <quick-buy-drawer id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" href="{{ product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-drawer" class="drawer drawer--large drawer--quick-buy hidden-phone"></quick-buy-drawer>
+        {% else %}
+
+          {%- capture form_id -%}product_form_{{ section.id }}_{{ block.id }}_{{ product.id }}_{% increment product_form_index %}{%- endcapture -%}
+          {%- form 'product', product, is: 'product-form', id: form_id -%}
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="id" value="{{ product.variants[1].id }}">
+            <button type="submit" {% if show_cta %}is="loader-button"{% endif %} class="{% if reduced_content and full_button != true %}product-item__link link text--subdued{% else %}product-item__cta button button--tile{% endif %}"><div>{{ 'collection.product.add_to_cart_short' | t }}</div>{% if full_button %}<div class="hide-temp"><span class="hidden-phone">&nbsp; – &nbsp;</span><span class="price">{{ product.price | money_without_trailing_zeros }}</span>{% if product.compare_at_price %}<span class="price price--compare">{{ product.compare_at_price | money_without_trailing_zeros }}</span>{% endif %}</div>{% endif %}</button>
+          {%- endform -%}
+
+        {% endif %}
+       
+        {%- endif -%}
+      </div>
+    {%- elsif reduced_content -%}
+      {% if full_button == true %}
+          <span role="button" class="product-item__cta button button--tile button--disabled">{{ 'collection.product.sold_out' | t }}<span>
+      {% else %}
+      <div class="product-item__cta-wrapper">
+        <span class="product-item__link text--subdued">{{ 'collection.product.sold_out' | t }}</span>
+      </div>
+      {% endif %}
+    {%- endif -%}
+
+    {% comment %} This is for the Free Mini Module in Mini-cart. Works for products with full size and mini, with the mini being the free gift{% endcomment %}
+    {% if is_mini_cart_gwp %}
+
+    {%- capture form_id -%}product_form_{{ section.id }}_{{ block.id }}_{{ product.id }}_{% increment product_form_index %}{%- endcapture -%}
+      {%- form 'product', product, is: 'product-form', id: form_id -%}
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="id" value="{% if product.variants.size > 1 %}{{ product.variants[1].id }}{% else %}{{ product.variants[0].id }}{% endif %}">
+        <button type="submit" {% if show_cta %}is="loader-button"{% endif %} class="text--uppercase product-item__link link">{% if reached_threshold %}ADD FREE GIFT{% else %}FREE OVER $40{% endif %}</button>
+      {%- endform -%}
+
+    {% endif %}
+
+  </div>
+</product-item>

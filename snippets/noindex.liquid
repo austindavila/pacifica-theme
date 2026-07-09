@@ -1,0 +1,47 @@
+{%- comment -%}
+no index pages
+{%- endcomment -%}
+{% 
+  if handle contains 'not-last-call' or 
+  handle contains 'test-collection' or 
+  handle contains 'not-on-redlined-sale' or 
+  handle contains 'gwp' or 
+  handle contains 'sale-30' or 
+  handle contains 'sale-50' or 
+  handle contains 'all-products-exclude-bundles-gift-cards' or 
+  handle contains 'glow-baby-sampling-program' or 
+  handle contains 'not-last-call-or-gift-cards' or 
+  handle contains 'plant-magic-polish-ingredients' or 
+  handle contains 'bio-glitter-translucent-toppers-ingredients' or 
+  handle contains 'hidden-products' or 
+  handle contains 'vip-sampling-program' or 
+  handle contains 'vc-temp' or handle contains 'blacklist' or 
+  handle contains 'all-products-exclude-bundles-gift-cards-donations-last-call' or 
+  handle contains 'pacifica-beauty-blog' or 
+  handle contains 'kind-beauty-blog' or 
+  handle contains 'ingredients-glossary' or 
+  handle contains 'csr-ops-communication-portal' or
+  handle contains 'plant-magic-polish-ingredients' or
+  handle contains 'bio-glitter-translucent-toppers-ingredients' or
+  handle contains 'apps/bundles/bundle/71287' or
+  handle contains 'all-products-including-gift-cards' or
+  handle contains 'best-sellers-home' or
+  handle contains 'body-sale' or
+  handle contains 'full-priced-skincare' or
+  handle contains 'hair-sale' or
+  handle contains 'lip-sale' or
+  handle contains 'new-home' or
+  handle contains 'not-bundles' or
+  handle contains 'perfume-sale' or
+  handle contains 'products-created-in-the-30-days' or
+  handle contains 'suncare-sale' or
+  handle contains 'all-products-exclude-bundles-gift-cards-donations-last-call-new-fragrance-2024' or
+  handle contains 'deluxe-travel-size-products'
+%}
+  <meta name="robots" content="noindex">
+{% endif %}
+
+{% if product.tags contains "google-noindex" %}
+ <meta name="robots" content="noindex">
+{% endif %}
+

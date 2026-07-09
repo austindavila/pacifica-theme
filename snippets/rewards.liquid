@@ -1,0 +1,313 @@
+ {% comment %} HEADER {% endcomment %}
+ <div class="row center-xs middle-xs bg-seafoam">
+
+      <div class="col-xs-12 col-sm-12 col-md-6 r">
+        <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/Rewards-Revamp-Refer-Image-Woman-Hair.jpg?v=1718736669">
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6" style="padding:20px 10px;">
+
+        <h1 class="heading heading--xlarge font-melt" style="margin-bottom:5px;">Pacifica Beauty Rewards</h1>
+
+      {% if customer %}
+
+        <h2 class="heading h3" style="margin:0 padding-top:10px;">Welcome Back {{ customer.first_name }}!</h2>
+
+        <!-- customer's approved (redeemable) points + tier name -->
+        {% comment %} <div class="heading h3" style="padding-top:10px;">YOUR POINTS: <b><span data-lion-points='approved'></span></b></div>  {% endcomment %}
+        <div class="heading h5" style="padding-top:10px;">YOUR POINTS: <strong><span id="customer-points-approved"></span></strong></div>  
+        <div class="heading h5" style="padding-top:5px; padding-bottom:20px;">YOUR STATUS: <strong><span id="customer-tier"></span></strong></div> 
+
+        {% comment %} status bar {% endcomment %}
+        {% render 'rewards-slider' %}
+
+      {% else %}
+
+        <p>We care for our people just like we care about doing good, and we always believe that kindness is key. That’s why we want to give you lots of fun insider perks for being so loyal, and also to thank you for being as compassionate about our planet and animals as we are.</p>
+              
+          <div>
+            <a href="/account/register"><div class="button button--primary">Sign Up</div></a>
+             <a href="/account"><div class="button button--primary">Log In</div></a>
+          </div>
+
+      {% endif %}
+
+      </div>
+  </div> 
+
+
+
+  {% comment %} HOW IT WORKS {% endcomment %}
+  {% if customer %}
+    {% else %}
+        <div class="row center-xs middle-xs" style="padding-top:40px;">
+            <div class="col-xs-12">
+                <h2 class="heading h1 text--center font-melt" style="padding-bottom:20px;">how it works</h2>
+            </div>
+
+        <div class="col-xs-10 col-sm-7 col-md-3 text--center">
+            <div class="heading heading--xxlarge big-dot"><strong>1</strong></div>
+            <h3 style="margin:0; padding-top:10px;">CREATE AN ACCOUNT</h3>
+            <p style="margin-top:0; line-height:normal;">25 points</p>
+        </div>
+
+        <div class="col-xs-10 col-sm-7 col-md-3 text--center">
+            <div class="heading heading--xxlarge big-dot"><strong>2</strong></div>
+            <h3 style="margin:0; padding-top:10px;">EARN POINTS</h3>
+            <p style="margin-top:0; line-height:normal;">$1 = 1 point earned</p>
+        </div>
+
+        <div class="col-xs-10 col-sm-7 col-md-3 text--center">
+            <div class="heading heading--xxlarge big-dot"><strong>3</strong></div>
+            <h3 style="margin:0; padding-top:10px;">REDEEM POINTS</h3>
+            <p style="margin-top:0; line-height:normal;">redeem points for exclusive discounts</p>
+        </div>
+        </div>
+ {% endif %}
+
+
+ {% comment %} HOW TO EARN POINTS {% endcomment %}
+ <h2 class="heading h1 text--center font-melt" style="padding-top:40px;">earn points</h2>
+<!-- rules list -->
+<div data-lion-rules-list></div>
+
+
+{% comment %} REDEEM REWARDS {% endcomment %}
+<h2 class="heading h1 text--center font-melt" style="padding-top:40px;">redeem rewards</h2>
+<div data-lion-rewards-list></div>
+
+
+{% comment %} REFER A FRIEND {% endcomment %}
+{% if customer %}
+    <div class="row center-xs middle-xs bg-seafoam" style="margin-top:60px;">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="padding:20px 10px;">
+          <h2 class="heading h1 font-melt" style="margin-bottom:5px;">refer a friend</h2>
+          <p class="heading h3">Give a friend $10 off their first purchase <br class="hidden-phone">and earn $10 (350 points) when they spend over $45</p>
+          <div>
+            <a href="#" class="button button --primary" data-lion-refer>Refer your friends</a>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/Rewards-Revamp-Woman-Photo-Beach.jpg?v=1718736755">
+          </div>
+    </div>
+
+{% else %}
+
+  <div class="row center-xs middle-xs bg-seafoam" style="margin-top:60px;">
+    
+    <div class="col-xs-12 col-sm-12 col-md-6" style="padding:20px 10px;">
+      <h2 class="heading h1 font-melt" style="margin-bottom:5px;">refer a friend</h2>
+      <p class="heading h3">Give a friend $10 off their first purchase <br class="hidden-phone">and earn $10 (350 points) when they spend over $45</p>
+      <div>
+        <a href="/account/register"><div class="button button--primary">Sign Up</div></a>
+         <a href="/account"><div class="button button--primary">Log In</div></a>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/Rewards-Revamp-Woman-Photo-Beach.jpg?v=1718736755">
+      </div>
+
+    </div>
+   
+{% endif %}
+
+
+{% comment %} BENEFITS {% endcomment %}
+{% if customer %}
+{% else %}
+{% endif %}
+<h2 class="heading h1 text--center font-melt"  style="padding-top:40px;">benefits</h2>
+ <div class="benefits-tier-compare" style="overflow-x: auto;">
+    <table style="margin-left: auto; margin-right: auto;" dir="ltr" cellspacing="0" cellpadding="10" align="center">
+    <colgroup> 
+      <col class="master-col"> <col class="sub-col"> <col  class="sub-col"> <col  class="sub-col"> 
+    </colgroup>
+      <tbody>
+      <tr style="border-bottom: 4px solid #FFFFFF;">
+      <td class="re-circs" style="text-align: right;">
+        <div class="re-level re-level-1">
+          <h3 style="text-align: left; padding-left:10px;">REWARDS</h3>
+        </div>
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-1">
+          <h3>Friend Status</h3>
+          <i class="fal fa-gem"></i>
+        </div>
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-2">
+          <h3>Girl Crush</h3>
+          <i class="fad fa-gem"></i>
+        </div>
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-3">
+        <h3>Bestie Forever</h3>
+        <i class="fas fa-gem"></i>
+        </div>
+      </td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>12 Month Spend*</div>
+        </td>
+        <td class="td-dot">1 point <br class="hidden-lap-and-up">per $1</td>
+        <td class="td-dot">2 points <br class="hidden-lap-and-up">per $1</td>
+        <td class="td-dot">3 points <br class="hidden-lap-and-up">per $1</td>
+      </tr>
+      <tr>
+        <td class="re-title">
+          <div>Free Shipping</div>
+        </td>
+        <td class="td-dot">Over <br class="hidden-lap-and-up">$50</td>
+        <td class="td-dot">Two <br class="hidden-lap-and-up">Vouchers</td>
+        <td class="td-dot">Always</td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>Free Gifts</div>
+        </td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+      <tr>
+        <td class="re-title">
+          <div>Discount Vouchers</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>Early Access to Product Launches</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+        <tr>
+        <td class="re-title">
+          <div>Birthday Offer</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 14px;text-align: center; font-style:italic;">*Tiers are based on cumulative points over the past 12 months</p>
+  </div>
+
+
+
+{% comment %} CLAIMED REWARDS {% endcomment %}
+ {% if customer %}
+    <h2 class="heading h1 text--center font-melt" style="padding-top:60px;">claimed rewards</h2>
+    <div data-lion-claimed-rewards-list></div>
+{% endif %}
+
+{% comment %} HISTORY {% endcomment %}
+{% if customer %}
+  <h2 class="heading h1 text--center font-melt" style="padding-top:60px;">account history</h2>
+  <div style="margin-top:10px;" data-lion-history-table></div>
+{% endif %}
+
+
+{% comment %} TIER OVERVIEWS {% endcomment %}
+{% comment %} <div data-lion-tier-benefits-compare></div> {% endcomment %}
+{% comment %} <div data-lion-tier-overview></div> {% endcomment %}
+
+
+
+{% comment %} https://developers.loyaltylion.com/api/resources/customers {% endcomment %}
+{% comment %} https://developers.loyaltylion.com/api/resources/activities {% endcomment %}
+{% comment %} https://developers.loyaltylion.com/api/resources/webhooks#program_eventscustomerapproaching_tier_upgrade {% endcomment %}
+
+{% comment %} need to update middleware to call the loyaltylion orders API and get the customer total spend {% endcomment %}
+{% comment %} https://developers.loyaltylion.com/api/resources/orders/ {% endcomment %}
+<script type="text/javascript">
+
+{% if customer %}
+
+    var options = {
+        customer_id: "{{ customer.id }}",
+        customer_email: "{{ customer.email }}"
+    }
+    
+    // Function to format a number with commas
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        {% comment %} console.log("starting ajax call to loyalty endpoint"); {% endcomment %}
+                    
+        $.ajax({
+            type: "POST",
+            url: "https://pb-middleware.herokuapp.com/loyalty-lion-customer",
+            cache: false,
+            data: options,
+            success: function (data) {
+                // console.log("customer data found")
+                console.log(data);
+                var customer = data.body.customers[0];
+                //======================= progress bar
+                var tierName = customer.loyalty_tier_membership.loyalty_tier.name;
+
+                    console.log('Tier Name:', tierName);
+
+                    var progressToNextTier;
+                    var stepsCompleted;
+                    if (tierName === "Friend Status") {
+                        progressToNextTier = 33;
+                        stepsCompleted = 1;
+                    } else if (tierName === "Girl Crush") {
+                        progressToNextTier = 66;
+                        stepsCompleted = 2;
+                    } else if (tierName === "Bestie Forever") {
+                        progressToNextTier = 100;
+                        stepsCompleted = 3;
+                    } else {
+                        progressToNextTier = 0; // Default if tier name is unrecognized
+                        stepsCompleted = 0;
+                    }
+
+                    // Log calculated progress
+                    console.log('Progress to Next Tier:', progressToNextTier);
+
+                    // Update the progress bar fill width
+                    var progressBarFill = document.getElementById("ll-progress-bar-fill");
+                    progressBarFill.style.width = `${progressToNextTier}%`;
+
+                    // Update the steps based on completion
+                    for (let i = 1; i <= stepsCompleted; i++) {
+                        document.getElementById(`ll-step-${i}`).classList.add("completed");
+                    }
+               
+                $( "#customer-points-approved" ).text(numberWithCommas(customer.points_approved));
+                $( "#customer-tier" ).text(customer.loyalty_tier_membership.loyalty_tier.name);
+            },
+            error: function (error) {
+                console.log("error getting customer data");
+            }
+        });
+
+    } else {
+        // jQuery is not loaded
+        // console.log("jquery not loaded");
+    }
+
+};
+    
+{% endif %}
+
+</script> 
+

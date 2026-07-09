@@ -1,0 +1,31 @@
+{% comment %} 
+check to see if the product is on sale or a bundle
+{% endcomment %}
+
+{% if template contains 'product' %}
+{% elsif template contains 'collection' %}
+{% endif %}
+
+{% assign productTags = product.tags | join: ',' %} 
+{% assign isBundle = false %}
+
+{% comment %} check if last call or gift card {% endcomment %}	
+{% if productTags contains 'last-call' or productTags contains 'gift-card' %}
+  	{% assign onSale = true %}
+{% else %} 
+  	{% assign onSale = false %}
+{% endif %}
+
+{% comment %} 
+check if product is bundle. 
+will pull in products inside bundles too because of the '__bund:product-handle' tags. but will fix that below {% endcomment %}	
+{% if productTags contains 'bundle' %} 
+	
+	
+{% endif %}
+
+{% comment %} if it has the '__bund:product-handle' tag then reset it to not on sale and not bundle {% endcomment %}	
+{% if productTags contains '__bundle' %} 
+	
+	
+{% endif %}

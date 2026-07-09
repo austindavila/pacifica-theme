@@ -1,0 +1,385 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "1663207419ed115f7e": {
+      "type": "slideshow",
+      "blocks": {
+        "16632074187825298a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Subscriptions-Banner.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": true,
+            "gradient_name": "bg-blue-lavender",
+            "text_position": "middle_center",
+            "title": "",
+            "body_copy": "<div class=\"header h2\">Clean, Cruelty-Free Beauty  <br class=\"hidden-phone\">at Your Convenience​</div><div class=\"text--medium \" style=\"padding-top:15px;\">Subscribe and save 5% on your Pacifica must-haves! ​\n<br class=\"hidden-phone\">Plus, FREE shipping on orders $40+​</div>",
+            "subheading": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "16632074187825298a-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "1663208025fb070b03": {
+      "type": "slideshow-original",
+      "blocks": {
+        "166320802593f62782-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Subscriptions-Header-HP-widest.jpg",
+            "mobile_image": "shopify://shop_images/Subscriptions-Banner-Mobile.jpg",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div class=\"heading--xxlarge\" style=\"font-weight:400; line-height:1; padding:10px;\">\n<span class=\"font-california-coast\">subscribe</span> &amp; SAVE 10%</div><div style=\"padding:10px; font-weight:500;\">+ FREE shipping <br class=\"hidden-tablet-and-up\">on subscriptions $40+​</div>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "166320802593f62782-0"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "mobile_fix": false,
+        "banner_only": false,
+        "cycle_speed": 4,
+        "background": "#f7e0f8"
+      }
+    },
+    "166320836988d870ce": {
+      "type": "multi-column",
+      "blocks": {
+        "16632083686a334dec-0": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<i class=\"fa-light fa-bag-shopping\" style=\"font-size:30px;padding-bottom:10px;\"></i>",
+            "content": "<span class=\"heading--large font-california-coast\">shop</span><p>Pick your favorite products that are eligible for auto-delivery</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16632083686a334dec-1": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<i class=\"fa-light fa-calendar-week\" style=\"font-size:30px;padding-bottom:10px;\"></i>",
+            "content": "<span class=\"heading--large font-california-coast\">schedule</span><p>Choose your delivery frequency  on the product detail page or in the shopping bag</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16632083686a334dec-2": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<i class=\"fa-light fa-truck\" style=\"font-size:30px;padding-bottom:10px;\"></i>",
+            "content": "<span class=\"heading--large font-california-coast\">ship</span><p>Enjoy 10% off plus free shipping on orders $40</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16632083686a334dec-0",
+        "16632083686a334dec-1",
+        "16632083686a334dec-2"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "<div class=\"heading heading--large\">How It Works</div>",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#f8e4e2",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1663208478ba43c720": {
+      "type": "rich-text",
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<i class=\"text--small\">Pause, skip, or cancel at any time.*</i>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#f8e4e2",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "166320848923fd11e9": {
+      "type": "featured-collections",
+      "blocks": {
+        "16632084890a2bd48c-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "subscription-best-sellers",
+            "label": "",
+            "button_text": "SHOP NOW",
+            "button_url": "shopify://collections/subscription-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "16632084890a2bd48c-0"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"heading heading--large\" style=\"font-weight:400; line-height:1;\">\nsubscribe &amp; save <br class=\"hidden-lap-and-up\"><span class=\"font-california-coast\" style=\"color:#b361a9;\">on your faves</span>\n</div>",
+        "content": "",
+        "products_count": 50,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "166320852573b288f9": {
+      "type": "faq",
+      "blocks": {
+        "1663208525c6d3abf0-1": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS THE SUBSCRIPTION PROGRAM?",
+            "answer": "<p>Pacifica’s Subscription Program is the most convenient way for you to get the products you want delivered to you on a regular schedule. We automatically send your favorite products (over $5) based on your chosen frequency. The service is easy to use and customizable; you can make changes online whenever you need. </p><p>Just tell us how often you want your products, and we'll take it from there. You will receive 10% off all subscription items and free shipping on subscription orders $40+! </p><p>You always have complete control over your Pacifica subscription orders. You will receive an an email reminder just before each order ships. You can change your delivery frequency, next order date, or quantity anytime by visiting the subscription order section of your <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">Pacificabeauty.com account</a>. </p><p><strong>*No changes or cancellations can be made within 3 business days of the order processing date. Your credit card will be charged, and your order will be shipped as originally scheduled. </strong></p><p><strong>No refunds will be issued for subscription orders once your order is shipped.</strong></p><p>Your subscription will continue until you cancel it. A recurring charge in the amount of the product selected for subscription will be automatically charged to your credit card for each shipment on the schedule you requested when you selected the product. There is no minimum term of the subscription and no minimum purchase obligation.</p>"
+          }
+        },
+        "1663208525c6d3abf0-2": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I JOIN THE SUBSCRIPTION PROGRAM?",
+            "answer": "<p>Joining our subscription program is easy. To get started, simply select the subscription option for your desired product, select your preferred shipment frequency and then check out as normal.</p>"
+          }
+        },
+        "1663208525c6d3abf0-4": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT WILL HAPPEN AFTER I JOIN THE SUBSCRIPTION PROGRAM?",
+            "answer": "<p>After you join the subscription program, you will receive an email confirming your subscription order. This email will include a link to access the subscription section in <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> where you can manage your future orders, subscription items and account information.</p><p>We will place your subscription orders automatically according to your selected frequency, and you will only be billed on the day the order is shipped. We will send you an email reminder 10 days before each subscription order. You will also receive email notifications regarding other important information related to your subscription account, such as if your item is discontinued or out of stock, if you cancel your subscription, and confirmation when an order is placed successfully.</p>"
+          }
+        },
+        "d8cde2c1-0f74-4587-9c3e-5a2226c1cfae": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I VIEW MY FUTURE DELIVERIES?",
+            "answer": "<p>Your very next scheduled orders will be listed in the My Subscription section of <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a>.</p>"
+          }
+        },
+        "39a93375-3cbe-4b82-89d9-5040ba6dce24": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "CAN I ADD ITEMS TO MY NEXT ORDER WITH AN EXISTING SUBSCRIPTION ORDER?",
+            "answer": "<p>Yes! To do so, you must be logged into your account. Visit the item’s page you wish to add to your order and find the Add this to my order on: button. When you click this button, you will have the option to add the item as one time only or as a subscription item.</p>"
+          }
+        },
+        "8612590f-02dc-4794-94c4-a236d6b6cd7f": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT TYPES OF PAYMENT ARE ACCEPTED FOR SUBSCRIPTION?",
+            "answer": "<p>All subscription orders require a credit or debit card payment. Alternative payment forms – such as Afterpay, Klarna, or PayPal – cannot be accepted.</p>"
+          }
+        },
+        "037a2648-b908-4889-88d0-f260b5add02c": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "title": "Making Changes to Your Subscriptions"
+          }
+        },
+        "8e9f904f-2624-4966-80c8-74616dbe2227": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I MAKE CHANGES TO MY SUBSCRIPTION ORDER?",
+            "answer": "<p>Managing your subscription order is easy! You can change your next order date, skip an order, change your selected frequency, or cancel a subscription by visiting the subscription section in <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a>. Please allow up to 24 hours for modifications or cancellations to be processed.</p>"
+          }
+        },
+        "d94b53e4-3da5-4260-82e5-cf49b7d0ad6b": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I COMBINE ITEMS TO BE IN THE SAME ORDER?",
+            "answer": "<p>Subscription items that have the same order date, shipping address, billing address and payment method will ship as one order. If you have more than one Subscription item and want the items to ship in the same order, simply visit My Subscription section of <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> and change the next order dates to be the same. Also, confirm the orders are going to the same shipping address and have the same billing address and payment method.</p>"
+          }
+        },
+        "3654b444-5888-4517-80ea-c7e4a5719104": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I MAKE CHANGES TO MY SUBSCRIPTION ACCOUNT INFORMATION?",
+            "answer": "<p>To review or modify your Subscription account information, visit My Subscription located within <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a>. </p>"
+          }
+        },
+        "510886c8-d5f9-4233-9e01-82bb7c19cfb7": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CANCEL OR PAUSE A SUBSCRIPTION PLAN?",
+            "answer": "<p><strong>To cancel a subscription item</strong>, please visit the My Subscription section within <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> and click the cancel subscription link to the right of the item you wish to cancel. You’ll be prompted to confirm this action and indicate your reason for cancelling. </p><p>Once you’ve selected a cancel reason and clicked the Stop Subscription button, your replenishment will be cancelled and no future orders will be placed. </p><p>You will receive an email notification confirming this action. Please allow up to 24 hours for any modifications or cancellations to be processed.</p><p><strong>To pause a subscription item</strong>, please visit the My Subscription section within <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> and click the pause subscription link to the right of the item you wish to pause. You’ll be prompted to select a shipment resume date. Once you’ve selected the date and clicked the Pause Subscription button, your replenishment will be paused and will resume shipment on the date that you selected.</p>"
+          }
+        },
+        "352e7afd-9680-4fc6-a148-2353f35157d0": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CHANGE THE SHIPPING OR BILLING ADDRESS FOR AN ORDER?",
+            "answer": "<p><strong>To change your shipping address</strong> for an order, click the Edit link located directly below the current shipping information. Select a previous shipping address from the dropdown menu or create a new one to add to your account. This address will apply to all subscriptions and future orders unless otherwise noted. </p><p><strong>To change your billing address</strong> for an order, click the Edit link located directly below the current billing information. This will open a new page where you can add new payment information. This billing information will apply to all subscriptions and future orders. Please remember to press OK and verify that your updated information saved successfully. We kindly ask that you allow up to 24 hours for modifications or cancellations to be processed.</p>"
+          }
+        },
+        "fcf0ae52-8b7e-4d73-aaf0-a4a206b40bbe": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CHANGE THE ORDER DATE ON A SUBSCRIPTION?",
+            "answer": "<p><strong>To change your next order date</strong>, please visit the subscription section within <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> and click the Change Date button to the right of the next shipment date then select a new date for your order. This will change the order date for the entire subscription order.</p>"
+          }
+        },
+        "1bcbed86-5bfc-4b1a-bd1d-9dc8171ee244": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I SKIP A DELIVERY?",
+            "answer": "<p><strong>To skip a subscription order</strong>, please visit the subscription section within your account and click the Skip Order button to the right of the upcoming order date to skip the entire order.</p>"
+          }
+        },
+        "f01eb592-2938-46af-842a-51acacc7f769": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CHANGE DELIVERY FREQUENCY?",
+            "answer": "<p><strong>To modify the delivery frequency</strong> for a subscription item, please visit the My Subscription section within your account. The current delivery frequency is displayed next to each replenishment item in a dropdown menu next to Every. To change the delivery frequency for an individual replenishment item, simply click the frequency dropdown next to the item you would like to modify and select your next desired frequency from the dropdown menu.</p>"
+          }
+        },
+        "e808a8cd-24d4-4f4f-832a-05eac952c58a": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I TRIGGER AN ORDER TO SEND RIGHT AWAY?",
+            "answer": "<p><strong>To send a subscription order now</strong>, please visit the My Subscription section within <a href=\"https://www.pacificabeauty.com/account/login\" title=\"https://www.pacificabeauty.com/account/login\">your account</a> and click the Send Now button to the right of the upcoming order date to send the entire order.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1663208525c6d3abf0-1",
+        "1663208525c6d3abf0-2",
+        "1663208525c6d3abf0-4",
+        "d8cde2c1-0f74-4587-9c3e-5a2226c1cfae",
+        "39a93375-3cbe-4b82-89d9-5040ba6dce24",
+        "8612590f-02dc-4794-94c4-a236d6b6cd7f",
+        "037a2648-b908-4889-88d0-f260b5add02c",
+        "8e9f904f-2624-4966-80c8-74616dbe2227",
+        "d94b53e4-3da5-4260-82e5-cf49b7d0ad6b",
+        "3654b444-5888-4517-80ea-c7e4a5719104",
+        "510886c8-d5f9-4233-9e01-82bb7c19cfb7",
+        "352e7afd-9680-4fc6-a148-2353f35157d0",
+        "fcf0ae52-8b7e-4d73-aaf0-a4a206b40bbe",
+        "1bcbed86-5bfc-4b1a-bd1d-9dc8171ee244",
+        "f01eb592-2938-46af-842a-51acacc7f769",
+        "e808a8cd-24d4-4f4f-832a-05eac952c58a"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": false,
+        "title": "Frequently Asked Questions",
+        "content": "",
+        "background": "#fdf5f7",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "c716413a-08d8-41bc-abf4-1c316609deeb": {
+      "type": "rich-text",
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p class=\"text--small\">*No changes or cancellations can be made within 3 business days of the order processing date. Your credit card will be charged, and your order will be shipped as originally scheduled.\n\nNo orders will be reshipped if sent to the wrong address if you have not changed it ahead of the shipment date.\n\nNo refunds will be issued for subscription orders once your order is shipped.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#fdf5f7",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663207419ed115f7e",
+    "1663208025fb070b03",
+    "166320836988d870ce",
+    "1663208478ba43c720",
+    "166320848923fd11e9",
+    "166320852573b288f9",
+    "c716413a-08d8-41bc-abf4-1c316609deeb"
+  ]
+}

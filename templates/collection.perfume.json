@@ -1,0 +1,348 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": false,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "medium",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "16565209272d9e3f13": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<div class=\"text--medium\" style=\"padding-top:20px; padding-bottom:20px;\">FREE GIFT WITH ALL ORDERS $100+<br>\n<a href=\"/products/dream-moon-body-lotion\" style=\"text-decoration:underline;\">Dream Moon Body Lotion</a><br> <span class=\"text--small text--subdued\"><i>Added to cart automatically</i></span>\n</div>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#f7e0f8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_original_79wbJM": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_cR9Qyg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GIFT_50_COLL_DESK.png",
+            "mobile_image": "shopify://shop_images/GIFT_50_COLL_MOBILE.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_cR9Qyg"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": true,
+        "banner_only": true,
+        "cycle_speed": 4,
+        "background": "#fccecb"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-BOGO-Masks-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/face-masks",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "ba45512c-f62f-4379-98c4-2bb7653429e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-BOGO-Travel-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/travel-size",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738",
+        "ba45512c-f62f-4379-98c4-2bb7653429e5"
+      ],
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": true,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "large"
+      }
+    },
+    "faq_KqMxMk": {
+      "type": "faq",
+      "blocks": {
+        "question_K8P8Lq": {
+          "type": "question",
+          "settings": {
+            "title": "What types of fragrance does Pacifica Beauty offer?",
+            "answer": "<p>Pacifica Beauty offers a wide range of fragrance formats including <strong>perfume, hair perfume, and hair & body mists</strong>. Explore the full <a href=\"/collections/perfume\" title=\"Vegan Perfume & Fragrance\">fragrance collection</a> featuring iconic scents like <a href=\"/products/indian-coconut-nectar-spray-perfume-1\" title=\"Indian Coconut Nectar Spray Perfume\">Indian Coconut Nectar</a> and <a href=\"/collections/tahitian-gardenia-legacy-scent\" title=\"Tahitian Gardenia Legacy Scent\">Tahitian Gardenia</a> designed for everyday wear, layering, and personal expression. </p>"
+          }
+        },
+        "question_ThWBkG": {
+          "type": "question",
+          "settings": {
+            "title": "What is the difference between perfume, hair perfume, and body mist?",
+            "answer": "<p>Perfume is typically more concentrated and designed for longer wear on skin, while hair perfume is formulated to lightly scent the hair without heaviness. Hair and body mists offer a lighter, more refreshing fragrance experience that can be worn on both skin and hair throughout the day.</p>"
+          }
+        },
+        "question_tnmWpC": {
+          "type": "question",
+          "settings": {
+            "title": "What are mood-boosting scents?",
+            "answer": "<p>Pacifica Beauty fragrance is inspired by mood-boosting scent profiles designed to uplift, energise, or calm the senses. These fragrances are created to support emotional wellbeing through carefully crafted scent combinations and aromatic inspiration.</p>"
+          }
+        },
+        "question_48pXCf": {
+          "type": "question",
+          "settings": {
+            "title": "Is Pacifica Beauty fragrance based on aromatherapy?",
+            "answer": "<p>Yes. Fragrance at Pacifica Beauty is deeply rooted in aromatherapy. Founder Brook Harvey Taylor is a certified aromatherapist, and this foundation influences how scents are developed—focusing on emotional connection, balance, and sensory experience.</p>"
+          }
+        },
+        "question_VcdAX9": {
+          "type": "question",
+          "settings": {
+            "title": "Can I layer perfume, hair perfume, and body mist?",
+            "answer": "<p>Yes, layering fragrance is encouraged. You can combine perfume with hair perfume or a hair and body mist to build a personalised scent experience that evolves throughout the day. Try pairing <a href=\"/products/vanilla-whip-spray-perfume\" title=\"Vanilla Whip Eau de Parfum\">Vanilla Whip</a> Perfume with a complementary body mist and hair perfume for a longer-lasting scent story.</p>"
+          }
+        },
+        "question_a4Qih7": {
+          "type": "question",
+          "settings": {
+            "title": "Are Pacifica Beauty fragrances vegan and cruelty-free?",
+            "answer": "<p>Yes, all fragrances from Pacifica Beauty are vegan and cruelty-free, designed to deliver beautiful scent experiences while aligning with ethical beauty values.</p>"
+          }
+        },
+        "question_RNKLmd": {
+          "type": "question",
+          "settings": {
+            "title": "What is a hair and body mist used for?",
+            "answer": "<p>Hair and body mists are lightweight fragrances designed to refresh both hair and skin. They are perfect for daily use and provide an easy way to add a subtle scent throughout the day.</p>"
+          }
+        },
+        "question_wcxqH8": {
+          "type": "question",
+          "settings": {
+            "title": "What makes Pacifica Beauty perfume unique?",
+            "answer": "<p>Pacifica Beauty perfumes are inspired by aromatherapy, mood, and emotional wellbeing. Each scent is designed to be expressive and wearable, offering a unique fragrance experience rooted in creativity and intention.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_K8P8Lq",
+        "question_ThWBkG",
+        "question_tnmWpC",
+        "question_48pXCf",
+        "question_VcdAX9",
+        "question_a4Qih7",
+        "question_RNKLmd",
+        "question_wcxqH8"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": false,
+        "title": "Perfume & Fragrance FAQs",
+        "content": "<p>Got questions about perfume, body mists, and scent? We’ve got you covered.</p>",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "ss_media_grid_2_7BWihf": {
+      "type": "ss-media-grid-2",
+      "blocks": {
+        "item_Hwd7CY": {
+          "type": "item",
+          "settings": {
+            "column_width": 2,
+            "row_width": 1,
+            "image": "shopify://shop_images/amazon_1940_x_500-5.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "",
+            "text": "",
+            "button": "",
+            "url": "",
+            "content_align": "bottom-center",
+            "content_align_mobile": "bottom-center",
+            "sub_heading_color": "#FFFFFF",
+            "title_color": "#f8eedd",
+            "text_color": "#FFFFFF",
+            "button_color": "#573c2a",
+            "button_hover_color": "#573c2a",
+            "button_bg_color": "#f8eedd",
+            "button_bg_hover_color": "#FFFFFF",
+            "button_border_color": "#573c2a",
+            "button_border_hover_color": "#573c2a"
+          }
+        }
+      },
+      "block_order": [
+        "item_Hwd7CY"
+      ],
+      "name": "SS - Media Grid #2",
+      "settings": {
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 34,
+        "heading_size_mobile": 30,
+        "heading_height": 150,
+        "heading_align": "left",
+        "heading_align_mobile": "left",
+        "items_columns": 2,
+        "items_columns_mobile": "1",
+        "items_gap": 10,
+        "items_gap_mobile": 10,
+        "items_mt": 10,
+        "row_height": 600,
+        "row_height_mobile": 200,
+        "item_radius": 16,
+        "item_border_thickness": 0,
+        "item_shadow": false,
+        "content_padding_vertical": 16,
+        "content_padding_vertical_mobile": 16,
+        "content_padding_horizontal": 16,
+        "content_padding_horizontal_mobile": 16,
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 14,
+        "sub_heading_size_mobile": 14,
+        "sub_heading_height": 100,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 22,
+        "title_size_mobile": 20,
+        "title_height": 100,
+        "title_mt": 10,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 100,
+        "text_mt": 10,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 14,
+        "button_size_mobile": 14,
+        "button_height": 100,
+        "button_mt": 12,
+        "button_padding_vertical": 10,
+        "button_padding_vertical_mobile": 10,
+        "button_padding_horizontal": 14,
+        "button_padding_horizontal_mobile": 16,
+        "button_radius": 14,
+        "button_border_thickness": 1,
+        "button_style": "non_outline",
+        "item_border_color": "#000000",
+        "item_shadow_color": "#000000",
+        "heading_color": "#000000",
+        "overlay_color": "#000000",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 400,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "ss_media_grid_2_7BWihf",
+    "16565209272d9e3f13",
+    "slideshow_original_79wbJM",
+    "main",
+    "faq_KqMxMk",
+    "16397758758c69c057"
+  ]
+}

@@ -1,0 +1,39 @@
+{% comment %} infographics content for mascara brushes {% endcomment %}
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} INFOGRAPHIC ---------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+ 
+{% comment %} GET METAOBJECTS {% endcomment %}
+{% assign product_infographic_handle =  product.metafields.custom.product_infographic_section.value %}
+
+{% if product_infographic_handle != null %} 
+
+  {% comment %} stellar gaze {% endcomment %}
+  <div id="enhanced-content-infographics">
+
+    <div class="infographic-content__wrapper container">
+
+    <div class="infographic-content__image-wrapper">
+        <img alt="{{ product.title }} – Model" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: product_infographic_handle.image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}>
+    </div>
+
+    <div class="infographic-content__text-wrapper" style="background-color: {{ product_infographic_handle.background_color.value }};">
+        <div class="infographic-content__text-container">   
+          <h3 class="infographic-content__title">{{ product_infographic_handle.headline.value }}</h3>
+          {{ product_infographic_handle.features | metafield_tag }}        
+        </div>
+    </div>
+  </div>
+</div>  
+{% comment %} ================================ END ================================ {% endcomment %}
+
+
+{% endif %}
+
+
+
+
+                                        
+

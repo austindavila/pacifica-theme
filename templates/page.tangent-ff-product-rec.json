@@ -1,0 +1,109 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "large"
+      }
+    },
+    "custom_liquid_VTkN7y": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% render 'tangent_ff_recommendation' %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_pCqJdF": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<p>Can't decide?</p>",
+        "content": "<p>Try a fragrance sample kit!</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_LX3Ymx": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_CRLFU9": {
+          "type": "collection",
+          "settings": {
+            "collection": "spray-perfume",
+            "label": "",
+            "button_text": "shop all",
+            "button_url": "shopify://collections/spray-perfume"
+          }
+        },
+        "collection_EdLmQw": {
+          "type": "collection",
+          "settings": {
+            "collection": "hair-body-mist",
+            "label": "",
+            "button_text": "shop all",
+            "button_url": "shopify://collections/hair-body-mist"
+          }
+        },
+        "collection_zbTEyK": {
+          "type": "collection",
+          "settings": {
+            "collection": "fragrance-sets",
+            "label": "FRAGRANCE SETS",
+            "button_text": "SHOP ALL",
+            "button_url": "shopify://collections/fragrance-sets"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CRLFU9",
+        "collection_EdLmQw",
+        "collection_zbTEyK"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"font-melt\">shop all fragrance</div>",
+        "content": "",
+        "products_count": 4,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "show_minis": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_VTkN7y",
+    "rich_text_pCqJdF",
+    "featured_collections_LX3Ymx"
+  ]
+}

@@ -1,0 +1,953 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Shipping-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/skincare",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "ba45512c-f62f-4379-98c4-2bb7653429e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Gift-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/new",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738",
+        "ba45512c-f62f-4379-98c4-2bb7653429e5"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "large"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_original_UUVBqr": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_gMYf4r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/plp_banner_desk.png",
+            "mobile_image": "shopify://shop_images/plp_banner_mobile_dee753a8-9dd0-41de-8657-9230a7a27c43.png",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_background_hover": "#000000",
+            "button_text_color_hover": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_gMYf4r"
+      ],
+      "custom_css": [
+        ".vertical-breather {padding-top: 20px; margin: auto; width: 95%;}",
+        ".header-lockup {font-size: 28px;}",
+        ".slideshow__text-wrapper {padding-right: 20px;}",
+        ".header-body {margin: auto; line-height: normal; font-size: 18px;}",
+        "@media (min-width: 1000px) {.header-lockup {font-size: 40px; } .vertical-breather {padding-top: 0px; width: 100%; }}",
+        "@media (min-width: 1400px) {.header-lockup {font-size: 40px; }}",
+        ".button-wrapper a {border-radius: 25px;}",
+        "@media screen and (max-width: 999px) {.content-box--medium {text-align: left; }}"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": true,
+        "banner_only": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "timeline_xhMtMq": {
+      "type": "timeline",
+      "blocks": {
+        "item_t8zPnM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Pacifica_PDP_dream_milk_lavender_glow.png",
+            "label": "New Body Bundles",
+            "title": "Magnesium Moonlight Body Duo",
+            "content": "Unwind. Hydrate. Glow. 🌙 Meet the Magnesium Moonlight Body Duo. 20% OFF (5/7 - 5/11)",
+            "button_text": "Shop Now",
+            "button_link": "shopify://products/magnesium-body-spray-lavender-glow-luminizer-duo"
+          }
+        },
+        "item_EDbtqH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GROUPPHOTO_2c9e420b-8f6b-48f8-af3e-b170ccb54089.jpg",
+            "label": "BUY ONE GET ONE",
+            "title": "Fragrance Gifts",
+            "content": "Select any 2 oz perfume,<br> get a FREE Hair &amp; Body Mist<br> when both are added to cart",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/bogo50hbmist"
+          }
+        },
+        "item_FTiyRB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_dc4fb05f-a88b-462a-a514-861f9c6c236e.png",
+            "label": "$20 & Under Gifts",
+            "title": "$20 & Under Gifts",
+            "content": "Little luxuries, mood-boosting vibes— all $20 &amp; under",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/beauty-under-20"
+          }
+        },
+        "item_tgG6iW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/6_58422137-d8b2-4617-9a27-b912be3aa72d.png",
+            "label": "Makeup for Mom",
+            "title": "Makeup for Mom",
+            "content": "Makeup she’ll love, with ingredients she’ll trust",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/makeup-nail-polish"
+          }
+        },
+        "item_KBmNFt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/8_5a4a2149-59cb-47c4-84d5-440cc28ca076.png",
+            "label": "Gifts for Bestie",
+            "title": "Gifts for your Taurus Bestie",
+            "content": "Glow-worthy skincare, dreamy scents, and cozy vibes for your fave earth sign",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/gifts-for-taurus"
+          }
+        },
+        "item_k3Yeyc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5.1.25_Gift_Shop_Image_Tiles_2.png",
+            "label": "50% off Gift Sets",
+            "title": "Gift Sets",
+            "content": "Get 50% Off Curated Gift Sets – perfect for anyone (or yourself)",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/50-off-clearance"
+          }
+        },
+        "item_LRYiXa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Gift-Card-Transparent.png",
+            "label": "GIFT CARDS",
+            "title": "Gift Cards",
+            "content": "Last-minute gift? Choose an eco-friendly option with Pacifica Digital Gift Cards—delivered instantly",
+            "button_text": "shop now",
+            "button_link": "shopify://products/digital-gift-card"
+          }
+        }
+      },
+      "block_order": [
+        "item_t8zPnM",
+        "item_EDbtqH",
+        "item_FTiyRB",
+        "item_tgG6iW",
+        "item_KBmNFt",
+        "item_k3Yeyc",
+        "item_LRYiXa"
+      ],
+      "custom_css": [
+        ".button-wrapper a {border-radius: 20px;}",
+        "h2 {font-size: 20px; margin-bottom: 0;}",
+        "section {margin-top: 10;}",
+        ".timeline__content {padding: 30px; line-height: 1.4em;}",
+        ".button-wrapper {margin-top: 20px;}",
+        "@media (min-width: 1000px) {.timeline__content {padding: 40px; } .button-wrapper {}}",
+        "@media screen and (max-width: 999px) {.timeline__item {align-items: end; display: block; float: none; width: 350px; } .timeline__image-wrapper {width: 275px; } .timeline__content {width: 275px; } .button:hover {background: black; } .heading {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "subheading": "Up to 50% OFF",
+        "title": "<div class=\"heading heading--large\" style=\"padding-top:0px;\">Curated Gifts For Mom</div>",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "item_background": "#ddf1f4",
+        "item_text_color": "#000000"
+      }
+    },
+    "rich_text_hKtN7M": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<p>Fragrance Finder</p><p></p>",
+        "content": "<p>Can’t pick a scent? Watch for inspo or take the quiz—we got you. Aromapower<sup>TM</sup> by Pacifica: your nose’s new BFF.</p>",
+        "button_text": "",
+        "button_link": "shopify://pages/fragrance-finder",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ddf1f4",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_Ybb4bj": {
+      "type": "video",
+      "custom_css": [
+        ".section--flush {max-width: 1400px; margin: auto;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "metafield_video": false,
+        "vimeo_video": false,
+        "vimeo_html": "",
+        "video_url": "https://youtu.be/TRPJYq55ZCc?si=n14a5_UlSfr4FPm0",
+        "image": "shopify://shop_images/YOUTUBE_THUMBNAILS-2.png",
+        "background_type": "full_width",
+        "video_size": "auto",
+        "autoplay": false,
+        "background": "#ffffff",
+        "text_color": "#ffffff"
+      }
+    },
+    "rich_text_rFXbyL": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "TAKE THE QUIZ",
+        "button_link": "shopify://pages/fragrance-finder",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "41b85dbe-2da2-40be-9641-3edff5b5d754": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_YbPUPp": {
+          "type": "collection",
+          "settings": {
+            "collection": "perfume",
+            "label": "Fragrance",
+            "button_text": "shop more fragrance",
+            "button_url": "shopify://collections/perfume"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YbPUPp"
+      ],
+      "custom_css": [
+        ".product-item__cta {border-radius: 25px; background: black; color: white;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"heading heading--large\" style=\"padding-top:30px;\">Fragrance Gifts</div>",
+        "content": "<p>20% OFF Select Items</p>",
+        "products_count": 28,
+        "products_per_row": 5,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "slideshow_UKfwc7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_7RzBfJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PDP_april_2025_unicorn_plushies.gif",
+            "smaller_columns": false,
+            "show_extra_padding": true,
+            "show_extra_column_padding": true,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": true,
+            "gradient_name": "bg-glowphoria-light-radial",
+            "text_position": "middle_center",
+            "title": "",
+            "body_copy": "<div class=\"slideshow-body-copy\"> <h3 class=\"neue haas grotesk text pro--large\">PACIFICA MERCH</h3>\n\n<p></p>\n\n<div class=\"slideshow-body-copy\"> \n\n<p>Limited Edition Pacifica Merch – cool, vibe-lifting gifts for Mom (and maybe you, too). Thoughtfully curated by the fairy godmother of clean, vegan beauty.</p>\n\n<p style=\"font-weight:500;\">Brook Harvey-Taylor<br>Founder, CEO, and Chief Scentologist</p>\n</div>\n</div>",
+            "subheading": "",
+            "button_1_text": "Shop Now",
+            "button_1_link": "shopify://collections/pacifica-beauty-merch",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#fef7f1",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_7RzBfJ"
+      ],
+      "custom_css": [
+        ".slideshow-body-copy {width: 100%; margin: auto; text-align: center;}",
+        "@media (min-width: 1000px) {.slideshow-body-copy {width: 80%; }}",
+        "h3 {margin-bottom: 0;}",
+        ".button--primary {border-radius: 20px;}",
+        ".section--flush {max-width: 1520px; margin: auto;}"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_NJNK3X": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_AzwrU9": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles",
+            "label": "bundles",
+            "button_text": "shop more bundles",
+            "button_url": "shopify://collections/bundles"
+          }
+        }
+      },
+      "block_order": [
+        "collection_AzwrU9"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"heading heading--large\" style=\"padding-top:30px;\">Shop Bundle Gifts</div>",
+        "content": "",
+        "products_count": 28,
+        "products_per_row": 5,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "rich_text_jcY4C9": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<p>#PacificaWellnessEra Contest Videos</p>",
+        "content": "<p>Looking for some fun wellness inspo while you shop for mom? Check out these mood-boosting videos submitted by contestants in our Wellness Era Contest. Semi-finalists will be announced on May 9th, 2025!</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ddf1f4",
+        "text_color": "#000000",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "17460492566d95b44a": {
+      "type": "apps",
+      "blocks": {
+        "live_shopping_by_livemeup_carrousel_tffpp3": {
+          "type": "shopify://apps/livemeup-live-shopping/blocks/carrousel/82ccf4ed-67f8-4725-9167-e54475d4748e",
+          "settings": {
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "block_position": "justify-content: center;",
+            "rounded_borders": false,
+            "play_button": false,
+            "show_title": false,
+            "gap": 12,
+            "size": 250,
+            "gap_mobile": 16,
+            "size_mobile": 75,
+            "border_color": "",
+            "border_thickness": 1
+          }
+        }
+      },
+      "block_order": [
+        "live_shopping_by_livemeup_carrousel_tffpp3"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "32cd36f0-d228-43df-988f-513472886bf4": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0001_vitamin-c.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vitamin c",
+            "content": "<p>Powerful antioxidant that helps brighten, even and renew skin tone. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0008_vanilla.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vanilla extract",
+            "content": "<p>Promotes healthier skin with antioxidizing properties. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_6i3rAr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0006_glycolic-acid.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "glycolic acid",
+            "content": "<p>Chemically exfoliates to help dissolve dead skin cells. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0000_aha.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "AHAS",
+            "content": "<p>Skin renewing agents that help to gently exfoliate the skin. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0021_pineapple-papaya.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pineapple + papaya",
+            "content": "<p>These fruit enzymes help dissolve oil, debris, and slough-off dead skin cells. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GcezEt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0005_lactic-acid.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "lactic acid",
+            "content": "<p>Helps brighten, exfoliate, and fade the appearance of dark spots and hyperpigmentation. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_i3TgQV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/rice_powder.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "rice starch",
+            "content": "<p>Manually exfoliates to help unclog the skin from impurities, makeup, pollution, and the things you do daily. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GxVHT6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0014_kakadu-plum.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "kakadu plum",
+            "content": "<p>Highest recorded amount of vitamin C of any other food! Helps to even and improve skin texture for skin radiance. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_HHQd9J": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0015_grapes.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "grape extract",
+            "content": "<p>\nHelps to even out skin tone and known to make skin softer and more supple \nHelps even skin tone for softer, smoother, suppler skin. \n</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_L98mga": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0009_niacinamide.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "niacinimide",
+            "content": "<p>Helps retain skin moisture while improving the appearance of pores. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_JeLddy": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0007_pumpkin.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pumpkin",
+            "content": "<p>A fruit acid that helps remove dead skin cells for even, smooth, and restored skin. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2",
+        "item_6i3rAr",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4",
+        "item_GcezEt",
+        "item_i3TgQV",
+        "item_GxVHT6",
+        "item_HHQd9J",
+        "item_L98mga",
+        "item_JeLddy"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {line-height: normal; margin-top: 5px;}",
+        ".h5 {padding-top: 15px; margin: 0;}",
+        ".heading--large {margin-top: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "<div class=\"heading heading--large font-california-coast\">essential ingredients</div>",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#bcfafd",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_c9phwz": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs\">\n\n<div class=\" col-xs-12 col-md-10 text--center\" style=\"padding-bottom:35px;\"> <span class=\"header h2 font-melt\">the routine</span>\n</div>\n\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "gallery_NiUC6p": {
+      "type": "gallery",
+      "blocks": {
+        "image_eJeXCY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Face-Wash.jpg",
+            "caption": "<p><strong>Cleanse: </strong>Clean skin should always be the first step in any skin care routine. Our <a href=\"/products/glow-baby-brightening-face-wash\" title=\"Glow Baby Brightening Face Wash\">Glow Baby Brightening Face Wash</a> is a great cleanser to start with. </p>"
+          }
+        },
+        "image_VXbMDT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Enzyme-Scrub.jpg",
+            "caption": "<p><strong>Exfoliate: </strong>Our <a href=\"/products/glow-baby-super-lit-enzyme-scrub\" title=\"Glow Baby Super Lit Enzyme Scrub\">Glow Baby Super Lit Enzyme Scrub</a> gently dissolves and lifts impurities to help unclog pores for refreshedand smooth skin. </p>"
+          }
+        },
+        "image_3pzTW9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Glow-Baby.jpg",
+            "caption": "<p><strong>Serum Up:</strong> Our <a href=\"/products/glow-baby-booster-serum\" title=\"Glow Baby Booster Serum\">Glow Baby Booster Serum</a> can be applied right after your AM cleansing for a dewy, radiant canvas.</p>"
+          }
+        },
+        "image_JhAdxc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Super-Lit-SPF.jpg",
+            "caption": "<p><strong>Don't Skip on Sunscreen:</strong> Vitamin C and sunscreen are a match made in heaven, working together to help protect your skin from sun damage and environmental stressors. Try our <a href=\"/products/glow-baby-glow-baby-super-lit-spf-lotion\" title=\"Glow Baby Super Lit SPF Lotion\">Glow Baby Super Lit SPF Lotion</a>. </p>"
+          }
+        },
+        "image_zTJHbq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Setting-Mist.jpg",
+            "caption": "<p><strong>Set, Refresh, Glow:</strong> Glow on the go! Refresh anytime, anywhere with our Glow Baby Setting Mist to setand protect your radiance throughout your day.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_eJeXCY",
+        "image_VXbMDT",
+        "image_3pzTW9",
+        "image_JhAdxc",
+        "image_zTJHbq"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".header {text-align: center; color: black;}",
+        "section {padding-top: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<span class=\"heading heading--large font-california-coast\">the routine</span>",
+        "show_arrows": false,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "testimonials_PLc8yj": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_8GhFAJ": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"I have received so many compliments wearing this perfume.\"",
+            "author": "★★★★★"
+          }
+        },
+        "testimonial_rXmGqn": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        },
+        "testimonial_aDLp3e": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        },
+        "testimonial_Tb7rXG": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_8GhFAJ",
+        "testimonial_rXmGqn",
+        "testimonial_aDLp3e",
+        "testimonial_Tb7rXG"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nI love this product so so much! It makes my skin so glowy and even – I feel so confident when wearing it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">ABBIE</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Booster Serum",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nThis cream has made a huge difference in my under eye area. I put it on every morning. I love it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">MARISOL</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Eye Bright Cream",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "quote_XY38gq": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nSince switching to the Glow Baby line my skin is more beautiful than ever. I have received more compliments on my skin in the last year than I have my entire life!\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">CARA B</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Face Wash",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "video_aXQddV": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "highlight": false,
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "quote_VERjbz": {
+          "type": "quote",
+          "disabled": true,
+          "settings": {
+            "highlight": true,
+            "subheading": "MONTANA SKY SPRAY PERFUME",
+            "content": "SMELLS LIKE A NIGHT IN THE MOUNTAINS!",
+            "author": "– Mary Manatee",
+            "background": "#d6f9f3",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1",
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6",
+        "quote_XY38gq",
+        "video_aXQddV",
+        "quote_VERjbz"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".promotion-block__content-wrapper {padding: 0; margin: 0;}",
+        ".promotion-block--large {--promotion-block-min-height: none;}",
+        ".heading--small {font-size: 26px;}",
+        ".promotion-block {align-items: flex-start; text-align: center;}",
+        "p {padding-top: 0; margin-top: 0;}",
+        "h5 {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "large",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_liquid_ce48ck": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "<div data-crl8-container-id=\"gallery-2sy1nuwT\" data-crl8-filter=\"productId:'3955581059160'\"></div>\n{% comment %}this is using the 'other' website gallery with the product ID filter because we couldn't clear out old content from product gallery without BV intervention. try replacing product sku with product id if this doesn't work.{% endcomment %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_phbffb": {
+      "type": "custom-html",
+      "custom_css": [
+        "section {margin: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row middle-xs center-xs\">\n<div class=\"col-xs-12 col-md-8\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Pacifica-Values.jpg?v=1714690707\"></div>\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_DhmhGJ": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_ggzniQ": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-gift",
+            "title": "free gift",
+            "content": "<p>Free gift with all orders $40+</p>"
+          }
+        },
+        "item_PicwWR": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-love",
+            "title": "earn rewards",
+            "content": "<p>Join our <a href=\"/pages/rewards\" title=\"Pacifica Beauty Rewards Program\">loyalty program</a></p>"
+          }
+        },
+        "item_x8NCCf": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-chat",
+            "title": "contact us",
+            "content": "<p>Need help? Chat with us below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_ggzniQ",
+        "item_PicwWR",
+        "item_x8NCCf"
+      ],
+      "custom_css": [
+        "svg {width: 70px !important; height: 70px !important;}",
+        ".heading--small {font-weight: normal; margin-block-end: 0; font-size: 26px; text-transform: none;}",
+        "p {margin-top: 0;}"
+      ],
+      "settings": {
+        "background": "#bcfafd",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "main",
+    "16397758758c69c057",
+    "slideshow_original_UUVBqr",
+    "timeline_xhMtMq",
+    "rich_text_hKtN7M",
+    "video_Ybb4bj",
+    "rich_text_rFXbyL",
+    "41b85dbe-2da2-40be-9641-3edff5b5d754",
+    "slideshow_UKfwc7",
+    "featured_collections_NJNK3X",
+    "rich_text_jcY4C9",
+    "17460492566d95b44a",
+    "32cd36f0-d228-43df-988f-513472886bf4",
+    "custom_html_c9phwz",
+    "gallery_NiUC6p",
+    "testimonials_PLc8yj",
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c",
+    "custom_liquid_ce48ck",
+    "custom_html_phbffb",
+    "text_with_icons_DhmhGJ"
+  ]
+}

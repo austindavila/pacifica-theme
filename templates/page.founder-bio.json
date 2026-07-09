@@ -1,0 +1,281 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "06d2617c-986d-4112-89c6-791434f1b72d": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-top: 10px; padding-bottom: 20px;}",
+        ".font-tan-nimbus {font-family: \"tannimbus\";}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<h1 class=\"heading h1 text--center font-tan-nimbus\n\">for brook harvey-taylor</h1><p class=\"text--center heading h5\" style=\"line-height:1.4em;\">Founder and CEO, natural beauty should coexist with conscious and compassionate living.</p>",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#f7f8fc",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "19997854-e48b-485f-abe6-e43a05831f09": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text-block__content:not(.image-with-text-block__content--tight) {padding: 30px;}",
+        ".image-with-text-block__content {background: transparent; background-image: url(\"https://cdn.shopify.com/s/files/1/1515/0462/files/about_us_mockup_banner_white_shape.png?v=1695931166\"); background-size: contain; background-repeat: no-repeat; background-position: center;}",
+        "h2 {font-weight: 500;}",
+        "p {margin: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/about_us_mockup_banner-10-03.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<h2>Pacifica</h2><p><em>[ Pa`ci´fi`ca]</em><strong> </strong>Inspired by a lyric by Joao and Astrud<br/>Gilberto. </p><p>Recalls the natural beauty of the pacific coastline. </p><p>Peaceful, calm.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "center",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "cccee4cf-c82f-46c3-81f7-56bb5babbf48": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__cccee4cf-c82f-46c3-81f7-56bb5babbf48-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/founder-hero-brook.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h1><strong>for brook harvey-taylor</strong>, founder and CEO, natural beauty should coexist with conscious and compassionate living. </h1>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__cccee4cf-c82f-46c3-81f7-56bb5babbf48-item-1"
+      ],
+      "custom_css": [
+        "strong {font-family: \"tannimbus\";}",
+        "p {line-height: 1.4em;}",
+        "h1 {font-weight: normal;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}",
+        ".container {padding: 40px 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "#eff8f8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6e22645c-2300-482a-89b3-b2803ec5c98a": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p>\nGrowing up on a small cattle ranch in Montana, Brook’s path to awareness started at a young age when her mother was diagnosed with Multiple Sclerosis. Seeking to eliminate all chemicals from her family’s environment, her mother had Brook and her sister work at the local food co-op to earn a discount on organic foods and products for holistic support. While stocking shelves as a teen, Brook was first exposed to natural beauty, or rather the lack of it, and dreamed of building her own brand anchored in safe ingredients. \n</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "#e0f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "0cac3cc9-4451-4eff-8cab-fe1455cbcde5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__0cac3cc9-4451-4eff-8cab-fe1455cbcde5-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/founder-temp-brook.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<p>Growing up on a small cattle ranch in Montana, Brook’s path to awareness started at a young age when her mother was diagnosed with Multiple Sclerosis. Seeking to eliminate all chemicals from her family’s environment, her mother had Brook and her sister work at the local food co-op to earn a discount on organic foods and products for holistic support. While stocking shelves as a teen, Brook was first exposed to natural beauty, or rather the lack of it, and dreamed of building her own brand anchored in safe ingredients. </p><p>While studying fine art and sociology at the University of Oregon, Brook apprenticed with an aromatherapist, and became obsessed with how essential oils powerfully benefited body, mind, and soul. Her excitement led to innovation, and she began blending oils to create beautiful fragrances with aromatherapeutic value. Crafting the first seven scents in her kitchen, Brook and her husband Billy Taylor took the perfumes to a trade show in San Francisco. Kindling enough positive attention to realize that Brook’s dream could become reality, the two returned to Portland to found Pacifica Beauty in 1996.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__0cac3cc9-4451-4eff-8cab-fe1455cbcde5-item-1"
+      ],
+      "custom_css": [
+        ".container {padding: 40px;}",
+        "h3 {font-family: \"tannimbus\";}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "#e0f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "09d65fc7-09b4-4fe9-92f9-8fb18f11ba42": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        ".vertical-breather--extra-tight {padding-top: 50px; padding-bottom: 80px;}",
+        ".font-tan-nimbus {font-family: \"tannimbus\";}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p>\nGrowing up on a small cattle ranch in Montana, Brook’s path to awareness started at a young age when her mother was diagnosed with Multiple Sclerosis. Seeking to eliminate all chemicals from her family’s environment, her mother had Brook and her sister work at the local food co-op to earn a discount on organic foods and products for holistic support. While stocking shelves as a teen, Brook was first exposed to natural beauty, or rather the lack of it, and dreamed of building her own brand anchored in safe ingredients. \n<br><br>While studying fine art and sociology at the University of Oregon, Brook apprenticed with an aromatherapist, and became obsessed with how essential oils powerfully benefited body, mind, and soul. Her excitement led to innovation, and she began blending oils to create beautiful fragrances with aromatherapeutic value. Crafting the first seven scents in her kitchen, Brook and her husband Billy Taylor took the perfumes to a trade show in San Francisco. Kindling enough positive attention to realize that Brook’s dream could become reality, the two returned to Portland to found Pacifica Beauty in 1996.\n<br><br>\nWhile studying fine art and sociology at the University of Oregon, Brook apprenticed with an aromatherapist, and became obsessed with how essential oils powerfully benefited body, mind, and soul. Her excitement led to innovation, and she began blending oils to create beautiful fragrances with aromatherapeutic value. Crafting the first seven scents in her kitchen, Brook and her husband Billy Taylor took the perfumes to a trade show in San Francisco. Kindling enough positive attention to realize that Brook’s dream could become reality, the two returned to Portland to found Pacifica Beauty in 1996.\n<br><br>\nRaising and falling in love with animals her whole life on the ranch, only to be continuously heartbroken when they were sent away to be killed, Brook’s lifestyle choices became centered in advocacy for animal rights at a young age. Seeking to implement her personal values of conscious living with natural beauty, Brook and Billy set out to challenge the status quo by creating clean, 100% vegan and cruelty-free products made with natural ingredients at accessible price points. Leading with kindness and quality, Brook initiated a grassroots movement in beauty by carving out a new current pillared in ingenuity, community, and empathy. With an artist’s eye for packaging, a talent for blending scents, and a scientific dedication to formulating highly effective products in sustainable packaging, Brook has succeeded in developing honest beauty that delivers powerful results and delights the senses to benefit both body and planet. \n<br><br>\nBeyond her role as a pioneering entrepreneur Brook lives on a small farm in Southern California. Surrounded by oaks, jasmine, and the Pacific Ocean, she enjoys surfing and spending time with her husband, three kids, three dogs, and 1 cat.\n\n</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "255706b7-e5a9-4d29-ab14-214fb16678e1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__255706b7-e5a9-4d29-ab14-214fb16678e1-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/founder-temp2-brook.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<p>Raising and falling in love with animals her whole life on the ranch, only to be continuously heartbroken when they were sent away to be killed, Brook’s lifestyle choices became centered in advocacy for animal rights at a young age. Seeking to implement her personal values of conscious living with natural beauty, Brook and Billy set out to challenge the status quo by creating clean, 100% vegan and cruelty-free products made with natural ingredients at accessible price points. </p><p>Leading with kindness and quality, Brook initiated a grassroots movement in beauty by carving out a new current pillared in ingenuity, community, and empathy. With an artist’s eye for packaging, a talent for blending scents, and a scientific dedication to formulating highly effective products in sustainable packaging, Brook has succeeded in developing honest beauty that delivers powerful results and delights the senses to benefit both body and planet. <br/><br/>Beyond her role as a pioneering entrepreneur Brook lives on a small farm in Southern California. Surrounded by oaks, jasmine, and the Pacific Ocean, she enjoys surfing and spending time with her husband, three kids, three dogs, and 1 cat.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__255706b7-e5a9-4d29-ab14-214fb16678e1-item-1"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"tannimbus\";}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}",
+        ".container {padding: 40px 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "cycle_speed": 3,
+        "accent_background": "#cdeceb",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "66714a7f-efef-4541-aeb8-d6bb7508e87f": {
+      "type": "image-with-text",
+      "blocks": {
+        "38e4bb4d-e20f-4030-b8a7-85b8782639bc": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/founder-temp2-brook.png",
+            "tab_label": "Item",
+            "subheading": "Subheading",
+            "title": "Image with text",
+            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "38e4bb4d-e20f-4030-b8a7-85b8782639bc"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-bottom: 60px;}",
+        "h3 {font-family: \"tannimbus\";}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "#ffbf8e",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "06d2617c-986d-4112-89c6-791434f1b72d",
+    "19997854-e48b-485f-abe6-e43a05831f09",
+    "cccee4cf-c82f-46c3-81f7-56bb5babbf48",
+    "6e22645c-2300-482a-89b3-b2803ec5c98a",
+    "0cac3cc9-4451-4eff-8cab-fe1455cbcde5",
+    "09d65fc7-09b4-4fe9-92f9-8fb18f11ba42",
+    "255706b7-e5a9-4d29-ab14-214fb16678e1",
+    "66714a7f-efef-4541-aeb8-d6bb7508e87f"
+  ]
+}

@@ -1,0 +1,412 @@
+<div id="RewardsPage">
+
+{% render 'reward-icons' %}
+
+<!-- HEADER -->    
+<div class="container" style="padding:0;">
+
+  <div class="page-header row start-xs middle-xs bg-french-lilac column-reverse-mobile">
+
+      <div class="col-xs-12 col-sm-12 col-md-6 bg-img" style="background: url({{ 'loyalty-header.jpg' | file_url }}); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 header-copy">
+
+      {% if customer %}
+
+        <h1 class="heading h3 text--center">Welcome Back {{ customer.first_name }}!</h1>
+        <!-- <div class="subhead">Your points: <b><span data-lion-points='approved'></span></b></div> -->
+        <div class="heading heading--small text--center">Your points: <span id="customer-points-approved"></span></div>  
+        <div class="heading heading--small text--center">Your tier: <span id="customer-tier"></span></div> 
+
+      {% else %}
+
+        <div class="">
+
+          <!-- <h1  class="heading h3 text--center">Girl Code Reward Program</h1> -->
+
+          <div>We care for our people just like we care about doing good, and we always believe that kindness is key. That’s why we want to give you lots of fun insider perks for being so loyal, and also to thank you for being as compassionate about our planet and animals as we are.
+          </div>
+              
+          <div class="text--center" style="padding-top:20px;">
+            <a href="/account/register"><div class="button button--secondary">Sign Up</div></a>
+             <a href="/account"><div class="button button--secondary">Log In</div></a>
+          </div>
+
+        </div>
+
+      {% endif %}
+
+      </div>
+  </div>
+
+</div>
+
+
+{% if customer %}
+
+<div class="row text--center center-xs vertical-breather">
+      <div class="col-xs-12 col-md-5">
+          <!-- <i style="font-size: 50px;" class="fal fa-megaphone"></i> -->
+<!--           <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/ll-refer-a-friend-temp.png?v=1615483863" alt="Refer A Friend" style="width: 260px;"> -->
+           <h2 class="heading h1 text--center font-awesome-extratall-italic" style="margin:15px;">Refer a Friend</h2>
+           <div style="padding: 0 0 20px 0;">Give a friend 15% off their first order and get 100 points when they purchase.</div>
+           <!-- <span data-lion-referral-url></span> -->
+           <a href="#" data-lion-refer><div class="button button--primary">Share and Earn</div></a>
+      </div>
+    </div>
+
+
+{% else %}
+
+  <div class="vertical-breather">
+    <div class="row text--center">
+        <div class="col-xs-12">
+             <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding-bottom:20px;">Three Easy Steps</h2>
+        </div>
+      </div>
+
+      <div class="row">
+       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text--center dots">
+             <div class="big-dot bg-light-blue">1</div>
+             <h3>Create Account</h3>
+             <p>25 points</p>
+        </div>
+
+       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text--center dots">
+             <div class="big-dot bg-light-blue">2</div>
+             <h3>Start Earning</h3>
+             <p>$1 = 1 point</p>
+        </div>
+
+       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text--center dots">
+             <div class="big-dot bg-light-blue">3</div>
+             <h3>Get Your Rewards</h3>
+             <p>Discounts</p>
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+        
+{% comment %}
+    <!-- loyalty panel -->
+    <!-- https://developers.loyaltylion.com/sdk/components/loyalty-panel -->
+    <!-- <div data-lion-account></div> -->
+
+    <!-- insert login buttons here and have login button take people back to the rewards page. or launch a modal so it stays on this page -->
+
+    <!-- these change display depending on if you are logged in -->
+{% endcomment %}
+
+
+  {% comment %} EARN POINTS {% endcomment %}
+    
+    <!-- if logged in -->
+    {% if customer %}
+    <div class="vertical-breather--tight">
+        <h2 class="heading h1 text--center font-awesome-extratall-italic">Earn Points</h2>   
+    </div>
+      <!-- rules list -->
+    <div data-lion-rules-list></div>
+
+
+    <!-- if not logged in -->
+    {% else %}
+        
+      <div class="text--center circle-img">
+        <!-- <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/ll-circle-image-temp3.png?v=1614966004"> -->
+        <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Ways to Earn Points</h2>  
+    </div>
+
+        <div class="row center-xs icons vertical-breather">
+            <div class="col-xs-6 col-md-4">
+            <i class="fal fa-user-circle"></i>
+            <h3>Create Account</h3>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <i class="fal fa-credit-card"></i>
+            <h3>Make Purchases</h3>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <i class="fab fa-instagram"></i>
+            <h3>Follow Us on Social</h3>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <i class="fal fa-user-friends"></i>
+            <h3>Refer a Friend</h3>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <i class="fal fa-star"></i>
+            <h3>Write a Review</h3>
+          </div>
+        </div>
+
+   {% endif %}
+
+  {% comment %} REDEEM REWARDS {% endcomment %}
+
+    <!-- if logged in -->
+    {% if customer %}
+        <div class="vertical-breather--tight">
+          <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Redeem Rewards</h2>  
+        </div>
+
+        <div data-lion-rewards-list></div>
+
+    <!-- if not logged in -->
+    {% else %}
+         <div class="text--center circle-img vertical-breather--tight">
+            <!-- <span>{{ svg_shopping }}</span> -->
+            <!-- <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/ll-circle-image-temp4.png?v=1614966324"> -->
+            <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Ways to Redeem Points</h2>  
+        </div>
+
+         <div class="row icons vertical-breather">
+
+<!--           <div class="col-xs-12 col-sm-12 col-md-4 text--center">
+            <i class="fal fa-gifts"></i>
+            <h3>Free Products</h3>
+            <p>Cash in your points for amazing products + freebies.</p>
+          </div> -->
+          <div class="col-xs-12 col-sm-12 col-md-12 text--center">
+            <i class="fal fa-tag"></i>
+            <h3>Discounts on Purchases</h3>
+            <p>Redeem vouchers for discounts on future purchases.</p>
+          </div>
+<!--           <div class="col-xs-12 col-sm-12 col-md-4 text--center">
+            <i class="fal fa-hands-heart"></i>
+            <h3>Donate to Charity</h3>
+            <p>Donate your points to one of our favorite charities.</p>
+          </div> -->
+
+        </div>
+   {% endif %}
+
+   
+
+    <!-- if logged in -->
+    {% if customer %}
+<!--         <div class="SectionHeader--center bg-vivid-tangerine">
+          <span>{{ svg_star }}</span><h2 class="">Your Status</h2>      
+        </div>
+        <div data-lion-tier-overview></div> -->
+    <!-- if not logged in -->
+    {% else %}
+         <div class="text--center circle-img vertical-breather">
+            <!-- <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/ll-circle-image-temp.png?v=1614965222"> -->
+            <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Program Structure</h2>       
+        </div>
+        <!-- <div data-lion-tier-benefits-compare></div> -->
+
+  <!-- benefits table -->
+  <div class="benefits-tier-compare" style="overflow-x: auto;">
+    <table style="margin-left: auto; margin-right: auto;" dir="ltr" cellspacing="0" cellpadding="10" align="center">
+    <colgroup> 
+      <col class="master-col"> <col class="sub-col"> <col  class="sub-col"> <col  class="sub-col"> 
+    </colgroup>
+      <tbody>
+      <tr style="border-bottom: 4px solid #FFFFFF;">
+      <td class="re-circs" style="text-align: right;">
+        <div class="re-level re-level-1">
+          <h3 style="text-align: left; padding-left:10px;">REWARDS</h3>
+        </div>
+        <!-- <p class="re-level-p re-level-p-1"><em><br><br>yearly spend</em></p> -->
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-1">
+          <h3>Friend Status</h3>
+          <i class="fal fa-gem"></i>
+        </div>
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-2">
+          <h3>Girl Crush</h3>
+          <i class="fad fa-gem"></i>
+        </div>
+      </td>
+      <td class="re-circs" role="columnheader">
+        <div class="re-level re-level-3">
+        <h3>Bestie Forever</h3>
+        <i class="fas fa-gem"></i>
+        </div>
+      </td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>12 Month Spend*</div>
+        </td>
+        <td class="td-dot">1 point <br class="hidden-lap-and-up">per $1</td>
+        <td class="td-dot">2 points <br class="hidden-lap-and-up">per $1</td>
+        <td class="td-dot">3 points <br class="hidden-lap-and-up">per $1</td>
+      </tr>
+<!--       <tr class="shading">
+        <td class="re-title">
+          <div>Friends & Family</div>
+        </td>
+        <td class="td-dot">10% <br class="hidden-lap-and-up">OFF</td>
+        <td class="td-dot">15% <br class="hidden-lap-and-up">OFF</td>
+        <td class="td-dot">20% <br class="hidden-lap-and-up">OFF</td>
+      </tr> -->
+<!--       <tr>
+        <td class="re-title">
+          <div>Anniversary Offer</div>
+        </td>
+        <td class="td-dot">10% <br class="hidden-lap-and-up">OFF</td>
+        <td class="td-dot">15% <br class="hidden-lap-and-up">OFF</td>
+        <td class="td-dot">20% <br class="hidden-lap-and-up">OFF</td>
+      </tr> -->
+      <tr>
+        <td class="re-title">
+          <div>Free Shipping</div>
+        </td>
+        <td class="td-dot">Over <br class="hidden-lap-and-up">$50</td>
+        <td class="td-dot">Two <br class="hidden-lap-and-up">Vouchers</td>
+        <td class="td-dot">Always</td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>Free Gifts</div>
+        </td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+      <tr>
+        <td class="re-title">
+          <div>Discount Vouchers</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+      <tr class="shading">
+        <td class="re-title">
+          <div>Early Access to Product Launches</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+        <tr>
+        <td class="re-title">
+          <div>Birthday Offer</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr>
+<!--       <tr class="shading">
+        <td class="re-title">
+          <div>Product Sampling</div>
+        </td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot">&nbsp;</td>
+        <td class="td-dot"><i class="fad fa-diamond"></i></td>
+      </tr> -->
+        
+      </tbody>
+    </table>
+    <p style="font-size: 14px;text-align: center; font-style:italic;">*Tiers are based on cumulative points over the past 12 months</p>
+  </div>
+
+
+
+   {% endif %}
+
+    <!-- tier overview --><!-- 
+     -->
+<!--     <div data-lion-tier-rewards-compare></div> -->
+    <!-- https://developers.loyaltylion.com/sdk/components/tier-benefits-compare -->
+    <!-- Before embedding the Tier benefits component, please submit a request to our support team with the benefit(s) you would like to add for each tier. Skipping this step will result in an empty Tier benefits component.-->
+    
+
+
+    <!-- if logged in show activity history-->
+    {% if customer %}
+
+    <div class="vertical-breather--tight">
+        <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Your Account Activity</h2>   
+    </div>
+        <!-- activity history -->
+        <div data-lion-history-table></div>
+
+        
+    <div class="vertical-breather--tight">
+       <h2 class="heading h1 text--center font-awesome-extratall-italic" style="padding:10px;">Reward History</h2>  
+    </div>
+    <!-- claimed rewards -->
+    <div data-lion-claimed-rewards-list></div>
+
+
+  {% else %}
+        <div class="row center-xs vertical-breather">
+          <div class="col-xs-12 col-md-6">
+            <h2>Ready to Get Started?</h2>
+          <a href="/account/register"><div class="button button--primary">Sign Up</div></a>
+            <a href="/account"><div class="button button--primary">Log In</div></a>
+          </div>
+        </div>
+    {% endif %}
+
+</div>
+
+
+
+<!-- https://developers.loyaltylion.com/api/resources/customers -->
+<script type="text/javascript">
+
+{% if customer %}
+
+ var options = {
+    customer_id: "{{ customer.id }}",
+    customer_email: "{{ customer.email }}"
+    }
+
+
+  window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        console.log("starting ajax call to loyalty endpoint");
+                  
+      $.ajax({
+          type: "POST",
+          url: "https://pb-middleware.herokuapp.com/loyalty-lion-customer",
+          cache: false,
+          data: options,
+          success: function (data) {
+              // console.log("customer data found")
+              // console.log(data);
+              var customer = data.body.customers[0];
+              // console.log(customer.loyalty_tier_membership.loyalty_tier.name);
+              // console.log(customer.points_spent);
+              // console.log(customer.points_approved);
+              // lion.ui.refresh();
+              $( "#customer-points-approved" ).text(customer.points_approved);
+              $( "#customer-tier" ).text(customer.loyalty_tier_membership.loyalty_tier.name);
+          },
+          error: function (error) {
+              console.log("error getting customer data");
+          }
+      });
+
+    } else {
+        // jQuery is not loaded
+        // console.log("jquery not loaded");
+    }
+
+};
+  
+{% endif %}
+
+</script>
+
+
+
+{% comment %} this sends customer ID to herokup app {% endcomment %}
+{% if customer %}
+   <script type="text/javascript">
+        window.customerId = "{{ customer.id }}";
+        window.customerEmail = "{{ customer.email }}";
+    </script> 
+{% endif %}

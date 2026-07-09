@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "totals": {
+          "type": "totals",
+          "settings": {}
+        },
+        "257f097f-6b0a-4283-b474-65fe9a10f827": {
+          "type": "express_checkout_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "totals",
+        "257f097f-6b0a-4283-b474-65fe9a10f827"
+      ],
+      "settings": {
+        "show_payment_methods": true,
+        "show_shipping_estimator": false,
+        "shipping_estimator_default_country": "United States",
+        "empty_button_link": "shopify://collections/skincare"
+      }
+    },
+    "cart-recommendations": {
+      "type": "cart-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cart-recommendations"
+  ]
+}

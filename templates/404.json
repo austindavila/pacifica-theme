@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-not-found",
+      "settings": {}
+    },
+    "164858987756f6536b": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "kind-beauty-blog",
+        "subheading": "Stay up-to-date",
+        "title": "Kind Beauty Blog",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16485899824a83df19": {
+      "type": "featured-collections",
+      "blocks": {
+        "16485899823aef38b5-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "skincare",
+            "label": "Skincare",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "f637b8bc-8a47-4be9-8396-0065ae5881dc": {
+          "type": "collection",
+          "settings": {
+            "collection": "clean-makeup-nail-polish",
+            "label": "Makeup",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "2b4945da-896e-4402-bf5a-945f2fe914c6": {
+          "type": "collection",
+          "settings": {
+            "collection": "perfume",
+            "label": "Perfume",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "11b78f50-d81b-47aa-b6ff-429e848795bc": {
+          "type": "collection",
+          "settings": {
+            "collection": "bath-body",
+            "label": "Bath & Body",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "a104c655-4796-4932-b35f-1613d031aa66": {
+          "type": "collection",
+          "settings": {
+            "collection": "hair",
+            "label": "Haircare",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "16485899823aef38b5-0",
+        "f637b8bc-8a47-4be9-8396-0065ae5881dc",
+        "2b4945da-896e-4402-bf5a-945f2fe914c6",
+        "11b78f50-d81b-47aa-b6ff-429e848795bc",
+        "a104c655-4796-4932-b35f-1613d031aa66"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Browse Collections",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164858987756f6536b",
+    "16485899824a83df19"
+  ]
+}

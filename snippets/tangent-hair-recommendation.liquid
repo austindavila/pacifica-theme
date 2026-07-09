@@ -1,0 +1,179 @@
+<link rel="stylesheet" href="https:{{ 'tangent_ff_recommendation.css' | asset_url }}">
+{% assign buttonTextColor = "black" %}
+{% assign buttonBgColor = "#afc5ec" %}
+{% assign settings_width = 100 %}
+<style>
+  .tangent-general-text,
+  #tangent-products-section > div > p,
+  .tangent-btn-add>a,
+  #tangent-products-section > div > a > p {
+    color: {{ buttonTextColor }};
+    text-decoration: none;
+  }
+  #message-text {
+    color: {{ buttonTextColor }};
+  }
+  .tangent-btn-add {
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    cursor: pointer;
+    margin: 0px auto;
+    display: grid;
+    background: rgb(0, 0, 0);
+    font-size: 13px;
+    padding: 8px 40px;
+    box-shadow: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+  }
+  .tangent-product-add-btn-wrapper>p{
+    color:#fff!important;
+  }
+  .tangent-product-add-btn-wrapper>p:hover{
+    color:#000!important;
+  }
+  .tangent-btn-add:hover {
+    background: #dce9ff;
+  }
+  #tangent-add-all-to-cart {
+    color: {{ settings.colors_background }}
+    ;
+    {% if buttonTextColor != buttonBgColor %}
+      color: {{ buttonBgColor }}
+      ;
+    {% endif %}
+    background: {{ buttonTextColor }};
+  }
+  .tangent_selected-variant {
+    {% if buttonTextColor != buttonBgColor %}
+      color: {{ buttonBgColor }}
+      ;
+    {% endif %}
+    background: {{ buttonTextColor }};
+  }
+  .added-to-cart-style {
+    background-color: #dce9ff;
+    cursor: none;
+    pointer-events: none;
+  }
+  .tangent_add_all_to_cart_button{
+    display: none!important; 
+  }
+  .tangent_product_title_text{ 
+    padding-top:0 !important;
+    font-weight:normal;
+    margin-top:10px !important;
+  }
+  #tangent-products-section{
+    padding-top:0px !important;
+  }
+  #tangent-checkout-description{
+    padding-top:0 !important;
+  }
+  #tangent-checkout-description h1{
+    font-weight:400 !important;
+  }
+  .tangent_product_title_text b{
+    font-weight:400 !important;
+    font-size:20px;
+  }
+  .tangent-product-title, .tangent_recommendation_description_wrapper{
+    line-height:normal;
+  }
+  .tangent_product_title_text{
+    margin-bottom:0 !important;
+  }
+  .tangent_product_price_text{
+    padding-bottom:10px;
+    margin-top:0;
+  }
+</style>
+
+{% comment %} LANGUAGE ADAPTION {% endcomment %}
+{%- liquid 
+  assign addAllToCartText = "Add all to cart"  
+  assign generalText = "Here is the personalized recommendation for you!" 
+-%}
+
+{%- liquid 
+  case request.locale.iso_code 
+    when "es" 
+      assign addAllToCartText = "Agregar todo al carrito" 
+      assign generalText = "¡Aquí está la recomendación personalizada para usted!"
+    when "it" 
+      assign addAllToCartText = "Aggiungi tutto al carrello"
+      assign generalText = "Ecco la raccomandazione personalizzata per te!"
+    when "fr" 
+      assign addAllToCartText = "Ajouter tout au panier" 
+      assign generalText = "Voici la recommandation personnalisée pour vous!" 
+    when "de" 
+      assign addAllToCartText = "Fügen Sie alle zum Warenkorb hinzu" 
+      assign generalText = "Hier ist die personalisierte Empfehlung für Sie!" 
+    when "ja" 
+      assign addAllToCartText = "すべてをカートに追加します" 
+      assign generalText = "これがあなたのためのパーソナライズされた推奨事項です！" 
+    when "ko" 
+      assign addAllToCartText = "카트에 모두 추가하십시오" 
+      assign generalText = "다음은 귀하를위한 개인화 된 추천입니다!" 
+    when "pl" 
+      assign addAllToCartText = "Dodaj wszystko do koszyka" 
+      assign generalText = "Oto spersonalizowana rekomendacja dla Ciebie!" 
+    when "pt" 
+      assign addAllToCartText = "Adicione tudo ao carrinho" 
+      assign generalText = "Aqui está a recomendação personalizada para você!" 
+    when "pt-BR" 
+      assign addAllToCartText = "Adicione tudo ao carrinho" 
+      assign generalText = "Aqui está a recomendação personalizada para você!" 
+    when "ru" 
+      assign addAllToCartText = "Добавить все в корзину"  
+      assign generalText = "Вот персонализированная рекомендация для вас!"   
+    when "sl-SI" 
+      assign addAllToCartText = "Dodaj vse v košarico"  
+      assign generalText = "Tukaj je prilagojeno priporočilo za vas!"    
+    when "da" 
+      assign addAllToCartText = "Tilføj alt til indkøbskurv"  
+      assign generalText = "Her er den personlige anbefaling til dig!"
+    when "fi" 
+      assign addAllToCartText = "Lisää kaikki ostoskoriin"  
+      assign generalText = "Tässä on henkilökohtainen suositus sinulle!"        
+    else 
+      assign addAllToCartText = "Add all to cart" 
+      assign generalText = "Here is the personalized recommendation for you!" 
+  endcase 
+-%}
+
+<div
+  id="tangent-recommendation-div"
+  class="tangent_recommendation_parent_wrapper"
+  style="width: {{ settings_width }}%;margin:0 auto">
+  <p id="site-url" class="hide-element">{{ shop.url }}</p>
+  <p id="site-currency" class="hide-element">{{ cart.currency.symbol }}</p>
+  <p id="site-iso-code" class="hide-element">{{ request.locale.iso_code }}</p>
+
+  <div style="text-align:center">
+    <p id="tangent-checkout-description" class="tangent_recommendation_description_wrapper"></p>
+  </div>
+  <p id="tangent-general-text" class="tangent-general-text"></p>
+  <div id="tangent-selfie-container-div" class="tangent_selfie_container_parent_wrapper"></div>
+
+  
+
+  <div id="tangent-products-section" class="row tangent_product_parent_wrapper"></div>
+
+  <p style="margin-bottom: 0%;text-align:center">
+    <a
+      id="tangent-add-all-to-cart"
+      class="Button Button--primary custom-add-to-cart-tangent tangent_add_all_to_cart_button"
+      onclick="addAllTocartFunction()">{{ addAllToCartText }}</a>
+  </p>
+  <div id="message-text"></div>
+  <input
+    type="checkbox"
+    name="category"
+    value="true"
+    id="tangent_variant_view_check"
+    class="hide-element">
+
+</div>
+<script src="{{ 'tangent_hair_recommendation.js' | asset_url }}" async></script>

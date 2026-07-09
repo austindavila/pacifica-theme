@@ -1,0 +1,379 @@
+{% if settings.enable_pieeye %}
+  <script>
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+  }
+  
+  // Helper function to check and apply checkout consent
+  function checkAndApplyCheckoutConsent() {
+    try {
+      // Try getTrackingConsent() first
+      const trackingConsent = window.Shopify.customerPrivacy.getTrackingConsent();
+  
+      // Handle string responses - "no" means explicitly denied, "yes" means explicitly granted
+      if (typeof trackingConsent === 'string') {
+        if (trackingConsent === "no" || trackingConsent === "NO") {
+          return {
+            found: true,
+            consent: {
+              analytics: typeof window.Shopify?.customerPrivacy?.analyticsProcessingAllowed === "function"
+                ? window.Shopify.customerPrivacy.analyticsProcessingAllowed() === true
+                : false,
+              marketing: typeof window.Shopify?.customerPrivacy?.marketingAllowed === "function"
+                ? window.Shopify.customerPrivacy.marketingAllowed() === true
+                : false,
+              preferences: typeof window.Shopify?.customerPrivacy?.preferencesProcessingAllowed === "function"
+                ? window.Shopify.customerPrivacy.preferencesProcessingAllowed() === true
+                : false,
+              sale_of_data: typeof window.Shopify?.customerPrivacy?.marketingAllowed === "function"
+                ? window.Shopify.customerPrivacy.marketingAllowed() === true
+                : false,
+            }
+          };
+        } else if (trackingConsent === "yes" || trackingConsent === "YES") {
+          // When "yes", we should check if there are specific consent values stored
+          // For now, treat "yes" as all granted, but ideally we'd get the actual values
+          // This might need to be handled via subscribe callback for detailed consent
+          return {
+            found: true,
+            // If consent found means needs to set yes, but should check each category
+            consent: {
+              analytics: typeof window.Shopify?.customerPrivacy?.analyticsProcessingAllowed === "function"
+                ? window.Shopify.customerPrivacy.analyticsProcessingAllowed() === true
+                : false,
+              marketing: typeof window.Shopify?.customerPrivacy?.marketingAllowed === "function"
+                ? window.Shopify.customerPrivacy.marketingAllowed() === true
+                : false,
+              preferences: typeof window.Shopify?.customerPrivacy?.preferencesProcessingAllowed === "function"
+                ? window.Shopify.customerPrivacy.preferencesProcessingAllowed() === true
+                : false,
+              sale_of_data: typeof window.Shopify?.customerPrivacy?.marketingAllowed === "function"
+                ? window.Shopify.customerPrivacy.marketingAllowed() === true
+                : false,
+            }
+          };
+        } 
+      }
+    } catch (e) {
+      console.warn('Error checking getTrackingConsent():', e);
+    }
+    return { found: false, consent: null };
+  }
+  
+   // --- Geo API ---
+  async function getUserLocation() {
+    try {
+      const response = await fetch("https://geo.pii.ai/geo");
+      const data = await response.json();
+      return {
+        continent: data.location.continent.code,
+        country: data.location.country.code,
+        region: data.location.region.code,
+        city: data.location.city,
+        gpc: data.gpc
+      };
+    } catch (error) {
+      console.error("Error getting location from internal API:", error);
+      return null;
+    }
+  }
+
+  // --- Region-based rules ---
+  async function shouldEnableConsentByDefault(location) {
+    if (!location) return false;
+
+    const { country, region, continent, gpc } = location;
+    
+    // EU requires explicit consent
+    if (continent === "EU") return false;
+    
+    // GPC for US
+    if (gpc && country === "US") return false;
+
+    // Canada - Quebec requires explicit consent
+    if (country === "CA" && region === "CA-QC") return false;
+
+    // US - California requires explicit consent
+    if (country === "US" && region === "US-CA") return false;
+
+    // Default: implicit consent allowed
+    return true;
+  }
+
+  async function applyConsentSettings() {
+    const location = await getUserLocation();
+    return shouldEnableConsentByDefault(location);
+  }
+  
+  
+  // Main consent initialization function
+  function initializeConsent() {
+    let checkoutConsentFound = false;
+    let consentInitialized = false;
+  
+    // Helper function to apply PieEye cookie logic
+    async function applyPieEyeLogic() {
+      if (consentInitialized) return; // Already initialized
+      consentInitialized = true;
+  
+      console.log('Consent - No checkout consent found, checking PieEye cookie');
+      const pieEyeCookie = getCookie('PieEyeConsent');
+  
+      if (!pieEyeCookie) {
+          console.log('Consent - PieEyeConsent cookie not found, setting initial consent');
+         const allowedConsent = await applyConsentSettings();
+
+		if (!allowedConsent) {
+			window.Shopify.customerPrivacy.setTrackingConsent(
+			{
+				analytics: false,
+				marketing: false,
+				preferences: false,
+				sale_of_data: false,
+			},
+			() => console.log('Default explicit consent set')
+			);
+		} else {
+			window.Shopify.customerPrivacy.setTrackingConsent(
+			{
+				analytics: true,
+				marketing: true,
+				preferences: true,
+				sale_of_data: true,
+			},
+			() => console.log('Default Implied consent set')
+			);
+		}
+      } else {
+        console.log('Consent - PieEyeConsent cookie found, using existing consent settings');
+      }
+    }
+ 
+    // First, try to get checkout consent immediately
+    const immediateCheck = checkAndApplyCheckoutConsent();
+    if (immediateCheck.found) {
+      if (immediateCheck.consent) {
+        // We have the actual consent values, apply them immediately
+        console.log('Consent - Checkout consent found immediately with values, applying it:', immediateCheck.consent);
+        checkoutConsentFound = true;
+        consentInitialized = true;
+        window.Shopify.customerPrivacy.setTrackingConsent(immediateCheck.consent, () => {
+          console.log('Consent - Checkout consent applied successfully');
+        });
+        // Map our categories to appropriate cookie categories
+        // Strictly Necessary: always true (Shopify core requirement)
+        // Functionality: preferences
+        // Performance: analytics
+        // Targeting/Advertising: marketing or sale_of_data
+        // Create a cookie with the names of categories that are granted (true)
+        var grantedCategories = [];
+        grantedCategories.push('Strictly Necessary');
+        if (immediateCheck.consent.analytics === true) grantedCategories.push('Performance');
+        if (immediateCheck.consent.marketing === true || immediateCheck.consent.sale_of_data === true) grantedCategories.push('Targeting/Advertising');
+        if (immediateCheck.consent.preferences === true) grantedCategories.push('Functionality');
+        if (grantedCategories.length > 0) {
+          const domain = window.location.hostname;
+          //document.cookie = `pieeye-checkout-consent=${grantedCategories.join(',')};path=/;max-age=31536000;domain=${domain};SameSite=None;Secure`;
+          //document.cookie = `pieeye-checkout-consent=${grantedCategories.join(',')}; path=/; max-age=31536000;`;
+        }
+        return; // Exit early, skip PieEye cookie logic
+      } else {
+        // Consent exists but we need to wait for subscribe to get the actual values
+        console.log('Consent - waiting for subscribe callback to get values');
+        checkoutConsentFound = true; // Mark as found so we don't run PieEye logic
+        // Don't set consentInitialized yet - wait for subscribe to provide values
+      }
+    }
+  
+    // Subscribe to detect consent from checkout
+    let subscribeFired = false;
+    let pieEyeLogicApplied = false;
+  
+    if (typeof window.Shopify.customerPrivacy.subscribe === 'function') {
+      window.Shopify.customerPrivacy.subscribe(function(consent) {
+        console.log('Consent - subscribe callback received:', JSON.stringify(consent, null, 2));
+        subscribeFired = true;
+  
+        // First, try getTrackingConsent() again (it might be available now)
+        const trackingCheck = checkAndApplyCheckoutConsent();
+        if (trackingCheck.found && trackingCheck.consent && !checkoutConsentFound && !consentInitialized) {
+          console.log('Consent - Checkout consent found via getTrackingConsent() in subscribe callback');
+          checkoutConsentFound = true;
+          consentInitialized = true;
+          window.Shopify.customerPrivacy.setTrackingConsent(trackingCheck.consent, () => {
+            console.log('Consent - Checkout consent applied successfully from subscribe (getTrackingConsent)');
+          });
+          return;
+        }
+  
+        // Also try to extract from subscribe callback - check multiple possible formats
+        let visitorConsent = null;
+  
+        // Format 1: consent.visitorConsent
+        if (consent && consent.visitorConsent) {
+          visitorConsent = consent.visitorConsent;
+          console.log('Consent - Extracted visitorConsent from subscribe.visitorConsent:', visitorConsent);
+        }
+        // Format 2: consent.current.visitorConsent
+        else if (consent && consent.current && consent.current.visitorConsent) {
+          visitorConsent = consent.current.visitorConsent;
+          console.log('Consent - Extracted visitorConsent from subscribe.current.visitorConsent:', visitorConsent);
+        }
+        // Format 3: consent.value.visitorConsent
+        else if (consent && consent.value && consent.value.visitorConsent) {
+          visitorConsent = consent.value.visitorConsent;
+          console.log('Consent - Extracted visitorConsent from subscribe.value.visitorConsent:', visitorConsent);
+        }
+        // Format 4: consent directly has consent fields (check this last as it's less specific)
+        else if (consent && typeof consent === 'object' &&
+          (consent.analytics !== undefined || consent.marketing !== undefined ||
+            consent.preferences !== undefined || consent.saleOfData !== undefined ||
+            consent.sale_of_data !== undefined)) {
+          visitorConsent = consent;
+          console.log('Consent - Using consent directly from subscribe (has consent fields):', visitorConsent);
+        }
+  
+        // Debug: log the full consent structure if we couldn't extract visitorConsent
+        if (!visitorConsent && consent) {
+          console.log('Consent - Could not extract visitorConsent. Full consent object:', consent);
+          console.log('Consent - Consent keys:', Object.keys(consent));
+        }
+  
+        if (visitorConsent) {
+          // Check if this is actual consent (not just empty/undefined values)
+          const hasValidConsent =
+            visitorConsent.analytics !== undefined ||
+            visitorConsent.marketing !== undefined ||
+            visitorConsent.preferences !== undefined ||
+            visitorConsent.saleOfData !== undefined ||
+            visitorConsent.sale_of_data !== undefined;
+  
+          if (hasValidConsent) {
+            console.log('Consent - Checkout consent detected via subscribe callback:', visitorConsent);
+  
+            // Apply checkout consent immediately (highest priority) - even if already initialized
+            const consentToApply = {
+              analytics: visitorConsent.analytics !== undefined ? visitorConsent.analytics : false,
+              marketing: visitorConsent.marketing !== undefined ? visitorConsent.marketing : false,
+              preferences: visitorConsent.preferences !== undefined ? visitorConsent.preferences : false,
+              sale_of_data: (visitorConsent.saleOfData !== undefined ? visitorConsent.saleOfData :
+                visitorConsent.sale_of_data !== undefined ? visitorConsent.sale_of_data : false)
+            };
+  
+            console.log('Consent - Applying checkout consent (overriding any existing):', consentToApply);
+  
+            // Mark as found and initialized to prevent PieEye logic
+            checkoutConsentFound = true;
+            consentInitialized = true;
+  
+            window.Shopify.customerPrivacy.setTrackingConsent(consentToApply, () => {
+              console.log('Consent - Checkout consent applied successfully from subscribe');
+            });
+            return; // Exit early, consent found
+          } else {
+            console.log('Consent - Subscribe callback has visitorConsent but fields are undefined:', visitorConsent);
+          }
+        } else {
+          console.log('Consent - No visitorConsent found in subscribe callback. Consent object structure:', Object.keys(consent || {}));
+        }
+  
+        // If subscribe fired but no valid consent found, proceed with PieEye logic (only once)
+        // This handles both cases: no checkout consent detected, or checkout consent detected but no values provided
+        if (!consentInitialized && !pieEyeLogicApplied) {
+          if (checkoutConsentFound) {
+            console.log('Consent - Checkout consent was detected but subscribe did not provide values. Falling back to PieEye cookie logic.');
+            checkoutConsentFound = false; // Reset so PieEye can run
+          } else {
+            console.log('Consent - Subscribe fired but no checkout consent found, falling back to PieEye cookie logic');
+          }
+          pieEyeLogicApplied = true;
+          applyPieEyeLogic();
+        }
+      });
+      console.log('Consent - Subscribed to Shopify Customer Privacy API for checkout consent detection');
+    } else {
+      console.warn('Consent - Subscribe method not available');
+    }
+  
+    // Wait a short time for subscribe to fire, then fallback to PieEye logic if no consent found
+    setTimeout(function() {
+      // If checkout consent was found but not yet initialized, check if subscribe provided values
+      if (checkoutConsentFound && !consentInitialized) {
+        // Try one more time to get consent values
+        const finalCheck = checkAndApplyCheckoutConsent();
+        if (finalCheck.found && finalCheck.consent) {
+          console.log('Consent - Checkout consent values found in final check, applying it:', finalCheck.consent);
+          consentInitialized = true;
+          window.Shopify.customerPrivacy.setTrackingConsent(finalCheck.consent, () => {
+            console.log('Consent - Checkout consent applied successfully from final check');
+          });
+          return;
+        }
+  
+        // If subscribe fired but didn't provide values, or subscribe didn't fire, fall back to PieEye
+        if (subscribeFired) {
+          console.log('Consent - Checkout consent was detected but subscribe did not provide values. Falling back to PieEye cookie logic.');
+        } else {
+          console.log('Consent - Checkout consent was detected but subscribe did not fire. Falling back to PieEye cookie logic.');
+        }
+        // Reset checkoutConsentFound since we couldn't get actual values, allow PieEye to run
+        checkoutConsentFound = false;
+        // Fall through to run PieEye logic below
+      }
+  
+      // If no checkout consent found or we reset it above, proceed with PieEye logic
+      if (!checkoutConsentFound && !consentInitialized && !pieEyeLogicApplied) {
+        // Try one more time to get consent
+        const finalCheck = checkAndApplyCheckoutConsent();
+        if (finalCheck.found && finalCheck.consent) {
+          console.log('Consent - Checkout consent found in final check, applying it');
+          checkoutConsentFound = true;
+          consentInitialized = true;
+          window.Shopify.customerPrivacy.setTrackingConsent(finalCheck.consent, () => {
+            console.log('Consent - Checkout consent applied successfully from final check');
+          });
+          return;
+        }
+  
+        if (subscribeFired) {
+          console.log('Consent - Subscribe fired but no checkout consent detected, falling back to PieEye cookie logic');
+        } else {
+          console.log('Consent - Subscribe did not fire within timeout, falling back to PieEye cookie logic');
+        }
+        pieEyeLogicApplied = true;
+        applyPieEyeLogic();
+      }
+    }, 3000); // Wait 3 seconds for subscribe to fire
+  }
+  
+  window.Shopify.loadFeatures(
+    [
+      {
+        name: 'consent-tracking-api',
+        version: '0.1',
+      },
+    ],
+    function (error) {
+      if (error) throw error;
+      console.log('Consent - tracking API loaded');
+      initializeConsent();
+    }
+  );
+  window.addEventListener("pieEyeShopifyConsent", function (e) {
+    const existConsentShopify = setInterval(function () {
+      if (window.Shopify.customerPrivacy) {
+        clearInterval(existConsentShopify);
+        window.Shopify.customerPrivacy.setTrackingConsent({
+          "analytics": e.detail.analytics,
+          "marketing": e.detail.marketing,
+          "preferences": e.detail.preferences,
+          "sale_of_data": e.detail.sale_of_data,
+        }, () => console.log("Consent - consent captured"));
+      }
+    }, 100);
+  });
+  </script>
+{% endif %}

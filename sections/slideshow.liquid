@@ -1,0 +1,343 @@
+
+<section class="section section--flush">
+
+    {%- for block in section.blocks -%}
+
+    <div class="row {% if block.settings.column_reverse %}reverse{% endif %} {% if block.settings.column_reverse_mobile %}column-reverse-mobile{% endif %} center-xs middle-xs {% if block.settings.show_gradient %}{{ block.settings.gradient_name }}{% endif %} {% if block.settings.show_extra_padding %} vertical-breather {% endif %}" {% unless block.settings.show_gradient %}style="background-color:{{ block.settings.background_color }};"{% endunless %}>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 {% if block.settings.smaller_columns %}col-lg-4{% else %}col-lg-6{% endif %} slideshow__bg-image {% if block.settings.show_extra_column_padding %} side-padding {% endif %}" >
+        <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="{{ block.settings.image.alt }}">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 {% if block.settings.smaller_columns %}col-lg-4{% else %}col-lg-6{% endif %} {% if block.settings.show_extra_column_padding %} side-padding {% endif %}">
+        <div class="row vertical-breather" style="color:{{ block.settings.text_color }};">
+          
+          {%- assign text_position = block.settings.text_position | split: '_' | last -%}
+          {%- case text_position -%}
+            {%- when 'left' -%}
+              {%- assign section_text_alignment = 'text--left' -%}
+            {%- when 'center' -%}
+              {%- assign section_text_alignment = 'text--center' -%}
+            {%- when 'right' -%}
+              {%- assign section_text_alignment = 'text--right' -%}
+          {%- endcase -%}
+
+          <div class="col-xs-12 {{ section_text_alignment }}">
+            {% if block.settings.slide_image %}
+              <img class="" src="{{ block.settings.slide_image | image_url: width: 600 }}">
+            {% endif %}
+            {{ block.settings.body_copy }}
+
+            {%- if block.settings.button_1_text != blank -%}
+              <a href="{{ block.settings.button_1_link }}" class="button button--small button--primary" style="background-color:{{ block.settings.button_background }}; color:{{ block.settings.button_text_color }}; margin-top:20px">{{ block.settings.button_1_text | escape }}</a>
+            {%- endif -%}
+
+          </div>
+        </div>
+      </div>
+
+     </div>
+    {%- endfor -%}
+ 
+</section>
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "class": "shopify-section--slideshow",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Section height",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Original image ratio"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "fit",
+          "label": "Fit screen height"
+        }
+      ],
+      "info": "DISABLED: Choose \"Original image ratio\" to not cut images. [Learn more](https://help.shopify.com/en/manual/online-store/images/theme-images#best-practices-for-slideshows-and-full-width-images)",
+      "default": "auto"
+    },
+    {
+      "type": "select",
+      "id": "transition_type",
+      "label": "Transition type",
+      "info": "DISABLED",
+      "options": [
+        {
+          "value": "sweep",
+          "label": "Sweep"
+        },
+        {
+          "value": "reveal",
+          "label": "Reveal"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        }
+      ],
+      "default": "sweep"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "info": "DISABLED",
+      "default": 5
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "info": "Used while slideshow image is loading",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "info": "2048 x 1450px .jpg recommended",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "smaller_columns",
+          "label": "Make Columns Smaller on large viewports"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_extra_padding",
+          "label": "Show extra top bottom padding on row"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_extra_column_padding",
+          "label": "Show extra right left padding on columns"
+        },
+        {
+          "type": "checkbox",
+          "id": "column_reverse",
+          "label": "Reverse columns"
+        },
+        {
+          "type": "checkbox",
+          "id": "column_reverse_mobile",
+          "label": "Reverse columns on mobile"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gradient",
+          "label": "Show gradient instead of solid color background"
+        },
+        {
+          "type": "text",
+          "id": "gradient_name",
+          "label": "Gradient Class Name",
+          "default": "bg-blue-lavender"
+        },
+        {
+          "type": "image_picker",
+          "id": "split_image",
+          "info": "1080 x 1080px .jpg recommended. Won't show up on mobile.",
+          "label": "Split image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "1000 x 1400px .jpg recommended. If none is set, desktop image will be used."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text position",
+          "options": [
+            {
+              "value": "top_left",
+              "label": "Top left"
+            },
+            {
+              "value": "top_center",
+              "label": "Top center"
+            },
+            {
+              "value": "top_right",
+              "label": "Top right"
+            },
+            {
+              "value": "middle_left",
+              "label": "Middle left"
+            },
+            {
+              "value": "middle_center",
+              "label": "Middle center"
+            },
+            {
+              "value": "middle_right",
+              "label": "Middle right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom_center",
+              "label": "Bottom center"
+            },
+            {
+              "value": "bottom_right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "middle_center"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "info": "Transparent png recommended",
+          "label": "Image to appear above the copy"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Slide title"
+        },
+        {
+          "type": "html",
+          "id": "body_copy",
+          "label": "Body Copy",
+          "default": "Lorem Ipsum sit dolor amet."
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Tell your story"
+        },
+        {
+          "type": "text",
+          "id": "button_1_text",
+          "label": "Button 1 text"
+        },
+        {
+          "type": "url",
+          "id": "button_1_link",
+          "label": "Button 1 link",
+          "info": "Leave the \"Button 1 text\" and \"Button 2\" settings empty to make the slide fully clickable."
+        },
+        {
+          "type": "text",
+          "id": "button_2_text",
+          "label": "Button 2 text"
+        },
+        {
+          "type": "url",
+          "id": "button_2_link",
+          "label": "Button 2 link"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "Button background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 30
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "title": "Slide 1"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "title": "Slide 2"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

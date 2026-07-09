@@ -1,0 +1,1140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Shipping-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/skincare",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "ba45512c-f62f-4379-98c4-2bb7653429e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Gift-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/new",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738",
+        "ba45512c-f62f-4379-98c4-2bb7653429e5"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "large"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_original_UUVBqr": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_gMYf4r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Woman-Holding-Phone-Sml-Banner.jpg",
+            "mobile_image": "shopify://shop_images/Woman-Holding-Phone-Sml-Banner.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "<div>\n\n<h1 class=\"header-lockup\" style=\"color:#000000; padding-top:0px; padding-bottom:0px;   font-weight: 400; line-height: 0.95em; margin-bottom:15px;\">\n<br><span class=\"font-california-coast\">TikTok 🩷 Pacifica\n</span>\n</h1>\n\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_background_hover": "#000000",
+            "button_text_color_hover": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_gMYf4r"
+      ],
+      "custom_css": [
+        ".vertical-breather {padding-top: 20px; margin: auto; width: 95%;}",
+        ".header-lockup {font-size: 28px;}",
+        ".header-body {margin: auto; line-height: normal; font-size: 16px;}",
+        "@media (min-width: 1000px) {.header-lockup {font-size: 38px; } .vertical-breather {padding-top: 0px; width: 100%; }}",
+        "@media (min-width: 1400px) {.header-lockup {font-size: 50px; } .header-body {font-size: 22px; } .content-box--left {margin-left: 0; } .container {margin: auto; max-width: 1520px; }}",
+        ".button-wrapper a {border-radius: 25px;}"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": false,
+        "banner_only": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "timeline_xhMtMq": {
+      "type": "timeline",
+      "blocks": {
+        "item_EDbtqH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_GLOW_BABY_SERUM_BOTTLE.jpg",
+            "label": "glow baby booster serum",
+            "title": "glow baby booster serum",
+            "content": "",
+            "button_text": "shop now • $18",
+            "button_link": "shopify://products/glow-baby-booster-serum"
+          }
+        },
+        "item_LRYiXa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_REUSABLE_MASK_BROW_TIN_OPEN.jpg",
+            "label": "reusable masks brow",
+            "title": "reusable masks brow",
+            "content": "",
+            "button_text": "shop now • $18",
+            "button_link": "shopify://products/reusable-mask-brow"
+          }
+        },
+        "item_KBmNFt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TIKTOK_MADE_ME_BUY_IT.jpg",
+            "label": "tiktok faves",
+            "title": "tiktok faves",
+            "content": "<i>save $13</i>",
+            "button_text": "shop now • $52",
+            "button_link": "shopify://products/tiktok-faves-bundle"
+          }
+        },
+        "item_tgG6iW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BETTER_THAN_BOTOX.jpg",
+            "label": "brow bliss duo",
+            "title": "brow bliss duo",
+            "content": "<i>save $8</i>",
+            "button_text": "shop now • $35",
+            "button_link": "shopify://products/brow-bliss-duo"
+          }
+        },
+        "item_FTiyRB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BRIGHT_UNDEREYE_KIT.jpg",
+            "label": "bright-eyed kit",
+            "title": "bright-eyed kit",
+            "content": "<i>save $6</i>",
+            "button_text": "shop now • $27",
+            "button_link": "shopify://products/bright-eyed-kit"
+          }
+        },
+        "item_k3Yeyc": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/COCONUT_VANILLA_SHAMPOO_WATER_INGREDIENTS.jpg",
+            "label": "coconut vanilla",
+            "title": "coconut vanilla",
+            "content": "Deep cleanses and hydrates while adding softness",
+            "button_text": "shop now",
+            "button_link": "shopify://collections/coconut-vanilla"
+          }
+        },
+        "item_ePWRtm": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/687735642042_JasmineAgaveHairOil_INFO_keyingredients.jpg",
+            "label": "jasmine agave hair oil",
+            "title": "jasmine agave hair oil",
+            "content": "Lorem ipsum sit dolor amet. Cross-sell other products in family.",
+            "button_text": "shop now • $11",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_EDbtqH",
+        "item_LRYiXa",
+        "item_KBmNFt",
+        "item_tgG6iW",
+        "item_FTiyRB",
+        "item_k3Yeyc",
+        "item_ePWRtm"
+      ],
+      "custom_css": [
+        ".button-wrapper a {border-radius: 25px;}",
+        "h2 {font-family: \"california-coast\", serif !important; font-size: 26px; margin-bottom: 0;}",
+        "section {margin-top: 0;}",
+        ".timeline__content {padding: 10px; line-height: 1.2em;}",
+        ".button-wrapper {margin-top: 10px;}",
+        "@media (min-width: 1000px) {.timeline__content {padding: 40px; } .button-wrapper {margin-top: 20px; }}",
+        "@media screen and (max-width: 999px) {.timeline__item {align-items: end; }}",
+        ".button:hover {background: black;}",
+        ".heading {padding-bottom: 5px;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "32cd36f0-d228-43df-988f-513472886bf4": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-jojoba-oil.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "jojoba oil",
+            "content": "<p>moisturizes and protects hair, adding shine and reducing frizz</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-banana.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "banana",
+            "content": "<p>rich in vitamins and minerals, it nourishes and strengthens hair</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_HHQd9J": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-chia-seed.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "chia seed",
+            "content": "<p>supports scalp, hydration, plus provides essential nutrients and adds volume and texture</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GxVHT6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-ascophyllum-nodosum.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "ascophyllum nodosum",
+            "content": "<p>used to help strengthen and improve the texture of hair </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_6i3rAr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-pineapple.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pineapple",
+            "content": "<p> moisturizes and helps protect </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GcezEt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-rice-protein.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "rice protein",
+            "content": "<p> helps improve hair manageability, shine and volume</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-hyaluronic-acid.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "hyaluronic acid",
+            "content": "<p>helps reduce frizz and hydrate</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-argan-oils.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "argan oils",
+            "content": "<p>deeply moisturizes and nourishes and helps protect from breakage</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_i3TgQV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-papaya.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "papaya",
+            "content": "<p>adds texture and nourishes while minimizing frizz</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_L98mga": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-super-oils.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "super oils",
+            "content": "<p>nourish and protect hair, adding shine and reducing frizz</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_9L7Q9J": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-sacha-inchi-oil.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "sacha inchi oil",
+            "content": "<p>moisturizes, reduces frizz and helps protect hair from breakage</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GgA77U": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-agave.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "agave",
+            "content": "<p>supports scalp and hydration</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_eJXWxT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-mango-butter.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "mango butter",
+            "content": "<p>deeply moisturizes and conditions, leaving hair soft and manageable</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_3dqaWA": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-jasmine-sambac.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "jasmine sambac",
+            "content": "<p>used to help strengthen and improve the softness of hair</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_CGkWam": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-argan-oils.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "argania spinosa kernel oil",
+            "content": "<p>rich in essential fatty acids and vitamin E, it nourishes and strengthens hair</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_gYUngJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-moringa-oleifera-seed-oil.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "moringa oleifera seed oil",
+            "content": "<p>provides deep hydration and rejuvenation</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GqNQwQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-vegan-squalane.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vegan squalene",
+            "content": "<p>powerful moisturizing agent helps enhance shine and prevent breakage</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_b9jcEW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-coconut-oil.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "coconut oil",
+            "content": "<p>packed with fatty acids, coconut oil tames frizz and provides a protective barrier to keep your hair looking smooth and shiny</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_7byEaG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-coconut-water.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "coconut water",
+            "content": "<p>hydrating coconut water penetrates deep into the hair shaft to provide long-lasting moisture</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_JeLddy": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-pea-peptides.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pea peptides",
+            "content": "<p>used to help strengthen and improve the softness of hair</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_djdDYi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-apple-extract.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "apple extract",
+            "content": "<p>creates a natural protective barrier against environmental aggressors </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_TmAj4G": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-oat-milk.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "oat milk",
+            "content": "<p> moisturizing without weighing hair down. It can also help with frizz and split ends</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_HtqGg9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-vanilla-extract.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vanilla extract",
+            "content": "<p>supports scalp and hydration</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_E8zFMk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-cranberry-seed-oil.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "cranberry seed oil",
+            "content": "<p>nourishing and rich in vitamins</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_gfQiY7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-rosemary.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "rosemary",
+            "content": "<p>beloved ingredient for scalp care and hydration</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_4jccYV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-mint-and-soy-protein.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "mint &amp; soy protein",
+            "content": "<p>stimulates and cares for scalp</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_8RbtW9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-willow-bark.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "willow bark",
+            "content": "<p>helps with\nclogged scalp</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_cfw3QU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/hair-ingredient-lemon-balm-and-tilia-cordata-flower.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "lemon balm and tilia cordata flower",
+            "content": "<p>provides antioxidant benefits</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4",
+        "item_HHQd9J",
+        "item_GxVHT6",
+        "item_6i3rAr",
+        "item_GcezEt",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3",
+        "item_i3TgQV",
+        "item_L98mga",
+        "item_9L7Q9J",
+        "item_GgA77U",
+        "item_eJXWxT",
+        "item_3dqaWA",
+        "item_CGkWam",
+        "item_gYUngJ",
+        "item_GqNQwQ",
+        "item_b9jcEW",
+        "item_7byEaG",
+        "item_JeLddy",
+        "item_djdDYi",
+        "item_TmAj4G",
+        "item_HtqGg9",
+        "item_E8zFMk",
+        "item_gfQiY7",
+        "item_4jccYV",
+        "item_8RbtW9",
+        "item_cfw3QU"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {line-height: normal; margin-top: 5px;}",
+        ".h5 {padding-top: 15px; margin: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "<div class=\"h2 font-california-coast\">essential ingredients</div>",
+        "content": "<p style=\"font-size:16px;\">proven by science to care for <br class=\"hidden-tablet-and-up\">your hair and improve your mood</p>",
+        "column_alignment": "left",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#e2f8f9",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_block_BfFKFq": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text-block__content {background: transparent;}",
+        ".content-box {padding: 0; max-width: none;}",
+        ".heading {color: black; padding-top: 15px;}",
+        "@media (min-width: 1000px) {.heading {color: black; padding-top: 0; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Hair-Landing-Temp-Hair-Car.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "html_content": "<div class=\"font-california-coast heading heading--xlarge\">for hair that smells <br class=\"hidden-pocket\">as amazing as it looks</div>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "boxed",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "gallery_NiUC6p": {
+      "type": "gallery",
+      "blocks": {
+        "image_VXbMDT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642158_VolumizingFoamShampooVanillaOatmilk_INFO_benefits2.jpg",
+            "caption": "<p><a href=\"/collections/vanilla-oat-milk\" title=\"Vanilla Oat Milk\"><strong>Vanilla Oat Milk</strong></a></p>"
+          }
+        },
+        "image_eJeXCY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642059_ScalpLoveFoamShampooRosemaryMint_INFO_benefits2.jpg",
+            "caption": "<p><a href=\"/collections/rosemary-mint\" title=\"Rosemary Mint\"><strong>Rosemary Mint</strong></a></p>"
+          }
+        },
+        "image_3pzTW9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642073_CurlCareFoamShampooPineapplePapaya_INFO_benefits2.jpg",
+            "caption": "<p><a href=\"/collections/pineapple-papaya\" title=\"Pineapple Papaya\"><strong>Pineapple Papaya</strong></a></p>"
+          }
+        },
+        "image_zTJHbq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642141_MoistureFoamShampooCoconutVanilla_INFO_benefits22.jpg",
+            "caption": "<p><a href=\"/collections/coconut-vanilla\" title=\"Coconut Vanilla\"><strong>Coconut Vanilla</strong></a></p>"
+          }
+        },
+        "image_JhAdxc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642042_JasmineAgaveHairOil_INFO_hairtype.jpg",
+            "caption": "<p><a href=\"/collections/jasmine-agave\" title=\"Jasmine Agave\"><strong>Jasmine Agave</strong></a></p>"
+          }
+        },
+        "image_zjBfma": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/687735642066_BeachyTextureFoamShampooBananaCream_INFO_benefits2.jpg",
+            "caption": "<p><a href=\"/collections/banana-cream\" title=\"Banana Cream\"><strong>Banana Cream</strong></a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_VXbMDT",
+        "image_eJeXCY",
+        "image_3pzTW9",
+        "image_zTJHbq",
+        "image_JhAdxc",
+        "image_zjBfma"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".header,p {text-align: left; color: black;}",
+        "section {padding-top: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<span class=\"header h2 font-california-coast\">hair goals</span>\n<p>Driven by our wild obsession for natural ingredients that are backed by science, <br class=\"hidden-phone\">we craft situational haircare for all hair needs that smell amazing too.</p>",
+        "show_arrows": true,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "db9a7ea9-e36d-4178-95be-3cab54235140": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-top: 40px; padding-bottom: 40px;}",
+        ".col-xs-10 {padding: 5px 0;}",
+        ".section__color-wrapper {margin-top: 40px;}",
+        ".section__color-wrapper {background: rgb(255, 211, 171); background: radial-gradient( circle, rgba(255, 211, 171, 1) 0%, rgba(255, 208, 198, 1) 68%, rgba(255, 208, 233, 1) 100% );}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs\">\n\n<div class=\" col-xs-10 col-md-10 text--center\" style=\"padding-bottom:5px;\"> <span class=\"header h2 font-melt\">before &amp; after</span>\n</div>\n\n<div class=\"col-xs-10 col-md-10\" style=\"padding-bottom:25px;\">\n<p class=\"h5\">Vitamin C's anti-inflammatory properties also help to soothe and calm the skin, <br class=\"hidden-phone\">making it an essential ingredient for maintaining a healthy, radiant complexion. </p>\n</div>\n\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PAC_GLOW_BABY_BRIGHTENING_FACIAL_MASK_BEFORE_AFTER.jpg?v=1683928333\" alt=\"before &amp; after\">\n</div>\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PAC_GLOW_BABY_HYDRODEW_MOISTURE_GEL_BEFORE_AFTER.jpg?v=1684345963\" alt=\"before &amp; after\">\n</div>\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/MODEL_BEFORE_AFTER_SKINCARE_2.jpg?v=1688653971\" alt=\"before &amp; after\">\n</div>\n\n\n</div>",
+        "no_padding_margin": true,
+        "background_type": "full_width",
+        "background": "#edf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_block_mCji6F": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text-block__content {background: transparent; padding: 15px 0 0 0;}",
+        ".button:hover {background: black;}",
+        ".button{border-radius:25px;}",
+        "}.heading {color: black;}",
+        "@media (min-width: 1000px) {.heading {color: black; } .image-with-text-block__content {padding: 0; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/HAIR-LANDING-QUIZ-D.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "html_content": "<div class=\"font-california-coast heading heading--xlarge\">Find your <br>perfect hair match</div>",
+        "button_text": "TAKE THE HAIR QUIZ",
+        "button_link": "shopify://pages/hair-quiz-welcome",
+        "background_type": "boxed",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nI love this product so so much! It makes my skin so glowy and even – I feel so confident when wearing it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">ABBIE</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Booster Serum",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nThis cream has made a huge difference in my under eye area. I put it on every morning. I love it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">MARISOL</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Eye Bright Cream",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "quote_XY38gq": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nSince switching to the Glow Baby line my skin is more beautiful than ever. I have received more compliments on my skin in the last year than I have my entire life!\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">CARA B</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Face Wash",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "video_aXQddV": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "highlight": false,
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "quote_VERjbz": {
+          "type": "quote",
+          "disabled": true,
+          "settings": {
+            "highlight": true,
+            "subheading": "MONTANA SKY SPRAY PERFUME",
+            "content": "SMELLS LIKE A NIGHT IN THE MOUNTAINS!",
+            "author": "– Mary Manatee",
+            "background": "#d6f9f3",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1",
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6",
+        "quote_XY38gq",
+        "video_aXQddV",
+        "quote_VERjbz"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".promotion-block__content-wrapper {padding: 0; margin: 0;}",
+        ".promotion-block--large {--promotion-block-min-height: none;}",
+        ".heading--small {font-size: 26px;}",
+        ".promotion-block {align-items: flex-start; text-align: center;}",
+        "p {padding-top: 0; margin-top: 0;}",
+        "h5 {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "large",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_UKfwc7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_7RzBfJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Woman-Heart-Hands.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": true,
+            "gradient_name": "bg-glowphoria-light-radial",
+            "text_position": "middle_left",
+            "title": "",
+            "body_copy": "<div class=\"slideshow-body-copy\" style=\"text-align:center; padding-bottom:10px;\">\n\n<h3 class=\"heading h4 font-california-coast\">beauty with a <br class=\"hidden-lap-and-up\">higher purpose</h3>\n</div>\n\n<div class=\"slideshow-body-copy\"> \n\n<p>Compassionism<sup><small>TM</small></sup> has been our grounding core value since day 1. We’ve always been committed to creating 100% vegan + cruelty-free beauty that’s safe for the planet, animals, and you. <br><br>This imperative shapes everything we do at Pacifica Beauty, from our skintentional, high-performance products at fair prices to our stance on animal and human rights and climate-conscious practices.</p> \n\n<p style=\"font-weight:500;\">– Brook Harvey-Taylor<br>Founder, CEO, and Chief Scentologist</p>\n</div>",
+            "subheading": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#e2f8f9",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_7RzBfJ"
+      ],
+      "custom_css": [
+        ".slideshow-body-copy {width: 80%; margin: auto; text-align: left;}",
+        "@media (min-width: 1000px) {.slideshow-body-copy {width: 85%; }}",
+        "h3 {margin-bottom: 0;}",
+        ".button--primary {border-radius: 25px;}",
+        ".section--flush {max-width: 1520px; margin: auto; margin-top: 40px;}"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_qE4dHx": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Y8XBxf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hair-Group-Stylized-Landing-Pink-square.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": true,
+            "column_reverse_mobile": false,
+            "show_gradient": false,
+            "gradient_name": "bg-glowphoria-light-radial",
+            "text_position": "middle_center",
+            "title": "",
+            "body_copy": "<div class=\"slideshow-body-copy\"> <h3 class=\"heading h1\">Subscribe + Save </h3>\n<p>Never run out of your Pacifica faves! Delivered straight to your door, subscribe and get 10% off today and all future orders. You set the schedule and can skip or cancel at anytime. Free US shipping on all orders over $40.  \n</p>\n</div>",
+            "subheading": "",
+            "button_1_text": "SHOP THE COLLECTION",
+            "button_1_link": "shopify://collections/new-haircare-arrivals",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#e2f8f9",
+            "text_color": "#ffffff",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_Y8XBxf"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".slideshow-body-copy {width: 80%; margin: auto; text-align: left; color: black;}",
+        "@media (min-width: 1000px) {.slideshow-body-copy {width: 60%; }}",
+        "h3 {margin-bottom: 0;}",
+        ".button--primary {border-radius: 25px;}",
+        ".section--flush {max-width: 1520px; margin: auto;}"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "cycle_speed": 5,
+        "background": "#fff0f0"
+      }
+    },
+    "41b85dbe-2da2-40be-9641-3edff5b5d754": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14702093107288__41b85dbe-2da2-40be-9641-3edff5b5d754-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-haircare-arrivals",
+            "label": "new",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_YbPUPp": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers-home",
+            "label": "BEST SELLERS",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_AiVdiH": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles",
+            "label": "BUNDLES",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__41b85dbe-2da2-40be-9641-3edff5b5d754-collection-1",
+        "collection_YbPUPp",
+        "collection_AiVdiH"
+      ],
+      "custom_css": [
+        ".product-item__cta {border-radius: 25px; background: black; color: white;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"h2 font-california-coast heading heading-xlarge\" style=\"padding-top:30px;\">so much to love</div>",
+        "content": "",
+        "products_count": 28,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "custom_liquid_ce48ck": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "<div data-crl8-container-id=\"gallery-2sy1nuwT\" data-crl8-filter=\"productId:'3955581059160'\"></div>\n{% comment %}this is using the 'other' website gallery with the product ID filter because we couldn't clear out old content from product gallery without BV intervention. try replacing product sku with product id if this doesn't work.{% endcomment %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_phbffb": {
+      "type": "custom-html",
+      "custom_css": [
+        "section {margin: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row middle-xs center-xs\">\n<div class=\"col-xs-12 col-md-8\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Pacifica-Values.jpg?v=1714690707\"></div>\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_DhmhGJ": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_ggzniQ": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-gift",
+            "title": "free gift",
+            "content": "<p>Free gift with all orders $40+</p>"
+          }
+        },
+        "item_PicwWR": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-love",
+            "title": "earn rewards",
+            "content": "<p>Join our <a href=\"/pages/rewards\" title=\"Pacifica Beauty Rewards Program\">loyalty program</a></p>"
+          }
+        },
+        "item_x8NCCf": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-chat",
+            "title": "contact us",
+            "content": "<p>Need help? Chat with us below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_ggzniQ",
+        "item_PicwWR",
+        "item_x8NCCf"
+      ],
+      "custom_css": [
+        "svg {width: 70px !important; height: 70px !important;}",
+        ".heading--small {font-weight: normal; margin-block-end: 0; font-size: 26px; text-transform: none;}",
+        "p {margin-top: 0;}"
+      ],
+      "settings": {
+        "background": "#e2f8f9",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "main",
+    "16397758758c69c057",
+    "slideshow_original_UUVBqr",
+    "timeline_xhMtMq",
+    "32cd36f0-d228-43df-988f-513472886bf4",
+    "image_with_text_block_BfFKFq",
+    "gallery_NiUC6p",
+    "db9a7ea9-e36d-4178-95be-3cab54235140",
+    "image_with_text_block_mCji6F",
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c",
+    "slideshow_UKfwc7",
+    "slideshow_qE4dHx",
+    "41b85dbe-2da2-40be-9641-3edff5b5d754",
+    "custom_liquid_ce48ck",
+    "custom_html_phbffb",
+    "text_with_icons_DhmhGJ"
+  ]
+}

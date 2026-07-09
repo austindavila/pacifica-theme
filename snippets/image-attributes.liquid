@@ -1,0 +1,60 @@
+{%- comment -%}
+This snippet outputs all the necessary attributes to the image tag for creating lazyloading. You need to output it
+as part of an image tag, by passing to it the required sizes:
+
+<img {% render 'image-attributes', image: image, sizes: '200,300,400' %} />
+
+We can also pass the "native" attribute to true. This will actually generate attributes for the native lazyloading
+instead of lazysizes
+{%- endcomment -%}
+
+{%- assign desired_sizes = sizes | remove: ' ' | split: ',' -%}
+{%- assign supported_sizes = '' -%}
+
+{%- for size in desired_sizes -%}
+  {%- assign size_as_int = size | times: 1 -%}
+
+  {%- if image.width <= size_as_int -%}
+    {%- assign supported_sizes = supported_sizes | append: image.width -%}
+    {%- break -%}
+  {%- endif -%}
+
+  {%- assign supported_sizes = supported_sizes | append: size | append: ',' -%}
+{%- endfor -%}
+
+{%- comment -%}
+  If we have no single size which matches, we at least set the maximum width of the image, so that there at least
+  something that is displayed on the screen.
+{%- endcomment -%}
+
+{%- if supported_sizes == blank -%}
+  {%- assign supported_sizes = image.width -%}
+{%- endif -%}
+
+{%- assign supported_sizes = supported_sizes | split: ',' | compact -%}
+{%- assign src_list = '' -%}
+
+{%- for supported_size in supported_sizes -%}
+  {%- assign _w = supported_size | times: 1 -%}
+  {%- if height_constraint -%}
+    {%- assign _h = height_constraint | times: 1 -%}
+    {%- assign _img_url = image | image_url: width: _w, height: _h, crop: crop, format: 'webp' -%}
+  {%- else -%}
+    {%- assign _img_url = image | image_url: width: _w, format: 'webp' -%}
+  {%- endif -%}
+  {%- capture src_list -%}{{ src_list }}{{ _img_url }} {{ supported_size }}w{% unless forloop.last %}, {% endunless %}{%- endcapture -%}
+{%- endfor -%}
+
+{%- assign _last_w = supported_sizes | last | times: 1 -%}
+{%- if height_constraint -%}
+  {%- assign _last_h = height_constraint | times: 1 -%}
+  {%- assign _src = image | image_url: width: _last_w, height: _last_h, crop: crop, format: 'webp' -%}
+{%- else -%}
+  {%- assign _src = image | image_url: width: _last_w, format: 'webp' -%}
+{%- endif -%}
+
+{%- if sizes_only -%}
+  {{ src_list }}
+{%- else -%}
+  height="{{ image.height }}" width="{{ image.width }}" alt="{{ alt | default: image.alt | escape }}" {% unless ignore_src %}src="{{ _src }}"{% endunless %} srcset="{{ src_list }}"
+{%- endif -%}

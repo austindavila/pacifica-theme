@@ -1,0 +1,1187 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "icon_stroke_width": 1.2,
+    "button_border_radius": 6,
+    "block_border_radius": "medium",
+    "vertical_spacing": "small",
+    "heading_color": "#000000",
+    "blog_color": "#ffffff",
+    "text_color": "#000000",
+    "background": "#ffffff",
+    "secondary_background": "#fff",
+    "success_color": "#db1d71",
+    "error_color": "#de2a2a",
+    "header_background": "#ffffff",
+    "header_text_color": "#000000",
+    "footer_background": "#ff8ea0",
+    "footer_text_color": "#000000",
+    "primary_button_background": "#afc5ec",
+    "primary_button_text_color": "#000000",
+    "primary_button_border_color": "#afc5ec",
+    "primary_button_hover_color": "#dce9ff",
+    "ternary_button_background": "#f6eff0",
+    "secondary_button_background": "#afc5ec",
+    "secondary_button_text_color": "#000000",
+    "tile_button_background": "#afc5ec",
+    "tile_button_text_color": "#000000",
+    "tile_button_border_color": "#afc5ec",
+    "product_rating_color": "#333333",
+    "product_on_sale_accent": "#fff0f0",
+    "product_sold_out_accent": "#f6eff0",
+    "product_custom_label_background": "#fff0f0",
+    "product_custom_label_2_background": "#95dadb",
+    "product_in_stock_text_color": "#6f719b",
+    "product_low_stock_text_color": "#de2a2a",
+    "heading_font": "karla_n4",
+    "heading_font_size": "small",
+    "heading_text_transform": "normal",
+    "text_font": "karla_n4",
+    "text_font_size": 14,
+    "currency_code_enabled": false,
+    "show_image_zoom": false,
+    "stagger_products_apparition": false,
+    "round_color_swatches": true,
+    "color_swatch_config": "Diamond: #F9F7F6\nGreen Goddess: #8BE685\nHappy Yellow: #F8FE98\nLavender Moon: #DDC0E4\nOcean Surf: #B3DCEE\nPink Cloud: #ECAEC1\nTangerine Pop: #FFCF7C  \nTourmaline Stone: #8E65FF  \nMermaid Tail: #46AC3A \nCloudy Day: #E7E7E7  \nMinty: #DFFFDB  \nHope Ranch: #A53749\nBlue Moon: #82AECC\nTwilight: #F6BFC8  \nGolden Hour: #F57F92  \nDirt Road: #C9A56E\nCharcoal: #1B1203\nDel Sol: #8B0F09\nStar Gaze: #6D19B3\nBronzite: #962A18\nSedona Sunset:#E593D7",
+    "sitewide_show_sale_message": false,
+    "sitewide_sale_message": "<p><strong>Giving Tuesday Sitewide 35% OFF</strong> at checkout</p>",
+    "sitewide_show_sale_message_exclude_sale": false,
+    "tag_show_sale_message": false,
+    "tag_sale_message": "<p>Free Mini with $25 Vit C spend + add-to-cart at checkout</p>",
+    "tag_sale_message_tag": "GWP25-BOOSTERMINI",
+    "collection_show_sale_message": false,
+    "collection_sale_message": "<p>20% OFF makeup</p>",
+    "collection_sale_message_collection": "makeup-nail-polish",
+    "product_show_sale_message": true,
+    "product_sale_message": "<p>Free Mini with $50 Spend</p>",
+    "product_sale_message_product": "glow-baby-booster-serum",
+    "show_vendor": false,
+    "show_secondary_image": true,
+    "show_product_rating": true,
+    "discount_mode": "saving",
+    "product_color_display": "count",
+    "product_image_size": "square",
+    "search_enable_products": true,
+    "search_enable_blog_posts": false,
+    "search_enable_collections": false,
+    "cart_type": "drawer",
+    "cart_empty_button_link": "shopify://collections/best-sellers-home",
+    "cart_show_free_shipping_threshold": false,
+    "cart_free_shipping_threshold": "50",
+    "cart_show_free_gift_threshold": false,
+    "cart_free_gift_threshold": "40",
+    "cart_free_gift_product": "on-the-glow-travel-kit",
+    "cart_free_gift_qualifier": "",
+    "cart_free_gift_product_two": "",
+    "chooser_free_gift_threshold": "40",
+    "donation_module": true,
+    "donation_product": "round-up-for-the-aclu",
+    "donation_title": "the ACLU",
+    "social_facebook": "https://www.facebook.com/PacificaBeauty/",
+    "social_twitter": "https://twitter.com/pacificabeauty",
+    "social_pinterest": "https://www.pinterest.com/ilovepacifica/",
+    "social_instagram": "https://www.instagram.com/pacificabeauty",
+    "social_youtube": "",
+    "social_tiktok": "https://www.tiktok.com/@pacificabeauty",
+    "favicon": "shopify://shop_images/FAVICON_9.jpg",
+    "enable_pieeye": true,
+    "checkout_logo_image": "shopify://shop_images/pacifica_logo_with_tagline_black.jpg",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_sidebar_background_color": "#f7f8fd",
+    "checkout_heading_font": "Open Sans",
+    "checkout_body_font": "Open Sans",
+    "checkout_accent_color": "#db1d71",
+    "checkout_button_color": "#db1d71",
+    "checkout_error_color": "#de2a2a",
+    "cart_free_gift_threshold_two": "holiday-set",
+    "accent_color": "#405de6",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "message-1": {
+            "type": "message",
+            "name": "WELCOME",
+            "settings": {
+              "text": "WELLNESS SEEKER, YOU'RE HOME",
+              "learn_more_text": "read more",
+              "title": "Welcome home, to the best of everything for everyday.",
+              "content": "<p>Come find everything you need for your whole body skincare wellness.</p>",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "9806fbd0-0bee-4c32-b23a-43e629b396a1": {
+            "type": "message",
+            "name": "GWP",
+            "settings": {
+              "text": "Spend $50+, Choose 2 FREE Gifts <b>SHOP NOW</b>",
+              "learn_more_text": "more",
+              "title": "",
+              "content": "<p>Spend $50+ and pick any 2: </p><p><a href=\"/products/glow-baby-booster-serum\" title=\"Glow Baby Booster Serum\">Glow Baby Booster Serum Mini</a>, </p><p><a href=\"/products/chill-baby-cooling-cryo-globes\" title=\"Chill Baby Cooling Cryo Globes\">Chill Baby Cooling Cryo Globes</a>, or </p><p><a href=\"/products/dream-moon-spray-perfume\" title=\"Dream Moon Spray Perfume\">Dream Moon Spray Perfume</a>. </p><p>Choose 2 gifts in cart when qualified at $50. Free gifts added automatically at checkout. <em>Offer based on post-discount subtotal. Available for a limited time only.</em></p>",
+              "button_text": "Shop Now",
+              "button_link": "/pages/deals-coupons-promo-codes"
+            }
+          },
+          "0714d79e-42e3-4a24-b6c5-4950b9588627": {
+            "type": "message",
+            "name": "SHIPPING",
+            "settings": {
+              "text": "FREE US SHIPPING OVER $50",
+              "learn_more_text": "",
+              "title": "",
+              "content": "",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "message_Qi3LGR": {
+            "type": "message",
+            "name": "BUNDLE",
+            "disabled": true,
+            "settings": {
+              "text": "<a href=\"https://www.pacificabeauty.com/collections/bundles\">BUNDLES</a>\n are <b>25% OFF</b> This Weekend! <a href=\"https://www.pacificabeauty.com/collections/bundles\"><b>SHOP NOW</b></a>",
+              "learn_more_text": "LEARN MORE",
+              "title": "",
+              "content": "<p>This weekend only: all bundles are 25% off - up from our usual 20%. </p><p>Building your own bundle with 4+ items? Use code <strong>BUNDLEUP </strong>at checkout for 25% off. <em>Discount applied automatically at checkout.</em></p>",
+              "button_text": "Shop Now",
+              "button_link": "shopify://collections/bundles"
+            }
+          }
+        },
+        "block_order": [
+          "message-1",
+          "9806fbd0-0bee-4c32-b23a-43e629b396a1",
+          "0714d79e-42e3-4a24-b6c5-4950b9588627",
+          "message_Qi3LGR"
+        ],
+        "custom_css": [],
+        "settings": {
+          "announcement_bar_position": "sticky",
+          "announcement_text_size": "normal",
+          "autoplay": true,
+          "cycle_speed": 5,
+          "background": "#ffffff",
+          "text_color": "#333333",
+          "button_background": "#f6eff0",
+          "button_text_color": "#000000",
+          "show_countdown": false,
+          "show_days_countdown": false,
+          "countdown_year": "2024",
+          "countdown_month": "12",
+          "countdown_day": "19",
+          "countdown_hour": "3",
+          "content_fixed_countdown": "<p>Happy Hour Sitewide sale ends in </p>",
+          "countdown_background": "#e4a6b1"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "mega_menu_bf7Rdw": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "images_position": "right",
+              "image_1_heading": "",
+              "image_1_text": "",
+              "image_1_link": "",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "mega_menu_K7p7fF": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "images_position": "right",
+              "image_1_heading": "",
+              "image_1_text": "",
+              "image_1_link": "",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "mega_menu_hcFH6z": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "holiday offers",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/FRAGRANCE_-_QUIZ.png",
+              "image_1_heading": "50% off Fragrance with GIFT50",
+              "image_1_text": "",
+              "image_1_link": "",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "a24ce8da-2a9c-409f-acca-d41bad9d8186": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "trending",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/DISNEY_GROUP_UNDERWATER_MM.jpg",
+              "image_1_heading": "Disney's The Little Mermaid",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/the-little-mermaid",
+              "image_2": "shopify://shop_images/Coco-Peptide-MM2.jpg",
+              "image_2_heading": "Coco Peptide Haircare",
+              "image_2_text": "",
+              "image_2_link": "shopify://collections/coco-peptide-haircare",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "efb15b50-b4b0-4a1c-861c-630668d16195": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "sets",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/VC-MM.jpg",
+              "image_1_heading": "Vegan Collagen",
+              "image_1_text": "Hydrate & Plump Trio",
+              "image_1_link": "shopify://products/vegan-collagen-hydrate-plump-trio",
+              "image_2": "shopify://shop_images/WUB-MM_a2696f07-be52-4dec-8d8a-ebd757afbd42.jpg",
+              "image_2_heading": "Wake Up Beautiful",
+              "image_2_text": "Hydrate & Repair Trio",
+              "image_2_link": "shopify://products/wake-up-beautiful-hydrate-repair-trio",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "313ebbe2-ef60-455a-80fd-9801c986c8e2": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "skincare",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/Glow-Baby-Landing-MM.jpg",
+              "image_1_heading": "shop glow baby",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/glow-baby-collection",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "1edc4720-3e88-49ca-85a7-436a1262fd5e": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "makeup",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/Eye-Conic-Mascaras-MM.png",
+              "image_1_heading": "Eye-Conic Lashes",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/eye-conic-lashes",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "eca4f391-67e5-444c-880d-a86204becb2d": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "makeup",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/ENDLESS_SUMMER_SKIN_DUO_STYLIZED-MM.jpg",
+              "image_1_heading": "Endless Summer Skin",
+              "image_1_text": "Shop the Set",
+              "image_1_link": "shopify://products/endless-summer-skin-duo",
+              "image_2": "shopify://shop_images/Surf-Lash-MM.jpg",
+              "image_2_heading": "Surf Lash",
+              "image_2_text": "Water-Resistant Mascara",
+              "image_2_link": "shopify://products/surf-lash-mascara",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "28e9a708-cc46-4fe6-ad9c-56ce17dab67d": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "haircare",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/new-hair-mega-menu.jpg",
+              "image_1_heading": "situational haircare",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/new-hair-collection",
+              "image_2": "shopify://shop_images/Hair-Quiz-MM.jpg",
+              "image_2_heading": "TAKE THE HAIR QUIZ",
+              "image_2_text": "",
+              "image_2_link": "shopify://pages/hair-quiz-welcome",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "5734e23f-c0de-40cf-b102-1dcd00cad803": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "body",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/Vegan-Collagen-Body-MM.jpg",
+              "image_1_heading": "Vegan Collagen Body",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/vegan-collagen-body",
+              "image_2": "shopify://shop_images/HERO_SKUS_GROUP_1-MM.jpg",
+              "image_2_heading": "SHOP BEST SELLERS",
+              "image_2_text": "",
+              "image_2_link": "shopify://collections/best-sellers-home",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "619e9d21-4f5a-437a-9fb5-16d5d203270f": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "fragrance",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/SP26_EDP.png",
+              "image_1_heading": "New In fragrance",
+              "image_1_text": "",
+              "image_1_link": "shopify://collections/perfume",
+              "image_2": "shopify://shop_images/LEGACY_EDP.png",
+              "image_2_heading": "Legacy Scents",
+              "image_2_text": "",
+              "image_2_link": "shopify://collections/pacifica-legacy-perfume-scents",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "1453ae54-31c3-4dea-b406-1b4467b6e3ab": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "only here",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/Special-Offers-New-MM.png",
+              "image_1_heading": "Special Offers",
+              "image_1_text": "Online Exclusives & More",
+              "image_1_link": "shopify://pages/deals-coupons-promo-codes",
+              "image_2": "shopify://shop_images/coconut_milk_detangle_elixir_mobile_bcef8956-0050-4b74-848e-556a9688f83a.png",
+              "image_2_heading": "THE COMPASSIONISTA",
+              "image_2_text": "Why Hair Detangler?",
+              "image_2_link": "shopify://blogs/the-compassionista/the-ultimate-guide-to-hair-detanglers",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "7ed82402-4f3e-4420-8f95-cf5bccdc2f29": {
+            "type": "mega_menu",
+            "disabled": true,
+            "settings": {
+              "menu_item": "about",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/about_us_mockup_banner-MM.jpg",
+              "image_1_heading": "Beauty Leaders",
+              "image_1_text": "About The Brand",
+              "image_1_link": "shopify://pages/about-us",
+              "image_2": "shopify://shop_images/brook-founder-mm.png",
+              "image_2_heading": "MEET OUR FOUNDER",
+              "image_2_text": "Brook Harvey-Taylor",
+              "image_2_link": "shopify://pages/founders-story",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "mega_menu_wPDU6w": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "images_position": "right",
+              "image_1_heading": "",
+              "image_1_text": "",
+              "image_1_link": "",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "mega_menu_bf7Rdw",
+          "mega_menu_K7p7fF",
+          "mega_menu_hcFH6z",
+          "a24ce8da-2a9c-409f-acca-d41bad9d8186",
+          "efb15b50-b4b0-4a1c-861c-630668d16195",
+          "313ebbe2-ef60-455a-80fd-9801c986c8e2",
+          "1edc4720-3e88-49ca-85a7-436a1262fd5e",
+          "eca4f391-67e5-444c-880d-a86204becb2d",
+          "28e9a708-cc46-4fe6-ad9c-56ce17dab67d",
+          "5734e23f-c0de-40cf-b102-1dcd00cad803",
+          "619e9d21-4f5a-437a-9fb5-16d5d203270f",
+          "1453ae54-31c3-4dea-b406-1b4467b6e3ab",
+          "7ed82402-4f3e-4420-8f95-cf5bccdc2f29",
+          "mega_menu_wPDU6w"
+        ],
+        "custom_css": [
+          ".header__linklist .header__linklist-item:first-child {color: #000000;}",
+          ".header__linklist .header__linklist-item:nth-child(7) a {}"
+        ],
+        "settings": {
+          "enable_sticky_header": true,
+          "logo": "shopify://shop_images/PACIFICA_LOGO_2024_BLACK.png",
+          "logo_max_width": 180,
+          "mobile_logo_max_width": 125,
+          "navigation_menu": "nav-2023",
+          "sidebar_navigation_menu": "",
+          "cart_icon": "tote_bag",
+          "header_layout": "logo_left_navigation_center",
+          "show_icons": true,
+          "reduce_desktop_padding": true,
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "enable_transparent_header": false,
+          "transparent_header_text_color": "#000000",
+          "search_menu": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "links": {
+            "type": "links",
+            "settings": {
+              "menu": "pb_footer_account"
+            }
+          },
+          "db83fe46-db24-4fb2-8614-0ebdc7852f6a": {
+            "type": "links",
+            "settings": {
+              "menu": "information"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Stay In touch",
+              "content": "<p><strong>Get 10% OFF!</strong>  Sign up for email and text message alerts to receive updates, access to exclusive deals, and more.</p>"
+            }
+          },
+          "social_media": {
+            "type": "social_media",
+            "settings": {
+              "title": "Follow us",
+              "content": ""
+            }
+          }
+        },
+        "block_order": [
+          "links",
+          "db83fe46-db24-4fb2-8614-0ebdc7852f6a",
+          "newsletter",
+          "social_media"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "show_currency_selector": false,
+          "show_locale_selector": true,
+          "show_cookie_bar": false,
+          "cookie_bar_title": "Cookie policy",
+          "cookie_bar_content": "<p>I agree to the processing of my data in accordance with the conditions set out in the policy of Privacy.</p>"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "image_position": "left",
+          "title": "Get 10% off",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "custom_css": [
+          ".text--subdued {display: none;}",
+          ".col-xs-6 {margin: auto;}"
+        ],
+        "settings": {
+          "cart_icon": "tote_bag",
+          "show_order_note": false,
+          "show_checkout_button": true,
+          "empty_button_link": "shopify://collections/new-skincare-and-beauty",
+          "show_custom_cart_message": false,
+          "custom_cart_message": "<div style=\"background-color: #C7E6FF; padding:10px 5px; ;text-align: center;\nline-height:1.3;\">✨ Free <a href=\"/products/vegan-collagen-fluffy-lash-mascara\"><b>FLUFFY LASH MASCARA</b></a> with $75 purchase!✨\n</div>",
+          "show_recommendations": true,
+          "recommendations_title": "More to Love",
+          "show_mini_chooser_module": false,
+          "show_free_gift_chooser_module": false,
+          "free_gift_title": "Choose Your FREE MINI",
+          "free_gift_product_one": "",
+          "free_gift_product_two": "dream-moon-hair-body-mist-mini",
+          "free_gift_product_three": "",
+          "free_gift_product_four": ""
+        }
+      },
+      "static-text-with-icons": {
+        "type": "static-text-with-icons",
+        "blocks": {
+          "static-text-with-icons-0": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-box",
+              "title": "Free shipping",
+              "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
+            }
+          },
+          "static-text-with-icons-1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-phone",
+              "title": "Customer service",
+              "content": "<p>We are available from monday to friday to answer your questions.</p>"
+            }
+          },
+          "static-text-with-icons-2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-lock",
+              "title": "Secure payment",
+              "content": "<p>Your payment information is processed securely.</p>"
+            }
+          },
+          "static-text-with-icons-3": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-email",
+              "title": "Contact us",
+              "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com</p>"
+            }
+          }
+        },
+        "block_order": [
+          "static-text-with-icons-0",
+          "static-text-with-icons-1",
+          "static-text-with-icons-2",
+          "static-text-with-icons-3"
+        ],
+        "settings": {
+          "show_section": false,
+          "background": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)"
+        }
+      },
+      "static-newsletter": {
+        "type": "static-newsletter",
+        "settings": {
+          "show_section": false,
+          "reveal_on_scroll": true,
+          "subheading": "Subscribe to our newsletter",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
+          "text_position": "right",
+          "text_alignment": "left",
+          "text_background": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)",
+          "button_background": "rgba(0,0,0,0)",
+          "button_text_color": "rgba(0,0,0,0)"
+        }
+      },
+      "main-gift-card": {
+        "type": "main-gift-card",
+        "settings": {
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100,
+          "image": "shopify://shop_images/2020_gift_card-01.png",
+          "background": "#ffffff",
+          "content_background": "#ffffff",
+          "text_color": "#000000"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "starapps-via": {
+        "type": "shopify://apps/variant-image-automator/blocks/starapps-via-embed/2a01d106-3d10-48e8-ba53-5cb971217ac4",
+        "disabled": false,
+        "settings": {}
+      },
+      "9172647555721718247": {
+        "type": "shopify://apps/klevu-ai-search-filter/blocks/global-configuration/3fd783f0-6a26-4856-8c5b-59083a014991",
+        "disabled": true,
+        "settings": {
+          "enable_quicksearch": true,
+          "enable_catnav": false,
+          "enable_recommendations": false,
+          "search_landing": "/search",
+          "wait_for_interactive": false
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "6412501105843178657": {
+        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-main/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": false,
+        "settings": {
+          "primary_color": "#4d384b",
+          "secondary_color": "#126bbf",
+          "icon_color": "#126bbf",
+          "button_size": "medium",
+          "button_border_radius": 4,
+          "button_primary_background_color": "#4d384b",
+          "button_primary_text_color": "#ffffff",
+          "button_neutral_background_color": "#757575",
+          "button_neutral_text_color": "#ffffff"
+        }
+      },
+      "4291333794791649201": {
+        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": false,
+        "settings": {
+          "disableBundledCSS": false,
+          "disableBundledFonts": false,
+          "useClassIsolator": false
+        }
+      },
+      "7147999719060634790": {
+        "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+        "disabled": false,
+        "settings": {}
+      },
+      "15516442047899035060": {
+        "type": "shopify://apps/live-shopping-by-livemeup/blocks/live-widget/82ccf4ed-67f8-4725-9167-e54475d4748e",
+        "disabled": true,
+        "settings": {
+          "horizontal_position": "left",
+          "horizontal_distance": 10,
+          "vertical_distance": 10,
+          "show_desktop": true,
+          "show_mobile": true,
+          "thumbnail_desktop_width": 200,
+          "thumbnail_mobile_width": 150,
+          "thumbnail_corner_radius": 0,
+          "border_color": "",
+          "border_thickness": 1
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "10306775681609745795": {
+        "type": "shopify://apps/listrak/blocks/tracking/26437a9c-275e-4426-8461-fb21a0cbf35b",
+        "disabled": false,
+        "settings": {}
+      },
+      "7280966411886983154": {
+        "type": "shopify://apps/monk/blocks/app-embed/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
+        "disabled": false,
+        "settings": {}
+      },
+      "4761459923222742006": {
+        "type": "shopify://apps/repete-ai-reorder-agent/blocks/on-demand-widget/aab79467-9235-43e5-8d30-39a1906f371b",
+        "disabled": false,
+        "settings": {
+          "enable_repete_widget": "widget_only",
+          "due_schedules_pre_days": 2,
+          "customer_widget_y_alignment": "bottom",
+          "customer_widget_x_alignment": "center-x",
+          "enable_selling_plan_helper": true,
+          "enable_tae_buy_button": false,
+          "atc_selector": "",
+          "enable_repete_buy_button": "true"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Carbon": {
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "heading_color": "#282828",
+      "text_color": "#282828",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#282828",
+      "footer_background": "#282828",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#405de6",
+      "secondary_button_background": "#f3ff34",
+      "secondary_button_text_color": "#282828",
+      "product_on_sale_accent": "#de2a2a",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3ff34",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "zurich_extended_n8",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "zurich_n4",
+      "text_font_size": 15,
+      "currency_code_enabled": false,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "show_product_rating": false,
+      "cart_type": "message",
+      "cart_show_free_shipping_threshold": true,
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#282828",
+      "checkout_button_color": "#405de6",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "normal",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f3ff34",
+            "text_color": "#282828",
+            "button_background": "#282828",
+            "button_text_color": "#ffffff",
+            "countdown_background": "#000000"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_left_navigation_center",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Ivory": {
+      "button_border_radius": 4,
+      "block_border_radius": "small",
+      "heading_color": "#1a1a1a",
+      "text_color": "#1a1a1a",
+      "secondary_background": "#f5f1ec",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#56112a",
+      "header_text_color": "#ffffff",
+      "footer_background": "#56112a",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#56112a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#f7aea6",
+      "secondary_button_text_color": "#56112a",
+      "product_on_sale_accent": "#913b59",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3e5b6",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "itc_caslon_no_224_n5",
+      "heading_font_size": "medium",
+      "heading_text_transform": "normal",
+      "text_font": "avenir_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": true,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "cart_type": "drawer",
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f6f3ed",
+      "checkout_accent_color": "#353535",
+      "checkout_button_color": "#353535",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f7aea6",
+            "text_color": "#56112a",
+            "button_background": "#56112a",
+            "button_text_color": "#ffffff",
+            "countdown_background": "#000000"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Quartz": {
+      "icon_stroke_width": 1.3,
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "vertical_spacing": "medium",
+      "heading_color": "#0d0d0d",
+      "text_color": "#2e2e2e",
+      "background": "#ffffff",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#3c6e71",
+      "error_color": "#de2a2a",
+      "header_background": "#ffffff",
+      "header_text_color": "#2e2e2e",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#2e2e2e",
+      "primary_button_background": "#051e38",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#dfdfdf",
+      "secondary_button_text_color": "#2e2e2e",
+      "product_on_sale_accent": "#de2b2b",
+      "product_sold_out_accent": "#5b5b5b",
+      "product_custom_label_background": "#051e38",
+      "product_custom_label_2_background": "#2e9e7b",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2b2b",
+      "heading_font": "futura_n3",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "din_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "hide",
+      "product_image_size": "natural",
+      "cart_type": "drawer",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#051e38",
+      "checkout_button_color": "#051e38",
+      "checkout_error_color": "#de2a2a",
+      "accent_color": "#405de6",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#051e38",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#051e38",
+            "countdown_background": "#000000"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "cart_icon": "tote_bag",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": true,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": true,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    }
+  }
+}

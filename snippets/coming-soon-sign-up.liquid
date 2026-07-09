@@ -1,0 +1,151 @@
+<div class="coming-soon-notification-form">
+
+    <div class="heading h4 sign-up">Sign up to be notified when this drops!</div>  
+
+    {% comment %} ============ success message ============= {% endcomment %}
+    <p id="pdp_notify_success" style="display:none;">Thank you! We will let you know when this drops!</p>
+
+
+    {% comment %} ============ EMAIL SIGN UP FORM ============= {% endcomment %}
+    <form id="email_notify" class="klaviyo_gdpr_embed_LIST_ID signup_holder" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+        <input type="hidden" name="g" value="KFBVFb">
+        <input type="hidden" name="$fields" value="$consent">
+        <input type="hidden" name="$list_fields" value="$consent">
+
+        <div class="klaviyo_field_group">
+            <div>
+
+                <div class="input-container">
+                  <i class="far fa-envelope"></i>
+                  <input class="Form__Input" type="email" value="" name="email" id="k_id_email" aria-label="Enter email address" placeholder="Enter email address" aria-describedby="email_error" required/>
+                   <div class="button-holder push klaviyo_form_actions">
+                    <button type="submit" class="button--arrow text--xsmall">SIGN UP</button> 
+                  </div>
+                </div>
+
+                <div class="klaviyo_messages">
+                    <!-- <div class="success_message custom_success_message" style="display:none;"></div> -->
+                    <div id="email_error" class="error_message Form__Alert Alert Alert--error" style="display:none;"></div>
+                </div>
+
+                <p class="disclaimer"><small>By submitting this form, you agree to receive email marketing from Pacifica Beauty.</small></p>
+
+            </div>
+        </div>
+
+    </form>
+
+
+    {% comment %} ============ SMS SIGNUP FORM ============= {% endcomment %}
+    <form id="sms_notify" class="signup_holder">
+        <div class="input-container">
+          <i class="fas fa-mobile-alt"></i>
+          <input type="tel" class="Form__Input" value="" name="phone" id="" onfocus="this.value=''" aria-label="Enter phone number" placeholder="Enter phone number" required aria-describedby="sms_error"/><span class="validity"></span>
+          <div class="button-holder push">
+            <button class="Form__Submit button--arrow text--xsmall">SIGN UP</button> 
+          </div>
+        </div>
+
+        <div id="sms_notify_error" class="sms_error  Form__Alert  Alert--error"  style="display:none; background:0; font-size:13px; margin:5px 0;">Please enter a valid phone number.</div>
+        <div class="sms_notify_success custom_success_message Form__Alert Alert Alert--success"  style="display:none; ">Thank you! Keep an eye out for your exclusive offer!</div>
+
+        <p class="disclaimer"><small>By submitting this form, you agree to receive recurring automated promotional and personalized marketing text messages (e.g. cart reminders) from Pacifica at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP for help and STOP to cancel. Msg frequency varies. Msg & data rates may apply. View <a href="http://attn.tv/pacifica/terms.html" target="_blank">Terms</a> & <a href="/pages/privacy-policy" target="_blank">Privacy</a>.</small></p>
+
+    </form>
+
+</div>
+
+
+{% comment %}  KLAVIYO - SENDS USER EMAIL + CUSTOM PROPERTY {% endcomment %} 
+<script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+<script type="text/javascript">
+  KlaviyoSubscribe.attachToForms('#email_notify', {
+    hide_form_on_success: false,
+    extra_properties: {
+      product_line_launch: '{{ notify_product_category }}'
+    },
+     success: function ($form) {
+        $('#email_notify').hide();
+        $('#sms_notify').hide();
+        $('.sign-up').hide();
+        $('#pdp_notify_success').show();
+     }
+  });
+
+
+
+{% comment %}  ATTENTIVE - SENDS USER PHONE + EMAIL + CUSTOM EVENT {% endcomment %} 
+{% comment %}  
+Need to request new signUpSourceId for each type of sign-up unit. Ask Attentive for ID.
+signUpSourceId 'Footer' - 105436
+signUpSourceId 'Launch Notification' - 105437
+{% endcomment %} 
+$('body').on('click', '#sms_notify .Form__Submit', function(e) {
+   // console.log('sms clicked');
+
+    e.preventDefault();
+    
+    var phoneNumber = $('#sms_notify .Form__Input').val();
+
+    // validate phone number
+    var phone_pattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    var valid_phone = phone_pattern.test(phoneNumber);
+
+    if (valid_phone){
+        // build data object
+        var data = {
+            user: {
+                "user": {
+                    "phone": "+1" + String(phoneNumber)
+                },
+                "signUpSourceId": "105437"
+            },
+            event: {
+                "type": "Launch Notification",
+                "properties": {
+                    "category": "{{ notify_product_category }}",
+                    "productTitle": "{{ product.title }}"
+                },
+                "occurredAt": new Date(),
+                "user": {
+                   "phone": "+1" + String(phoneNumber)
+                }
+            }
+        }
+        //clear field
+        $('#sms_notify .Form__Input').val('');
+        // console.log("send number to middleware");
+        // console.log(JSON.stringify(data.user));
+        // console.log(JSON.stringify(data.event));
+        $.ajax({
+            //dev url - changes when you relaunch ngrok
+            // url: "http://df7033e96033.ngrok.io/attentive-subscriber", 
+            url: "https://pb-middleware.herokuapp.com/attentive-subscriber",
+            method: "POST",
+            // dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            success: function (data) {
+                $('#sms_notify').hide();
+                $('#email_notify').hide();
+                $('.sign-up').hide();
+                $('#pdp_notify_success').show();
+                // console.log("SUCCESS");
+                // console.log("data="+JSON.stringify(data));
+            },
+            error: function(xhr, status, error) {
+              // var err = eval("(" + xhr.responseText + ")");
+              console.log("error attentive");
+              // console.log(err.Message);
+            }
+        });
+    }
+    else {
+        console.log("no number!");
+        $('#sms_notify_error').show();
+    }
+
+});
+</script>
+
+       

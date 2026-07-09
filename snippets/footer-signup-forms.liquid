@@ -1,0 +1,75 @@
+  <!-- START KLAVIYO FORM -->
+          
+          <!-- https://help.klaviyo.com/hc/en-us/articles/115005249588-Add-and-Customize-a-Legacy-Embedded-Signup-Form -->
+          <!-- https://help.klaviyo.com/hc/en-us/articles/115005080127-Add-Additional-Fields-to-a-Sign-Up-Form -->
+          <!-- https://help.klaviyo.com/hc/en-us/articles/115005079887-Customize-the-Signup-Source-Property-for-a-Legacy-Form -->
+          <!-- https://help.klaviyo.com/hc/en-us/articles/115005247088 -->
+          <!-- newsletter: KFBVFb -->
+
+          <form id="email_signup" class="klaviyo_gdpr_embed_LIST_ID signup_holder" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+          <input type="hidden" name="g" value="KFBVFb">
+          <input type="hidden" name="$fields" value="$consent">
+          <input type="hidden" name="$list_fields" value="$consent">
+
+          <div class="klaviyo_field_group">
+          
+            <div class="input__container">
+              <span><i class="far fa-envelope"></i></span>
+              <input class="input__field input__field--text" type="email" value="" name="email" id="k_id_email" aria-label="Enter email address" placeholder="Enter email address" required aria-describedby="email_error"/>
+               <div class="button-holder push klaviyo_form_actions">
+                <button type="submit" class="Form__Submit Button--Arrow">SIGN UP</button> 
+              </div>
+            </div>
+
+            <div class="klaviyo_messages">
+              <div class="success_message custom_success_message" style="display:none;"></div>
+              <div id="email_error" class="error_message Form__Alert Alert Alert--error" style="display:none;"></div>
+            </div>
+
+          </div>
+
+        </form>
+
+         <div class="email_success custom_success_message Form__Alert Alert Alert--success"  style="display:none;">Thank you for signing up! Your special offer is on its way!</div>
+
+        <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+        <script type="text/javascript">
+          KlaviyoSubscribe.attachToForms('#email_signup', {
+            hide_form_on_success: false,
+            success_message: "Thank you for signing up! Your special offer is on its way!",
+            extra_properties: {
+              $source: 'Web Footer'
+            },
+             success: function ($form) {
+                $('#email_signup').hide();
+                $('.Email_Content').hide();
+                $('.email_success').show();
+                 _gaq.push(['_trackEvent', 'Acquisition', 'Newsletter Sign Up', 'Web Footer']);
+             }
+          });
+        </script>
+
+        <!-- END KLAVIYO FORM -->
+
+         {%- if block.settings.content_sms != blank -%}
+          <div class="Footer__Content Rte SMS_Content" style="padding-top:40px;">
+            {{ block.settings.content_sms }}
+          </div>
+        {%- endif -%}
+
+        <!-- START ATTENTIVE FORM -->
+
+        <form id="sms_signup" class="signup_holder">
+        <div class="input__container">
+          <i class="fas fa-mobile-alt"></i>
+          <input type="tel" class="input__field input__field--text" value="" name="phone" id="" onfocus="this.value=''" aria-label="Enter phone number" placeholder="Enter phone number" required aria-describedby="sms_error"/><span class="validity"></span>
+          <div class="button-holder push">
+            <button class="Form__Submit Button--Arrow">SIGN UP</button> 
+          </div>
+        </div>
+        <p class="input__legal--text">By submitting this form, you agree to receive recurring marketing text messages (e.g. cart reminders), which may be automated, to the mobile number provided at opt-in from Pacifica Beauty. Only U.S. mobile numbers are eligible to participate. Consent is not a condition of purchase. Msg frequency may vary. Msg & data rates may apply. Reply HELP for help and STOP to cancel. View <a href="https://www.pacificabeauty.com/pages/mobile-communications-terms-conditions" target="_blank">Terms</a> & <a href="https://www.pacificabeauty.com/pages/privacy-policy" target="_blank">Privacy</a>.</p>
+      </form>
+      <div id="sms_error" class="sms_error  Form__Alert  Alert--error"  style="display:none; background:0; font-size:13px;">Please enter a valid phone number.</div>
+      <div class="sms_success custom_success_message Form__Alert Alert Alert--success"  style="display:none; ">Thank you! Keep an eye out for your exclusive offer!</div>
+
+      <!-- END ATTENTIVE FORM -->

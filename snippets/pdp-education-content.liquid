@@ -1,0 +1,10 @@
+{%- comment -%}
+router for pdp education content
+naming convention is 'education-content' + product handle. put in snippets folder.
+{%- endcomment -%}
+
+{% assign snippet= 'education-content-' | append: product.handle %}
+{% capture education_content %}{% include snippet %}{% endcapture %}
+{% unless education_content contains "Liquid error" %}
+   {{ education_content }} 
+{% endunless %}

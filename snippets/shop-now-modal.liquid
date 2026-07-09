@@ -1,0 +1,9 @@
+{% if type_needed == 'button' %}
+    <button type="button" is="toggle-button" aria-controls="product-{{ active_product.id }}-drawer" aria-expanded="false" class="routine-content__link hidden-phone">SHOP NOW <i class="fa-light fa-arrow-right"></i></button>  
+    <button type="button" is="toggle-button" aria-controls="product-{{ active_product.id }}-popover" aria-expanded="false" class="routine-content__link hidden-tablet-and-up">SHOP NOW <i class="fa-light fa-arrow-right"></i></button>
+{% elsif type_needed == 'modal' %}
+    <div class="routine-content__popover" tab-index="1">    
+    <quick-buy-popover id="product-{{ active_product.id }}-popover" href="{{ active_product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-popover" class="popover popover--quick-buy hidden-tablet-and-up"></quick-buy-popover>
+    <quick-buy-drawer id="product-{{ active_product.id }}-drawer" href="{{ active_product.url | within: collection }}{% if product_url_contains_query %}&{% else %}?{% endif %}view=quick-buy-drawer" class="drawer drawer--large drawer--quick-buy hidden-phone"></quick-buy-drawer>        
+  </div>
+{% endif %}

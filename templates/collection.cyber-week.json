@@ -1,0 +1,519 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_original_RJqQBh": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_XyX6em": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/day_7_10.png",
+            "mobile_image": "shopify://shop_images/day_7_9.png",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_XyX6em"
+      ],
+      "name": "Slideshow Original",
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "mobile_fix": true,
+        "banner_only": false,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_pqgQ8B": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_RkMNpT": {
+          "type": "collection",
+          "settings": {
+            "collection": "bogo-free-hair-body-mists",
+            "label": "",
+            "button_text": "SHOP MORE",
+            "button_url": "shopify://collections/bogo-free-hair-body-mists"
+          }
+        }
+      },
+      "block_order": [
+        "collection_RkMNpT"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "products_count": 25,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": true,
+        "show_minis": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "image_with_text_overlay_6dqDDc": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-size: 60px; letter-spacing: 0px;}"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "show_collection_image": false,
+        "section_height": "medium",
+        "image": "shopify://shop_images/11.21-_1123_3_day_sale_bf_banner_2.png",
+        "subheading": "Your Wish-list. GRanted.",
+        "title": "35% OFF SITEWIDE",
+        "content": "<p>The Giving Tuesday magic is still going. Your must-haves, unlocked. The stars align with savings up to 75% OFF you can’t miss.  \n </p>No code needed. Exclusions apply.<p></p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "featured_collections_tXag4Q": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_6NdEmH": {
+          "type": "collection",
+          "settings": {
+            "collection": "trending-now-new-in",
+            "label": "New",
+            "button_text": "Show More",
+            "button_url": "shopify://collections/trending-now-new-in"
+          }
+        },
+        "collection_adFNjQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "trending-now-bundles",
+            "label": "Bundle & Save",
+            "button_text": "Show More",
+            "button_url": "shopify://collections/trending-now-bundles"
+          }
+        },
+        "collection_NrraQH": {
+          "type": "collection",
+          "settings": {
+            "collection": "trending-now-best-sellers",
+            "label": "Best Sellers",
+            "button_text": "Show More",
+            "button_url": "shopify://collections/trending-now-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_6NdEmH",
+        "collection_adFNjQ",
+        "collection_NrraQH"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-size: 30px; letter-spacing: 0px;}"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "subheading": "",
+        "title": "35% OFF GIFTS TRENDING NOW",
+        "content": "<p>Shop our most popular Giving Tuesday gifts.</p>",
+        "products_count": 10,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": true,
+        "show_minis": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_qiC6eM": {
+      "type": "multi-column",
+      "blocks": {
+        "item_fqML8c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BFCM_Homepage_Below_The_Fold_Assets_3.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "GIFTS $10 &amp; UNDER",
+            "content": "Tiny treats, big magic. Save on Stocking Stuffers and mini must-haves.",
+            "link_text": "Shop now",
+            "link_url": "shopify://collections/gifts-under-10",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_eByhKF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BFCM_Homepage_Below_The_Fold_Assets.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "FRAGRANCE GIFTS",
+            "content": "Refined, radiant, and ready to elevate every Holiday moment.",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/perfume",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_37QDLK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BFCM_Homepage_Below_The_Fold_Assets_1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "HOLIDAY MAGIC UNICORNS",
+            "content": "Select from 4 unique Unicorn Plushies. Each with a personality of their own.",
+            "link_text": "Shop Now",
+            "link_url": "shopify://products/unicorn-plushie",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_czNp3a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BFCM_Homepage_Below_The_Fold_Assets_2.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "12 DAYS OF MASKING",
+            "content": "Select 12 assorted facial masks for $25. Exclusions Apply. While supplies last.",
+            "link_text": "Shop Now",
+            "link_url": "shopify://products/12-days-of-masking",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "item_fqML8c",
+        "item_eByhKF",
+        "item_37QDLK",
+        "item_czNp3a"
+      ],
+      "custom_css": [
+        ".multi-column__image,.mega-menu__image-wrapper,.multi-column__image-wrapper {border-radius: 0;}",
+        "@media screen and (max-width: 740px) {.multi-column--pocket-medium .multi-column__inner--scroller {grid-auto-columns: 36vw; } .multi-column--pocket-large .multi-column__inner--scroller {grid-auto-columns: 80vw; }}",
+        "@media screen and (min-width: 1000px) {.multi-column--large {--section-items-per-row: 4; } .multi-column__inner--scroller {grid-auto-columns: 450px; overflow: hidden; }}",
+        "h3 {font-size: 30px; letter-spacing: 0px;}"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "your curated wish-list granted",
+        "title": "HOLIDAY GIFTING",
+        "content": "Sprinkle a little magic this season.",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_product_zpqY7k": {
+      "type": "featured-product",
+      "blocks": {
+        "variant_picker_YLYQbh": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_K6UUQB": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_nb8ef3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_YLYQbh",
+        "quantity_selector_K6UUQB",
+        "buy_buttons_nb8ef3"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "product": "future-youth-facial-massage-roller",
+        "subheading": "",
+        "title": "",
+        "show_vendor": true,
+        "show_sku": true,
+        "show_taxes_included": false,
+        "show_product_rating": true,
+        "show_share_buttons": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_overlay_tzVJ8q": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        "h3 {font-size: 30px; letter-spacing: 0px;}"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "show_collection_image": false,
+        "section_height": "medium",
+        "image": "shopify://shop_images/Screenshot_2025-11-26_at_10.31.51_AM.png",
+        "subheading": "GET YOUR HOLIDAY GLOW ON",
+        "title": "GLOW BABY SUPER LIT BOOSTER SERUM",
+        "content": "<p>Your go-to skin care must for a summertime glow all winter long.</p>",
+        "button_text": "GLOW UP NOW",
+        "button_link": "shopify://products/glow-baby-booster-serum",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_left",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 6
+      }
+    },
+    "multi_column_6bhctt": {
+      "type": "multi-column",
+      "blocks": {
+        "item_fCeVQH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/4_32bdb64b-a8e0-4b60-aea8-3660b4d7806d.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "SKINCARE GIFTS",
+            "content": "",
+            "link_text": "Shop now",
+            "link_url": "shopify://collections/skincare",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_RwzxGC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/62434_INFOGRAPHIC_INGREDIENTBG.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "BODY CARE GIFTS",
+            "content": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/bath-body-hair-spring-clean-25",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_WxVQk9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/SILVER_MOON_SPRAY_PERFUME_BOTH_THELISTAWARD.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "FRAGRANCE GIFTS",
+            "content": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/perfume",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_7HamnH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2_b0b5bfbc-cb5a-4ab6-a219-8173cf9dc298.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "HAIRCARE GIFTS",
+            "content": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/best-selling-haircare",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_H3UnwH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/30730_06.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "MAKEUP GIFTS",
+            "content": "",
+            "link_text": "Shop Now",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "item_fCeVQH",
+        "item_RwzxGC",
+        "item_WxVQk9",
+        "item_7HamnH",
+        "item_H3UnwH"
+      ],
+      "custom_css": [
+        "h3 {font-size: 30px; letter-spacing: 0px;}"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "SHOP BY CATEGORY",
+        "content": "Explore the Giving Tuesday Magic Pacifica has to offer. Don't forget to take advantage of our 35% OFF Sitewide sale.",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "image_XEY4Qj": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "title": "SHOP ALL",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_center",
+            "background": "#f7f8fd",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "image_XEY4Qj"
+      ],
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": true,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "large"
+      }
+    },
+    "f4cca11d-1db8-4cd4-a230-977d6dc9f5c5": {
+      "type": "custom-html",
+      "custom_css": [
+        "#left-message,#right-message {width: 100%; box-sizing: border-box; margin-bottom: 10px;}",
+        "@media (min-width: 600px) {#left-message, #right-message {width: 50%; float: left; }}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row bg-custom-gradient\" style=\"padding:20px; margin:0;\">\n    <div class=\"col-xs-12 center-xs\">\n        <p>Thanks for shopping with us for 12 Days of Giving!<br>Join our mailing list to keep be the first to know about future promotions.<br> <a href=\"https://pacifica.attn.tv/p/Pvg/landing-page\">SIGN UP FOR EMAILS AND TEXTS</a>\n<br><a href=\"https://www.pacificabeauty.com/pages/deals-coupons-promo-codes\">VIEW SPECIAL OFFERS</a></p>\n    </div>\n    \n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "slideshow_original_RJqQBh",
+    "featured_collections_pqgQ8B",
+    "collection-banner",
+    "image_with_text_overlay_6dqDDc",
+    "featured_collections_tXag4Q",
+    "multi_column_qiC6eM",
+    "featured_product_zpqY7k",
+    "image_with_text_overlay_tzVJ8q",
+    "multi_column_6bhctt",
+    "main",
+    "f4cca11d-1db8-4cd4-a230-977d6dc9f5c5",
+    "16397758758c69c057"
+  ]
+}

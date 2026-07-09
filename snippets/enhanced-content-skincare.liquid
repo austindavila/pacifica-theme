@@ -1,0 +1,564 @@
+
+{% comment %} SWIPER INCLUDES FOR ROUTINE SECTION {% endcomment %}
+{% comment %} https://swiperjs.com/swiper-api#parameters {% endcomment %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+{% comment %} GET METAOBJECTS {% endcomment %}
+{% assign product_before_and_after_handle =  product.metafields.custom.product_before_and_after_section.value %}
+{% assign product_benefits_handle =  product.metafields.custom.product_benefits_section.value %}
+{% assign featured_ingredients_handle =  product.metafields.custom.featured_ingredients_section.value %}
+{% assign product_packaging_handle =  product.metafields.custom.product_packaging_section.value %}
+{% assign product_directions_handle =  product.metafields.custom.product_directions_section.value %}
+{% assign product_routine_handle =  product.metafields.custom.product_routine_section.value %}
+
+{% comment %} STYLES THAT NEED TO BE DECLARED HERE {% endcomment %}
+<style>
+  @media screen and (min-width: 999px){  }
+    .ingredients-content__text-wrapper{
+      background: {{ featured_ingredients_handle.background_color.value }};
+    }
+
+  .swiper1 .swiper-pagination {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    grid-gap: 5px;
+    padding-left: 20px;
+  }
+  .swiper1 .swiper-pagination-bullet{
+    background-color:white;  
+    opacity:1; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 20px;
+    position: relative;
+    background: white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin:0 !important;
+    {% comment %} border: 1px solid black; {% endcomment %}
+  }
+  .swiper1 .swiper-pagination-bullet-active{
+    background-color: {{ product_routine_handle.active_color.value }};
+    border:none;
+  }
+  .swiper .swiper-slide{
+    cursor:pointer;
+  }
+  .swiper1{
+    width:100%;
+    height:100%;
+  }
+  .swiper1 .swiper-slide{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  @media screen and (min-width: 741px){
+    .swiper1 .swiper-pagination-bullet{
+      padding: 30px;
+    }
+  }
+  @media screen and (min-width: 1400px){     
+    .swiper1 .swiper-pagination-bullet{
+      padding: 30px;
+    }
+    .swiper1 .swiper-pagination {
+      padding-left:40px;
+      grid-gap: 10px;
+    }
+    .swiper1 .swiper-slide{
+      padding-left:40px;
+    }
+    .swiper1 .swiper-wrapper{
+      height:65%;
+    }
+  }
+  {% comment %} swiper for before & after {% endcomment %}
+  .swiper2{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+</style>
+ 
+<div id="enhanced-content">
+
+
+{% comment %} https://shopify.dev/docs/api/liquid/objects/metaobject {% endcomment %}
+{% comment %} {% assign product_benefits_handle = 'product-benefits-' | append: product.id %} {% endcomment %}
+
+
+
+{% comment %} ------------------------------------------------- {% endcomment %}
+{% comment %} BEFORE & AFTERS --------------------------------- {% endcomment %}
+{% comment %} ------------------------------------------------- {% endcomment %}
+
+{% if product_before_and_after_handle != null %} 
+
+<div class="before-after-content__wrapper container">
+  
+<!-- main container -->
+<div class="swiper swiper2" style="">
+  <!-- wrapper -->
+  <div class="swiper-wrapper">
+    <!-- slides -->
+    {% for image in product_before_and_after_handle.images.value %}
+      <div class="swiper-slide"><img alt="{{ product.title }}" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: image.src , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}></div>
+    {% endfor %}
+  </div>
+
+  <!-- scrollbar -->
+  <div class="swiper-scrollbar swiper-scrollbar2"></div>
+</div>
+
+  <div class="before-after-content__text-wrapper" style="background-color: {{ product_before_and_after_handle.background_color.value }};">
+    <div class="before-after-content__text-container">
+      <div class="before-after-content__body">
+        <h3 class="before-after-content__title">{{ product_before_and_after_handle.headline.value }}</h3>
+           {{ product_before_and_after_handle.features | metafield_tag }}        
+      </div>
+  </div>
+  </div>
+
+</div>
+
+<script>
+  const swiperBA = new Swiper('.swiper2', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination2',
+    },
+    
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar2',
+    },
+  });
+</script>
+
+{% endif %}
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} RESULTS --------------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+
+{% if product_benefits_handle != null %} 
+  <div class="results-content__wrapper container">
+    <div class="results-content__text-wrapper" style="background-color: {{ product_benefits_handle.background_color.value }};">
+      <div class="results-content__text-container">
+        <div class="results-content__body">
+          <h3 class="results-content__title">{{ product_benefits_handle.headline.value }}</h3>
+        </div>
+        <div class="results-content__list">
+          {{ product_benefits_handle.features | metafield_tag }}
+        </div>
+    </div>
+    </div>
+    <div class="results-content__image-wrapper">
+      <img alt="{{ product.title }}" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: product_benefits_handle.image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}>
+    </div>
+  </div>
+{% endif %}
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} INGREDIENTS ----------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+
+
+{% if featured_ingredients_handle != null %} 
+  <div class="ingredients-content__wrapper container">
+    <div class="ingredients-content__text-wrapper">
+      <div class="ingredients-content__text-container">     
+        <div class="ingredients-content__body">
+        
+        <h3 class="ingredients-content__title">{{ featured_ingredients_handle.headline.value }}</h3>
+
+        <div class="scroller">
+          <div class="scroller__inner">
+            <ul class="ingredients-content__list">
+                {% for item in featured_ingredients_handle.ingredient.value -%}
+                  <li class="ingredients-content__list-item">
+                    <img alt="{{ item.image.value.alt }}" loading="lazy" sizes="35vw" {% render 'image-attributes', image: item.image.value , sizes: '200,400,600,800' %}>
+                    <h4>{{ item.name }}</h4>
+                    <p>{{ item.description }}</p> 
+                  </li>
+                {%- endfor %}
+              </ul>
+          </div>
+        </div>
+
+        <a class="ingredients-content__link" href="#pdp-ingredients-tab">FULL INGREDIENT LIST</a>  
+
+      </div>
+    </div>
+  </div>
+  </div>
+{% endif %} 
+
+{% comment %} open the full ingredients list above {% endcomment %}
+<script>
+  // Define the function to trigger the click event
+  function triggerButtonClick() {
+    // Get the element with the specified class
+    var parentElement = document.querySelector('.pdp-tabs__ingredients');
+
+    // Check if the parent element exists
+    if (parentElement) {
+      // Get the button element within the parent element
+      var buttonElement = parentElement.querySelector('button');
+
+      // Trigger a click event on the button element
+      if (buttonElement) {
+        buttonElement.click();
+      }
+    }
+  }
+
+  // Get the button element
+  var ingredients_button = document.querySelector('.ingredients-content__link');
+
+  // Add a click event listener to the button
+  if (ingredients_button) {
+    ingredients_button.addEventListener('click', triggerButtonClick);
+  }
+</script>
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} ROUTINE --------------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+
+{% if product_routine_handle != null %} 
+<div class="routine-content__wrapper container">
+
+  <div class="routine-content__image-wrapper">
+    {% for item in product_routine_handle.products.value -%}
+      {% assign active_product = all_products[item.product] %} 
+      {% if active_product == all_products[product.handle] %} 
+        {% assign current_step = forloop.index0 %} 
+      {% endif %}
+      <div class="routine-content__image hidden" tab-index="0"> <img alt="{{ active_product.title }} – Model" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: item.model_image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}></div>
+    {% endfor %}
+  </div>
+
+
+  <!-- Slider main container -->
+  <div class="swiper swiper1" style="background-color: {{ product_routine_handle.background_color.value }};">
+
+    <div class="routine-content__body">
+      <h3 class="routine-content__title">{{ product_routine_handle.headline.value }}</h3>
+      <p>{{ product_routine_handle.subheadline.value }}</p>
+    </div> 
+  
+    <div class="swiper-pagination swiper-pagination1"></div>
+
+    <!-- Swiper required wrapper -->
+    <div class="swiper-wrapper">
+
+      <!-- Slides -->
+      {% for item in product_routine_handle.products.value -%}
+        {% assign active_product = all_products[item.product] %} 
+
+        <div class="swiper-slide routine-content__swatch">
+          {% comment %} <img src="https://cdn.shopify.com/s/files/1/1515/0462/files/TEMP-Swatch-GB-Scrub.png?v=1675990221"> {% endcomment %}
+          <img alt="{{ active_product.title }} Swatch" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: item.swatch_image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}>
+          <div class="routine-content__image-content">      
+              <strong>{{ active_product.title }}</strong>
+              <span class="divider"></span>
+              <p>{{ item.tagline }}</p>       
+              {% comment %} {% assign active_product = all_products['glow-baby-super-lit-enzyme-scrub'] %}  {% endcomment %}
+              {% render 'shop-now-modal', type_needed:'button', active_product: active_product  %}
+            </div>
+        </div>
+
+      {%- endfor %}
+
+    </div>
+      
+  </div>
+</div> 
+
+
+{% comment %} MODALS NEED TO BE HERE -------------------------------- {% endcomment %}
+{% for item in product_routine_handle.products.value -%}
+  {% assign active_product = all_products[item.product] %} 
+  {% render 'shop-now-modal',  type_needed: 'modal', active_product: active_product  %}  
+{%- endfor %}
+
+{% comment %} -------------------------------------------------------- {% endcomment %}
+
+
+{% comment %} ROUTINE SWIPER JS {% endcomment %}
+
+<script>
+  const swiper = new Swiper('.swiper1', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    {% comment %} initialSlide: 0, {% endcomment %}
+    initialSlide: {{ current_step }},
+    // set initial slide based on current step in routine
+  
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+      },
+    },
+  });
+
+  {% comment %} change slide {% endcomment %}
+  swiper.on('slideChange', function () {
+    console.log('slide changed');
+    console.log('activeindex='+swiper.activeIndex);
+    switchImage(swiper.activeIndex);
+  });
+
+  var model_images = document.getElementsByClassName("routine-content__image");
+  {% comment %} var current_step = 0; {% endcomment %}
+  var current_step = {{ current_step }};
+
+  {% comment %} set the routine to show the step for the current product {% endcomment %}
+  function setImage(current_step){
+    for (var i = 0; i < model_images.length; i++) {
+      model_images[i].classList.add("hidden");
+      model_images[i].setAttribute('tab-index', '0');
+      model_images[current_step].classList.remove("hidden");
+      model_images[current_step].setAttribute('tab-index', '1');
+    }
+  }
+  setImage(current_step);
+
+  {% comment %} switch image {% endcomment %}
+  function switchImage(current){
+    for (var i = 0; i < model_images.length; i++) {
+      model_images[i].classList.add("hidden");
+      model_images[i].setAttribute('tab-index', '0');
+      model_images[current].classList.remove("hidden");
+      model_images[current].setAttribute('tab-index', '1');
+    }
+  }
+</script> 
+{% endif %}
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} FUNCTIONAL FRAGRANCE -------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} <div class="fragrance-content__wrapper container">
+  <div class="fragrance-content__text-wrapper" style="background-color: {{ product_benefits_handle.background_color.value }};">
+    <div class="fragrance-content__text-container">     
+      <div class="fragrance-content__body">
+      
+      <h3 class="fragrance-content__title">Functional Fragrance</h3>
+      {% comment %} <p>Scents that are created to foster a certain type of feeling</p> {% endcomment %}
+
+        <ul class="fragrance-content__list">
+              <li class="fragrance-content__list-item">
+                <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+                <h4>Vanilla</h4>
+                <p>Lorem ipsum sit dolor amet</p> 
+              </li>
+            <li class="fragrance-content__list-item">
+              <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+              <h4>Vanilla</h4>
+              <p>Lorem ipsum sit dolor amet</p> 
+            </li>
+          <li class="fragrance-content__list-item">
+            <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+            <h4>Vanilla</h4>
+            <p>Lorem ipsum sit dolor amet</p> 
+          </li>
+        </ul>
+
+    </div>
+  </div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} FUNCTIONAL FRAGRANCE ----------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+  {% comment %} <div class="ingredients-content__wrapper container">
+    <div class="ingredients-content__text-wrapper">
+      <div class="ingredients-content__text-container">     
+        <div class="ingredients-content__body">
+        
+        <h3 class="ingredients-content__title" style="padding-bottom:0;">Functional Fragrance</h3>
+         <p style="margin-top:5px;">Scents for your body and mind</p>
+
+        <div class="scroller">
+          <div class="scroller__inner">
+            <ul class="ingredients-content__list">
+                  <li class="ingredients-content__list-item">
+                    <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+                    <h4>Vanilla</h4>
+                    <p>Lorem ipsum sit dolor amet</p> 
+                  </li>
+                  <li class="ingredients-content__list-item">
+                    <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+                    <h4>Vanilla</h4>
+                    <p>Lorem ipsum sit dolor amet</p> 
+                  </li>
+                  <li class="ingredients-content__list-item">
+                    <img alt="" src="https://cdn.shopify.com/s/files/1/1515/0462/files/FF-Vanilla-Transparent-TEMP.png?v=1679343605">
+                    <h4>Vanilla</h4>
+                    <p>Lorem ipsum sit dolor amet</p> 
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div> {% endcomment %}
+
+
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} RECYCLING ------------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+
+
+{% if product_packaging_handle != null %} 
+  <div class="recycle-content__wrapper container">
+
+    <div class="recycle-content__text-wrapper" style="background-color: {{ product_packaging_handle.background_color.value }};">
+
+      <div class="recycle-content__text-container">
+
+        <div class="recycle-content__body">
+          <h3 class="recycle-content__title">{{ product_packaging_handle.headline.value }}</h3>
+        </div>
+
+        <div class="recycle-content__illustration">
+          <img alt="{{ product.title }}" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: product_packaging_handle.floating_image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}>
+
+          {% if product_packaging_handle.tilted_right == false %}
+              {% assign tilted_left = true %}
+          {% endif %}
+          
+          {% if product_packaging_handle.tooltip_top.value %}          
+            <div class="recycle-content__illustration-text recycle-content__illustration-text-top {% if tilted_left %}tilted-left{% endif %}">
+              <span class="recycle-content__illustration-title__arrow"></span>
+              <p>{{ product_packaging_handle.tooltip_top.value }}</p>
+            </div>
+          {% endif %}
+
+          {% if product_packaging_handle.tooltip_middle.value %}
+            <div class="recycle-content__illustration-text recycle-content__illustration-text-middle {% if tilted_left %}tilted-left{% endif %}">
+              <span class="recycle-content__illustration-title__arrow"></span>
+              <p>{{ product_packaging_handle.tooltip_middle.value }}</p>
+            </div>
+          {% endif %}
+
+          {% if product_packaging_handle.tooltip_bottom.value %}
+            <div class="recycle-content__illustration-text recycle-content__illustration-text-bottom {% if tilted_left %}tilted-left{% endif %}">
+              <span class="recycle-content__illustration-title__arrow"></span>
+              <p>{{ product_packaging_handle.tooltip_bottom.value }}</p>
+            </div>
+          {% endif %}
+
+        </div>
+
+    </div>
+
+    </div>
+  
+    <div class="recycle-content__image-wrapper" style="background-image: url('{{ product_packaging_handle.image | file_url }}');"></div>
+    
+  </div>
+
+{% endif %}
+
+
+{% comment %} ----------------------------------------- {% endcomment %}
+{% comment %} INSTRUCTIONS ---------------------------- {% endcomment %}
+{% comment %} ----------------------------------------- {% endcomment %}
+
+{% if product_directions_handle != null %} 
+  <div class="instructions-content__wrapper container">
+
+    <div class="instructions-content__image-wrapper">
+      <div class="results-content__image-wrapper">
+        <img alt="{{ product.title }} – Model" loading="lazy" sizes="(min-width: 999px) 50vw, 100vw" {% render 'image-attributes', image: product_directions_handle.image.value , sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200' %}>
+      </div>
+    </div>
+
+    <div class="instructions-content__text-wrapper" style="background-color: {{ product_directions_handle.background_color.value }};">
+        <div class="instructions-content__text-container">
+    
+          <div class="instructions-content__body">
+            <h3 class="instructions-content__title">{{ product_directions_handle.headline.value }}</h3>
+          </div>
+
+          <ol class="instructions-content__steps">
+
+            {% if product_directions_handle.step_one %}
+              <li>
+                <div class="instructions-content__number">01</div>
+                {{ product_directions_handle.step_one | metafield_tag }}
+              </li>
+            {% endif %}
+
+            {% if product_directions_handle.step_two %}
+              <li>
+                <div class="instructions-content__number">02</div>
+                {{ product_directions_handle.step_two| metafield_tag }}
+              </li>
+            {% endif %}
+
+            {% if product_directions_handle.step_three %}
+              <li>
+                <div class="instructions-content__number">03</div>
+                {{ product_directions_handle.step_three| metafield_tag }}
+              </li>
+            {% endif %}
+
+            {% if product_directions_handle.step_four %}
+              <li>
+                <div class="instructions-content__number">04</div>
+                {{ product_directions_handle.step_four| metafield_tag }}
+              </li>
+            {% endif %}
+
+          </ol>
+    
+        </div>
+      </div>
+    </div>
+
+{% endif %} 
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+                                        
+

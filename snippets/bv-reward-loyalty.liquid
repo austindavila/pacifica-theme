@@ -1,0 +1,42 @@
+
+{% comment %} this sets the customer ID and email
+{% if customer %}
+<script type="text/javascript">
+    window.customerId = "{{ customer.id }}";
+    window.customerEmail = "{{ customer.email }}";
+</script> 
+{% endif %}
+
+<script>
+     jQuery(document).ready(checkContainer);
+
+    function checkContainer () {
+        if($('.bv-submission-thankyou').is(':visible')){ //if the container is visible on the page
+        console.log('its visible!')
+            var points = {
+                name: "bv_reviews",
+                customer_id: customerId,
+                customer_email: customerEmail
+            }
+
+
+            $.ajax({
+                type: "POST",
+                url: "https://pb-middleware.herokuapp.com/bv-reward",
+                cache: false,
+                data: points,
+                success: function (data) {
+                    //update LL widget
+                    lion.ui.refresh();
+                    console.log('success')
+
+                },
+                error: function (error) {
+                    console.log("error giving customer points");
+                }
+            });
+      } else {
+          setTimeout(checkContainer, 50); //wait 50 ms, then try again
+      }
+   }
+  </script> {% endcomment %}

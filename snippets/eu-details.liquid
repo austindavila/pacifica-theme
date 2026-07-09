@@ -1,0 +1,16 @@
+{% comment %}EU DETAILS{% endcomment %}
+
+<modal-content section="{{ section.id }}" id="eu-popup" class="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__content">
+    <button type="button" class="modal__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+      {%- render 'icon' with 'close' -%}
+    </button>
+
+    <div class="newsletter-modal__content">
+      {{ product.metafields.custom_fields["eu_info"] }}
+    </div>
+    </div>
+  </div>
+</modal-content>

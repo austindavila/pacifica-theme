@@ -1,0 +1,214 @@
+#subheading-configure {
+  text-align: center;
+  padding: 4%;
+}
+
+#tangent-products-section {    
+  display: flex;
+  padding: 0%;
+  padding-top: 3%;
+  padding-bottom: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#tangent-products-section > div {
+  text-align: center;
+  padding: 2%;
+  padding-bottom: 5%;    
+  padding-top: 0;
+}
+#tangent-products-section > div > p {
+  margin: 0 auto;
+  color: #272727;
+  cursor: pointer;
+}
+#tangent-products-section > div > a > .tangent-product-title {
+  padding-top: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.tangent-btn-add {
+  padding: 10px;
+  width: fit-content;
+  font-size: 14px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 4%;
+}
+.tangent-product-add-btn-wrapper{
+  text-decoration: none;
+  cursor: auto;
+}
+#tangent-products-section > div > a > img {
+  max-height: 220px;
+  min-height: 220px;
+  margin: 0 auto;
+}
+
+.tangent-btn-add, #tangent-add-all-to-cart{
+  width: fit-content;
+  padding: 10px 15px;
+  min-width: 70%;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#tangent-add-all-to-cart {
+  display: none;
+  margin: 0 auto;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#tangent-checkout-description {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 4% 0;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2%;
+}
+.tangent-general-text {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  color: #272727;
+  margin-bottom: 5px;
+  margin-top: 4%;
+}
+#company_dt{
+  padding: 8% 2%;
+  font-size: 12px;
+  text-align: center;
+}
+.bottom-row > .row {
+  display: inherit !important;
+}
+.tangent_option{
+  padding: 2px 6px;
+  margin: 6px;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000;
+}
+.tangent_option_name{
+  margin: 0;
+  font-weight: 600;
+  width: 65px;
+  font-size: 16px;
+}
+.tangent_option_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tangent_selected-variant{
+  background-color: #000;
+  color: #fff;
+}
+.tangent_checkout_variants_div{
+  margin-bottom: 15px;
+}
+#tangent-selfie-container-div {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+#selfie_img {
+  margin: 3% 0 0 0;
+}
+.hide-element{
+  display: none!important;
+}
+#tangent-recommendation-page-title{
+  text-align:center;padding-bottom:15px
+}
+.tangent-text-link, .tangent-btn-add>a{
+  text-decoration: none!important;
+}
+ 
+.disable-btn, .disable-btn-wrapper{
+  opacity: 0.6;
+  pointer-events: none;
+}
+  
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#message-text {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  text-align: center; /* Centered text */
+  padding: 16px; /* Padding */
+  z-index: 1; /* Add a z-index if needed */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#message-text.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  /* -webkit-animation: fadein 0.5s, fadeout 0.5s 5s;
+  animation: fadein 0.5s, fadeout 0.5s 5s; */
+}
+
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #tangent-recommendation-div{
+    margin-bottom: 14%;
+  }
+  #tangent-products-section > div{
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  #tangent-checkout-description {
+    width: 85%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #tangent-recommendation-div{
+    margin-bottom: 4%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #tangent-products-section > div{
+    width: 32%;
+  }
+}

@@ -1,0 +1,752 @@
+{% comment %} loop through cart {% endcomment %}
+        
+{% assign new_cart_item_count = cart.item_count %}
+{% assign has_qualifying_product = false %}
+{% assign free_mini_in_cart = false %}
+
+{% for line_item in cart.items %}
+
+  {% comment %} if the round up product is in the cart, remove that many items from cart count{% endcomment %}
+  {% if line_item.title contains 'Round Up' %}
+      {% assign round_up_found = true %}
+      {% assign new_cart_item_count = new_cart_item_count | minus: line_item.quantity %}
+  {% endif %}
+
+  {% comment %}identify if this is a qualifying product for a gwp{% endcomment %}
+  {% if line_item.product.tags contains settings.cart_free_gift_qualifier %}
+      {% assign has_qualifying_product = true %}
+      {% break %}
+  {% endif %}
+
+   {% comment %}identify if a free mini is in cart - works for mini variants or individual products{% endcomment %}
+   {% comment %} if we are using the mini chooser module {% endcomment %}
+   {% if section.settings.show_mini_chooser_module %}
+
+    {% comment %} if product one has more than one variant {% endcomment %}
+    {% if section.settings.free_gift_product_one.variants.size > 1 %}
+      {% if line_item.variant.id == section.settings.free_gift_product_one.variants[1].id %}
+        {% assign free_mini_in_cart = true %}
+      {% endif %}
+    {% comment %} if product one has only one variant {% endcomment %}
+    {% else %}
+      {% if line_item.variant.id == section.settings.free_gift_product_one.variants[0].id %}
+        {% assign free_mini_in_cart = true %}
+      {% endif %}
+    {% endif %}
+
+
+
+    {% comment %} if product two has more than one variant {% endcomment %}
+    {% if section.settings.free_gift_product_two.variants.size > 1 %}
+      {% if line_item.variant.id == section.settings.free_gift_product_two.variants[1].id %}
+        {% assign free_mini_in_cart = true %}
+      {% endif %}
+    {% comment %} if product two has only one variant {% endcomment %}
+    {% else %}
+      {% if line_item.variant.id == section.settings.free_gift_product_two.variants[0].id %}
+        {% assign free_mini_in_cart = true %}
+      {% endif %}
+    {% endif %}
+
+  {% endif %}
+   
+
+{% endfor %}
+
+<cart-drawer section="{{ section.id }}" id="mini-cart" class="mini-cart drawer drawer--large" >
+
+  <span class="drawer__overlay"></span>
+
+  <header id="mini-cart-drawer__header" class="drawer__header" {% if has_qualifying_product %}data-qualifying-product{% endif %}>
+    <p class="drawer__title heading h6">
+      {%- case section.settings.cart_icon -%}
+        {%- when 'shopping_bag' -%}
+          {%- render 'icon' with 'header-cart' -%}
+
+        {%- when 'shopping_cart' -%}
+          {%- render 'icon' with 'header-shopping-cart' -%}
+
+        {%- when 'tote_bag' -%}
+          {%- render 'icon' with 'header-tote-bag' -%}
+      {%- endcase -%}
+
+      {%- if cart.item_count == 0 -%}
+        {{- 'cart.general.title' | t -}}
+      {%- else -%}
+
+        {{- 'cart.general.item_count' | t: count: new_cart_item_count -}}
+
+      {%- endif -%}
+    </p>
+
+    <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+      {%- render 'icon' with 'close' -%}
+    </button>
+  </header>
+
+  {%- if cart.item_count == 10000 -%}
+    {% comment %} EMPTY CART {% endcomment %}
+    <div class="drawer__content drawer__content--center">
+      <p>{{ 'cart.general.empty' | t }}</p>
+
+      <div class="button-wrapper">
+        <a href="{{ section.settings.empty_button_link }}" class="button button--primary">{{ 'cart.general.start_shopping' | t }}</a>
+      </div>
+    </div>
+  {%- else -%}
+
+   {% comment %} OPEN SPOT FOR CUSTOM MESSAGING {% endcomment %} 
+   {% if section.settings.show_custom_cart_message %}
+      {{ section.settings.custom_cart_message }}
+    {% endif %}
+   {% comment %} ============================== {% endcomment %} 
+
+   {% comment %} FREE GIFT MESSAGING {% endcomment %} 
+   {% if settings.cart_show_free_gift_threshold %}
+    {% assign free_gift_threshold = settings.cart_free_gift_threshold | times: 100 %}
+
+    {%- if cart.total_price >= free_gift_threshold -%}
+      <p class="heading heading--xsmall text--strong free-gift-reminder" style="display:none;"><span class="text--uppercase">You've got a</span> free gift! &nbsp;</p>
+    {%- else -%}
+      {%- capture remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+      <p class="heading heading--xsmall text--strong free-gift-reminder" style="text-transform:none; font-weight:normal;">SPEND <span style="font-weight:500;">{{ remaining_amount }}</span> MORE FOR A FREE<br><a href="{{ settings.cart_free_gift_product.url }}"><span style="text-transform:uppercase;">{{ settings.cart_free_gift_product.title }}</span></a><i> ({{ settings.cart_free_gift_product.price | money_without_trailing_zeros }} value)</i></p>
+    {%- endif -%}
+
+   {% endif %}
+   {% comment %} ============================== {% endcomment %} 
+
+    <div class="drawer__content">
+
+      {%- if settings.cart_show_free_shipping_threshold and settings.cart_free_shipping_threshold != '' -%}
+        {%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}
+        {%- assign has_found_matching_threshold = false -%}
+
+        {%- if free_shipping_thresholds.size > 1 -%}
+          {%- for threshold in free_shipping_thresholds -%}
+            {%- assign threshold_parts = threshold | split: ':' -%}
+            {%- assign currency_code = threshold_parts | first | upcase -%}
+
+            {%- if currency_code == cart.currency.iso_code -%}
+              {%- assign free_shipping_calculated_threshold = threshold_parts | last -%}
+              {%- assign has_found_matching_threshold = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {%- assign free_shipping_calculated_threshold = free_shipping_thresholds | last -%}
+          {%- assign has_found_matching_threshold = true -%}
+        {%- endif -%}
+
+        {%- if has_found_matching_threshold -%}
+          {%- assign threshold_in_cents = free_shipping_calculated_threshold | times: 100 -%}
+
+        {% comment %}OLD location for free gift messaging{% endcomment %}
+          {% comment %}
+        {% comment %} FREE GIFT MESSAGING {% endcomment %} 
+        {% if settings.cart_show_free_gift_threshold %}
+          {% assign free_gift_threshold = settings.cart_free_gift_threshold | times: 100 %}
+
+          {%- if cart.total_price >= free_gift_threshold -%}
+            <p class="text--small free-gift-reminder">You've got a<span class="text-strong"> free gift!</span> &nbsp; <i class="fas fa-gift"></i></p>
+          {%- else -%}
+            {%- capture remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+            <p class="text--small free-gift-reminder">Spend {{ remaining_amount }} more and get a free gift! &nbsp; <i class="fas fa-gift"></i></a></p>
+          {%- endif -%}
+        {% endif %}
+        {% endcomment %}
+         
+          {% comment %}original location for free shipping messaging{% endcomment %}
+          {% comment %} {% endcomment %}
+          <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
+            {%- if cart.total_price >= threshold_in_cents -%}
+              <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping' | t }}</span>
+            {%- else -%}
+              {%- capture remaining_amount -%}{{ cart.total_price | minus: threshold_in_cents | abs | money }}{%- endcapture -%}
+              <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</span>
+            {%- endif -%}
+
+            <span class="shipping-bar__progress"></span>
+          </free-shipping-bar>
+         
+        {%- endif -%}
+      {%- endif -%}
+
+      <form id="mini-cart-form" action="{{ routes.cart_url }}" novalidate method="post">
+        <input type="hidden" name="checkout">
+
+        {%- for line_item in cart.items -%}
+          <line-item class="line-item">
+            <div class="line-item__content-wrapper">
+              <a href="{{ line_item.url }}" class="line-item__image-wrapper" tabindex="-1" aria-hidden="true"  >
+                <span class="line-item__loader" hidden>
+                  <span class="line-item__loader-spinner spinner" hidden>{% render 'icon' with 'spinner', width: 16, height: 16, stroke_width: 6 %}</span>
+                  <span class="line-item__loader-mark" hidden>{% render 'icon' with 'check', width: 20, height: 20 %}</span>
+                </span>
+
+                <img class="line-item__image" loading="sizes" sizes="(max-width: 740px) 80px, 92px" {% render 'image-attributes', image: line_item.image, sizes: '80,92,160,184,240,276' %}>
+              </a>
+
+              {%- capture unit_price -%}
+                {%- if line_item.unit_price_measurement -%}
+                  <div class="price text--subdued">
+                    <div class="unit-price-measurement">
+                      <span class="unit-price-measurement__price">{{ line_item.unit_price | money }}</span>
+                      <span class="unit-price-measurement__separator">/</span>
+
+                      {%- if line_item.unit_price_measurement.reference_value != 1 -%}
+                        <span class="unit-price-measurement__reference-value">{{ line_item.unit_price_measurement.reference_value }}</span>
+                      {%- endif -%}
+
+                      <span class="unit-price-measurement__reference-unit">{{ line_item.unit_price_measurement.reference_unit }}</span>
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endcapture -%}
+
+              {%- capture line_price -%}
+                {%- comment -%}
+                IMPLEMENTATION NOTE: The designer wanted to show the "compare at price" on cart. In case an automatic discount is applied
+                  to a line item though, the "real" discount takes precedence over the compare at price
+                {%- endcomment -%}
+
+                <span class="price {% if line_item.original_line_price > line_item.final_line_price or line_item.final_line_price == 0 or line_item.variant.compare_at_price > line_item.variant.price %}price--highlight{% endif %}">
+                  <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+                  {%- if line_item.final_line_price == 0 -%}
+                    {{- 'cart.general.free' | t -}}
+                  {%- else -%}
+                    {{- line_item.final_line_price | money -}}
+                  {%- endif -%}
+                </span>
+
+                {%- if line_item.original_line_price > line_item.final_line_price or line_item.variant.compare_at_price > line_item.variant.price -%}
+                  <span class="price price--compare">
+                    <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+                    {%- if line_item.original_line_price > line_item.final_line_price -%}
+                      {{- line_item.original_line_price | money -}}
+                    {%- else -%}
+                      {{- line_item.variant.compare_at_price | times: line_item.quantity | money -}}
+                    {%- endif -%}
+                  </span>
+                {%- endif -%}
+              {%- endcapture -%}
+
+              <div class="line-item__info">
+                <div class="product-item-meta">
+                  {%- if settings.show_vendor -%}
+                    {%- assign vendor_handle = line_item.vendor | handle -%}
+                    {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+                    {%- unless collection_for_vendor.empty? -%}
+                      <a class="product-item-meta__vendor heading heading--xxsmall" href="{{ collection_for_vendor.url }}">{{ line_item.vendor }}</a>
+                      {%- else -%}
+                      <a class="product-item-meta__vendor heading heading--xxsmall" href="{{ line_item.vendor | url_for_vendor }}">{{ line_item.vendor }}</a>
+                    {%- endunless -%}
+                  {%- endif -%}
+
+                  <a href="{{ line_item.url }}" class="product-item-meta__title text--small">{{ line_item.product.title }}</a>
+
+                {% comment %} show last call final sale messaging {% endcomment %} 
+                {%- if line_item.product.tags contains 'last-call' or line_item.product.tags contains 'final-sale' -%}
+                   <div class='product-item-meta__property text--subdued text--xsmall'>Final Sale</div>
+                {%- endif -%}
+
+                {% comment %} show deluxe bundle messaging {% endcomment %} 
+                {%- if line_item.product.tags contains 'deluxe-bundle' -%}
+                  <div class='product-item-meta__property text--subdued text--xsmall price--highlight'>FREE w/orders $40+ <br>use code <b>DELUXE</b></div>
+                {%- endif -%}
+   
+                {% comment %} hazardous items messaging {% endcomment %} 
+                {% if line_item.product.tags contains 'hazmat' %}
+                    <div style="clear: both; display: inline-block; width: 100%; font-size:9pt;line-height: 14pt;">*This hazmat item ships ground within the contiguous US.</div>
+                {% endif %}
+
+                  {%- capture line_item_properties -%}
+                    {%- unless line_item.product.has_only_default_variant -%}
+                      <span class="product-item-meta__property text--subdued text--xsmall">{{ line_item.variant.title }}</span>
+                    {%- endunless -%}
+
+                    {%- if line_item.selling_plan_allocation -%}
+                      <span class="product-item-meta__property text--subdued text--xsmall">{{ line_item.selling_plan_allocation.selling_plan.name }}</span>
+                    {%- endif -%}
+
+                    {%- unless line_item.properties == blank -%}
+                      <ul class="product-item-meta__property list--unstyled text--subdued text--xsmall" role="list">
+                        {%- for property in line_item.properties -%}
+                          {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                          {%- if property.last == blank or first_character_in_key == '_' -%}
+                            {%- continue -%}
+                          {%- endif -%}
+
+                          <li>{{ property.first }}: {{ property.last }}</li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endunless -%}
+                  {%- endcapture -%}
+
+                  {%- if line_item_properties != blank -%}
+                    <div class="product-item-meta__property-list">
+                      {{- line_item_properties -}}
+                    </div>
+                  {%- endif -%}
+
+                  <div class="product-item-meta__price-list-container text--small">
+                    <div class="price-list hidden-tablet-and-up">
+                      {{- line_price -}}
+                      {{- unit_price -}}
+                    </div>
+
+                    {%- if unit_price != blank -%}
+                      <div class="price-list hidden-phone">
+                        {{- unit_price -}}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+
+                {%- if line_item.line_level_discount_allocations != blank -%}
+                  <ul class="line-item__discount-list list--unstyled" role="list">
+                    {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                      <li class="line-item__discount-badge discount-badge">
+                        {%- render 'icon' with 'discount-badge' -%}{{ discount_allocation.discount_application.title }} {% comment %}(-{{ discount_allocation.amount | money }}){% endcomment %}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+
+                {% comment %} ordergroove {% endcomment %}
+                {% comment %} <og-offer product="{{line_item.key}}" location="cart" cart></og-offer>    {% endcomment %}
+                
+
+                {%- assign max_allowed_quantity = '' -%}
+                {%- assign allow_more = true -%}
+
+                {%- if line_item.variant.inventory_management == 'shopify' and line_item.variant.inventory_policy == 'deny' and line_item.variant.inventory_quantity <= line_item.quantity -%}
+                  {%- assign max_allowed_quantity = line_item.variant.inventory_quantity -%}
+                  {%- assign allow_more = false -%}
+                {%- endif -%}
+
+{% comment %}{% endcomment %}
+
+                <line-item-quantity class="line-item__quantity">
+                  <div class="quantity-selector quantity-selector--small" {% if line_item.title contains 'Round Up' %} style="display:none;"{% endif %} >
+                    <a href="{{ routes.cart_change_url }}?quantity={{ line_item.quantity | minus: 1 }}&line={{ forloop.index }}" class="quantity-selector__button" aria-label="{{ 'cart.general.decrease_quantity' | t | escape }}" data-no-instant>
+                      {%- render 'icon' with 'minus' -%}
+                    </a>
+
+                    <input is="input-number" class="quantity-selector__input text--xsmall" autocomplete="off" type="text" inputmode="numeric" name="updates[]" data-line="{{ forloop.index }}" value="{{ line_item.quantity }}" {% if max_allowed_quantity != '' %}max="{{ max_allowed_quantity }}"{% endif %} size="{{ line_item.quantity | append: '' | size | at_least: 2 }}" aria-label="{{ 'cart.general.change_quantity' | t | escape }}">
+
+                    {%- if allow_more -%}
+                      <a href="{{ routes.cart_change_url }}?quantity={{ line_item.quantity | plus: 1 }}&line={{ forloop.index }}" class="quantity-selector__button" aria-label="{{ 'cart.general.increase_quantity' | t | escape }}" data-no-instant>
+                        {%- render 'icon' with 'plus' -%}
+                      </a>
+                    {%- else -%}
+                      <span class="quantity-selector__button" aria-label="{{ 'cart.general.no_more_stock' | t | escape }}" data-tooltip="{{ 'cart.general.no_more_stock' | t | escape }}">
+                        {%- render 'icon' with 'plus' -%}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                 
+                  {% comment %}identify if this is a gwp product that was auto-added{% endcomment %}
+                  {% assign is_gwp = false %} 
+                  {% if line_item.product_id == settings.cart_free_gift_product.id or line_item.product_id == settings.cart_free_gift_product_two.id  %} 
+                    {% assign is_gwp = true %} 
+                  {% endif %}
+
+                  <a href="{{ line_item.url_to_remove }}" class="line-item__remove-button link text--subdued text--xxsmall" data-no-instant {% if line_item.title contains 'Round Up' %} style="margin-left:0;"{% endif %} {% if is_gwp %}data-is-gwp{% endif %}>{{ 'cart.general.remove' | t }}</a>
+                </line-item-quantity>
+              </div>
+
+              <div class="line-item__price-list-container text--small hidden-phone">
+                {%- if settings.show_vendor -%}
+                  {%- comment -%}
+                    IMPLEMENTATION NOTE: in the design, the price is aligned in regards of the product title (not the brand). It was a
+                    bit hard to do as we cannot set a fixed margin, so I am actually adding an empty vendor to simulate the same height
+                  {%- endcomment -%}
+                  <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden">x</span>
+                {%- endif -%}
+
+                <div class="price-list price-list--stack">
+                  {{- line_price -}}
+                </div>
+              </div>
+            </div>
+
+            {% comment %} ordergroove {% endcomment %}
+            <div class="og-in-cart" style="margin-left:116px; padding-top:5px;"><og-offer product="{{line_item.key}}" location="cart" cart></og-offer>  </div>
+             
+          </line-item>
+        {%- endfor -%}
+      </form>
+
+      {% comment %} ------------- CHOOSE YOUR FREE MINI ------------- {% endcomment %}
+    {%- if section.settings.show_mini_chooser_module -%}
+      {% render 'mini-chooser', free_mini_in_cart: free_mini_in_cart %}
+    {%- endif -%}
+
+    {% comment %} ---------------------------------------------- {% endcomment %}
+
+    {% comment %}   start ACLU donation module   {% endcomment %} 
+    {% if settings.donation_module == true %} 
+      {% render 'donation', round_up_found: round_up_found %}
+    {% endif %} 
+    {% comment %}================================={% endcomment %} 
+
+
+      {%- if section.settings.show_recommendations and cart.item_count > 0 -%}
+        <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
+          {%- assign acceptable_recommendations_count = 0 -%}
+
+          {%- for product in recommendations.products -%}
+            {%- assign matching_product = cart.items | where: 'product_id', product.id | first -%}
+
+            {% comment %} hide hidden and gift card products {% endcomment %}
+            {% if product.tags contains 'gift-card' or product.tags contains 'hidden' %}
+              {%- assign acceptable_recommendations_count = acceptable_recommendations_count | plus: 1 -%}
+            {% endif %}
+            
+            {%- if matching_product == blank -%}
+              {%- assign acceptable_recommendations_count = acceptable_recommendations_count | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if recommendations.performed -%}
+            {%- if acceptable_recommendations_count > 0 -%}
+              <div class="mini-cart__recommendations-inner">
+                {%- if section.settings.recommendations_title != blank -%}
+                  <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">{{ section.settings.recommendations_title | escape }}</p>
+                  <p class="mini-cart__recommendations-heading heading heading--xsmall text--subdued hidden-lap-and-up">{{ section.settings.recommendations_title | escape }}</p>
+                {%- endif -%}
+
+                <div class="scroller">
+                  <div class="scroller__inner">
+                    <div class="mini-cart__recommendations-list">
+                      {%- assign shown_products_count = 0 -%}
+
+                      {%- for product in recommendations.products -%}
+                          {%- if shown_products_count >= 6 -%}
+                            {%- break -%}
+                          {%- endif -%}
+
+
+                        {% comment %} check to see if it should be hidden {% endcomment %}
+                        {% if product.tags contains 'gift-card' or product.tags contains 'hidden' %}
+                            {% assign hidden_product = true %}
+                            {% else %}
+                            {% assign hidden_product = false %}
+                        {% endif %}
+
+                        {%- assign matching_product = cart.items | where: 'product_id', product.id -%}
+
+                        {%- if matching_product.size == 0 and hidden_product == false -%}
+                          {%- assign shown_products_count = shown_products_count | plus: 1 -%}
+
+                          {%- render 'product-item', product: product, reduced_content: true, reduced_font_size: true, hide_secondary_image: true, sizes_attribute: '(max-width: 740px) 65px, 92px', variable: 'mini-cart' -%}
+
+
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          {%- else -%}
+            <div class="mini-cart__recommendations-inner">
+              <div class="spinner">
+                {%- render 'icon' with 'spinner', stroke_width: 3, width: 40, height: 40 -%}
+              </div>
+            </div>
+          {%- endif -%}
+        </cart-drawer-recommendations>
+      {%- endif -%}
+
+
+    {% comment %} ------------- CHOOSE YOUR FREE GIFT ------------- {% endcomment %}
+    {%- if section.settings.show_free_gift_chooser_module -%}
+
+    {% assign chooser_free_gift_threshold = settings.chooser_free_gift_threshold | times: 100 %}
+
+    {%- capture chooser_remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: chooser_free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+
+    {% if cart.total_price >= chooser_free_gift_threshold %}
+      {% assign reached_threshold = true %}
+    {% else %}
+      {% assign reached_threshold = false %}
+    {% endif %}
+
+     <div class="mini-cart__free-gift-chooser">
+
+        {%- if reached_threshold != true -%}
+
+          {%- capture remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: settings.chooser_free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+          <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">Spend {{ chooser_remaining_amount }} more for a FREE GIFT</a></p>
+
+        {%- else -%}
+
+          {%- if section.settings.free_gift_title != blank -%}
+            <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">{{ section.settings.free_gift_title | escape }}</p>
+          {%- endif -%}
+
+      {%- endif -%}
+
+        <div class="scroller">
+          <div class="scroller__inner">
+            <div class="mini-cart__free-gift-list">
+              <!-- check if all three products are defined -->
+              {% for i in (1..4) %}
+                {% if i == 1 %}
+                  {%- assign current_product = section.settings.free_gift_product_one -%}
+                {% elsif i == 2 %}
+                  {%- assign current_product = section.settings.free_gift_product_two -%}
+                {% elsif i == 3 %}
+                  {%- assign current_product = section.settings.free_gift_product_three -%}
+                {% elsif i == 4 %}
+                  {%- assign current_product = section.settings.free_gift_product_four -%}
+              {% endif %}              
+              {% if current_product.title != null %}
+                {%- render 'product-item', product: current_product, reduced_content: true, reduced_font_size: true, hide_secondary_image: true, sizes_attribute: '(max-width: 740px) 65px, 92px' -%}
+              {% endif %} 
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+
+    </div>
+
+
+    <footer class="mini-cart__drawer-footer drawer__footer drawer__footer--tight drawer__footer--bordered">
+      {%- capture shipping_tax_note -%}{{ 'cart.general.shipping_tax_note' | t }}{%- endcapture -%}
+
+      {%- if cart.cart_level_discount_applications != blank -%}
+        <ul class="mini-cart__discount-list list--unstyled" role="list">
+          {%- for discount_application in cart.cart_level_discount_applications -%}
+            <li class="mini-cart__discount">
+              <span class="mini-cart__discount-badge discount-badge">{%- render 'icon' with 'discount-badge' -%}{{ discount_application.title }}</span>
+              <span class="mini-cart__discount-price text--xsmall text--subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      {% comment %}NEW location for free shipping messaging{% endcomment %}
+      {% comment %} <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
+            {%- if cart.total_price >= threshold_in_cents -%}
+              <span class="shipping-bar__text text--xsmall">{{ 'cart.general.free_shipping' | t }}</span>
+            {%- else -%}
+              {%- capture remaining_amount -%}{{ cart.total_price | minus: threshold_in_cents | abs | money }}{%- endcapture -%}
+              <span class="shipping-bar__text text--xsmall">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</span>
+              <span class="shipping-bar__progress"></span>
+            {%- endif -%}
+
+            
+        </free-shipping-bar> {% endcomment %}
+
+      {% comment %} ==== loyalty lion points for cart ====== {% endcomment %}
+      {% assign points_per_dollar = 1 %}
+
+      {% if customer %}
+        {% assign customer_tags = customer.tags | join: ',' %}
+      
+        {% if customer_tags contains 'Girl Crush' %}
+          {% assign points_per_dollar = 2 %}
+        {% elsif customer_tags contains 'Bestie Forever' %}
+          {% assign points_per_dollar = 3 %}
+        {% endif %}
+
+      {% endif %}
+      
+      {% assign total_points = cart.total_price | divided_by: 100 | times: points_per_dollar | floor %}
+
+      {% comment %} REWARDS CALLOUT - BOTTOM LOCATION {% endcomment %}
+      <div class="text--xsmall text--center" style="margin-top:10px;">
+        <i class="fa-light fa-circle-dollar"></i> Earn {%  if cart.total_price > 0 %} <span id="LLPointsForPurchase-Cart">{{ total_points }}</span>{% endif %} <a style="text-decoration:underline;" href="https://www.pacificabeauty.com/pages/pacifica-beauty-rewards-program">reward points</a>
+      </div>     
+
+      {% comment %} =================================== {% endcomment %}
+
+      {%- if section.settings.show_order_note or shipping_tax_note != '' -%}
+        <div class="mini-cart__actions text--subdued text--xsmall">
+          {%- if section.settings.show_order_note -%}
+            <button type="button" is="toggle-button" id="order-note-toggle" class="link" data-action="toggle-order-note" aria-controls="mini-cart-note" aria-expanded="false">
+              {%- if cart.note == blank -%}
+                {{- 'cart.general.add_order_note' | t -}}
+              {%- else -%}
+                {{- 'cart.general.edit_order_note' | t -}}
+              {%- endif -%}
+            </button>
+          {%- endif -%}
+
+          {%- if shipping_tax_note != '' -%}
+            <span>{{ shipping_tax_note }}</span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.show_checkout_button -%}
+        <button is="loader-button" form="mini-cart-form" type="submit" class="checkout-button button button--primary button--full" name="checkout">
+          <span class="checkout-button__lock">{%- render 'icon' with 'lock' -%}</span>
+
+          {{- 'cart.general.checkout' | t -}}
+          <span class="square-separator"></span>
+          {{- cart.total_price | money_with_currency -}}
+        </button>
+
+        <a href="https://www.pacificabeauty.com/collections/skincare" style="text-align:center; display:block; padding-top:5px;">Continue shopping</a>
+
+      {%- else -%}
+        <a href="{{ routes.cart_url }}" class="button button--primary button--full" data-no-instant>{{ 'cart.general.go_to_cart' | t }}</a>
+      {%- endif -%}
+    </footer>
+  {%- endif -%}
+
+  {%- if section.settings.show_order_note -%}
+    <openable-element id="mini-cart-note" class="mini-cart__order-note">
+      <span class="openable__overlay"></span>
+      <label for="cart[note]" class="mini-cart__order-note-title heading heading--xsmall">{{- 'cart.general.add_order_note' | t -}}</label>
+      <textarea is="cart-note" name="note" id="cart[note]" rows="3" aria-owns="order-note-toggle" class="input__field input__field--textarea" placeholder="{{ 'cart.general.order_note_placeholder' | t }}">{{ cart.note }}</textarea>
+      <button type="button" data-action="close" class="form__submit form__submit--closer button button--secondary">{{ 'cart.general.order_note_save' | t }}</button>
+    </openable-element>
+  {%- endif -%}
+</cart-drawer>
+
+{% schema %}
+{
+  "name": "Cart drawer",
+  "class": "shopify-section--mini-cart",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Free shipping notice can be configured in global cart settings."
+    },
+    {
+      "type": "select",
+      "id": "cart_icon",
+      "label": "Cart icon",
+      "options": [
+        {
+          "value": "shopping_bag",
+          "label": "Shopping bag"
+        },
+        {
+          "value": "shopping_cart",
+          "label": "Shopping cart"
+        },
+        {
+          "value": "tote_bag",
+          "label": "Tote bag"
+        }
+      ],
+      "default": "shopping_bag"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_order_note",
+      "label": "Show order note",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_checkout_button",
+      "label": "Show checkout button",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "empty_button_link",
+      "label": "Empty button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "CUSTOM HTML MESSAGE",
+      "info": "Use this for custom cart messaging"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_cart_message",
+      "label": "Show custom cart message",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "custom_cart_message",
+      "label": "Custom messaging to appear at the top of the mini-cart"
+    },
+    {
+      "type": "header",
+      "content": "Cross-sell",
+      "info": "Dynamic recommendations are based on the items in your cart. They change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_recommendations",
+      "label": "Show cart recommendations",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "recommendations_title",
+      "label": "Recommendations heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "header",
+      "content": "Free Minis Chooser",
+      "info": "Picker: Choose free mini with purchase. Up to four options."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mini_chooser_module",
+      "label": "Show Free Mini Chooser Module",
+      "default": true,
+      "info": "The money threshold is set in the cart settings, and shared with the free gift chooser module. Use one or the other."
+    },
+    {
+      "type": "header",
+      "content": "Free Gift",
+      "info": "Picker: Choose free gift with purchase. Up to four options."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_free_gift_chooser_module",
+      "label": "Show Free Gift Chooser Module",
+      "default": true,
+      "info": "The money threshold is set in the cart settings, and shared with the free mini chooser module. Use one or the other"
+    },
+    {
+      "type": "text",
+      "id": "free_gift_title",
+      "label": "Free Gift heading",
+      "default": "Choose Your Free Gift"
+    },
+    {
+      "type": "product",
+      "id": "free_gift_product_one",
+      "label": "Free Gift Product"
+    },
+    {
+      "type": "product",
+      "id": "free_gift_product_two",
+      "label": "Free Gift Product"
+    },
+    {
+      "type": "product",
+      "id": "free_gift_product_three",
+      "label": "Free Gift Product",
+      "info": "DISABLED"
+    },
+    {
+      "type": "product",
+      "id": "free_gift_product_four",
+      "label": "Free Gift Product",
+      "info": "DISABLED"
+    }
+  ]
+}
+{% endschema %}

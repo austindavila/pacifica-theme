@@ -1,0 +1,632 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing this theme as much as we did for
+  developing it. We have put a lot of work to make this theme as developer friendly as possible by offering you
+  hooks to integrate into critical parts of the theme. You will find the complete technical documentation (including
+  all events, dependencies...) in the "custom.js" file, located in the Assets folder.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<!doctype html>
+
+ <!--
+                  _  __ _             _                      _         
+ _ __   __ _  ___(_)/ _(_) ___ __ _  | |__   ___  __ _ _   _| |_ _   _ 
+| '_ \ / _` |/ __| | |_| |/ __/ _` | | '_ \ / _ \/ _` | | | | __| | | |
+| |_) | (_| | (__| |  _| | (_| (_| | | |_) |  __/ (_| | |_| | |_| |_| |
+| .__/ \__,_|\___|_|_| |_|\___\__,_| |_.__/ \___|\__,_|\__,_|\__|\__, |
+|_|                                                              |___/ 
+                          
+
+-->
+
+
+{%- assign direction = 'ltr' -%}
+{%- case request.locale.iso_code -%}
+  {%- when 'ar' or 'arc' or 'dv' or 'fa' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'ps' or 'ur' or 'yi' -%}
+    {%- assign direction = 'rtl' -%}
+{%- endcase -%}
+
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
+  <head>
+
+    {% if settings.enable_pieeye %}
+	    <link rel="preconnect" href="https://cdn.cookie.pii.ai">
+      <link rel="preconnect" href="https://pieeyegpc.pii.ai" crossorigin="">
+      <link rel="dns-prefetch" href="https://pieeyegpc.pii.ai">
+      <link rel="preconnect" href="https://geo.pii.ai" crossorigin="">
+      <link rel="dns-prefetch" href="https://geo.pii.ai">
+	    {% render 'pieeye-default-consent' %}
+	     <script type="text/javascript" src="https://cdn.cookie.pii.ai/scripts/1/ws/be1ac353-922f-4805-b48b-d10abd6a3ce0/domain/85c1692e-5d32-43f4-bbd7-d8bc5b10aefa/pieeyeBlocking-pacificabeauty.js" async></script>
+	     <!-- Start of PieEye DNSS Script -->
+	       <link rel="stylesheet" href="https://pieeyegpc.pii.ai/1/dsrp/45ec5995-18a2-4e77-b130-25099cfcf55a/gpc.css" media="print" onload="this.media='all'">
+            <noscript><link rel="stylesheet" href="https://pieeyegpc.pii.ai/1/dsrp/45ec5995-18a2-4e77-b130-25099cfcf55a/gpc.css"></noscript>
+	  
+	       <script type="text/javascript" src="https://pieeyegpc.pii.ai/1/dsrp/45ec5995-18a2-4e77-b130-25099cfcf55a/gpc.min.js" async></script>
+	     <!-- End of PieEye DNSS Script -->
+    {% endif %}
+ {%- render 'ecom_header' -%}
+
+{% comment %}{% endcomment %}
+<!-- Google Optimize -->
+{% comment %} <script src="https://www.googleoptimize.com/optimize.js?id=OPT-W7KD5MD"></script> {% endcomment %}
+  
+<!-- COFRAME -->
+{% comment %}
+ <script id='coframe-installation-script'>
+  (function () {
+        // Early exit for performance testing
+        if (/cf_disable/.test(location.search)) return console.warn('[Coframe] Disabled via URL parameter');
+        
+        // Coframe config
+        const config = {
+          projectId: '69ea92cb3f6fb3b3373ef132',
+          startTime: Date.now(),
+          timeoutMs: 1000,
+          currentUrl: window.location.href,
+        };
+    
+        // Prevent duplicate installation
+        const script_id = 'coframe-sdk-js';
+        if (document.getElementById(script_id)) return console.warn('[Coframe] SDK already installed');
+        
+        // Coframe queue setup
+        (window.CFQ = window.CFQ || []).push({ config });
+    
+        // Coframe antiflicker CSS
+        const style = document.createElement('style');
+        style.id = 'coframe-antiflicker';
+        
+        style.textContent = 
+          ':root { --cf-show: 0;}' +
+          'body { opacity: var(--cf-show) !important; transition: opacity 0.2s ease; }'
+        
+        function hide() { document.head.appendChild(style); }
+        function show() {
+          document.documentElement.style.setProperty('--cf-show', '1');
+          style.parentNode && style.parentNode.removeChild(style);
+        }
+        hide(); setTimeout(show, config.timeoutMs);
+        
+        // Coframe SDK JS
+        var edgeUrl = new URL('https://edge.cofra.me/cf.js');
+        edgeUrl.searchParams.set('config', encodeURIComponent(JSON.stringify(config)));
+    
+        const script = document.createElement('script');
+        script.id = script_id;
+        script.async = true;
+        script.src = edgeUrl.toString();
+        
+        script.onerror = () => { show(); console.error('[Coframe] SDK failed to load'); };
+        document.head.appendChild(script);
+    })();
+</script>
+{% endcomment %}
+
+<!-- Hotjar Tracking Code for www.pacificabeauty.com -->
+<script type="text/plain" class="pieeye-category-performance">
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1491539,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="{{ settings.header_background }}">
+
+    {% comment %}
+    <!-- hide GWP products and certain collections from search engines -->
+    <!-- use this to hide rewards products as well -->
+    <!-- https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines -->
+    {% endcomment %}
+    {% render 'noindex' %}
+
+   {% if product.tags contains "hemp" %}
+     <meta name="AdsBot-Google" content="nofollow">
+     <meta name="AdsBot-Google-Mobile" content="nofollow">
+     <meta name="Mediapartners-Google" content="nofollow">
+    {% endif %}
+
+    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% endif %}{% if canonical_url contains "tagged" %} Tagged: {{ canonical_url | split: "/" | last }}{% endif %}</title>
+
+{% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}{% if canonical_url contains "tagged" %} Tagged: {{ canonical_url | split: "/" | last }}{% endif %}">
+{% endif %}
+
+      {% if handle contains 'acne-defense' %}
+        <link rel="canonical" href="https://www.pacificabeauty.com/collections/acne">
+    {% else %}
+        <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96, height: 96 }}" type="image/png">
+    {%- endif -%}
+
+    {%- comment -%}Few prefech to increase performance on commonly used third-parties{%- endcomment -%}
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    {%- unless settings.heading_font.system? and settings.text_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    {%- comment -%}Preload important resources{%- endcomment -%}
+    {{ 'theme.css' | asset_url | preload_tag: as: 'style' }}
+    {{ 'vendor.js' | asset_url | preload_tag: as: 'script' }}
+    {{ 'theme.js' | asset_url | preload_tag: as: 'script' }}
+
+    {%- comment -%}
+      IMPLEMENTATION NOTE: for improving performance, Focal tries to preload images on known pages (such as blog page,
+      product or collection pages). In order to keep a main JS file size minimal, the theme also lazyloads non-essential
+      libraries (such as PhotoSwipe or Flickity) and only loads them on demand.
+    {%- endcomment -%}
+    {%- if request.page_type == 'product' -%}
+      {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}
+
+      <link rel="preload" as="fetch" href="{{ product.url }}.js" crossorigin>
+      <link rel="preload" as="image" imagesizes="(max-width: 999px) calc(100vw - 48px), 640px" imagesrcset="{% render 'image-attributes', image: selected_media, sizes: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800', sizes_only: true %}">
+
+      {%- if product.media.size > 1 -%}
+        <link rel="preload" as="script" href="{{ 'flickity.js' | asset_url }}">
+      {%- endif -%}
+    {%- elsif request.page_type == 'collection' and collection.image -%}
+      <link rel="preload" as="image" media="(max-width: 740px)" imagesizes="100vw" imagesrcset="{% render 'image-attributes', image: collection.image, sizes: '400,500,600,700,800,900,1000', height_constraint: 600, crop: 'center', sizes_only: true %}">
+      <link rel="preload" as="image" media="(min-width: 741px)" imagesizes="100vw" imagesrcset="{% render 'image-attributes', image: collection.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600', sizes_only: true %}">
+    {%- elsif request.page_type == 'article' and article.image -%}
+      <link rel="preload" as="image" imagesizes="(max-width: 740px) 100vw, {% if article.image.aspect_ratio >= 1 %}50vw{% else %}37.5vw{% endif %}" imagesrcset="{% render 'image-attributes', image: article.image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500', sizes_only: true %}">
+    {%- endif -%}
+
+    {% render 'social-meta-tags' %}
+    {% render 'microdata-schema' %}
+    {% render 'css-variables', direction: direction %}
+    {% render 'js-variables', direction: direction %}
+
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+
+    {% if template.name == "product" %}   
+        <link rel="stylesheet" href="{{ 'theme-enhanced-pdp.css' | asset_url }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ 'loyalty-styles.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ 'loyalty-styles.css' | asset_url }}"></noscript>
+
+    <script src="{{ 'vendor.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+
+    {{ content_for_header }}
+    {% render 'pieeye-shopify-privacy-api' %}
+
+    <!-- http://flexboxgrid.com/ -->
+    <link rel="stylesheet" href="{{ 'flexboxgrid.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ 'flexboxgrid.css' | asset_url }}"></noscript>
+
+    <!-- load jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+
+    <!-- FONT AWESOME-->
+    <!-- <script src="https://kit.fontawesome.com/3b487541bb.js" crossorigin="anonymous" defer></script> -->
+    <script src="https://kit.fontawesome.com/7bb0fdae81.js" crossorigin="anonymous" defer></script>
+    
+    {% comment %} https://help.loyaltylion.com/en/articles/8608718-enable-loyaltylion-via-shopify-app-embeds {% endcomment %}
+     <!-- START LOYALTY LION -->
+    {% comment %}  {% endcomment %}
+    <!-- END LOYALTY LION -->
+
+  
+
+    <!-- Start VWO Async SmartCode -->
+    {% comment %}<script type='text/javascript'>
+    window._vwo_code = window._vwo_code || (function(){
+    var account_id=602032,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    is_spa=1,
+    hide_element='body',
+
+    /* DO NOT EDIT BELOW THIS LINE */
+    f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+    window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+    </script>
+    <!-- End VWO Async SmartCode -->
+    {% endcomment %}
+
+
+    {% comment %} OMNIE CRAWLER CODE {% endcomment %} 
+    <meta name='zd-site-verification' content='s52ezkyfbkf8ycwu8pbysx' />
+
+    <meta name='zd-site-verification' content='h2wum6mektplmi2jo32nql' />
+
+    <meta name='zd-site-verification' content='9rbyld503va8g4tzqsizdd' />
+
+
+    <!-- load webfonts -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7447338/7637032/css/fonts.css" /> -->
+
+    {% comment %} temp handwriting fonts{% endcomment %}
+    {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Handlee&display=swap" rel="stylesheet"> {% endcomment %}
+
+    <!-- load klevu styles -->    
+       {% comment %}{% endcomment %}
+       <link rel="stylesheet" href="{{ 'klevu-v2-styles.css' | asset_url }}" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="{{ 'klevu-v2-styles.css' | asset_url }}"></noscript>
+
+
+    {% comment %}{% endcomment %}
+    <!-- Google Tag Manager 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N53HZR63');</script>
+     End Google Tag Manager -->
+
+
+    <!-- facebook domain verification code -->
+    {% comment %}{% endcomment %}
+    <meta name="facebook-domain-verification" content="1oqev92td9mjpt09vhplmzk2j8pzya" />
+    
+
+    <!-- ORDERGROOVE -->
+    {% comment %}{% endcomment %}
+    {% if template.name == 'product' %}
+      {%- render 'ordergroove_static_asset' -%}
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ 'font-override.css' | asset_url }}" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="{{ 'font-override.css' | asset_url }}"></noscript>
+
+    <script type="text/plain" class="pieeye-category-targeting-analytics"> !function(w,d,s,t,a){if(w.amzn)return;w.amzn=a=function(){w.amzn.q.push([arguments,(new Date).getTime()])};a.q=[];a.version="0.0";s=d.createElement("script");s.src="https://c.amazon-adsystem.com/aat/amzn.js";s.id="amzn-pixel";s.async=true;t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t)}(window,document);
+
+amzn("setRegion", "NA"); amzn("addTag", "c0b9f228-7eda-4977-b4cd-ef1e0a4856fd"); amzn("trackEvent", "PageView"); </script>
+  </head>
+
+  {%- assign feature_classes = '' -%}
+
+  {%- if settings.show_image_zoom -%}
+    {% assign feature_classes = feature_classes | append: ' features--image-zoom' %}
+  {%- endif -%}
+
+  <body class="no-focus-outline {{ feature_classes }}" data-instant-allow-query-string>
+    {%- comment -%}Common SVG definitions that we are re-using in several places{%- endcomment -%}
+    <svg class="visually-hidden">
+      <linearGradient id="rating-star-gradient-half">
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" />
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" stop-opacity="0.4" />
+      </linearGradient>
+    </svg>
+
+
+{% comment %}{% endcomment %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53HZR63"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+    <loading-bar class="loading-bar"></loading-bar>
+
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- section 'announcement-bar' -%}
+      {%- section 'popup' -%}
+      {%- section 'header' -%}
+
+      {%- unless settings.cart_type == 'page' or request.page_type == 'cart' -%}
+        {%- section 'mini-cart' -%}
+      {%- endunless -%}
+    {%- endif -%}
+
+    {% comment %} {% if template.name == "blog" %} 
+      <style>
+        .section__color-wrapper, #main, body {
+          background-color: {{ settings.blog_color }} !important;
+        }
+      </style>
+    {% endif %} {% endcomment %}
+
+    {% comment %} {% if template.name =="article" %} {% endif %} {% endcomment %}
+    <div id="main" role="main" class="anchor">
+      {%- comment -%}
+      IMPLEMENTATION NOTE: on collection and search page, the theme was designed to show on mobile the filter bar and/or sort
+        by at the very top of the page. However, due to the fact that sections are isolated, I had to move the code
+        here. Then, the collection section, based on the selected settings, will eventually hide those elements in CSS
+      {%- endcomment -%}
+
+      {% comment %} Moved this from here to collection-banner.liquid {% endcomment %}
+      {% comment %} {% endcomment %}
+
+      {%- if request.page_type == 'search' -%}
+        {%- assign active_filters_count = 0 -%}
+
+        {%- if request.page_type == 'collection' -%}
+          {%- assign filters = collection.filters -%}
+        {%- else -%}
+          {%- assign filters = search.filters -%}
+        {%- endif -%}
+
+        {%- for filter in filters -%}
+          {%- if filter.type == 'list' -%}
+            {%- assign active_filters_count = active_filters_count | plus: filter.active_values.size -%}
+          {%- elsif filter.type == 'price_range' and filter.min_value.value or filter.max_value.value -%}
+            {%- assign active_filters_count = active_filters_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign is_toolbar_collapsed = false -%}
+
+        {%- if request.page_type == 'search' and search.results.first.object_type != 'product' -%}
+          {%- assign is_toolbar_collapsed = true -%}
+        {%- endif -%}
+
+        
+        <div id="mobile-facet-toolbar" class="mobile-toolbar {% if is_toolbar_collapsed %}is-collapsed{% endif %} hidden-lap-and-up">
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--filters {% if active_filters_count > 0 %}has-filters{% endif %}" aria-expanded="false" aria-controls="facet-filters">
+            {%- render 'icon' with 'filters' -%}
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.filters' | t -}}</span>
+          </button>
+
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--sort" aria-expanded="false" aria-controls="sort-by-popover">
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.sort_by' | t -}}</span>
+            {%- render 'icon' with 'chevron' -%}
+          </button>
+        </div>
+        
+      {%- endif -%}
+
+      
+
+      {{ content_for_layout }}
+
+      {%- unless request.page_type == 'index' or request.page_type == 'password' or request.page_type == 'gift_card' -%}
+        {%- section 'static-text-with-icons' -%}
+        {%- section 'static-newsletter' -%}
+      {%- endunless -%}
+    </div>
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- section 'footer' -%}
+    {%- endif -%}
+
+
+    {% comment %}Bazaar Voice - give points for reviews {% endcomment %}
+    {% comment %} {% include 'bv-reward-loyalty' %} {% endcomment %}
+
+
+    {% comment %} 
+    BEGIN KLAVIYO BACK IN STOCK CODE
+    https://help.klaviyo.com/hc/en-us/articles/360001895651-Install-Back-in-Stock-for-Shopify
+    load only on product template pages 
+    {% endcomment %}
+
+    {% if template.name == "product" %} 
+
+    <script type="text/plain" class="pieeye-category-targeting-analytics" src="https://a.klaviyo.com/media/js/onsite/onsite.js" defer></script>
+    <script type="text/plain" class="pieeye-category-targeting-analytics">
+        var klaviyo = klaviyo || [];
+        klaviyo.init({
+          account: "MxB5uj",
+          list: 'KFBVFb',
+          platform: "shopify",
+          exclude_on_tags: 'discontinued, last-call, gift-card, coming-soon'
+        });
+        klaviyo.enable("backinstock",{ 
+        trigger: {
+          product_page_text: "JOIN THE WAITLIST",
+          product_page_class: "product-form__add-button button--primary button button--full",
+          product_page_text_align: "center",
+          product_page_margin: "0px",
+          product_page_margin: "0px",
+          alternate_anchor: "focal-AddToCart",
+          replace_anchor: false
+        },
+        modal: {
+         newsletter_subscribe_label: "Add me to your email list.",
+         subscribe_checked: true,
+         headline: "{product_name}",
+         body_content: "Get notified when this product is back in stock. ",
+         email_field_label: "Email",
+         button_label: "JOIN THE WAITLIST",
+         subscription_success_label: "YOU'RE IN!",
+         footer_content: '',
+         drop_background_color: "#000",
+         background_color: "#fff",
+         text_color: "#333",
+         button_text_color: "#000",
+         button_background_color: "#FF8EA0",
+         close_button_color: "#ccc",
+         error_background_color: "#fcd6d7",
+         error_text_color: "#C72E2F",
+         success_background_color: " #FF8EA0",
+         success_text_color: "#fff"
+        }
+      });
+    </script>
+    {% endif %} 
+    {% comment %} END KLAVIYO BACK IN STOCK CODE {% endcomment %}
+
+
+
+<!-------------------------------->
+<!-- START GOOGLE TAGS AND CODE -->
+<!-------------------------------->
+
+<!-- Google Analytics -->
+<meta name="google-site-verification" content="nCRAcpLOpk1PsKDssQuhezKrvidn-bznUp1U_ZrVOok" />
+
+<!-- PORTED OVER FROM THE OLD THEME -->
+
+<!--2018 google dynamic remarketing -->
+<!-- Global site tag (gtag.js) - AdWords: 1042677772-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1042677772"></script> 
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1042677772'); 
+</script>
+
+{% if template.name == 'product' %}   
+
+    <!-- Google Code for Remarketing Tag -->
+    <script type="text/javascript">
+      var google_tag_params = {
+      ecomm_prodid: 'shopify_US_{{ product.id }}_{{ product.variants.first.id }}',
+      ecomm_pagetype: '{{ template }}',
+      ecomm_totalvalue: {{ product.price_min | money_without_currency | remove: ',' }}
+      };
+     </script>
+
+    <!-- https://support.google.com/tagmanager/answer/6106960?hl=en -->
+    <!--google dynamic remarketing-->
+    <script> 
+      gtag('event', 'page_view', { 
+      'send_to': 'AW-1042677772', 
+      'ecomm_pagetype':  '{{ template }}', 
+        'ecomm_prodid': 'shopify_US_{{ product.id }}_{{ product.variants.first.id }}',
+        'ecomm_totalvalue': {{ product.price_min | money_without_currency | remove: ',' }}
+    }); 
+    </script> 
+
+  {% endif %}
+
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 1042677772;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    </script>
+
+    <script type="text/plain" class="pieeye-category-targeting-analytics" src="//www.googleadservices.com/pagead/conversion.js" defer></script>
+
+    <noscript>
+      <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1042677772/?guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    <!-------------------------------->
+    <!-- END GOOGLE TAGS AND CODE -->
+    <!-------------------------------->
+
+    <!-- START KLEVU SEARCH -->
+
+   {% comment %} KLEVU V2 {% endcomment %}
+    {% comment %}   {% endcomment %}
+    <!-- Include JS Library -->
+    <script src="https://js.klevu.com/core/v2/klevu.js"></script>
+
+    <!-- Include Quick Search Theme -->
+    <script src="https://js.klevu.com/theme/default/v2/quick-search.js"></script>
+
+    <!-- Include Search Results Theme -->
+    <script src="https://js.klevu.com/theme/default/v2/search-results-page.js"></script>
+
+    <!-- Configure Klevu for your store -->
+    {% comment %} https://docs.klevu.com/template-js/styling-css {% endcomment %}
+    <script type="text/javascript">
+      klevu.interactive(function () {
+        var options = {
+            powerUp: {
+              quick: false
+            },
+            url : {
+                landing : '/pages/search-results-1',
+                protocol: 'https:',
+                search: ' https://eucs23v2.ksearchnet.com/cs/v2/search' // your search URL
+            },
+            search: {
+                minChars: 0,
+                searchBoxSelector: "#predictive-search-input,[name=q]", // your search input selector
+                apiKey: "klevu-160822578869513075", // your Klevu JS API Key
+                searchBoxTarget: document.getElementById("klevu-drawer__content")
+            },
+            analytics: {
+                apiKey: 'klevu-160822578869513075' // your Klevu JS API Key
+            },
+            theme: {
+              quickSearch: {
+                  loadDefaultStyles: false
+              },
+              landing: {
+                  loadDefaultStyles: false
+              },
+              catnav: {
+                  loadDefaultStyles: false
+              }
+            }
+        };
+        klevu(options);
+      });
+      {% comment %}loading some sticky styles here that were being overwritten by klevu. the other style overrides are loaded in the klevu css file in the head{% endcomment%}
+      var customStyleContent = '.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdTop .klevuImgWrap a img {max-width:none !important;max-height:none !important;} .kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdTop .klevuImgWrap{width: 100%!important;height: 250px!important;}.kuPrice .klevuQuickPriceGreyText{font-size:13px !important;} ';
+      
+      klevu.coreEvent.build({
+        name: "setRemoteConfigQuickOverride",
+        fire: function () {
+            if (klevu.getSetting(klevu,"settings.flags.setRemoteConfigQuick.build", false)) {
+                return true;
+            }
+            return false;
+        },
+        maxCount: 150,
+        delay: 100
+      });
+      
+      klevu.coreEvent.attach("setRemoteConfigQuickOverride", {
+        name: "attachRemoteConfigQuickOverride",
+        fire: function () {
+      
+            klevu.dom.helpers.addElementToHead({
+              name: "klevu-custom-styles",
+              content: customStyleContent,
+              type: "css"
+            });
+      
+            klevu({
+                powerUp: {
+                    quick: true
+                }
+            });
+        }
+      });
+    </script> 
+
+    {% comment %} KLEVU ADD TO CART CODE {% endcomment %}
+    <script type="text/javascript">
+      function klevu_addtocart( id, url, qty ) {
+        if( 'undefined' !== typeof klevu_customAddToCart ){
+          klevu_customAddToCart( id, url, qty );
+        } else{
+      var urlProtocol = ( "https:" === document.location.protocol ? "https://" : "http://" );
+      var url = urlProtocol + window.location.hostname +'/cart/add?id='+id+'&quantity='+qty;
+      window.location.assign(url);
+      }
+      }
+    </script>
+
+    {% comment %} customizations - ratings stars {% endcomment %}
+      <script src="https://js.klevu.com/klevu-js-v1/customizations/klevu-user-customization-160822578869513075-v2.js" defer></script>
+      <!-- END KLEVU SEARCH -->
+          
+   {% comment %} customizations - ACCESSIBE TO BE DEPRECATED
+    <script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146ff8', triggerColor : '#146ff8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 110, triggerOffsetY : 35, mobile : { triggerSize : 'medium', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 90, triggerOffsetY : 35, triggerRadius : '50%' } }); }; h.appendChild(s); })(); </script>
+  {% endcomment %}
+
+    {% comment %} bazaarvoice {% endcomment %}
+    <script type="text/plain" class="pieeye-category-functional">var CRL8_SITENAME = 'pacificabeauty-tqywcz';!function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.async=!0,o.src=t.location.protocol+"//edge.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();</script>
+
+    {% comment %} SHOPMY TRACKING CODE {% endcomment %}
+    <script type="text/plain" class="pieeye-category-targeting-analytics" defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack.js"></script>
+    
+  {%- render "ecom_footer"-%}
+    {%- render 'powerreviews' -%}
+</body>
+</html>

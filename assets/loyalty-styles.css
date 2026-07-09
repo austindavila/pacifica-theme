@@ -1,0 +1,253 @@
+.lion-action-button, #loyaltylion .lion-action-button{
+  background: black;
+  color: white;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-medium-weight);
+  font-size: calc(var(--base-font-size) - 1px);
+  text-transform: uppercase;
+  letter-spacing: normal;
+  border-radius: 25px;
+  max-width: 300px;
+  margin:auto;
+}
+
+.lion-rule-item--style-1 .lion-rule-item__title {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-align:center;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.lion-tier-box__title{
+  font-size: 1.3em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align:center;
+  line-height: normal;
+}
+
+.lion-tier-benefits-list__item{
+  font-size: 1em;
+}
+
+.lion-rule-item--style-1 .lion-rule-item__content, .lion-reward-item__content{
+  border-radius:10px;
+  background-color: #fff0f0;
+}
+
+.lion-reward-item__title{
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align:center;
+  line-height: normal;
+}
+
+.lion-claimed-reward-item__title {
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+.lion-reward-item__cost{
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom:10px;
+}
+
+.lion-reward-item__content{
+  min-height:100px !important;
+}
+
+.lion-tier-box{
+  background:#f3f9ff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.lion-rule-item--style-1.lion-rule-item--actionable:hover .lion-rule-item__content{
+  border: 1px solid black;
+}
+
+.lion-action-button:hover, #loyaltylion .lion-action-button:hover {
+  background-color: black;
+}
+
+/* If needed, use higher specificity or add !important */
+.lion-icon__rule--purchase {
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--purchase.png?v=1718310947') center / contain no-repeat !important;
+}
+.lion-icon__rule--birthday {
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--birthday.png?v=1718310947') center / contain no-repeat !important;
+}
+.lion-icon__rule--facebook-like {
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--facebook-like.png?v=1718310947') center / contain no-repeat !important;
+}
+.lion-icon__rule--instagram-follow {
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--instagram-follow.png?v=1718310947') center / contain no-repeat !important;
+}
+.lion-icon__rule--referral{
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--referral.png?v=1718310947') center / contain no-repeat !important;
+}
+.lion-icon__rule--custom{
+  background: url('https://cdn.shopify.com/s/files/1/1515/0462/files/lion-icon__rule--custom.png?v=1718310947') center / contain no-repeat !important;
+}
+
+/* rules container */
+.lion-rules-list {
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+/* rule items */
+.lion-rule-item{
+  flex: 1 1 100%!important;
+}
+@media (min-width: 1000px) {
+  .lion-rule-item {
+      flex: 1 1 calc(33.333% - 10px) !important; 
+  }
+}
+
+/* dots */
+.big-dot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 50px;
+  line-height: 100px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #99d9d9;
+  /* background: rgb(223,232,220);
+  background: linear-gradient(135deg, rgba(223,232,220,1) 0%, rgba(197,226,250,1) 51%, rgba(188,191,243,1) 100%); */
+}
+
+
+/* compare benefits */
+.benefits-tier-compare {
+  margin: 20px auto 20px auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
+  background:white;
+  border-radius:10px;
+  /* padding:50px 30px; */
+}
+
+.lion-rewards-list, .benefits-tier-compare, .lion-rules-list, .lion-history-table, .lion-claimed-rewards-list {
+  max-width: 1400px;
+  margin: 20px auto 20px auto;
+  padding-top:0;
+}
+
+.benefits-tier-compare table {
+  width: 800px;
+}
+@media (min-width: 1000px) {
+  .benefits-tier-compare table {
+    width: 100%;
+  }
+}
+.benefits-tier-compare .td-dot, .re-level{
+  text-align: center;
+}
+.benefits-tier-compare .re-level{
+  padding: 20px 0 10px 0;
+}
+.benefits-tier-compare i{
+  padding-top: 20px;
+  padding-bottom:10px;
+}
+.benefits-tier-compare .re-title{
+  padding: 15px 0 15px 15px;
+}
+.benefits-tier-compare .master-col{
+  width: 400px;
+  @media screen and (min-width: 1000px) {
+    width: 300px;
+  }
+}
+.benefits-tier-compare .sub-col{
+  width: 100px;
+  @media screen and (min-width: 1000px;) {
+    width: 200px;
+  }
+}
+.benefits-tier-compare td{
+  /* font-size: 16px; */
+  line-height: 16px;
+}
+.benefits-tier-compare .shading{
+  background-color: #fff0f0;
+}
+
+#loyaltylion .lion-modal__content, .lion-modal__header, .lion-referral-widget{
+  font-family: "Gotham A", "Gotham B", sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lion-modal__content .lion-action-button, .lion-modal__content .lion-action-button{
+  margin: auto 5px auto 5px !important;
+}
+#loyaltylion .lion-modal__header{
+  font-size:smaller;
+}
+
+#loyaltylion .lion-history-state-bubble--approved{
+  background-color: #51adad;
+}
+.lion-claimed-reward-item:nth-child(even), .lion-history-table__row:nth-child(even), .lion-history-table__header-cell {
+  background-color: #fffafa;
+}
+
+.lion-reward-item__fill{
+  display:none;
+}
+
+#loyaltylion .lion-reward-code__code {
+  background-color: #ececec;
+  border: 3px dashed #a6a6a6;
+}
+
+
+/* notifications */
+
+.lion-notification--guest-introduction .lion-notification__action{
+  display: none;
+}
+
+#lion-loyalty-panel-custom-css > div.lion-notification-container.lion-notification-container--top-right > div > div > div.lion-notification__message > span > a{
+  background: #000;
+  color: #fff;
+  padding: 5px 35px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  border-radius: 25px;
+  max-width: 300px;
+  margin: auto;
+}
+
+#loyaltylion .lion-notification__divider {
+  margin: .5rem 0 !important;
+}
+
+#loyaltylion .lion-notification__reward-message {
+  margin: 0 !important;
+  padding-top: 10px !important;
+}
+
+#loyaltylion .lion-notification-container--top-right{
+  top:35px;
+}
+
+@media (min-width: 1000px) {
+  #loyaltylion .lion-notification-container--top-right{
+    top:60px;
+  }
+}

@@ -1,0 +1,70 @@
+{% comment %} countdown timer for announcement bar https://www.w3schools.com/jsref/jsref_obj_date.asp{% endcomment %}
+
+<script>
+
+// Set the date we're counting down to, UTC
+// var endSaleDate = new Date("{{ section.settings.countdown_date }}").getTime();
+// https://www.w3schools.com/jsref/jsref_utc.asp
+// new Date(Date.UTC(year, month (0-11), date (1-31), -- keep hour 8, min 0, sec 0));
+var endSaleDateUTC = new Date(Date.UTC({{ section.settings.countdown_year }}, {{ section.settings.countdown_month }}, {{ section.settings.countdown_day }}, {{ section.settings.countdown_hour }}, 0, 0));
+
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+
+  // create date object for current location
+  var d = new Date();
+
+  // get local time
+  var localTime = d.getTime();
+  // console.log("local time is "+localTime);
+
+  // Find the distance between now and the count down date
+  var endsale_distance = endSaleDateUTC - localTime;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var endsale_days = Math.floor(endsale_distance / (1000 * 60 * 60 * 24));
+  var endsale_hours = Math.floor((endsale_distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var endsale_minutes = Math.floor((endsale_distance % (1000 * 60 * 60)) / (1000 * 60));
+  var endsale_seconds = Math.floor((endsale_distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  // document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h "
+  // + minutes + "m " + seconds + "s ";
+
+   document.getElementById("endsale-timer-days").innerHTML = endsale_days;
+   document.getElementById("endsale-timer-hours").innerHTML = endsale_hours;
+   document.getElementById("endsale-timer-minutes").innerHTML = endsale_minutes;
+   document.getElementById("endsale-timer-seconds").innerHTML = endsale_seconds;
+    
+  // If the count down is over, write some text 
+  if (endsale_distance < 0) {
+    clearInterval(x);
+    document.getElementById("endsale-timer").innerHTML = "";
+    $("#endsale-timer").hide();
+    // document.getElementById("endsale-timer").innerHTML = "";
+  }
+  else{
+    $("#endsale-timer").show();
+  }
+}, 1000);
+
+
+</script>
+
+<style>
+  #endsale-timer{
+    display: none;
+  }
+</style>
+
+<div class="">{{ section.settings.content_fixed_countdown | remove: '<p>' | remove: '</p>' }}
+<br class="hidden-lap-and-up">
+  <span id="endsale-timer" style="font-weight: normal; display:none;">
+    <div class="number-block" id="endsale-timer-days" {% unless section.settings.show_days_countdown %}style="display:none"{% endunless %}></div><span {% unless section.settings.show_days_countdown %}style="display:none"{% endunless %}>days</span>
+    <div class="number-block" id="endsale-timer-hours"></div><span>hrs</span>
+    <div class="number-block" id="endsale-timer-minutes"></div><span>min</span>
+    <div class="number-block" id="endsale-timer-seconds"></div><span>sec</span>
+  </span>
+
+</div>

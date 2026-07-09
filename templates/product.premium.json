@@ -1,0 +1,342 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "bfd7a147-995d-48fc-924a-d597508ca97d": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "Earn <span class=\"js-pdp-loyalty-points\">{{ product.selected_or_first_available_variant.price | money_without_currency | ceil }}</span> Kindness Club points <i class=\"fas fa-gift\"></i>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "e2819ddc-6584-4458-8f46-8dd948bbb635": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "{% comment %} ULTA AND TARGET LOGOS {% endcomment %}\n\n  {% comment %} {% endcomment %} \n  {% if product.tags contains 'ulta' or product.tags contains 'target' %}\n\n    {% for tag in product.tags %}\n      {% if tag contains '__link' %}<a href=\"{{ tag | split: '__link:' | last }}\" target=\"_blank\">{% endif %}\n    {% endfor %}\n       \n        {% if product.tags contains 'ulta' %}\n         \n          <div>\n            <span>Now available at </span>\n            <span><img src=\"{{ 'ulta-logo-gray.png' | asset_url }}\"  alt=\"Ulta Beauty Logo\" style=\"width: 100px; height: auto; padding-left: 10px;\"> </span>\n          </div>\n\n          {% elsif product.tags contains 'target' %}\n           \n          <div style=\"padding-bottom:10px;\">\n            <span><img src=\"{{ 'target-logo-pdp.png' | asset_url }}\"  alt=\"Target Logo\" style=\"width: 200px; height: auto;\"> </span>\n          </div>\n\n          {% endif %}\n\n    {% for tag in product.tags %}\n      {% if product.tags contains '__link' %}</a>{% endif %}\n    {% endfor %}\n    \n  {% endif %}"
+          }
+        },
+        "2e9f3bf4-234b-424f-9f0c-92a2165381a9": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<afterpay-placement \n          data-locale=\"en_US\"\n          data-currency=\"USD\" \n          data-amount=\"{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}\"\n          data-logo-type = \"lockup\"\n          data-show-upper-limit = \"false\"\n          data-size = \"xs\"\n          data-modal-theme=\"white\"\ndata-intro-text = \"pay in\"\n       ></afterpay-placement>\n\n       <style>\n          afterpay-placement { \n            --logo-badge-width: 80px;\n          }\n          .afterpay-paragraph{\n            padding: 10px 0;\n          }\n       </style>"
+          }
+        },
+        "467b239f-29ae-4fad-9568-a1d3fc1feb1b": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "disabled": true,
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "ordergroove_offer": {
+          "type": "shopify://apps/ordergroove-subscriptions/blocks/pdp-offer-block/cf69fc68-e893-4d33-87e3-4e71e2f5822f",
+          "settings": {
+            "location": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "0661894e-9d6b-4b50-a140-c8df732649cb": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"text--xsmall\" style=\"text-align: center;\n                background: #fcf5f6; padding: 10px; line-height:12px;\" >or 4 payments of <span class=\"js-installments-price\">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> with<img style=\"height:13px; margin: 0 7px;\" src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PDP-logo-klarna.png?v=1666826990\">or<img style=\"height:13px; margin: 0 7px;\"  src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PDP-logo-afterpay.png?v=1666826990\"></div>"
+          }
+        },
+        "d4bfc7e4-fe1f-4aee-b8c9-697cd18992c4": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% comment %}<div style=\"padding:0; padding-bottom:0px; margin:0;\" class=\"text--xsmall text--center\"><span class=\"text--strong\">FREE MINI</span> with orders $25+</div>{% endcomment %}\n<div style=\"padding:15px 0 0 0; padding-bottom:15px; margin:0;\" class=\"text--xsmall text--center\">Free Shipping over $50 • FREE MINI over $25</div>"
+          }
+        },
+        "c23475fb-b5bd-4fdb-a781-1c7b0eda672a": {
+          "type": "inventory",
+          "settings": {
+            "low_inventory_threshold": 15
+          }
+        },
+        "abbaa116-3b63-4da0-917d-82e74a7e02de": {
+          "type": "description",
+          "settings": {}
+        },
+        "9326edb1-d1e8-4f00-801f-f1633df17dd0": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{{ product.metafields.custom_fields [\"ingredients_we_love\"]}}"
+          }
+        },
+        "a347abf3-449b-48e0-8631-a026d92efe41": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% comment %}EU DETAILS{% endcomment %}\n     {% if product.metafields.custom_fields[\"eu_info\"] != blank %}\n        <button class=\"obs-symbol\" aria-label=\"Show Translated Directions\">\n          <img src=\"{{ 'OBS_Thumbnail.jpg' | file_url }}\" alt=\"OBS Image\"/>\n        </button>\n    {%- endif -%}"
+          }
+        }
+      },
+      "block_order": [
+        "bfd7a147-995d-48fc-924a-d597508ca97d",
+        "variant_picker",
+        "e2819ddc-6584-4458-8f46-8dd948bbb635",
+        "2e9f3bf4-234b-424f-9f0c-92a2165381a9",
+        "467b239f-29ae-4fad-9568-a1d3fc1feb1b",
+        "quantity_selector",
+        "ordergroove_offer",
+        "buy_buttons",
+        "0661894e-9d6b-4b50-a140-c8df732649cb",
+        "d4bfc7e4-fe1f-4aee-b8c9-697cd18992c4",
+        "c23475fb-b5bd-4fdb-a781-1c7b0eda672a",
+        "abbaa116-3b63-4da0-917d-82e74a7e02de",
+        "9326edb1-d1e8-4f00-801f-f1633df17dd0",
+        "a347abf3-449b-48e0-8631-a026d92efe41"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": true,
+        "desktop_thumbnails_position": "left",
+        "transition_effect": "slide"
+      }
+    },
+    "product-content": {
+      "type": "product-content",
+      "blocks": {
+        "bdc93e51-9fe8-4d2d-b40e-a9b07734184c": {
+          "type": "liquid",
+          "settings": {
+            "title": "Details",
+            "liquid": "{{ product.metafields.sf_product_tabs[\"tab_1_content\"] }}"
+          }
+        },
+        "8e5ec074-010b-4cbc-87da-661426b41264": {
+          "type": "liquid",
+          "settings": {
+            "title": "How to Use",
+            "liquid": "{{ product.metafields.sf_product_tabs[\"tab_2_content\"] }}"
+          }
+        },
+        "4641645f-e678-4633-afa3-f57265ef389d": {
+          "type": "liquid",
+          "settings": {
+            "title": "Ingredients",
+            "liquid": "{% if product.metafields.sf_product_tabs[\"tab_3_content\"] != blank %}{{ product.metafields.sf_product_tabs[\"tab_3_content\"] }}\n<span style=\"font-style:italic;\">We occasionally update formulas to make sure we are as clean and effective as possible. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.</span>{% endif %}"
+          }
+        },
+        "9a409ac7-4104-4c29-95c2-879987cef009": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-delivery-truck",
+            "title_1": "Free Shipping Over $50",
+            "content_1": "<p>Free shipping in the U.S. on all orders over $50. </p><p><em>Must have over $50 in cart at checkout</em></p>",
+            "icon_2": "picto-warranty",
+            "title_2": "Easy Returns",
+            "content_2": "<p><strong>Return Policy</strong><br/>At Pacifica, we want you to be 100% satisfied with your purchase and experience. That is why we offer an easy return process.</p><p>Once your order has been placed, it cannot be cancelled. You can return any items once received, with the exception of <a href=\"https://www.pacificabeauty.com/collections/last-call\">Last Call</a> items, by using our return process outlined below.</p><p>Returns are accepted within 30 days after receipt of products from Pacificabeauty.com only. Items purchased from a Pacifica retail partner will not be accepted. Samples & free gifts with purchase are not returnable. If you receive a promotional item with purchase, you will be charged for these promotional items if you return the qualifying item. We cannot accept returns from outside of the US. Shipping charges are non-refundable.</p><p>Pacifica does offer price adjustments on purchases made within 7 days before a markdown or sale. </p><p>All <a href=\"https://www.pacificabeauty.com/collections/last-call\">Last Call</a> Items are Final Sale.  No Returns, Refunds, or Exchanges. No Exceptions.</p><p><strong>For Returns:</strong><br/>Once your order is received, your refund will be processed and automatically applied to your credit card within 5 business days. Depending on your credit card company, it may take up to 14 business days after your credit is applied for it to post to your account. </p><p>When making your return, you may instead opt to receive a gift card instead of a refund to your credit card. The gift card will include an extra 10% to spend on your next order on pacificabeauty.com.</p><p>For Returns, visit our returns portal <a href=\"https://www.pacificabeauty.com/apps/returns\">here</a>. </p><p><strong>NOTE:</strong> If you need to return bundles, please contact customer care at <a href=\"mailto:support@pacificabeauty.com\">support@pacificabeauty.com</a>.</p><p>Start your return <a href=\"https://www.pacificabeauty.com/apps/returns\">here</a>. </p><p><strong>For Exchanges:</strong><br/>Once your order is received, your exchange will be processed. You will receive an email with updated tracking information for your new products. For Exchanges, visit our returns portal <a href=\"https://www.pacificabeauty.com/apps/returns\">here</a>. </p><p><strong>NOTE:</strong> If you need to return nail, perfume or aerosol products, please contact customer care at <a href=\"mailto:support@pacificabeauty.com\">support@pacificabeauty.com</a>.</p><p>Start your exchange <a href=\"https://www.pacificabeauty.com/apps/returns\">here</a>. </p><p> </p>",
+            "icon_3": "picto-gift",
+            "title_3": "Free Mini Over $25",
+            "content_3": "<p>Free Mini on all orders over $25. Make selection in cart.</p>"
+          }
+        },
+        "29adda11-ba5b-4afb-97ab-fe17ee5a8518": {
+          "type": "liquid",
+          "settings": {
+            "title": "Packaging",
+            "liquid": "{% if product.metafields.custom_fields[\"how_to_recycle\"] %}{{ product.metafields.custom_fields[\"how_to_recycle\"] }}{% endif %}"
+          }
+        },
+        "e0f7acb8-e83f-476d-9984-f343f5dd6eca": {
+          "type": "featured_products",
+          "settings": {
+            "title": "use it with",
+            "product_1": "vegan-collagen-skin-solve-primer",
+            "product_2": "vegan-collagen-lash-serum-primer"
+          }
+        }
+      },
+      "block_order": [
+        "bdc93e51-9fe8-4d2d-b40e-a9b07734184c",
+        "8e5ec074-010b-4cbc-87da-661426b41264",
+        "4641645f-e678-4633-afa3-f57265ef389d",
+        "9a409ac7-4104-4c29-95c2-879987cef009",
+        "29adda11-ba5b-4afb-97ab-fe17ee5a8518",
+        "e0f7acb8-e83f-476d-9984-f343f5dd6eca"
+      ],
+      "settings": {}
+    },
+    "1656606918fc157819": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if product.tags contains \"suncare\" %}\n{% assign product = all_products['after-sun-cool-glow-chest-area-sheet-mask'] %}\n<div class=\"row center-xs middle-xs\">\n\n    <div class=\"text--center col-xs-12 col-md-4\" style=\"margin:0;\">\n        <img src=\"{{ 'after-sun-chest-sheet-mask-stylized.jpg' | file_img_url: '300x' }}\">\n    </div>\n\n    <div class=\"text--medium text--center col-xs-12 col-md-4\" style=\"padding:30px;\">\n        LIMITED TIME OFFER<br>\n        Free <a href=\"/products/after-sun-cool-glow-chest-area-sheet-mask\" style=\"text-decoration:underline;\">After Sun Cool & Glow Chest Area Sheet Mask</a> with all Suncare purchases.\n        <br> \n        <div class=\"button-wrapper\" style=\"padding-top:10px;\">\n           <a href=\"\" onclick=\"addItemToCart({{product.first_available_variant.id  | json }});return false;\" class=\"button button--primary\">ADD TO BAG</a>\n        </div>\n    </div>\n</div>\n{% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "263f0aa6-e3b5-405e-a925-e62d88e45ff3": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs middle-xs\" style=\"margin-bottom:40px;\">\n<div class=\"col-xs-12 col-sm-4\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/VC-BodySpray-EveryBodyCampaign-Updated.jpg?v=1666899819\" width=\"300\" loading=\"lazy\" alt=\"We Support the Every Body Campaign\"></div>\n<div class=\"col-xs-12 col-sm-8 text--left\" style=\"background-color: #397e58; padding:40px 20px; color:white;\">\n<span class=\"heading h2 color-white\"><i>The Every Body Campaign is the largest beauty industry-backed reproductive rights initiative to date.</i></span><br>\nWe’ve banded together with over 35+ beauty brands to protect Every Body’s right to choose – because reproductive rights are human rights. In partnership with all brands, Pacifica has made a donation to support reproductive justice and Reproductive Justice Collective SisterSong. \n<br><br>The SisterSong Women of Color Reproductive Justice Collective is the largest multi-ethnic collective of its kind in the nation. Since 1997, they have been activating individuals and organizations to improve institutional policies and systems that impact the reproductive lives of marginalized communities. Learn more at <a href=\"http://www.everybodycampaign.com\" target=\"_blank\" style=\"text-decoration:underline;\">everybodycampaign.com</a> \n\n</div>\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "165522822375cdabc5": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{%- comment -%}\nrouter for pdp premium content - ported from old theme\n{%- endcomment -%}\n\n{%- comment -%}\nPREMIUM CONTENT\n{%- endcomment -%}\n\n{% if product.handle == 'vegan-collagen-fluffy-lash-mascara' %}\n\n{% render 'product-premium-content-vegan-collagen-fluffy-lash-mascara' %}\n\n{% elsif product.handle == 'vegan-collagen-lash-serum-primer' %}\n\n{% render 'product-premium-content-vegan-collagen-lash-serum-primer' %}\n\n{% elsif product.handle == 'vegan-collagen-skin-solve-primer' %}\n\n{% render 'product-premium-content-vegan-collagen-skin-solve-primer' %}\n\n{% elsif product.handle == 'activist-volume-mascara' %}\n\n{% render 'product-premium-content-activist-volume-mascara' %}\n\n{% endif %}\n\n\n{%- comment -%}\nEDUCATION CONTENT\n{%- endcomment -%}\n\n{% if product.handle == 'vegan-ceramide-serum' %}\n\n{% render 'product-education-content-vegan-ceramide-serum' %}\n\n{% elsif product.handle == 'vegan-ceramide-barrier-eye-cream' %}\n\n{% render 'product-education-content-vegan-ceramide-barrier-eye-cream' %}\n\n{% elsif product.handle == 'vegan-ceramide-barrier-face-cream' %}\n\n{% render 'product-education-content-vegan-ceramide-barrier-face-cream' %}\n\n{% elsif product.handle == 'vegan-ceramide-barrier-face-lotion' %}\n\n{% render 'product-education-content-vegan-ceramide-barrier-face-lotion' %}\n\n{% elsif product.handle == 'vegan-ceramide-extra-gentle-face-wash' %}\n\n{% render 'product-education-content-vegan-ceramide-extra-gentle-face-wash' %}\n\n{% elsif product.handle == 'vegan-ceramide-facial-oil' %}\n\n{% render 'product-education-content-vegan-ceramide-facial-oil' %}\n\n\n{% elsif product.handle == 'vegan-ceramide-hydration-fill-undereye-smile-line-jelly-patches' %}\n\n{% render 'product-education-content-vegan-ceramide-hydration-fill-undereye-smile-line-jelly-patches' %}\n\n{% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1649104490b642e062": {
+      "type": "bundle-and-save",
+      "settings": {
+        "text_title": "BUNDLE AND SAVE",
+        "text_body": "",
+        "button_text": "LEARN MORE"
+      }
+    },
+    "1639681093b7522139": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video_url": "https://youtu.be/AF3NXMs22VI",
+        "background_type": "boxed",
+        "video_size": "medium",
+        "autoplay": false,
+        "background": "#ffffff",
+        "text_color": "#ffffff"
+      }
+    },
+    "1655229652b6a54fe1": {
+      "type": "faq",
+      "blocks": {
+        "16552296524521536d-4": {
+          "type": "question",
+          "settings": {
+            "title": "Using Metafields",
+            "answer": "<p>Using Metafields</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16552296524521536d-4"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": true,
+        "title": "Frequently Asked Questions",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "more to fall in love with",
+        "recommendations_count": 8,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    // "165237674417ca9f75": {
+    //   "type": "custom-liquid",
+    //   "settings": {
+    //     "subheading": "",
+    //     "title": "",
+    //     "liquid": "<script async src='//asset.fwcdn3.com/js/storyblock.js'></script>\n\n<fw-storyblock channel=\"pacificabeauty\" hashtag=\"{{ product.selected_or_first_available_variant.sku }}\" \n\nmode=\"pinned\" open_in=\"default\" player_placement=\"bottom-right\" autoplay=\"true\">\n\n</fw-storyblock>",
+    //     "background_type": "full_width",
+    //     "background": "rgba(0,0,0,0)",
+    //     "text_color": "rgba(0,0,0,0)"
+    //   }
+    // },
+    // "16449534209b9bd5db": {
+    //   "type": "custom-liquid",
+    //   "settings": {
+    //     "subheading": "",
+    //     "title": "",
+    //     "liquid": "{%- comment -%}\nKLAVIYO ADD TO CART\n{%- endcomment -%}\n\n<script type=\"text/javascript\">\nvar _learnq = _learnq || [];\n\tdocument.getElementById(\"AddToCart\").addEventListener('click',function (){\n \t\t_learnq.push(['track', 'Added to Cart', item]);\nconsole.log(\"added!\");\t\n});</script>\n\n\n\n{%- comment -%}\nKLAVIYO VIEWED PRODUCT\n{%- endcomment -%}\n\n<script type=\"text/javascript\">\n  var _learnq = _learnq || [];\n\n  var item = {\n    Name: {{ product.title|json }},\n    ProductID: {{ product.id|json }},\n    Categories: {{ product.collections|map:'title'|json }},\n    ImageURL: \"https:{{ product.featured_image.src|img_url:'grande' }}\",\n    URL: \"{{ shop.secure_url }}{{ product.url }}\",\n    Brand: {{ product.vendor|json }},\n    Price: {{ product.price|money|json }},\n    CompareAtPrice: {{ product.compare_at_price_max|money|json }}\n  };\n\n  _learnq.push(['track', 'Viewed Product', item]);\n  _learnq.push(['trackViewedItem', {\n    Title: item.Name,\n    ItemId: item.ProductID,\n    Categories: item.Categories,\n    ImageUrl: item.ImageURL,\n    Url: item.URL,\n    Metadata: {\n      Brand: item.Brand,\n      Price: item.Price,\n      CompareAtPrice: item.CompareAtPrice\n    }\n  }]);\n</script>\n\n\n\n{%- comment -%}\nBAZAARVOICE\n{%- endcomment -%}\n\n<!-- this is what's on the bottom of the PDP -->\n<div id=\"reviewhighlights\" data-bv-show=\"review_highlights\" data-bv-product-id=\"{{product.id }}\" class=\"Container\"></div>\n\n<div data-bv-show=\"reviews\" data-bv-product-id=\"{{product.id }}\" class=\"Container\"></div>\n\n<div data-bv-show=\"questions\" data-bv-product-id=\"{{product.id }}\"></div>\n\n\n{%- comment -%}\nCURALATE\n{%- endcomment -%}\n\n<div crl8-container-id=\"product\" crl8-filter=\"productId:'{{ product.selected_or_first_available_variant.sku}}'\"></div>",
+    //     "background_type": "full_width",
+    //     "background": "rgba(0,0,0,0)",
+    //     "text_color": "rgba(0,0,0,0)"
+    //   }
+    // },
+    "powerreviews-pdp-review-display": {
+	"type": "powerreviews-pdp-review-display",
+	"settings": {
+	}
+},
+"powerreviews-pdp-question-display": {
+	"type": "powerreviews-pdp-question-display",
+	"settings": {
+	}
+}
+  },
+  "order": [
+    "main",
+    "product-content",
+    "1656606918fc157819",
+    "263f0aa6-e3b5-405e-a925-e62d88e45ff3",
+    "165522822375cdabc5",
+    "1649104490b642e062",
+    "1639681093b7522139",
+    "1655229652b6a54fe1",
+    "product-recommendations",
+    "powerreviews-pdp-review-display",
+    "powerreviews-pdp-question-display"
+  ]
+}

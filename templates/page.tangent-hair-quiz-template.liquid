@@ -1,0 +1,129 @@
+<style>
+  #subheading-configure,
+  #company_dt > a {
+    color: {{ settings.colors_text }};
+  }
+  #tangent-iframe-div {
+    margin: 0 auto;
+  }
+  .tangent-hide-element {
+    display: none !important;
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    #tangent-iframe-div {
+      width: 100%;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    #tangent-iframe-div {
+      width: 80%;
+    }
+  }
+</style>
+
+
+{% assign indexPage = true %}
+
+{% comment %} LANGUAGE PATH & CONFIG TEXT {% endcomment %}
+{%- liquid 
+  assign iso_path = ""  
+  assign generalText = "Please configure the Tangent quiz app to enable the quiz here." 
+  assign poweredByText = "Powered by" 
+-%}
+
+{%- if template.name != "index" -%}
+  {% assign indexPage = false %}
+{%- endif -%}
+
+{%- liquid 
+  case request.locale.iso_code 
+    when "es" 
+      assign iso_path = "es/"
+      assign generalText = "Configure la aplicación Tangent Quiz para habilitar el cuestionario aquí." 
+      assign poweredByText = "Energizado por" 
+    when "it" 
+      assign iso_path = "it/"
+      assign generalText = "Si prega di configurare l'app Tangent Quiz per abilitare il quiz qui." 
+      assign poweredByText = "Offerto da" 
+    when "fr" 
+      assign iso_path = "fr/"
+      assign generalText = "Veuillez configurer l'application de quiz tangente pour activer le quiz ici." 
+      assign poweredByText = "Alimenté par" 
+    when "de" 
+      assign iso_path = "de/"
+      assign generalText = "Bitte konfigurieren Sie die Tangenten -Quiz -App, um das Quiz hier zu aktivieren." 
+      assign poweredByText = "Bereitgestellt von" 
+    when "ja" 
+      assign iso_path = "ja/"
+      assign generalText = "ここでクイズを有効にするために、Tangent Quizアプリを構成してください。" 
+      assign poweredByText = "搭載" 
+    when "ko" 
+      assign iso_path = "ko/"
+      assign generalText = "퀴즈를 여기에서 활성화하려면 탄젠트 퀴즈 앱을 구성하십시오." 
+      assign poweredByText = "구동" 
+    when "pl" 
+      assign iso_path = "pl/"
+      assign generalText = "Skonfiguruj aplikację quizu Tangent, aby włączyć quiz tutaj." 
+      assign poweredByText = "Zasilane przez" 
+    when "pt" 
+      assign iso_path = "pt/"
+      assign generalText = "Configure o aplicativo Tangent Quiz para ativar o teste aqui." 
+      assign poweredByText = "Distribuído por" 
+    when "pt-BR" 
+      assign iso_path = "pt/"
+      assign generalText = "Configure o aplicativo Tangent Quiz para ativar o teste aqui." 
+      assign poweredByText = "Distribuído por" 
+    when "ru" 
+      assign iso_path = "ru/"
+      assign generalText = "Пожалуйста, настройте приложение Tangent Quiz, чтобы включить тест здесь."   
+      assign poweredByText = "Питаться от" 
+    when "da" 
+      assign iso_path = "da/"
+      assign generalText = "Konfigurer venligst Tangent Quiz -appen for at aktivere quizzen her."   
+      assign poweredByText = "Drevet af" 
+    when "sl-SI" 
+      assign iso_path = "sl/"
+      assign generalText = "Konfigurirajte aplikacijo za kviz Tangent, da omogočite kviz tukaj."   
+      assign poweredByText = "Poganja ga" 
+    when "fi" 
+      assign iso_path = "fi/"
+      assign generalText = "Määritä Tangent-tietokilpailusovellus ottaaksesi tietokilpailun käyttöön täällä."   
+      assign poweredByText = "Voimanlähteenä" 
+    else 
+      assign iso_path = "en/"
+      assign generalText = "Please configure the Tangent quiz app to enable the quiz here."
+      assign poweredByText = "Powered by" 
+  endcase 
+-%}
+
+<div id="tangent-iframe-div">
+  <p id="tangent-shop-domain" class="tangent-hide-element">{{ shop.permanent_domain }}</p>
+  <p id="tangent-shop-iso" class="tangent-hide-element">{{ request.locale.iso_code }}</p>
+  <iframe
+    id="tangent-block-quiz-iframe" onload="parent.scrollTo(0,0);" 
+    src="https://a.tangent.ai/quiz-app/1.0.89/en?shop_id={{ shop.id }}&amp;form_id=6694e4e58f0e9d874629605f"
+    allow="camera"
+    frameborder="0"
+    allowtransparency="true"
+    width="100%"
+    scrolling="no"
+    style="display:none;"></iframe>
+
+  <p style="padding: 8% 2%;font-size: 12px;text-align: center;display:block!important">{{ poweredByText }}
+    <a
+      target="_blank"
+      href="https://tangent.ai/?utm_source={{ shop.name }}"
+      style="color:{{ settings.colors_text }}">Tangent AI</a>
+  </p>
+</div>
+<input
+  type="checkbox"
+  name="category"
+  value="{{ indexPage }}"
+  id="tangent_iframe_load_page"
+  class="tangent-hide-element">
+
+<script src="{{ 'tangent-hair-quiz-template.js' | asset_url }}" async></script>

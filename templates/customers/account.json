@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "4774180e-d828-4718-8090-c80273409c79": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button--primary {border-radius: 25px; background: black; color: white;}",
+        ".button--primary:hover {border-radius: 25px; background: black; color: white;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "<h1 class=\"heading h3 text--center\">Welcome Back {{ customer.first_name }}!</h1>\n       \n        <div class=\"heading heading--small text--center\">Your points: <span data-lion-points=\"approved\"></span></div>  \n    \n<div style=\"margin:auto; padding-top:20px; text-align:center;\">\n<a href=\"/pages/pacifica-beauty-rewards-program\"><div style=\"width:auto;\" class=\"button--primary button--full button\">EARN OR REDEEM REWARDS</div></a></div>",
+        "background_type": "full_width",
+        "background": "#fff0f0",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-customers-account",
+      "blocks": {
+        "ordergroove_smi": {
+          "type": "shopify://apps/ordergroove-subscriptions/blocks/smi-block/cf69fc68-e893-4d33-87e3-4e71e2f5822f",
+          "settings": {}
+        },
+        "orders": {
+          "type": "orders",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ordergroove_smi",
+        "orders"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "4774180e-d828-4718-8090-c80273409c79",
+    "main"
+  ]
+}

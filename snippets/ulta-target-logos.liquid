@@ -1,0 +1,31 @@
+{% comment %} ULTA AND TARGET LOGOS {% endcomment %}
+
+{% for tag in product.tags %}
+    {% if tag contains '__link' %}
+        {% assign has_link = true %}
+        {% assign url_link =  tag | split: '__link:' | last %}
+    {% endif %}
+{% endfor %}
+
+  {% if product.tags contains 'ulta' or product.tags contains 'target' %}
+
+      {% if has_link %}<a href="{{ url_link }}" target="_blank">{% endif %}
+
+        {% if product.tags contains 'ulta' %}
+         
+          <div style="padding-top:15px;">
+            <span>Now available at </span>
+            <span><img src="{{ 'ulta-logo-gray.png' | asset_url }}"  alt="Ulta Beauty Logo" style="width: 100px; height: auto; padding-left: 10px;"> </span>
+          </div>
+
+          {% elsif product.tags contains 'target' %}
+           
+          <div style="padding-bottom:10px;">
+            <span><img src="{{ 'target-logo-pdp.png' | asset_url }}"  alt="Target Logo" style="width: 200px; height: auto;"> </span>
+          </div>
+
+        {% endif %}
+
+      {% if has_link %}</a>{% endif %}
+    
+  {% endif %}

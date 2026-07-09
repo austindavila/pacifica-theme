@@ -1,0 +1,1087 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Shipping-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/skincare",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "ba45512c-f62f-4379-98c4-2bb7653429e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Gift-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/new",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738",
+        "ba45512c-f62f-4379-98c4-2bb7653429e5"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "large"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_original_UUVBqr": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_gMYf4r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_BABY_LANDING_PAGE-HEADER-D.jpg",
+            "mobile_image": "shopify://shop_images/GLOW_BABY_LANDING_PAGE-HEADER-M.jpg",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div>\n\n<h1 class=\"header-lockup\" style=\"color:#000000; padding-top:0px; padding-bottom:0px;   font-weight: 400; line-height: 0.75em; margin-bottom:15px;\">\n<br><span class=\"\">summer school (for skin)</span>\n</h1>\n\n<div class=\"heading header-body\" style=\"font-weight:400; color: #000000; padding-top:0px; margin:0;\">\nYour ultimate guide to understanding <br class=\"hidden-phone\">Pacifica Beauty products <br class=\"hidden-phone\">and creating the perfect routine. \n</div>\n\n\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_background_hover": "#000000",
+            "button_text_color_hover": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_gMYf4r"
+      ],
+      "custom_css": [
+        ".vertical-breather {padding-top: 20px; margin: auto; width: 95%;}",
+        ".header-lockup {font-size: 28px;}",
+        ".slideshow__text-wrapper {padding-right: 20px;}",
+        ".header-body {margin: auto; line-height: normal; font-size: 18px;}",
+        "@media (min-width: 1000px) {.header-lockup {font-size: 40px; } .vertical-breather {padding-top: 0px; width: 100%; }}",
+        "@media (min-width: 1400px) {.header-lockup {font-size: 40px; }}",
+        ".button-wrapper a {border-radius: 25px;}",
+        "@media screen and (max-width: 999px) {.content-box--medium {text-align: left; }}"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": true,
+        "banner_only": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_9AXGPC": {
+      "type": "faq",
+      "blocks": {
+        "question_GYETCD": {
+          "type": "question",
+          "settings": {
+            "title": "💧Toner",
+            "answer": "<p>Toners are water-based liquids that balance your skin's pH after cleansing. They remove any remaining impurities and prepare your skin to better absorb the products that follow. Pacifica's toners are alcohol-free and packed with soothing botanicals!</p><p><strong>Pacifica Pro Tip:</strong></p><p>Apply toner with clean fingertips instead of cotton pads to avoid waste and ensure maximum product absorption!</p>"
+          }
+        },
+        "question_hXFK9t": {
+          "type": "question",
+          "settings": {
+            "title": "⚠️Parabens",
+            "answer": "<p>Parabens are preservatives commonly used in cosmetics to prevent bacteria growth. However, they can disrupt hormone function and have been linked to various health concerns. That's why all Pacifica Beauty products are proudly paraben-free!</p><p><strong>Why We Say No:</strong></p><p>We believe in clean beauty that's good for you and the planet. Our natural preservation systems keep products fresh without compromising your health.</p>"
+          }
+        },
+        "question_hq7zVm": {
+          "type": "question",
+          "settings": {
+            "title": "✨Glycolic Acid",
+            "answer": "<p>Glycolic acid is an alpha hydroxy acid (AHA) derived from sugarcane. It's a superstar exfoliator that removes dead skin cells, unclogs pores, and stimulates collagen production for brighter, smoother skin.</p><p><strong>Why It's In Our Serums:</strong></p><p>Our glycolic acid formulations are carefully balanced to provide effective exfoliation without irritation. We pair it with soothing botanicals for the perfect glow without the harsh side effects!</p>"
+          }
+        },
+        "question_fWUX3V": {
+          "type": "question",
+          "settings": {
+            "title": "🧴Hyaluronic Acid",
+            "answer": "<p>Hyaluronic acid is a moisture-binding ingredient that can hold up to 1000 times its weight in water. It plumps skin, reduces the appearance of fine lines, and provides intense hydration without feeling heavy.</p><p><strong>Hydration Hero: </strong>Our hyaluronic acid is derived from plant sources and formulated in multiple molecular weights to penetrate different skin layers for maximum hydration!</p>"
+          }
+        },
+        "question_PpaYxB": {
+          "type": "question",
+          "settings": {
+            "title": "☀️SPF",
+            "answer": "<p>SPF (Sun Protection Factor) measures how well a sunscreen protects against UVB rays. It's the most important step in any skincare routine, as it prevents premature aging, hyperpigmentation, and skin cancer.</p><p><strong>Daily Essential: </strong>Pacifica's mineral sunscreens use non-nano zinc oxide for broad-spectrum protection that's reef-safe and gentle on sensitive skin. Apply as the final step in your morning routine!</p>"
+          }
+        },
+        "question_biTBy4": {
+          "type": "question",
+          "settings": {
+            "title": "🌱Niacinamide",
+            "answer": "<p>Niacinamide (Vitamin B3) is a multitasking ingredient that strengthens the skin barrier, reduces inflammation, minimizes pores, and helps control oil production. It plays well with other ingredients and suits all skin types.</p><p><strong>Versatile Superstar: </strong>We include niacinamide in many of our formulations because it addresses multiple skin concerns simultaneously while being gentle enough for daily use!</p>"
+          }
+        },
+        "question_nrWKne": {
+          "type": "question",
+          "settings": {
+            "title": "🌿Antioxidants",
+            "answer": "<p>Antioxidants neutralize free radicals (unstable molecules that damage skin cells and accelerate aging). Examples include vitamins C and E, green tea, and resveratrol. They're your skin's defense system against pollution and UV damage.</p><p><strong>Protection Power: </strong>Pacifica Beauty sources potent plant-based antioxidants that work synergistically to provide maximum protection and repair environmental damage!</p>"
+          }
+        },
+        "question_PTcRpB": {
+          "type": "question",
+          "settings": {
+            "title": "🦄 Pacifica Beauty",
+            "answer": "<p>Beauty activists since 1996. For nearly 30 years, our grounding core value has always been compassion—for the planet, animals, and you. </p><p>Accessible prices, cruelty-free, with compassion for all.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_GYETCD",
+        "question_hXFK9t",
+        "question_hq7zVm",
+        "question_fWUX3V",
+        "question_PpaYxB",
+        "question_biTBy4",
+        "question_nrWKne",
+        "question_PTcRpB"
+      ],
+      "custom_css": [
+        ".section__header--tight {width: 1000px;}"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": false,
+        "title": "8 Skincare Terms You Need to Know",
+        "content": "<p>Feel like you need a dictionary when shopping for skincare? We've got you covered! Click each term to learn more.</p>",
+        "background": "#f6eff0",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "004467da-4622-46e7-b936-5bf89ecae8e6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14702093107288__004467da-4622-46e7-b936-5bf89ecae8e6-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brain_on_fragrance_IX_2.gif",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": true,
+            "column_reverse_mobile": false,
+            "show_gradient": false,
+            "gradient_name": "bg-blue-lavender",
+            "text_position": "middle_center",
+            "title": "",
+            "body_copy": "<div>\n\n<h1 class=\"header-lockup\" style=\"color:#000000; padding-top:0px; padding-bottom:0px; margin-bottom:15px;\">\n<span class=\"first-line\">scent has the power to</span><br><span class=\"font-melt\" style=\"color:#FF66C4;\">take you anywhere</span>\n</h1>\n\n<div class=\"heading header-body h4\" style=\"font-weight:400; color: #000000; font-size:16px; padding-top:0px;\">\nIntroducing a new collection of unisex, functional perfumes using neuroscience-backed ingredients designed to positively impact your mind and mood.\n</div>\n\n\n\n</div>",
+            "subheading": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#f3f4f6",
+            "text_color": "#000000",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__004467da-4622-46e7-b936-5bf89ecae8e6-image-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".header-lockup {font-size: 32px; font-weight: 400; line-height: 0.75em;}",
+        ".header-lockup .first-line {font-size: 23px;}",
+        ".header-body {width: 90%; margin: auto; line-height: normal;}",
+        "@media (min-width: 1000px) {.header-lockup {font-size: 40px; }}",
+        "@media (min-width: 1400px) {.header-lockup {font-size: 50px; } .header-lockup .first-line {font-size: 26px; } .header-body {width: 60%; margin: auto; }}",
+        ".vertical-breather {padding-top: 10px;}"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_bfyVPA": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        ".vertical-breather--extra-tight {padding-bottom: 40px;}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<div class=\"row center-xs\">\n\n<div class=\"col-xs-12 col-md-10 col-lg-8\">\n\n<div class=\"header h2 font-california-coast\" style=\"text-align:left;\">Scent has the power to take you anywhere</div>\n</div>\n\n<div class=\"col-xs-12 col-md-10 col-lg-8\">\n<p style=\"text-align:left;\">Introducing a new collection of unisex, functional perfumes using neuroscience-backed ingredients designed to positively impact your mind and mood.\n<br><br>Founder, CEO, and Chief Scentologist, Brook Harvey-Taylor is reconnecting with her roots as an aromatherapist in these 7 beautiful scents—some are familiar with updates, and some are brand new.  ​</p>\n</div>\n\n</div>",
+        "button_text": "find your signature scent",
+        "button_link": "shopify://pages/fragrance-finder",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "#e2f8f9",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "timeline_xhMtMq": {
+      "type": "timeline",
+      "blocks": {
+        "item_EDbtqH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Glow-Baby-Booster-Oranges.jpg",
+            "label": "Step 1",
+            "title": "Cleanse",
+            "content": "Start with a gentle cleanser to remove overnight oil buildup without stripping your skin.",
+            "button_text": "shop cleansers",
+            "button_link": "shopify://products/glow-baby-booster-serum"
+          }
+        },
+        "item_LRYiXa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_BABY_FACE_WASH_MACRO_BUBBLES_2024.jpg",
+            "label": "Step 2",
+            "title": "Tone",
+            "content": "Powered by AHA and Vitamin C, this exfoliating face wash gently cleanses and helps slough-off dead skin, revealing a clean, smooth, radiant complexion.",
+            "button_text": "shop toners",
+            "button_link": "shopify://products/glow-baby-brightening-face-wash"
+          }
+        },
+        "item_tgG6iW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_BABY_ENZYME_SCRUB_ORANGES_1x1_dbb04e7a-d034-4bb9-94d5-c5532814ffd2.jpg",
+            "label": "Step 3",
+            "title": "Apply Serum",
+            "content": "Our 2-in-1 manual and enzymatic exfoliant with rice starch, fruit extracts, vitamin C, lactic and glycolic acid helps dissolve impurities and unclog pores for softer, smoother, more radiant skin.",
+            "button_text": "shop serums",
+            "button_link": "shopify://products/glow-baby-super-lit-enzyme-scrub"
+          }
+        },
+        "item_KBmNFt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_GLOW_BABY_EYE_CREAM_ORANGES_1X1_f9756cd9-230a-45b0-a7cd-9aec436f1023.jpg",
+            "label": "Step 4",
+            "title": "Moisturize",
+            "content": "This ultra-hydrating under-eye cream is formulated with skin-first vitamin C, caffeine, hyaluronic acid and apple fruit extract to help restore under-eye brilliance.",
+            "button_text": "shop moisturizers",
+            "button_link": "shopify://products/glow-baby-eye-bright-cream"
+          }
+        },
+        "item_FTiyRB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_BABY_SUPER_LIT_SPF_ORANGES_1X1_d03ada73-d994-404c-a57f-f1501c5fcdb0.jpg",
+            "label": "Step 5",
+            "title": "Protect with SPF",
+            "content": "This one's for extra credit!\nFinish with broad-spectrum SPF 30+ sunscreen, even on cloudy days!",
+            "button_text": "shop Suncare",
+            "button_link": "shopify://products/glow-baby-glow-baby-super-lit-spf-lotion"
+          }
+        }
+      },
+      "block_order": [
+        "item_EDbtqH",
+        "item_LRYiXa",
+        "item_tgG6iW",
+        "item_KBmNFt",
+        "item_FTiyRB"
+      ],
+      "custom_css": [
+        ".section__header {max-width: unset; text-align: left;}",
+        ".button-wrapper a {border-radius: 25px;}",
+        "h2 {font-size: 26px; margin-bottom: 0;}",
+        "section {margin-top: 0;}",
+        ".timeline__content {padding: 10px; line-height: 1.6em;}",
+        ".button-wrapper {margin-top: 10px;}",
+        "@media (min-width: 1000px) {.timeline__content {padding: 40px; } .button-wrapper {margin-top: 20px; }}",
+        "@media screen and (max-width: 999px) {.timeline__item {align-items: end; }}",
+        ".button:hover {background: black;}",
+        ".heading {padding-bottom: 5px;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<span class=\"heading heading--xxlarge\" style=\"text-align: left;\">Your Perfect Summer Skincare Routine</span>\n\n<br>\n\n<span class=\"heading h3\" style=\"text-align: left;\">Beat the heat and keep your skin glowing with this simple yet effective 5-step morning routine!</span>",
+        "text_position": "bottom",
+        "background": "#e2ecfd",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_yLnYpK": {
+      "type": "multi-column",
+      "blocks": {
+        "item_UBK6VN": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<span class=\"heading h3\" style=\"text-align: left;\">Keep a facial mist in your bag for midday refreshment</span>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_hQMjU3": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<span class=\"heading h3\" style=\"text-align: left;\">Use a clay mask once a week to control excess oil</span>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_mDtyWe": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<span class=\"heading h3\" style=\"text-align: left;\">Switch to lighter makeup formulas or tinted sunscreen</span>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_wekyC8": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<span class=\"heading h3\" style=\"text-align: left;\">Don't forget your neck and décolletage in your routine!</span>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "item_UBK6VN",
+        "item_hQMjU3",
+        "item_mDtyWe",
+        "item_wekyC8"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "<span class=\"heading heading--xxlarge\">bonus summer skincare tips</span>",
+        "content": "",
+        "column_alignment": "left",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#c4dbff",
+        "text_color": "#000000"
+      }
+    },
+    "custom_html_3npjgA": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        ".section__color-wrapper {padding: 40px 0; background: rgb(255, 211, 171); background: radial-gradient( circle, rgba(255, 211, 171, 1) 0%, rgba(255, 208, 198, 1) 68%, rgba(255, 208, 233, 1) 100% );}",
+        "p {width: 90%; padding-top: 10px; margin: auto; line-height: normal;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs\">\n\n<div class=\" col-xs-12 col-md-10 text--center\" style=\"padding-bottom:35px;\"> <span class=\"header heading--large font-california-coast\">reasons to love <br class=\"hidden-lap-and-up\">glow baby</span>\n</div>\n\n<div class=\"col-xs-12 col-md-4 col-lg-4\">\n<div style=\"padding-bottom:15px;\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/glow-baby-landing-why2.png?v=1717035047\" style=\"width:70%\"></div>\n<span class=\"h5\">Radiant skin</span>\n<p>Packed with antioxidant-rich Vitamin C, Glow Baby products brighten and even skin tone for a softer, smoother, more radiant complexion. </p>\n</div>\n\n<div class=\"col-xs-12 col-md-4 col-lg-4\">\n<div style=\"padding-bottom:15px;\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/glow-baby-landing-why1b.png?v=1717081227\" style=\"width:70%;\"></div>\n<span class=\"h5\">Next-generation formulas <br>(ingredients that work!) </span>\n<p>We're experts in creating skin-first formulas made with future forward ingredients backed by science for positively transformative, radiant results. </p>\n</div>\n\n\n<div class=\"col-xs-12 col-md-4 col-lg-4\">\n<div style=\"padding-bottom:15px;\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/glow-baby-landing-why3.png?v=1717035047\" style=\"width:70%;\"></div>\n<span class=\"h5\">Conscious Beauty <br>(beauty with a higher purpose) </span>\n<p>We uphold our Compassionism<sup>TM</sup> standards with 100% vegan, cruelty-free products using skintentional formulas safe for the planet, animals, and you, leaving out over 1,800 harmful ingredients. </p>\n</div>\n\n\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "32cd36f0-d228-43df-988f-513472886bf4": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0001_vitamin-c.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vitamin c",
+            "content": "<p>Powerful antioxidant that helps brighten, even and renew skin tone. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0008_vanilla.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "vanilla extract",
+            "content": "<p>Promotes healthier skin with antioxidizing properties. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_6i3rAr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0006_glycolic-acid.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "glycolic acid",
+            "content": "<p>Chemically exfoliates to help dissolve dead skin cells. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0000_aha.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "AHAS",
+            "content": "<p>Skin renewing agents that help to gently exfoliate the skin. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0021_pineapple-papaya.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pineapple + papaya",
+            "content": "<p>These fruit enzymes help dissolve oil, debris, and slough-off dead skin cells. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GcezEt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0005_lactic-acid.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "lactic acid",
+            "content": "<p>Helps brighten, exfoliate, and fade the appearance of dark spots and hyperpigmentation. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_i3TgQV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/rice_powder.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "rice starch",
+            "content": "<p>Manually exfoliates to help unclog the skin from impurities, makeup, pollution, and the things you do daily. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_GxVHT6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0014_kakadu-plum.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "kakadu plum",
+            "content": "<p>Highest recorded amount of vitamin C of any other food! Helps to even and improve skin texture for skin radiance. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_HHQd9J": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0015_grapes.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "grape extract",
+            "content": "<p>\nHelps to even out skin tone and known to make skin softer and more supple \nHelps even skin tone for softer, smoother, suppler skin. \n</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_L98mga": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0009_niacinamide.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "niacinimide",
+            "content": "<p>Helps retain skin moisture while improving the appearance of pores. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_JeLddy": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ingredients-Template_0000s_0007_pumpkin.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "pumpkin",
+            "content": "<p>A fruit acid that helps remove dead skin cells for even, smooth, and restored skin. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2",
+        "item_6i3rAr",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4",
+        "item_GcezEt",
+        "item_i3TgQV",
+        "item_GxVHT6",
+        "item_HHQd9J",
+        "item_L98mga",
+        "item_JeLddy"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {line-height: normal; margin-top: 5px;}",
+        ".h5 {padding-top: 15px; margin: 0;}",
+        ".heading--large {margin-top: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "<div class=\"heading heading--large font-california-coast\">essential ingredients</div>",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#bcfafd",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_c9phwz": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs\">\n\n<div class=\" col-xs-12 col-md-10 text--center\" style=\"padding-bottom:35px;\"> <span class=\"header h2 font-melt\">the routine</span>\n</div>\n\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "gallery_NiUC6p": {
+      "type": "gallery",
+      "blocks": {
+        "image_eJeXCY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Face-Wash.jpg",
+            "caption": "<h2><strong>Glow Baby </strong>Our radiance-boosting line designed to reveal your skin's natural luminosity with vitamin C and fruit enzymes.</h2>"
+          }
+        },
+        "image_VXbMDT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Enzyme-Scrub.jpg",
+            "caption": "<h2><strong>Wake Up Beautiful </strong></h2><h2>Nights may be shorter but our overnight treatment line works hard while you sleep to repair, renew, and rejuvenate tired skin.</h2>"
+          }
+        },
+        "image_3pzTW9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Glow-Baby.jpg",
+            "caption": "<p><strong>Serum Up:</strong> Our <a href=\"/products/glow-baby-booster-serum\" title=\"Glow Baby Booster Serum\">Glow Baby Booster Serum</a> can be applied right after your AM cleansing for a dewy, radiant canvas.</p>"
+          }
+        },
+        "image_JhAdxc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Super-Lit-SPF.jpg",
+            "caption": "<p><strong>Don't Skip on Sunscreen:</strong> Vitamin C and sunscreen are a match made in heaven, working together to help protect your skin from sun damage and environmental stressors. Try our <a href=\"/products/glow-baby-glow-baby-super-lit-spf-lotion\" title=\"Glow Baby Super Lit SPF Lotion\">Glow Baby Super Lit SPF Lotion</a>. </p>"
+          }
+        },
+        "image_zTJHbq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GB-Routine-Setting-Mist.jpg",
+            "caption": "<p><strong>Set, Refresh, Glow:</strong> Glow on the go! Refresh anytime, anywhere with our Glow Baby Setting Mist to setand protect your radiance throughout your day.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_eJeXCY",
+        "image_VXbMDT",
+        "image_3pzTW9",
+        "image_JhAdxc",
+        "image_zTJHbq"
+      ],
+      "custom_css": [
+        ".header {text-align: center; color: black;}",
+        "section {padding-top: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<span class=\"heading heading--xxlarge\">takeaway</span>",
+        "show_arrows": false,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "db9a7ea9-e36d-4178-95be-3cab54235140": {
+      "type": "custom-html",
+      "custom_css": [
+        ".container {padding-top: 40px; padding-bottom: 40px;}",
+        ".col-xs-10 {padding: 5px 0;}",
+        ".section__color-wrapper {margin-top: 40px;}",
+        ".section__color-wrapper {background: rgb(255, 211, 171); background: radial-gradient( circle, rgba(255, 211, 171, 1) 0%, rgba(255, 208, 198, 1) 68%, rgba(255, 208, 233, 1) 100% );}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs\">\n\n<div class=\" col-xs-10 col-md-10 text--center\" style=\"padding-bottom:5px;\"> <span class=\"heading heading--large font-california-coast\">before &amp; after</span>\n</div>\n\n<div class=\"col-xs-10 col-md-10\" style=\"padding-bottom:25px;\">\n<p class=\"h5\">Vitamin C's anti-inflammatory properties also help to soothe and calm the skin, <br class=\"hidden-phone\">making it an essential ingredient for maintaining a healthy, radiant complexion. </p>\n</div>\n\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PAC_GLOW_BABY_BRIGHTENING_FACIAL_MASK_BEFORE_AFTER.jpg?v=1683928333\" alt=\"before &amp; after\">\n</div>\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/PAC_GLOW_BABY_HYDRODEW_MOISTURE_GEL_BEFORE_AFTER.jpg?v=1684345963\" alt=\"before &amp; after\">\n</div>\n\n<div class=\"col-xs-10 col-md-4\">\n<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/MODEL_BEFORE_AFTER_SKINCARE_2.jpg?v=1688653971\" alt=\"before &amp; after\">\n</div>\n\n\n</div>",
+        "no_padding_margin": true,
+        "background_type": "full_width",
+        "background": "#edf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_6icrPW": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        ".section--flush {max-width: 1400px; margin: auto; padding-top: 40px;}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<div class=\"font-melt h2\">what is aromapower?</div>\nHear from our Founder, CEO, and Chief Scentologist Brook Harvey-Taylor",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#fff0f0",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_Ybb4bj": {
+      "type": "video",
+      "disabled": true,
+      "custom_css": [
+        ".section--flush {max-width: 1400px; margin: auto;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "metafield_video": false,
+        "vimeo_video": false,
+        "vimeo_html": "",
+        "video_url": "https://youtu.be/TRPJYq55ZCc?si=n14a5_UlSfr4FPm0",
+        "image": "shopify://shop_images/YOUTUBE_THUMBNAILS-2.png",
+        "background_type": "full_width",
+        "video_size": "auto",
+        "autoplay": false,
+        "background": "#ffffff",
+        "text_color": "#ffffff"
+      }
+    },
+    "image_with_text_block_BfFKFq": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text-block {min-height: 350px;}",
+        ".button:hover {background: black;}",
+        "p {line-height: normal;}",
+        "section {padding-top: 40px;}",
+        ".button-wrapper a {border-radius: 25px;}",
+        ".image-with-text-block__content {background: transparent;}",
+        ".content-box {padding: 0; max-width: none;}",
+        ".heading {padding: 20px 10px 0 10px; color: black;}",
+        "@media (min-width: 1000px) {.heading {padding: 0; color: white; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/BG-Beach-Fragrance-Quiz-Section.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "html_content": "<span class=\"heading font-melt heading--xlarge\">discover your aromapower</span>",
+        "button_text": "TAKE THE QUIZ",
+        "button_link": "shopify://pages/fragrance-finder",
+        "background_type": "full_width",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "#ffffff",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "testimonials_PLc8yj": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_8GhFAJ": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"I have received so many compliments wearing this perfume.\"",
+            "author": "★★★★★"
+          }
+        },
+        "testimonial_rXmGqn": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        },
+        "testimonial_aDLp3e": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        },
+        "testimonial_Tb7rXG": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_8GhFAJ",
+        "testimonial_rXmGqn",
+        "testimonial_aDLp3e",
+        "testimonial_Tb7rXG"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nI love this product so so much! It makes my skin so glowy and even – I feel so confident when wearing it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">ABBIE</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Booster Serum",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nThis cream has made a huge difference in my under eye area. I put it on every morning. I love it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">MARISOL</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Eye Bright Cream",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "quote_XY38gq": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "★★★★★",
+            "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nSince switching to the Glow Baby line my skin is more beautiful than ever. I have received more compliments on my skin in the last year than I have my entire life!\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">CARA B</div>\n\n</div>\n</div>",
+            "author": "Glow Baby Face Wash",
+            "background": "#bcfafd",
+            "text_color": "#000000"
+          }
+        },
+        "video_aXQddV": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "highlight": false,
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "quote_VERjbz": {
+          "type": "quote",
+          "disabled": true,
+          "settings": {
+            "highlight": true,
+            "subheading": "MONTANA SKY SPRAY PERFUME",
+            "content": "SMELLS LIKE A NIGHT IN THE MOUNTAINS!",
+            "author": "– Mary Manatee",
+            "background": "#d6f9f3",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1",
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6",
+        "quote_XY38gq",
+        "video_aXQddV",
+        "quote_VERjbz"
+      ],
+      "custom_css": [
+        ".promotion-block__content-wrapper {padding: 0; margin: 0;}",
+        ".promotion-block--large {--promotion-block-min-height: none;}",
+        ".heading--small {font-size: 26px;}",
+        ".promotion-block {align-items: flex-start; text-align: center;}",
+        "p {padding-top: 0; margin-top: 0;}",
+        "h5 {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "large",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_UKfwc7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_7RzBfJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_BABY_BRIGHTENING_SETTING_MIST_SKY_MIRROR_ORANGES.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": true,
+            "gradient_name": "bg-glowphoria-light-radial",
+            "text_position": "middle_left",
+            "title": "",
+            "body_copy": "<div class=\"slideshow-body-copy\" style=\"text-align:center; padding-bottom:20px;\">\n<i class=\"fa-sharp fa-regular fa-leaf fa-2x\"></i>\n<i class=\"fa-regular fa-rabbit fa-2x\"></i>\n<i class=\"fa-sharp fa-solid fa-earth-americas fa-2x\"></i>\n</div>\n\n<div class=\"slideshow-body-copy\"> \nPacifica Beauty<br>[puh-sif-i-kuh byoo-tee]<br><i>noun</i>\n<p>Compassionism<sup><small>TM</small></sup> has been our grounding core value since day 1. We’ve always been committed to creating 100% vegan + cruelty-free beauty that’s safe for the planet, animals, and you. This imperative shapes everything we do at Pacifica Beauty, from our skintentional, high-performance products at fair prices to our stance on animal and human rights and climate-conscious practices. </p>\n<p>Glow Baby embodies our dedication to effective, conscious, and affordable skincare, where science-meets nature for radically positive changes to your skin, body, and mind (oh, and they smell good too).</p>\n\n<p style=\"font-weight:500;\">– Brook Harvey-Taylor<br>Founder, CEO, and Chief Scentologist</p>\n</div>",
+            "subheading": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#fef7f1",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_7RzBfJ"
+      ],
+      "custom_css": [
+        ".slideshow-body-copy {width: 80%; margin: auto; text-align: left;}",
+        "@media (min-width: 1000px) {.slideshow-body-copy {width: 80%; }}",
+        "h3 {margin-bottom: 0;}",
+        ".button--primary {border-radius: 25px;}",
+        ".section--flush {max-width: 1520px; margin: auto;}"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_phbffb": {
+      "type": "custom-html",
+      "custom_css": [
+        "section {margin: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row middle-xs center-xs\">\n<div class=\"col-xs-12 col-md-8\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Pacifica-Values.jpg?v=1714690707\"></div>\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_DhmhGJ": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_ggzniQ": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-gift",
+            "title": "free gift",
+            "content": "<p>Free gift with all orders $40+</p>"
+          }
+        },
+        "item_PicwWR": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-love",
+            "title": "earn rewards",
+            "content": "<p>Join our <a href=\"/pages/rewards\" title=\"Pacifica Beauty Rewards Program\">loyalty program</a></p>"
+          }
+        },
+        "item_x8NCCf": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-chat",
+            "title": "contact us",
+            "content": "<p>Need help? Chat with us below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_ggzniQ",
+        "item_PicwWR",
+        "item_x8NCCf"
+      ],
+      "custom_css": [
+        "svg {width: 70px !important; height: 70px !important;}",
+        ".heading--small {font-weight: normal; margin-block-end: 0; font-size: 26px; text-transform: none;}",
+        "p {margin-top: 0;}"
+      ],
+      "settings": {
+        "background": "#bcfafd",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "main",
+    "16397758758c69c057",
+    "slideshow_original_UUVBqr",
+    "faq_9AXGPC",
+    "004467da-4622-46e7-b936-5bf89ecae8e6",
+    "rich_text_bfyVPA",
+    "timeline_xhMtMq",
+    "multi_column_yLnYpK",
+    "custom_html_3npjgA",
+    "32cd36f0-d228-43df-988f-513472886bf4",
+    "custom_html_c9phwz",
+    "gallery_NiUC6p",
+    "db9a7ea9-e36d-4178-95be-3cab54235140",
+    "rich_text_6icrPW",
+    "video_Ybb4bj",
+    "image_with_text_block_BfFKFq",
+    "testimonials_PLc8yj",
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c",
+    "slideshow_UKfwc7",
+    "custom_html_phbffb",
+    "text_with_icons_DhmhGJ"
+  ]
+}

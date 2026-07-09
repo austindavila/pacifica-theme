@@ -1,0 +1,96 @@
+
+{% comment %} WRAP IN CONDITIONAL. DISPLAY ONLY IF A PRODUCT IS ASSIGNED. AND ASSIGN BUNDLES TO PRODUCTS IN CUSTOM FIELDS {% endcomment %}
+
+{% if product.metafields.custom_fields["associated_bundle"] != blank %}
+
+{% assign product_ref = all_products[product.metafields.custom_fields["associated_bundle"]] %}
+
+{% comment %} can't test if available because if it's offline/draft mode then that property can't be accessed, so we test to see if title exists {% endcomment %}
+{% if product_ref.title != blank %}
+
+<section class="section section--flush">
+  
+  <div>
+
+    <image-with-text class="image-with-text">
+      <div class="container">
+        <div class="image-with-text__wrapper">
+
+          <div class="image-with-text__image-wrapper">
+
+             <img class="product-item__primary-image" loading="lazy" data-media-id="{{ product_ref.id | escape }}" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: product_ref, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+
+          </div>
+
+
+          <div class="image-with-text__content-wrapper" >
+            <div class="image-with-text__content-list">
+
+                <image-with-text-item class="image-with-text__content text-container">
+                  
+                  <h2 class="heading heading--small">
+                    {{ section.settings.text_title }}
+                  </h2>
+
+                  <div class="heading h3"> {{ product_ref.title }}</div>
+
+                  <div class="image-with-text__text-wrapper">
+
+                    <div class="text--medium"> <span class="price price--highlight">{{ product_ref.price | money_without_trailing_zeros }}</span>
+                    <span class="price price--compare">{{ product_ref.compare_at_price | money_without_trailing_zeros }}</span>
+                     </div>
+
+                    {{ product_ref.content | truncate: 300 }}
+
+                    <div class="button-wrapper">
+                      <a href="{{ product_ref.url }}" class="button button--primary">{{ section.settings.button_text }}</a>
+                    </div>
+
+                  </div>
+
+                </image-with-text-item>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </image-with-text>
+  </div>
+</section>
+{% endif %}
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Bundle and Save",
+  "settings": [
+    {
+      "id": "text_title",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "text_body",
+      "type": "richtext",
+      "label": "Add custom text below",
+      "default": "<p>Add your text here</p>"
+    },
+    {
+      "id": "button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "LEARN MORE"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle and Save",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

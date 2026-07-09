@@ -1,0 +1,704 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_html_tCrkxK": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        "section {margin: 30px 0;}",
+        ".header-lockup {font-size: 36px; font-weight: 400;}",
+        "@media (min-width: 1400px) {.header-lockup {font-size: 60px; } .h3 {text-align: left; }}",
+        ".section--flush {margin: 0;}",
+        ".container {padding: 15px 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12 col-lg-6\">\n\n<h1 class=\"header-lockup\" style=\"color:#000000;\">\nthe <span class=\"font-melt\">compassionista</span>\n</h1>\n\n</div>\n\n<div class=\"col-xs-12 col-lg-4\" style=\"padding-top:10px;\">\n\n<h2 class=\"heading h3\">Explore a world of <br class=\"hidden-lap-and-up\"><b style=\"color:#0097B2;\">wellness with heart.</b> <br><span style=\"display:inline-block; padding-top:8px;\">Wellness seeker, <b>you're home.</b></span>\n</h2>\n\n</div>\n</div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_overlay_Er8zkw": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".image-overlay__image {object-position: bottom -173px right 0px;}",
+        ".image-overlay {--image-height: 110px;}",
+        "@media screen and (min-width: 1000px) {.image-overlay__image {object-position: bottom -221px right 0px; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "show_collection_image": false,
+        "section_height": "small",
+        "image": "shopify://shop_images/Blog-Landing-Hero-Wave-LGE.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<h1 class=\"heading heading--xxlarge font-california-coast\" style=\"letter-spacing: 2px; font-weight:normal; color:black;\">the compassionista</h1>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0
+      }
+    },
+    "custom_html_GpFt7Y": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        ".header-waves {position: relative; background: url(\"https://cdn.shopify.com/s/files/1/1515/0462/files/Blog-Landing-Hero-Wave-LGE.jpg?v=1718658694\"); width: 100%; height: 200px; background-size: cover; background-position: 0px -20px; background-repeat: no-repeat;}",
+        "section {margin-top: 0; margin-bottom: 0;}",
+        ".heading {position: absolute; top: 60%; left: 50%; transform: translate(-50%, 0%);}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"header-waves\"><h1 class=\"heading heading--xlarge font-california-coast text--center\" style=\"letter-spacing: 2px; font-weight:normal; color:black;\">the compassionista</h1></div>",
+        "no_padding_margin": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_3he9yc": {
+      "type": "rich-text",
+      "custom_css": [
+        "section {margin: 15px 0;}",
+        ".content-box--medium {margin: auto;}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<span class=\"font-california-coast\">wellness seeker, you're home</span>",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1659552491379b01d0": {
+      "type": "multi-column",
+      "blocks": {
+        "bbff243f-194a-4528-a3bb-c486196cbdda": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "food",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_hnVJbQ": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "scent",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "1659552491490aa04d-0": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "travel",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "1659552491490aa04d-1": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "skin",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "1659552491490aa04d-2": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "hair",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_mpNM4m": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "wellness",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_QgY9Hp": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "weird",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "bbff243f-194a-4528-a3bb-c486196cbdda",
+        "item_hnVJbQ",
+        "1659552491490aa04d-0",
+        "1659552491490aa04d-1",
+        "1659552491490aa04d-2",
+        "item_mpNM4m",
+        "item_QgY9Hp"
+      ],
+      "custom_css": [
+        ".section--flush {max-width: 1520px; margin: auto;}",
+        ".section__color-wrapper {margin-bottom: 20px;}",
+        ".multi-column--spacing-tight {overflow: hidden;}",
+        ".vertical-breather--extra-tight {padding: 10px 0;}",
+        ".multi-column__link {font-family: \"california-coast\", serif !important; text-transform: none; font-size: 20px;}",
+        "@media screen and (min-width: 1000px) {.section__color-wrapper {border-radius: 20px; } .multi-column__link {font-size: 26px; }}",
+        ".multi-column__inner--left {justify-content: safe center;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "left",
+        "mobile_item_size": "small",
+        "desktop_item_size": "pico",
+        "spacing": "tight",
+        "background": "#ff66c4",
+        "text_color": "#000000"
+      }
+    },
+    "slideshow_original_gRAJVK": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_thD3bF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/coconut_milk_detangle_elixir_desktop_5937fcce-fe67-426d-93d3-79032e56c606.png",
+            "mobile_image": "shopify://shop_images/coconut_milk_detangle_elixir_mobile.png",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div style=\"background-color: rgba(69, 189, 199, 0.5); padding: 20px; text-align: left;\">\n\n  <div style=\"color: #000000;\" class=\"font-california-coast heading heading--xlarge\">\n   The Ultimate Guide to Hair Detanglers: <br class=\"hidden-phone\">\n    <span style=\"font-weight: normal;\">Why Your Knots Need a Rehab Spray <br class=\"hidden-phone\">\n    (And Your Hair Will Thank You)</span>\n  </div>\n\n  <div class=\"readnow\" style=\"margin-top: 12px; font-size: 14px; color: #000000;\">\n    READ NOW <i class=\"fa-regular fa-arrow-right\"></i>\n  </div>\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "shopify://blogs/the-compassionista/the-ultimate-guide-to-hair-detanglers",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_wzqhNy": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/05-07-26_barrier_banner_header.png",
+            "mobile_image": "shopify://shop_images/05-07-26_barrier_article_image_01.jpg",
+            "text_position": "bottom_right",
+            "subheading": "",
+            "title": "<div style=\"background-color: rgba(240, 202, 215, 0.5); padding: 20px; text-align: left;\">\n\n  <div style=\"color: #000000;\" class=\"font-california-coast heading heading--xxlarge\">\n    National Skincare Awareness Week: <br class=\"hidden-phone\">\n    Why Your Skin Barrier <br class=\"hidden-phone\">\n    Deserves the Spotlight\n  </div>\n\n  <div class=\"readnow\" style=\"margin-top: 12px; font-size: 14px; color: #ffffff;\">\n    READ NOW <i class=\"fa-regular fa-arrow-right\"></i>\n  </div>\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "shopify://blogs/the-compassionista/national-skincare-awareness-week-why-your-skin-barrier-deserves-the-spotlight",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_thD3bF",
+        "image_wzqhNy"
+      ],
+      "custom_css": [
+        ".heading {color: black;}",
+        "@media screen and (max-width: 999px) {.slideshow__text-wrapper {padding: 0; } .heading {color: black; text-align: left; } .readnow {text-align: left; padding-left: 5px; }}",
+        "@media screen and (min-width: 1000px) {.heading {margin-right: 10px; } .slideshow__text-wrapper .content-box--right {margin-right: 50px; width: 40%; }}",
+        ".section--flush {max-width: 1520px; margin: auto;}",
+        ".slideshow__image-wrapper {border-radius: 20px 20px 20px 20px;}"
+      ],
+      "settings": {
+        "section_height": "medium",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": true,
+        "banner_only": false,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_DWCA6K": {
+      "type": "multi-column",
+      "blocks": {
+        "item_8pmrcR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/05-07-26_barrier_article.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">SKIN</div>",
+            "content": "<strong>National Skincare Awareness Week: Why Your Skin Barrier Deserves the Spotlight</strong>  \n<br>Learn what the skin barrier does, why it matters, and how Pacifica’s barrier care essentials help hydrate, soothe, and support stressed or sensitive skin.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/discover-aromapower\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        },
+        "item_e4jTHa": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Brief_BLOG_World_Animal_Day.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">SKIN</div>",
+            "content": "<strong>Hydrate and Repair Your Skin Barrier with Pacifica’s Hydrodew Slime Gel </strong> <br>Learn what the skin barrier is, why it matters, and how Pacifica’s Hydrodew Slime Vegan Barrier Care Gel with vegan mucin can hydrate and repair dry, sensitive skin.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/national-skincare-awareness-week-why-your-skin-barrier-deserves-the-spotlight\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        },
+        "item_cwfRkV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/blog_living_in_scent_0.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">SCENT</div>",
+            "content": "<strong>Unlocking the Power of Scent</strong> <br>In a world filled with endless distractions, it is important to find moments that ground us, uplift us, and connect us to our inner selves.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/discover-aromapower\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        },
+        "item_edECaX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BLOG_BROOK_HEADER.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">LIFESTYLE</div>",
+            "content": "<strong>Get ready for the day with me, <br>Brook Harvey-Taylor</strong><br>Today, I am thrilled to share with you a peek into my morning ritual that keeps me energized, focused, and ready to embrace whatever comes my way.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/get-ready-for-the-day-with-me-brook-harvey-taylor\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        },
+        "item_PTpFt3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Card-Retinoids.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">SKIN</div>",
+            "content": "<strong>Why We Love Retinoids: Pro-Aging Skincare</strong><br>Whether you’re new to the world of skincare or a seasoned enthusiast, there’s one ingredient that seems to always steal the spotlight: retinoids.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/why-we-love-retinoids-pro-aging-skincare\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        },
+        "item_Tg9MGM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BLOG_-_Vitamin_C_for_the_Win.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<div class=\"heading--small heading\">SKIN</div>",
+            "content": "<strong>Vitamin C for the Win (for your skin)</strong><br>Incorporating into your daily skincare regimen can result in a more luminous, healthy complexion over time.",
+            "link_text": "<a href=\"https://www.pacificabeauty.com/blogs/the-compassionista/vitamin-c-for-the-win-for-your-skin\">READ NOW <i class=\"fa-regular fa-arrow-right\"></i></a>",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "item_8pmrcR",
+        "item_e4jTHa",
+        "item_cwfRkV",
+        "item_edECaX",
+        "item_PTpFt3",
+        "item_Tg9MGM"
+      ],
+      "custom_css": [
+        ".sectio.section__header {margin-bottom: 20px;}",
+        ".h2 {font-family: \"california-coast\", serif !important; font-weight: normal; letter-spacing: 1px; font-size: 26px;}",
+        "@media screen and (min-width: 1000px) {.h2 {font-size: 32px; }}",
+        ".container {}",
+        ".multi-column__text-container {line-height: 1.3em;}",
+        ".multi-column__image-wrapper {border-radius: 20px;}",
+        ".section__color-wrapper {padding-top: 40px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "what we're obsessed with",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_original_nXixdR": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_TgJd4k": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Helena-Blog-waves-3.png",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div style=\"text-align:left;\">\n<strong>\nLove your hair, love your scalp</strong>\n\n<p style=\"font-weight:normal;\">Helena De Lang to walk us through what scalp care means to her and how she lives by it in her day to day.  </p>\n\n<a style=\"font-weight:bold;\" href=\"/blogs/the-compassionista/love-your-hair-love-your-scalp-helena-de-lang-s-pro-tip-rosemary-treatments-and-more-for-your-scalp-care-routine\">Read now <i class=\"fa-solid fa-arrow-right\"></i></a>\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_wJFtYt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BLOG_LANDING_PAGE_BANNER.png",
+            "mobile_image": "shopify://shop_images/BLOG_POST_HEADER_7aef34cb-d4ac-4ed4-bdb1-58bfc26ccfae.png",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div style=\"text-align:left;\">\n\n<h2 class=\"heading h2 font-california-coast\" style=\"color:#f812cd;\">\n<strong>Vitamin C for the Win <br class=\"hidden-phone\">(for your skin)</strong>\n</h2>\n\n<p style=\"font-weight:normal;\">Vitamin C is a powerful antioxidant that you simply should not be without in your skincare arsenal.</p>\n\n<a style=\"font-weight:normal;\" href=\"https://www.pacificabeauty.com/blogs/the-compassionista/vitamin-c-for-the-win-for-your-skin\">READ NOW <i class=\"fa-solid fa-arrow-right\"></i></a>\n\n\n</div>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_HwqNNd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/blog-compassionista-hero-image-2.jpg",
+            "mobile_image": "shopify://shop_images/blog-compassionista-hero-image-mobile.jpg",
+            "text_position": "middle_left",
+            "subheading": "<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/blog-compassionista-hero-title.png?v=1713400088\" style=\"width:100%; padding:15px 10px 5px 15px;\" alt=\"the compassionista\">\n<p>Explore a world of <b style=\"color:#0097B2;\">wellness with heart.</b><br><br>Dive into compassionate beauty tips, selfcare routines, and mindful practices with the latest trends and expert advice.<br><br>Join us in embracing a conscious, accountable, 100% vegan + cruelty-free beauty ethos with a higher purpose.<br><br>Wellness seeker, <b>you're home.</b></p>",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_jjjWN9": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image-withTextOverlay-Model1.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_TgJd4k",
+        "image_wJFtYt",
+        "image_HwqNNd",
+        "image_jjjWN9"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 1000px) {.content-box {background-color: #f5f1f2; border-radius: 20px; padding: 20px; } .slideshow__text-wrapper .content-box--right {margin-right: 20px; width: 40%; }}",
+        ".section--flush {max-width: 1520px; margin: auto;}",
+        "p {font-size: 16px;}",
+        ".slideshow__image-wrapper {border-radius: 20px 20px 20px 20px;}",
+        ".h2,h3 {margin-left: 0;}"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "fade",
+        "autoplay": false,
+        "mobile_fix": true,
+        "banner_only": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_block_jPimmn": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "custom_css": [
+        "section {margin-bottom: 0; margin-top: 0; background-color: #8fe1e4;}",
+        "h3 {color: #ff914d; margin-bottom: 0; padding-bottom: 0; font-weight: 500;}",
+        ".image-with-text-block__text-container {margin-top: 0;}",
+        ".image-with-text-block__content:not(.image-with-text-block__content--tight) {padding: 35px; border-radius: 20px;}",
+        ".container {padding-bottom: 20px;}",
+        ".button-wrapper {margin-top: 0;}",
+        "@media screen and (max-width: 999px) {.button:hover {background-color: #ff914d; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/BLOG-VITAMIN-C-GLOW_BABY_BOOSTER_SERUM_MODEL.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "html_content": "<img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/blog-page-hero-lockup-vitamin-c-new2.png?v=1713399242\" style=\"padding-bottom:10px; width:80%;\" alt=\"5 reasons why you need vitamin c\"><p style=\"padding-left:8px;\">Discover how Vitamin C transforms your skin by brightening, healing scars, and reducing wrinkles. Learn to choose and use Vitamin C...</p><a style=\"padding-left:8px; font-weight:bold;\" href=\"/blogs/the-compassionista/essential-vitamins-for-your-skin-5-reasons-why-you-need-vitamin-c\">Read now <i class=\"fa-solid fa-arrow-right\"></i></a>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "overlap_right",
+        "text_alignment": "left",
+        "text_background": "#f5f1f2",
+        "text_color": "#000000",
+        "button_background": "#ff914d",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "rich_text_FEmmzD": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p>Explore a world of wellness with heart. Dive into compassionate beauty tips, selfcare routines, and mindful practices with latest trends and expert advice on ‘The Compassionista’. Join us in embracing a conscious, accountable, 100% vegan + cruelty-free beauty ethos with a higher purpose. Wellness seeker, you’re home.\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_9zhhG4": {
+      "type": "multi-column",
+      "blocks": {
+        "item_MkiVep": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Model2.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_fBzLBw": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/glasses-woman-temp.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "item_6TPPiR": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "<span class=\"font-california-coast heading h1\">the compassionista</span>",
+            "content": "<p>Explore a world of wellness with heart. Dive into compassionate beauty tips, selfcare routines, and mindful practices with latest trends and expert advice on ‘The Compassionista’. Join us in embracing a conscious, accountable, 100% vegan + cruelty-free beauty ethos with a higher purpose. Wellness seeker, you’re home.\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "item_MkiVep",
+        "item_fBzLBw",
+        "item_6TPPiR"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "section {margin-top: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "tight",
+        "background": "#ffd9df",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "show_blog_title": false,
+        "show_tags": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 3
+      }
+    },
+    "image_with_text_block_ip4aC4": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Stellar-Gaze-Model3.jpg",
+        "subheading": "",
+        "title": "Lorem ipsum",
+        "content": "<p>Proin consequat, ligula sit amet finibus cursus, velit odio porttitor justo, vel lobortis ipsum tellus quis magna. Donec pulvinar vestibulum sem eu scelerisque.</p>",
+        "html_content": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "boxed",
+        "text_position": "overlap_left",
+        "text_alignment": "left",
+        "text_background": "#fff0f0",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "blog_posts_VjGDq7": {
+      "type": "blog-posts",
+      "disabled": true,
+      "custom_css": [
+        ".section__header {margin-bottom: 20px;}",
+        ".h2 {font-family: \"melt\", serif !important; font-weight: normal; font-size: 38px;}",
+        ".article-item a {border-radius: 20px;}"
+      ],
+      "settings": {
+        "blog": "the-compassionista",
+        "subheading": "",
+        "title": "more to discover",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "custom_html_tCrkxK",
+    "image_with_text_overlay_Er8zkw",
+    "custom_html_GpFt7Y",
+    "rich_text_3he9yc",
+    "1659552491379b01d0",
+    "slideshow_original_gRAJVK",
+    "multi_column_DWCA6K",
+    "slideshow_original_nXixdR",
+    "image_with_text_block_jPimmn",
+    "rich_text_FEmmzD",
+    "multi_column_9zhhG4",
+    "main",
+    "image_with_text_block_ip4aC4",
+    "blog_posts_VjGDq7"
+  ]
+}

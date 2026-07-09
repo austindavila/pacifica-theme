@@ -1,0 +1,108 @@
+{% comment %}
+SALE MESSAGES
+{% endcomment %} 
+
+
+{% comment %} check to see if the product is on sale or a bundle {% endcomment %}
+{% assign productTags = product.tags | join: ',' %} 
+{% assign isBundle = false %}
+
+{% comment %} check if last call or gift card {% endcomment %}  
+{% if productTags contains 'last-call' or productTags contains 'gift-card' or productTags contains 'sale-bundle' %}
+  {% assign onSale = true %}
+  {% if productTags contains 'sale-bundle' %} 
+    {% assign isBundle = true %}      
+  {% endif %}
+{% else %} 
+  {% assign onSale = false %}
+{% endif %}
+
+
+{% comment %}
+=====================================
+MESSAGES CONFIGURED IN THEME SETTINGS
+=====================================
+{% endcomment %}
+
+
+{% comment %} show sale message SITEWIDE {% endcomment %} 
+{% if settings.sitewide_show_sale_message %}
+  {% if settings.sitewide_show_sale_message_exclude_sale %}
+    {% unless onSale %}
+      <div class="product-meta__sale-message">{{ settings.sitewide_sale_message }}</div>
+    {% endunless %}
+  {% else %}
+      <div class="product-meta__sale-message">{{ settings.sitewide_sale_message }}</div>
+  {% endif %}
+{% endif %}
+
+
+{% comment %} show sale message for TAGGED items {% endcomment %} 
+{% if settings.tag_show_sale_message %}
+  {% if productTags contains settings.tag_sale_message_tag %}
+      <div class="product-meta__sale-message">{{ settings.tag_sale_message }}</div>
+  {% endif %}
+{% endif %}
+
+
+{% comment %} show sale message on a COLLECTION {% endcomment %} 
+{% if settings.collection_show_sale_message %}
+  {% for collection in product.collections %}
+    {% if collection.handle == settings.collection_sale_message_collection %}
+      <div class="product-meta__sale-message">{{ settings.collection_sale_message }}</div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+{% comment %} show sale message on individual PRODUCT {% endcomment %} 
+{% if settings.product_show_sale_message %}
+  {% if product.handle == settings.product_sale_message_product %}
+    <div class="product-meta__sale-message">{{ settings.product_sale_message }}</div>
+  {% endif %}
+{% endif %}
+
+
+{% comment %}
+======================
+MESSAGES BASED ON TAGS
+======================
+{% endcomment %}
+
+
+{% comment %} message shows on COLLECTION page below image and on PDP below ratings. use __promo: {% endcomment %}
+{% for tag in product.tags %}
+  {% if tag contains '__promo' %}
+    <div class="product-meta__sale-message" {% if template == "product" %}style="padding:10px 0"{% endif %}>{{ tag | split: '__promo:' | last }}</div>
+    {%- break -%}
+  {% endif %}
+{% endfor %}
+
+
+{% comment %} show last call final sale messaging - only in CART {% endcomment %}
+{% unless template == "collection" or template == "product" %}
+ {% if onSale or productTags contains 'final-sale' %}
+  {% if isBundle == false and product.handle != 'digital-gift-card' %}
+    <div class='text--subdued text--xsmall'>Final Sale</div>
+  {% endif %}
+ {% endif %}
+ {% endunless %}
+
+
+{% comment %}
+    "id": "sitewide_show_sale_message",
+    "id": "sitewide_sale_message",
+    "id": "sitewide_show_sale_message_exclude_sale",
+
+    "id": "tag_show_sale_message",
+    "id": "tag_sale_message",
+    "id": "tag_sale_message_tag",
+
+    "id": "collection_show_sale_message",
+    "id": "collection_sale_message",
+    "id": "collection_sale_message_collection",
+
+    "id": "product_show_sale_message",
+    "id": "product_sale_message",
+    "id": "product_sale_message_product"
+{% endcomment %} 

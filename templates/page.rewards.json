@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "custom_liquid_aPDhyD": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button {color: white; background-color: black; border-radius: 25px;}",
+        "p {line-height: normal; width: 90%; margin: auto; padding-bottom: 20px;}",
+        ".section__header {margin-bottom: 10px;}",
+        ".heading {margin-bottom: 0;}",
+        ".container {margin: 0; padding: 0; max-width: none;}",
+        "section {margin-top: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% render 'rewards' %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_HmNhGx": {
+      "type": "faq",
+      "blocks": {
+        "category_dCMm77": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "question_FMXPwQ": {
+          "type": "question",
+          "settings": {
+            "title": "Does it cost to sign up?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "category_p8hJqN": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "title": "Other"
+          }
+        },
+        "question_MdiGEG": {
+          "type": "question",
+          "settings": {
+            "title": "How do I log in?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_dCMm77",
+        "question_FMXPwQ",
+        "category_p8hJqN",
+        "question_MdiGEG"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_aPDhyD",
+    "faq_HmNhGx"
+  ]
+}

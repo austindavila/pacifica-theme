@@ -1,0 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "large"
+      }
+    },
+    "custom_html_nfYCWQ": {
+      "type": "custom-html",
+      "custom_css": [
+        ".container {padding: 0px; margin: 0px;}",
+        "section {padding: 0px; margin: 0px;}",
+        "@media screen and (min-width: 999px) {#tangent_welcome_screen_cover {height: 700px; } #tangent_welcome_component{width:400px;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<style>\n#tangent_welcome_screen_cover{\nheight:500px;\nwidth:100%;\nbackground-image:url('https://cdn.shopify.com/s/files/1/1515/0462/files/HAIR-LANDING-QUIZ-D.jpg?v=1721170587');\nbackground-size:cover;\nbacground-repeat:no-repeat;\nobject-fit:contain;\nposition:relative;\n}\n#tangent_welcome_component{\nbackground:#fff;\nposition:absolute;\nleft:4%;\nbottom:7%;\nwidth:90%;\npadding:2% 3%;\ntext-align:center;\nborder-radius:20px;\npadding-bottom:3%;\n}\n#tangent_welcome_component>h1{\nfont-weight:normal;\nmargin-bottom:3px;\nfont-size: 30px;\n}\n#tangent_welcome_component>p{\nmargin-top:0;\nfont-size:13px;\n}\n#tangent_welcome_start_button{\nbackground:#000;\ncolor:#fff;\nwidth:fit-content;\nmargin:0 auto;\npadding:10px 35px;\nborder-radius:50px;\n}\n#tangent_welcome_start_button>a:hover{\ncolor:#fff;\n}\n@media only screen and (max-width: 600px) {\n#tangent_welcome_screen_cover{\nbackground-position: bottom;\n}\n #tangent_welcome_component{\nleft:0;\nright:0;\nmargin: 0 auto;\n}\n}\n.container{\nmax-width:unset;\n}\n</style>\n<div id=\"tangent_welcome_screen_cover\">\n<div id=\"tangent_welcome_component\">\n<h1>Hair Quiz</h1>\n<p>Take our hair quiz to find the most <br>magical hair of your dreams.</p>\n<p id=\"tangent_welcome_start_button\"><a href=\"https://www.pacificabeauty.com/pages/hair-quiz\">Get Started</a></p>\n</div>\n</div>",
+        "no_padding_margin": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_html_nfYCWQ"
+  ]
+}

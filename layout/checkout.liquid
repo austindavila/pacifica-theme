@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <script src="https://js-prod01.narvar.com/pacificabeauty/promise_pdp.js" defer></script>
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+
+    <!-- Start ADDRESS VALIDATOR -->
+    <script async src="https://d3ox8tdk614ykk.cloudfront.net/pobox_checker.js"></script>
+    <!-- End ADDRESS VALIDATOR -->
+
+    {% render "loyaltylion" %}
+      <script>lion.configure({ checkout: true })</script>
+
+    {% comment %} USABLENET {% endcomment %}
+    <script src="https://a40.usablenet.com/pt/c/pacificabeauty/cookiestorestart" async></script>
+    
+    <style>
+      #express-checkout-wallets-wrapper { min-height: 200px; }
+      #express-checkout-wallets-wrapper li { min-height: 48px; }
+    </style>
+  </head>
+
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    window.narvar('postShopifyPdd');
+  });
+</script>
+
+    {% comment %} zendesk omnie chat bot 
+     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5b297296-fe8d-4c93-adcb-700bc9f0677e" defer></script> {% endcomment %}
+    
+    {% comment %} signature required over $200 {% endcomment %}
+    {% if checkout.total_price > 20000 %}
+      <script text="javascript">
+        window.addEventListener('DOMContentLoaded', (event) => { 
+            var element = document.createElement('p');
+            element.appendChild(document.createTextNode('To ensure your package is received, we require signatures on all deliveries over $200.'));
+            document.querySelector(".section--shipping-method .section__text").appendChild(element);
+            element.style.color= "#db1d71";
+        });
+      </script>
+    {% endif %}
+    
+{% comment %} {% endcomment %}
+<script src="https://js.narvar.com/pacificabeauty/Checkout.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    window.narvar('shopifyCheckout', {
+      countryCode: '{{ checkout.shipping_address.country_code }}', // Please do not edit this field, it is filled by Shopify platform
+      provinceCode: '{{ checkout.shipping_address.province_code }}', // Please do not edit this field, it is filled by Shopify platform
+      zipCode: '{{ checkout.shipping_address.zip }}', // Please do not edit this field, it is filled by Shopify platform
+      fallbackMessage: '{{ "now" | date: "%s" | plus: 432000 | date: "%A, %B %e" }}', // This will be displayed when there is no EDD
+      originZip: '46075', // 94105 is added as the default origin zip, please change it to the zipcode of the fulfillment facility center
+      originCountry: 'US', // US is the default origin country, please change it to the origin country of the fulfillment facility center
+      localeLanguage: 'en', // en is added as the default language, edit it and provide the appropriate language wherever necessary
+      localeCountry: 'US' // US is added as the default origin country, edit it and provide the appropriate country wherever necessary
+    });
+  });
+</script>
+
+
+  </body>
+</html>

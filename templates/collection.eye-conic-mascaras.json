@@ -1,0 +1,506 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#333333",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "slideshow_original_YebgBy": {
+      "type": "slideshow-original",
+      "blocks": {
+        "image_MR33tM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ash-Mascara-Header.jpg",
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "<div class=\"heading heading--xlarge font-california-coast\" style=\"color:black;\">all eyes on <span style=\"font-weight:500;\">YOU</span>\n</div>\n\n<h1 class=\"heading h1\">Discover our award-winning,<br>eye-conic mascaras.</h1>",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover": "#ffffff",
+            "button_text_color_hover": "#000000",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_MR33tM"
+      ],
+      "settings": {
+        "section_height": "medium",
+        "transition_type": "fade",
+        "autoplay": true,
+        "mobile_fix": false,
+        "banner_only": false,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "timeline_CKiQUr": {
+      "type": "timeline",
+      "blocks": {
+        "item_KBUVXk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Surf-Lash-Beach.jpg",
+            "label": "SURF LASH",
+            "title": "surf lash",
+            "content": "Lorem ipsum sit dolor amet",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify://products/surf-lash-mascara"
+          }
+        },
+        "item_KJXCgn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/687735301505_C3_zoom.jpg",
+            "label": "DREAM BIG",
+            "title": "dream big",
+            "content": "Lorem ipsum sit dolor amet",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_FBDpwP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Volume-Model-Temp-Square.jpg",
+            "label": "ACTIVIST VOLUME",
+            "title": "activist volume",
+            "content": "Lorem ipsum sit dolor amet",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_XhHiHX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Shot_12_Outside-Maddison_1652_square.jpg",
+            "label": "VEGAN COLLAGEN FLUFFY LASH",
+            "title": "vegan collagen fluffy lash",
+            "content": "Lorem ipsum sit dolor amet",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_zWkkyf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_30115_STELLAR_GAZE_SUPER_NOVA_BLACK_LIFESTYLE_1a2d81bc-c071-4126-bf87-4fc6d1ee6f4c.jpg",
+            "label": "STELLAR GAZE",
+            "title": "stellar gaze",
+            "content": "Lorem ipsum sit dolor amet",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_KBUVXk",
+        "item_KJXCgn",
+        "item_FBDpwP",
+        "item_XhHiHX",
+        "item_zWkkyf"
+      ],
+      "custom_css": [
+        ".button-wrapper a {border-radius: 25px;}",
+        "h2 {font-family: \"california-coast\", serif !important; font-size: 26px; margin-bottom: 0;}",
+        "section {margin-top: 0;}",
+        ".timeline__content {padding: 10px; line-height: 1.2em;}",
+        ".button-wrapper {margin-top: 10px;}",
+        "@media (min-width: 1000px) {.timeline__content {padding: 40px; } .button-wrapper {margin-top: 20px; }}",
+        "@media screen and (max-width: 999px) {.timeline__item {align-items: end; }}",
+        ".button:hover {background: black;}",
+        ".heading {padding-bottom: 5px;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Shipping-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/skincare",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "ba45512c-f62f-4379-98c4-2bb7653429e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Evergreen-Free-Gift-WIDE.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify://collections/new",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffffff",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "ead70714-d5ed-4b7c-be00-fd28dafc6738",
+        "ba45512c-f62f-4379-98c4-2bb7653429e5"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "large"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "004467da-4622-46e7-b936-5bf89ecae8e6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14702093107288__004467da-4622-46e7-b936-5bf89ecae8e6-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mascara-Month-Desktop.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": false,
+            "gradient_name": "bg-blue-lavender",
+            "mobile_image": "shopify://shop_images/Mascara-Month-Mobile.jpg",
+            "text_position": "middle_center",
+            "title": "",
+            "body_copy": "<div class=\"heading heading--large\" style=\"color:black;\">all eyes on <span style=\"font-weight:500;\">YOU</span>\n</div>\n\n<h1 class=\"heading h2\" style=\" color:white;\">Discover our award-winning,<br>eye-conic mascaras.</h1>",
+            "subheading": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#e6a5c4",
+            "text_color": "#ffffff",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "image_4VLChM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MAKEUP-SURFLASH-ASH-23.jpg",
+            "smaller_columns": false,
+            "show_extra_padding": false,
+            "show_extra_column_padding": false,
+            "column_reverse": false,
+            "column_reverse_mobile": false,
+            "show_gradient": false,
+            "gradient_name": "bg-blue-lavender",
+            "text_position": "middle_center",
+            "title": "Slide title",
+            "body_copy": "Lorem Ipsum sit dolor amet.",
+            "subheading": "Tell your story",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "background_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__004467da-4622-46e7-b936-5bf89ecae8e6-image-1",
+        "image_4VLChM"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "cycle_speed": 4,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "db9a7ea9-e36d-4178-95be-3cab54235140": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"table-outer-container\">\n    <div class=\"table-inner-container\">\n        <div class=\"table-scroll-container\">\n            <table class=\"comparison-table\">\n                <tbody>\n                    <tr>\n                        <th class=\"no-padding\"></th>\n                        <th class=\"no-padding table-cell-darker\">Surf Lash</th>\n                        <th class=\"no-padding table-cell-lightest\">Dream Big</th>\n                        <th class=\"no-padding\"><a href=\"https://www.pacificabeauty.com/collections/eye-conic-lashes/products/vegan-collagen-fluffy-lash-mascara\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Mascara-Infographic-Fluffy.jpg?v=1691154457\" alt=\"Vegan Collagen Fluffy Lash Mascara\" class=\"table-img\"></a></th>\n                        <th class=\"no-padding\"><a href=\"https://www.pacificabeauty.com/collections/eye-conic-lashes/products/stellar-gaze-length-strength-mineral-mascara\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Mascara-Infographic-Stellar.jpg?v=1691154457\" alt=\"Stellar Gaze Mascara\" class=\"table-img\"></a></th>\n                        <th class=\"no-padding\"><a href=\"https://www.pacificabeauty.com/collections/eye-conic-lashes/products/activist-volume-mascara\"><img src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/Mascara-Infographic-Activist.jpg?v=1691154457\" alt=\"Activist Volume &amp; Curl Mascara\" class=\"table-img\"></a></th>\n                    </tr>\n                    <tr>\n                        <td class=\"table-cell-lightest\"><span class=\"heading heading--small text--center\">Features</span></td>\n                        <td class=\"table-cell-carker\">\n                            <ul>\n                                <li><span class=\"heading heading--small\">surf lash</span></li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li><span class=\"heading heading--small\">dream big</span></li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li><span class=\"heading heading--small\">Get natural and fluffy lashes</span></li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li><span class=\"heading heading--small\">Get long and strong lashes</span></li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li><span class=\"heading heading--small\">Get volumized and curled lashes</span></li>\n                            </ul>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"table-cell-lightest\"><span class=\"heading heading--small text--center\">Brush</span></td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>100% vegan spiral fluff it up brush to fluff &amp; fan out every lash</li>\n                                <li>Lifts for fluffy lashes that look beyond natural</li>\n                                <li>Flexible bristles designed to spread evenly onto every single lash to fluff and for a feathery, fluttery effect</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>100% vegan soft brush</li>\n                                <li>Natural looking length and volume </li>\n                                <li>Plush bristles designed for effortless, buildable, coverage</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>100% vegan custom curved brush</li>\n                                <li>Contours lashes to lift, add volume and curl from root to tip</li>\n                                <li>Flexible bristles designed to load up lashes for maximum volume</li>\n                            </ul>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"table-cell-lightest\"><span class=\"heading heading--small text--center\">Ingredients</span></td>\n                        <td class=\"table-cell-darkert\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>                        \n                                <li>\n<span class=\"table-semibold\">Vegan Collagen:</span> Add structure and build volume</li>\n                                <li>\n<span class=\"table-semibold\">Plant Fibers:</span> Conditions and helps hydrate</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>\n<span class=\"table-semibold\">Vitamin B:</span> Nourishes lashes from root to tip</li>\n                                <li>\n<span class=\"table-semibold\">Coconut Oil:</span> Helps to hydrate for a fuller, healthier appearance </li>\n                                <li>\n<span class=\"table-semibold\">Kelp:</span> Rich in nutrients to support healthy lashes </li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>\n<span class=\"table-semibold\">Plant Waxes:</span> Add structure and build volume</li>\n                                <li>\n<span class=\"table-semibold\">Plant Fibers:</span> Amplify volume and adds length</li>\n                                <li>\n<span class=\"table-semibold\">Shorea Robusta Resin &amp; Acacia Senegal Gum:</span> Film forming &amp; curl</li>\n                                <li>\n<span class=\"table-semibold\">Plant Oils &amp; Vegan Collagen:</span> Nourish and condition</li>\n                            </ul>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"table-cell-lightest\"><span class=\"heading heading--small text--center\">Packaging</span></td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>Lorem ipsum dolor sit amet</li>\n                                <li>Consectetur adipiscing elit</li>\n                                <li>Sed do eiusmod tempor incididunt</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>96% naturally derived ingredients</li>\n                                <li>100% glass bottle</li>\n                                <li>Zero Microplastics</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-lightest\">\n                            <ul>\n                                <li>96% naturally derived ingredients</li>\n                                <li>FSC carton</li>\n                                <li>Zero Microplastics</li>\n                            </ul>\n                        </td>\n                        <td class=\"table-cell-darker\">\n                            <ul>\n                                <li>96% naturally derived ingredients</li>\n                                <li>100% glass bottle</li>\n                                <li>Zero Microplastics</li>\n                            </ul>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>\n\n\n<style>\n    /* General styles for all tables (outside the scope) */\n    table {\n        border-collapse: collapse;\n        width: 100%;\n    }\n    th, td {\n        border: 1px solid #ccc; /* Add gray border to all cells */\n        text-align: left;\n        min-width: 200px; /* Set the minimum width for all columns */\n    }\n\n    td{\n        padding-left:10px;\n    }\n    th.no-padding {\n        padding: 0 !important; /* Remove padding from table header cells with images */\n    }\n    img {\n        display: block; /* Remove extra space around the images */\n        width: 100%; /* Images fill the width of the container they are in */\n        height: auto;\n    }\n\n    /* Styles specific to the comparison table with the class \"comparison-table\" */\n    .comparison-table ul{\n        /* Add your specific styles here */\n        list-style: none;\n    }\n    .comparison-table li{\n        padding: 5px 0;\n        line-height: normal;\n    }\n    \n    /* Styles specific to <img> elements within the table with class \"table-img\" */\n    .comparison-table .table-img {\n        /* Add any other specific image styles here */\n    }\n\n    /* Styles for the outer container */\n    .table-outer-container {\n        overflow-x: auto;\n    }\n\n    /* Styles for the inner container */\n    .table-inner-container {\n        width: 100%;\n        /* Add padding or margin here if needed */\n    }\n\n    /* Styles for the scroll container */\n    .table-scroll-container {\n        min-width: 100%; /* Ensures horizontal scroll behavior */\n        overflow-x: auto;\n    }\n\n    /* Background styles for table cells */\n    .table-cell-lightest {\n        background-color: #fff0f4; /* Lightest pink background for table cells */\n    }\n\n    .table-cell-darker {\n        background-color:  #fffafb;/* Darker pink background for table cells */\n    }\n\n    /* Remove padding for all cells */\n    .comparison-table th,\n    .comparison-table td {\n        padding: 10px;\n    }\n    .comparison-table ul {\n        padding-left:5px;\n    }\n\n    .comparison-table .table-semibold{\n        font-weight:500;\n    }\n    /* Responsive styles for mobile devices */\n    @media (max-width: 600px) {\n        .comparison-table th, .comparison-table td {\n            /* font-size: 12px; */\n            width: 200px; /* Set a specific width for columns on mobile */\n        }\n        .comparison-table th:first-child,\n        .comparison-table td:first-child {\n            min-width: 70px; /* Adjust the width as needed */\n        }\n    }\n</style>",
+        "no_padding_margin": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "32cd36f0-d228-43df-988f-513472886bf4": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Model7.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Model4.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Model5.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Activist-Model6.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-1",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-2",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-3",
+        "template--14702093107288__32cd36f0-d228-43df-988f-513472886bf4-item-4"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": true,
+            "subheading": "My lashes look absolutely stunning!",
+            "content": "This mascara builds without clumping. It lengthens and builds amazing volume at the same time. It didn’t transfer onto my lids or fallout onto my lower eye area. The glass tube was a bonus! ",
+            "author": "Shelly – Vegan Collagen Fluffy Lash Mascara",
+            "background": "#fff0f0",
+            "text_color": "#000000"
+          }
+        },
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "",
+            "content": "I really like the way this mascara stays on all day, does not sting my sensitive eyes, and washes off super easily. It makes my lashes look longer and thicker.",
+            "author": "Meri B – Activist Volume Mascara",
+            "background": "#fff0f0",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__d723cb52-9dab-4b41-b05c-b4baba9d4b4c-quote-1",
+        "6a2cf85d-c542-4d6b-99ef-4f24503576e6"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "large",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "3f31d437-d72d-4d31-b98d-70096efa7c2c": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<h2 class=\"heading h1 font-california-coast\" style=\"font-weight:400; line-height:1; margin:0; padding:0;\">\nsee why we are the <br>clean mascara authority\n</h2>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "b6198230-eadd-4536-a453-6d1af44d4f14": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/mascara-landing-page-bottom-img1-alt.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<h3><strong>NO TO NYLON-6 </strong></h3><p>Nylon-6 is a plastic microfiber. \"Microplastic\" refers to all types of tiny plastic particles (smaller than 5mm) that are intentionally added to clothing, cosmetics, personal care​ products, etc. Long used in mascaras to add length, microplastics are not something we can get behind because they wind up in our oceans and fresh waterways​ <strong>and they do not biodegrade.​</strong></p><h3><strong>YES TO PLANT FIBERS! </strong></h3><p>Our next-gen plant-powered tech combines plant-based fibers with plant resins to give a similar effect.​</p>",
+        "html_content": "<p></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "overlap_right",
+        "text_alignment": "left",
+        "text_background": "#eff5ff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "41b85dbe-2da2-40be-9641-3edff5b5d754": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14702093107288__41b85dbe-2da2-40be-9641-3edff5b5d754-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "eye-conic-lashes",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14702093107288__41b85dbe-2da2-40be-9641-3edff5b5d754-collection-1"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "<div class=\"font-california-coast heading heading--large\">shop all mascara</div>",
+        "content": "",
+        "products_count": 15,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_original_YebgBy",
+    "timeline_CKiQUr",
+    "main",
+    "16397758758c69c057",
+    "004467da-4622-46e7-b936-5bf89ecae8e6",
+    "db9a7ea9-e36d-4178-95be-3cab54235140",
+    "32cd36f0-d228-43df-988f-513472886bf4",
+    "d723cb52-9dab-4b41-b05c-b4baba9d4b4c",
+    "3f31d437-d72d-4d31-b98d-70096efa7c2c",
+    "b6198230-eadd-4536-a453-6d1af44d4f14",
+    "41b85dbe-2da2-40be-9641-3edff5b5d754"
+  ]
+}

@@ -1,0 +1,978 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_hero_pro_eiidPk": {
+      "type": "ss-hero-pro",
+      "blocks": {
+        "heading_q4CLdC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>BUY MORE, </h1><h1>SAVE MORE</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_accent_font": "playfair_n4",
+            "heading_size": 72,
+            "heading_size_mobile": 50,
+            "heading_advanced": true,
+            "heading_height": 100,
+            "heading_mt": 8,
+            "heading_mt_mobile": 0,
+            "heading_color": "#000000",
+            "heading_accent_color": "#afafaf"
+          }
+        },
+        "text_jcLRGy": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Save 20% when you bundle!</h2>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 40,
+            "text_size_mobile": 25,
+            "text_advanced": true,
+            "text_height": 100,
+            "text_mt": 20,
+            "text_mt_mobile": 18,
+            "text_color": "#000000"
+          }
+        },
+        "text_ArJXwN": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Add 4 or more items </h6><h6>to your cart and</h6><h6>use code BUNDLEUP </h6><h6>for 20% off.</h6>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 40,
+            "text_size_mobile": 25,
+            "text_advanced": true,
+            "text_height": 100,
+            "text_mt": 20,
+            "text_mt_mobile": 10,
+            "text_color": "#000000"
+          }
+        },
+        "review_AKnAEb": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "stars_count": 4.5,
+            "stars_size": 16,
+            "stars_size_mobile": 14,
+            "stars_gap": 2,
+            "review": "<p>Rated 4.9/5 by 5,000+ reviews</p>",
+            "review_custom": false,
+            "review_font": "josefin_sans_n4",
+            "review_size": 14,
+            "review_size_mobile": 12,
+            "review_advanced": false,
+            "review_height": 130,
+            "review_mt": 0,
+            "review_mt_mobile": 0,
+            "background": true,
+            "review_bg_opacity": 0.3,
+            "enable_blur": true,
+            "review_radius": 10,
+            "review_border_thickness": 1,
+            "review_padding_horizontal": 12,
+            "review_padding_horizontal_mobile": 12,
+            "review_padding_vertical": 8,
+            "review_padding_vertical_mobile": 8,
+            "review_color": "#ffffff",
+            "review_bg_color": "#ffffff",
+            "review_border_color": "#ffffff",
+            "stars_color": "#ffffff",
+            "stars_bg_color": "#00b67a",
+            "stars_bg_half_color": "#dddddd"
+          }
+        },
+        "button_mC6Xit": {
+          "type": "button",
+          "settings": {
+            "button": "REDEEM BUNDLEUP",
+            "url": "",
+            "open_in_new_tab": false,
+            "button_style": "outline",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_advanced": true,
+            "button_height": 100,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_padding_vertical": 18,
+            "button_padding_vertical_mobile": 16,
+            "button_radius": 20,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 24,
+            "button_custom_styling": false,
+            "button_full_width_mobile": true,
+            "button_color": "#121212",
+            "button_hover_color": "#121212",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#ffffdd",
+            "button_border_color": "#121212",
+            "button_border_hover_color": "#121212",
+            "button_shadow_color": "#000000"
+          }
+        },
+        "button_W6UWVX": {
+          "type": "button",
+          "settings": {
+            "button": "SHOP BUNDLES",
+            "url": "shopify://collections/bundles",
+            "open_in_new_tab": false,
+            "button_style": "outline",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_advanced": true,
+            "button_height": 100,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_padding_vertical": 18,
+            "button_padding_vertical_mobile": 16,
+            "button_radius": 20,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 0,
+            "button_custom_styling": false,
+            "button_full_width_mobile": true,
+            "button_color": "#121212",
+            "button_hover_color": "#121212",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#ffffdd",
+            "button_border_color": "#121212",
+            "button_border_hover_color": "#121212",
+            "button_shadow_color": "#000000"
+          }
+        },
+        "verified_bNTEQw": {
+          "type": "verified",
+          "settings": {
+            "icon_size": 16,
+            "icon_size_mobile": 16,
+            "icon": "none",
+            "text": "<p><em><strong>*BUNDLEUP code may not be combined with other offers</strong></em></p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 14,
+            "text_size_mobile": 14,
+            "text_advanced": true,
+            "text_height": 200,
+            "text_mt": 50,
+            "text_mt_mobile": 50,
+            "icon_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_q4CLdC",
+        "text_jcLRGy",
+        "text_ArJXwN",
+        "review_AKnAEb",
+        "button_mC6Xit",
+        "button_W6UWVX",
+        "verified_bNTEQw"
+      ],
+      "custom_css": [
+        ".hero-button-inner-button_mC6Xit,.hero-button-inner-button_W6UWVX {font-weight: 600 !important;}"
+      ],
+      "name": "SS - Hero pro 💎  Bundles",
+      "settings": {
+        "hero_height": "full_screen",
+        "hero_fixed_height": 600,
+        "hero_fixed_height_mobile": 600,
+        "content_max_width": 100,
+        "enable_split_layout": false,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "start",
+        "features_advanced": false,
+        "features_mt": 20,
+        "features_mt_mobile": 20,
+        "features_gap": 24,
+        "features_gap_mobile": 12,
+        "feature_background": false,
+        "feature_bg_opacity": 0.3,
+        "feature_enable_blur": true,
+        "feature_radius": 100,
+        "feature_border_thickness": 1,
+        "feature_padding_horizontal": 12,
+        "feature_padding_horizontal_mobile": 12,
+        "feature_padding_vertical": 6,
+        "feature_padding_vertical_mobile": 6,
+        "feature_icon_size": 18,
+        "feature_icon_size_mobile": 16,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 16,
+        "feature_text_size_mobile": 14,
+        "feature_text_height": 150,
+        "feature_icon_color": "#ffffff",
+        "feature_text_color": "#ffffff",
+        "feature_bg_color": "#ffffff",
+        "feature_border_color": "#ffffff",
+        "layout_bg_type": "image",
+        "bg_image": "shopify://shop_images/OFFERS_PAGE_BUNDLE_DESKTOP_29c23466-ab20-451d-8489-f0a5b63592e6.png",
+        "bg_image_mobile": "shopify://shop_images/OFFERS_PAGE_BUNDLE_MOBILE_aab54df5-796d-437b-9247-c9163c0275df.png",
+        "bg_video_url": "",
+        "bg_overlay": 0.4,
+        "bg_overlay_color": "#ffffff",
+        "background_style": "solid",
+        "background_color": "#121212",
+        "background_gradient": "radial-gradient(rgba(30, 30, 36, 1), rgba(5, 5, 5, 1) 100%)",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 2,
+        "padding_horizontal_mobile": 1.5,
+        "width": "full",
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "ss_hero_pro_FhxzKV": {
+      "type": "ss-hero-pro",
+      "blocks": {
+        "heading_epmTyT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Choose 2 </h2><h2>Free Gifts</h2><h2>With $50 Purchase!</h2><p></p>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_accent_font": "playfair_n4",
+            "heading_size": 72,
+            "heading_size_mobile": 50,
+            "heading_advanced": true,
+            "heading_height": 100,
+            "heading_mt": 8,
+            "heading_mt_mobile": 8,
+            "heading_color": "#000000",
+            "heading_accent_color": "#afafaf"
+          }
+        },
+        "text_AggBa9": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Spend $50+ </h2><h2>and pick any 2:</h2>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 40,
+            "text_size_mobile": 25,
+            "text_advanced": true,
+            "text_height": 90,
+            "text_mt": 20,
+            "text_mt_mobile": 20,
+            "text_color": "#000000"
+          }
+        },
+        "text_PVkEDL": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://www.pacificabeauty.com/products/3955581059160\" target=\"_blank\"><strong>Glow Baby Booster Serum Mini</strong></a></p><p><a href=\"https://www.pacificabeauty.com/products/7344572989528\" target=\"_blank\"><strong>Chill Baby Cooling Cryo Globes</strong></a></p><p><a href=\"https://www.pacificabeauty.com/products/7555715563608\" target=\"_blank\"><strong>Dream Moon Spray Perfume</strong></a></p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 20,
+            "text_size_mobile": 18,
+            "text_advanced": true,
+            "text_height": 150,
+            "text_mt": 20,
+            "text_mt_mobile": 20,
+            "text_color": "#000000"
+          }
+        },
+        "text_V4tzet": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Choose your free </h5><h5>gifts in cart!</h5>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 40,
+            "text_size_mobile": 25,
+            "text_advanced": true,
+            "text_height": 100,
+            "text_mt": 10,
+            "text_mt_mobile": 20,
+            "text_color": "#000000"
+          }
+        },
+        "review_egUqnF": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "stars_count": 4.5,
+            "stars_size": 16,
+            "stars_size_mobile": 14,
+            "stars_gap": 2,
+            "review": "<p>Rated 4.9/5 by 5,000+ reviews</p>",
+            "review_custom": false,
+            "review_font": "josefin_sans_n4",
+            "review_size": 14,
+            "review_size_mobile": 12,
+            "review_advanced": false,
+            "review_height": 130,
+            "review_mt": 0,
+            "review_mt_mobile": 0,
+            "background": true,
+            "review_bg_opacity": 0.3,
+            "enable_blur": true,
+            "review_radius": 10,
+            "review_border_thickness": 1,
+            "review_padding_horizontal": 12,
+            "review_padding_horizontal_mobile": 12,
+            "review_padding_vertical": 8,
+            "review_padding_vertical_mobile": 8,
+            "review_color": "#ffffff",
+            "review_bg_color": "#ffffff",
+            "review_border_color": "#ffffff",
+            "stars_color": "#ffffff",
+            "stars_bg_color": "#00b67a",
+            "stars_bg_half_color": "#dddddd"
+          }
+        },
+        "verified_yNgLwx": {
+          "type": "verified",
+          "settings": {
+            "icon_size": 16,
+            "icon_size_mobile": 16,
+            "icon": "none",
+            "text": "<p><em><strong>*Offer based on post-discount subtotal. </strong></em></p><p><em><strong>Available for a limited time only.</strong></em></p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 14,
+            "text_size_mobile": 14,
+            "text_advanced": true,
+            "text_height": 150,
+            "text_mt": 50,
+            "text_mt_mobile": 50,
+            "icon_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_epmTyT",
+        "text_AggBa9",
+        "text_PVkEDL",
+        "text_V4tzet",
+        "review_egUqnF",
+        "verified_yNgLwx"
+      ],
+      "custom_css": [
+        ".hero-text-text_AggBa9 h5 {font-size: 20px !important;}",
+        ".hero-text-text_AggBa9 h6 {font-size: 13px !important;}",
+        ".hero-text-text_AggBa9 p {font-size: 10px !important;}"
+      ],
+      "name": "SS - Hero pro 💎  GWP",
+      "settings": {
+        "hero_height": "full_screen",
+        "hero_fixed_height": 600,
+        "hero_fixed_height_mobile": 600,
+        "content_max_width": 100,
+        "enable_split_layout": false,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "start",
+        "content_vertical_align_mobile": "start",
+        "features_advanced": false,
+        "features_mt": 20,
+        "features_mt_mobile": 20,
+        "features_gap": 24,
+        "features_gap_mobile": 12,
+        "feature_background": false,
+        "feature_bg_opacity": 0.3,
+        "feature_enable_blur": true,
+        "feature_radius": 100,
+        "feature_border_thickness": 1,
+        "feature_padding_horizontal": 12,
+        "feature_padding_horizontal_mobile": 12,
+        "feature_padding_vertical": 6,
+        "feature_padding_vertical_mobile": 6,
+        "feature_icon_size": 18,
+        "feature_icon_size_mobile": 16,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 16,
+        "feature_text_size_mobile": 14,
+        "feature_text_height": 150,
+        "feature_icon_color": "#ffffff",
+        "feature_text_color": "#ffffff",
+        "feature_bg_color": "#ffffff",
+        "feature_border_color": "#ffffff",
+        "layout_bg_type": "image",
+        "bg_image": "shopify://shop_images/OFFERS_PAGE_GWP_DESKTOP_924ba509-c21c-49fb-810a-506d9a22ef29.png",
+        "bg_image_mobile": "shopify://shop_images/OFFERS_PAGE_GWP_MOBILE_9952195e-0bc4-4fe8-b0f8-6ae41ba9ae65.png",
+        "bg_video_url": "",
+        "bg_overlay": 0.4,
+        "bg_overlay_color": "#ffffff",
+        "background_style": "solid",
+        "background_color": "#121212",
+        "background_gradient": "radial-gradient(rgba(30, 30, 36, 1), rgba(5, 5, 5, 1) 100%)",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 2,
+        "padding_horizontal_mobile": 1.5,
+        "width": "page",
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "ss_hero_1_zyyKnW": {
+      "type": "ss-hero-1",
+      "blocks": {
+        "slide_BpG6dn": {
+          "type": "slide",
+          "name": "BUNDLES",
+          "settings": {
+            "image": "shopify://shop_images/OFFERS_PAGE_BUNDLE_DESKTOP_29c23466-ab20-451d-8489-f0a5b63592e6.png",
+            "image_mobile": "shopify://shop_images/OFFERS_PAGE_BUNDLE_MOBILE_aab54df5-796d-437b-9247-c9163c0275df.png"
+          }
+        },
+        "slide_rF8eWw": {
+          "type": "slide",
+          "name": "GWP",
+          "settings": {
+            "image": "shopify://shop_images/OFFERS_PAGE_GWP_DESKTOP.png",
+            "image_mobile": "shopify://shop_images/OFFERS_PAGE_GWP_MOBILE.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_BpG6dn",
+        "slide_rF8eWw"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.ab-banner-content-template--20709767184472__ss_hero_1_ijKhRQ {background-color: rgba(255, 255, 255, 0.4); border-radius: 8px; padding: 16px 20px; }}"
+      ],
+      "name": "SS - Hero #1 offers",
+      "settings": {
+        "fixed_height": "adapt_first",
+        "hero_fixed_height": 580,
+        "hero_fixed_height_mobile": 600,
+        "vertical_alignment": "flex-start",
+        "vertical_alignment_mobile": "center",
+        "horizontal_alignment": "flex-start",
+        "horizontal_alignment_mobile": "center",
+        "interval": 5,
+        "image_radius": 0,
+        "image_overlay": 0,
+        "title": "<h2>BUY MORE, </h2><h2>SAVE MORE </h2><p>Save 25% </p><p>on bundles </p><p>this weekend</p>",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 72,
+        "title_size_mobile": 36,
+        "title_height": 100,
+        "subtitle": "<h6>All bundles are 25% off this weekend. </h6><h6>An additional 5% off!</h6><h6>Building your own bundle? Use code BUNDLEUP for 25% off.</h6>",
+        "subtitle_custom": false,
+        "subtitle_font": "josefin_sans_n4",
+        "subtitle_size": 16,
+        "subtitle_size_mobile": 16,
+        "subtitle_height": 150,
+        "subtitle_mt": 20,
+        "buttons_mt": 32,
+        "buttons_gap": 16,
+        "button": "REDEEM BUNDLEUP",
+        "button_url": "https://www.pacificabeauty.com/discount/BUNDLEUP",
+        "second_button": "SHOP BUNDLES",
+        "second_button_url": "shopify://collections/bundles",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 32,
+        "button_padding_horizontal_mobile": 32,
+        "button_radius": 32,
+        "button_border_thickness": 2,
+        "button_color": "#121212",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#ffffff",
+        "button_bg_hover_color": "#121212",
+        "button_border_color": "#121212",
+        "button_border_hover_color": "#121212",
+        "second_button_color": "#121212",
+        "second_button_hover_color": "#ffffff",
+        "second_button_bg_color": "#ffffff",
+        "second_button_bg_hover_color": "#121212",
+        "second_button_border_color": "#121212",
+        "second_button_border_hover_color": "#121212",
+        "title_color": "#000000",
+        "subtitle_color": "#000000",
+        "image_overlay_color": "#121212",
+        "background_color": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "section_radius": 0,
+        "lazy_load": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "large"
+      }
+    },
+    "349d714c-4dc7-4075-bec3-2bea08fba7c4": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__349d714c-4dc7-4075-bec3-2bea08fba7c4-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/IconicScents_04.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h1>50% off Fragrance: Spray Perfumes, Hair & Body Mists, even Gift Sets!</h1><p>Shop our most popular functional fragrances and stock up on holiday gifting. Use code <strong>GIFT50</strong> at checkout. <em>Limited Time Offer!</em></p><p><em>*select items. excludes subscriptions, gift cards, last call sale items, bundles, and select items. cannot be combined with other offers.</em></p>",
+            "button_text": "SHOP FRAGRANCE",
+            "button_link": "shopify://collections/perfume"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__349d714c-4dc7-4075-bec3-2bea08fba7c4-item-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_HjWHig": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_aXYENn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FUTURE_YOUTH_COMPLETE_BUNDLE.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>12 DAYS OF MASKING</h2><p>Customize a bundle of <strong>12 sheet masks</strong> and pay <strong>only $25</strong>. It's an advent calendar for beautiful skin!  <em>Limited Time Offer!</em></p><p><em>*limit one per customer</em></p>",
+            "button_text": "Bundle 12 Masks",
+            "button_link": "shopify://products/12-days-of-masking"
+          }
+        }
+      },
+      "block_order": [
+        "item_aXYENn"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_Rk9YG8": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_QrbaBE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/gwp_offers_page.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Free Gift With Purchase</h2><p>Spend $50+ and receive a FREE <a href=\"/products/3955581059160\">Glow Baby Booster Serum Mini</a>. Spend $75+ and choose your free gift: <a href=\"/products/7344572989528\">Chill Baby Cooling Cryo Globes</a> or <a href=\"/products/7555715563608\">Dream Moon Spray Perfume</a>. Free gifts automatically added to your cart at checkout. </p><p><em>Offer based on pre-discount subtotal. Available for a limited time only.</em></p>",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/best-selling-skincare"
+          }
+        }
+      },
+      "block_order": [
+        "item_QrbaBE"
+      ],
+      "disabled": true,
+      "name": "GWP - GBMINI + CRYO",
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_tzfLj3": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_8DH9cm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FUTURE_YOUTH_COMPLETE_BUNDLE.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Save 20% when you bundle</h2><p>Shop our most popular bundles or make your own. Buy 4 or more products, get 20% OFF. Use code <strong>BUNDLEUP</strong> at checkout.</p><p><em>*excludes subscriptions, gift cards, last call sale items, existing bundles, and new spray perfumes. cannot be combined with other offers.</em></p>",
+            "button_text": "SHOP BUNDLES",
+            "button_link": "shopify://collections/bundles"
+          }
+        }
+      },
+      "block_order": [
+        "item_8DH9cm"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7d3c202f-87aa-4453-9287-275044517694": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__7d3c202f-87aa-4453-9287-275044517694-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BOGO-Minis.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Buy 3 Get 1 Minis</h2><p>Buy any three travel size products, get one free. Use code <strong>MINI </strong>at checkout.</p><p><em>Choose your mini size from select full size products.</em></p>",
+            "button_text": "SHOP MINIS",
+            "button_link": "shopify://collections/travel-size"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__7d3c202f-87aa-4453-9287-275044517694-item-1"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1b4f1e80-f776-49f2-bdd7-b81ba89ece70": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "EARLY ACCESS",
+        "content": "<p style=\"padding-bottom:20px;\">Sign up for exclusive early access to our Black Friday/Cyber Monday Deals!</p>",
+        "button_text": "SIGN UP",
+        "button_link": "#",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#fff0f0",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1648761582a1c0c3dd": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648761582c1bc712c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Special-Offers-MakeupBag.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Free Makeup Bag</h2><p>Buy any three makeup products, get a free canvas makeup bag. Use code <strong>PRETTY</strong> at checkout.</p><p><em>Limit one per customer. Just add to cart.</em></p>",
+            "button_text": "GET THE BAG",
+            "button_link": "shopify://products/you-are-so-pretty-makeup-bag"
+          }
+        }
+      },
+      "block_order": [
+        "1648761582c1bc712c-0"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "ef5b700b-935a-41f5-9613-7cfd8a35f39c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__ef5b700b-935a-41f5-9613-7cfd8a35f39c-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Special-Offers-ReusableMasks.jpg",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Free Reusable Mask Set</h2><p>Free Reusable Masks Undereye & Brow with orders $100+. Use code <strong>MASK</strong> at checkout.</p><p><em>Limit one per order. Can't be combined with other offers. Must have $100 or more in cart at time of checkout.</em></p>",
+            "button_text": "GET THE SET",
+            "button_link": "shopify://products/reusable-eye-brow-mask-set"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__ef5b700b-935a-41f5-9613-7cfd8a35f39c-item-1"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "bb6073d5-92da-49a0-919c-78257c6d9f23": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__bb6073d5-92da-49a0-919c-78257c6d9f23-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_WUB_BUNDLE_TRIO_2023.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Subscribe & Save 10%</h2><p>Save 10% + Free Shipping when you subscribe.</p>",
+            "button_text": "LEARN MORE",
+            "button_link": "shopify://pages/subscriptions"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__bb6073d5-92da-49a0-919c-78257c6d9f23-item-1"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "942b7c33-6cc9-4a6e-b03d-b5b094fb1fe0": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__942b7c33-6cc9-4a6e-b03d-b5b094fb1fe0-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/WUB_MODEL_OVERNIGHT_RETINOID_CREAM_5_23_4_SQUARE.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Rewards Program</h2><p>It pays to shop consciously! Earn points for purchases when you join our loyalty program.</p>",
+            "button_text": "SIGN UP",
+            "button_link": "shopify://pages/pacifica-beauty-rewards-program"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__942b7c33-6cc9-4a6e-b03d-b5b094fb1fe0-item-1"
+      ],
+      "custom_css": [
+        ".container {padding: 20px 0;}",
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "031dd9be-26f8-4123-a9c6-860670e1eb35": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14709401747544__031dd9be-26f8-4123-a9c6-860670e1eb35-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/20200110_42_CHERRY_CHEEK_STAIN_TRIO_SQUARE_4a781670-fac9-438c-8fce-5364b68c4acb.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<h2>Join Our Community</h2><p>10% off your first order when you sign up for our email and SMS newsletter.</p><p><em>*excludes subscriptions, gift cards, last call sale items, and bundles. cannot be combined with other offers.</em></p>",
+            "button_text": "SIGN UP",
+            "button_link": "https://pacifica.attn.tv/p/Pvg/landing-page"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709401747544__031dd9be-26f8-4123-a9c6-860670e1eb35-item-1"
+      ],
+      "custom_css": [
+        ".container {padding: 20px 0;}",
+        "h2 {font-weight: 500;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "c74bcc57-d33c-4bb4-bb7c-874f29d5502a": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14999372922968__c74bcc57-d33c-4bb4-bb7c-874f29d5502a-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "last-call",
+            "label": "",
+            "button_text": "SHOP ALL LAST CALL",
+            "button_url": "shopify://collections/last-call"
+          }
+        }
+      },
+      "block_order": [
+        "template--14999372922968__c74bcc57-d33c-4bb4-bb7c-874f29d5502a-collection-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading.h2 {margin-bottom: 0;}",
+        "p {margin-top: 0;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Last Call Beauty Deals",
+        "content": "",
+        "products_count": 30,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": true,
+        "show_minis": true,
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "ss_hero_pro_eiidPk",
+    "ss_hero_pro_FhxzKV",
+    "ss_hero_1_zyyKnW",
+    "main",
+    "349d714c-4dc7-4075-bec3-2bea08fba7c4",
+    "image_with_text_HjWHig",
+    "image_with_text_Rk9YG8",
+    "image_with_text_tzfLj3",
+    "7d3c202f-87aa-4453-9287-275044517694",
+    "1b4f1e80-f776-49f2-bdd7-b81ba89ece70",
+    "1648761582a1c0c3dd",
+    "ef5b700b-935a-41f5-9613-7cfd8a35f39c",
+    "bb6073d5-92da-49a0-919c-78257c6d9f23",
+    "942b7c33-6cc9-4a6e-b03d-b5b094fb1fe0",
+    "031dd9be-26f8-4123-a9c6-860670e1eb35",
+    "c74bcc57-d33c-4bb4-bb7c-874f29d5502a"
+  ]
+}

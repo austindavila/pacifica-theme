@@ -1,0 +1,452 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1648763447d7eb8673": {
+      "type": "multi-column",
+      "blocks": {
+        "16487634474efb1e26-0": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "FROM BROOK",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/brook",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-1": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Tutorials",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/tutorials",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-2": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Education",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/education",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16487634474efb1e26-0",
+        "16487634474efb1e26-1",
+        "16487634474efb1e26-2"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "small",
+        "desktop_item_size": "small",
+        "spacing": "tight",
+        "background": "#000000",
+        "text_color": "#ffffff"
+      }
+    },
+    "1659633255bc6ff1d5": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": false,
+        "section_height": "large",
+        "image": "shopify://shop_images/Image-withTextOverlay-Model1.jpg",
+        "subheading": "By Brook Harvey-Taylor",
+        "title": "Nam eu aliquet urna, sed congue.",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "bottom_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "1659625489191a0afc": {
+      "type": "gallery",
+      "blocks": {
+        "16596254897130701b-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image2.jpg",
+            "caption": "<p>Aenean ornare erat ex, quis volutpat diam tristique sed. </p>"
+          }
+        },
+        "16596254897130701b-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image3.jpg",
+            "caption": "<p>Mauris porta justo nulla, vitae faucibus arcu vulputate sit amet.</p>"
+          }
+        },
+        "c404f332-db40-4585-b455-91fec6270e01": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image4.jpg",
+            "caption": "<p>Sed varius consequat orci, et dictum erat bibendum ac.</p>"
+          }
+        },
+        "16596254897130701b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image1.jpg",
+            "caption": "<p>Aenean id interdum lacus. Morbi a urna in nibh dictum lobortis.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16596254897130701b-2",
+        "16596254897130701b-1",
+        "c404f332-db40-4585-b455-91fec6270e01",
+        "16596254897130701b-0"
+      ],
+      "settings": {
+        "subheading": "FROM BROOK",
+        "title": "Aenean id interdum lacus. Morbi a urna in nibh dictum lobortis.",
+        "show_arrows": true,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1659633200f878ed6b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": false,
+        "section_height": "large",
+        "image": "shopify://shop_images/fluffy-blushy-swatch.jpg",
+        "subheading": "By Brook Harvey-Taylor",
+        "title": "Mauris porta justo nulla.",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "bottom_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "1659627045fe9fbaab": {
+      "type": "gallery",
+      "blocks": {
+        "16596270459ff717a8-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Landing-Header-Temp1.jpg",
+            "caption": "<p>Sed quis massa odio. Quisque at odio non est gravida pulvinar.</p>"
+          }
+        },
+        "16596270459ff717a8-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image5.jpg",
+            "caption": "<p>Aenean dapibus metus quis elementum posuere.</p>"
+          }
+        },
+        "bcd0a62f-7f51-4a00-b1b4-244a8e8807cd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/animal-magic-palette.jpg",
+            "caption": "<p>Fusce sit amet maximus odio, sit amet euismod sapien.</p>"
+          }
+        },
+        "16596270459ff717a8-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image13.jpg",
+            "caption": "<p>Integer imperdiet rutrum tristique.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16596270459ff717a8-1",
+        "16596270459ff717a8-0",
+        "bcd0a62f-7f51-4a00-b1b4-244a8e8807cd",
+        "16596270459ff717a8-2"
+      ],
+      "settings": {
+        "subheading": "TUTORIALS",
+        "title": "Morbi a urna in nibh dictum lobortis.",
+        "show_arrows": true,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1659621422235fb178": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": false,
+        "section_height": "large",
+        "image": "shopify://shop_images/Image-withTextOverlay-Model2.jpg",
+        "subheading": "By Brook Harvey-Taylor",
+        "title": "Etiam ultrices feugiat fringilla.",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "bottom_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "1659627730142cc4bd": {
+      "type": "gallery",
+      "blocks": {
+        "165962773028d91d82-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image11.jpg",
+            "caption": "<p>Nam lobortis purus nec ligula pharetra, non fermentum augue rutrum.</p>"
+          }
+        },
+        "8602433c-f528-4e71-b261-1f11d45d2d8c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image7.jpg",
+            "caption": "<p>Integer imperdiet rutrum tristique.</p>"
+          }
+        },
+        "165962773028d91d82-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image12.jpg",
+            "caption": "<p>Quisque at odio non est gravida pulvinar.</p>"
+          }
+        },
+        "165962773028d91d82-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blog-Preview-Temp-Image10.jpg",
+            "caption": "<p>Curabitur et nunc consequat, fringilla purus sed, ultricies metus.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "165962773028d91d82-0",
+        "8602433c-f528-4e71-b261-1f11d45d2d8c",
+        "165962773028d91d82-2",
+        "165962773028d91d82-1"
+      ],
+      "settings": {
+        "subheading": "EDUCATION",
+        "title": "Morbi a urna in nibh dictum lobortis.",
+        "show_arrows": true,
+        "show_before_after": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "1648759066b0948c72": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/Destiny-MM.jpg",
+        "subheading": "",
+        "title": "Welcome to the Blog",
+        "content": "<p>Featured blog post or link to the blog index page. </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis faucibus libero, at imperdiet eros condimentum ut.</p>",
+        "button_text": "Read Now",
+        "button_link": "shopify://blogs/the-compassionista",
+        "background_type": "full_width",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1648757823355c9abd": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "the-compassionista",
+        "subheading": "",
+        "title": "",
+        "articles_count": 4,
+        "stack_mobile": true,
+        "show_category": false,
+        "show_excerpt": true,
+        "background": "#ffffff",
+        "text_color": "#000000"
+      }
+    },
+    "1648759285e853a549": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648759285192f5bfc-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/About-Us-Brook-Bike_fb992291-19cb-474b-b591-f758e84a55fd.jpg",
+            "tab_label": "",
+            "subheading": "BEHIND THE SCENES",
+            "title": "Why I Created Vegan Ceramide",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read now",
+            "button_link": "shopify://blogs/the-compassionista/why-i-created-vegan-ceramide"
+          }
+        }
+      },
+      "block_order": [
+        "1648759285192f5bfc-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#b6e5e6",
+        "button_text_color": "#000000"
+      }
+    },
+    "164875781804708d05": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "brooks-blog",
+        "subheading": "",
+        "title": "More From Brook",
+        "articles_count": 3,
+        "stack_mobile": true,
+        "show_category": true,
+        "show_excerpt": true,
+        "background": "#ffffff",
+        "text_color": "#000000"
+      }
+    },
+    "1648761582a1c0c3dd": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648761582c1bc712c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Reusable-Masks-Underye_Eyebrow.jpg",
+            "tab_label": "",
+            "subheading": "BE KIND TO THE EARTH",
+            "title": "Reusable Masks",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read more",
+            "button_link": "shopify://blogs/the-compassionista/reduce-recharge-repeat"
+          }
+        }
+      },
+      "block_order": [
+        "1648761582c1bc712c-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "164876166912ec0545": {
+      "type": "image-with-text",
+      "blocks": {
+        "164876166913d1ddc7-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Destiny_Plumping_Gloss_1523.jpg",
+            "tab_label": "",
+            "subheading": "HOW IT WORKS",
+            "title": "Lip Plumping Gloss",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read more",
+            "button_link": "shopify://blogs/the-compassionista/why-vegan-collagen"
+          }
+        }
+      },
+      "block_order": [
+        "164876166913d1ddc7-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "1648763447d7eb8673",
+    "1659633255bc6ff1d5",
+    "1659625489191a0afc",
+    "1659633200f878ed6b",
+    "1659627045fe9fbaab",
+    "1659621422235fb178",
+    "1659627730142cc4bd",
+    "main",
+    "1648759066b0948c72",
+    "1648757823355c9abd",
+    "1648759285e853a549",
+    "164875781804708d05",
+    "1648761582a1c0c3dd",
+    "164876166912ec0545"
+  ]
+}

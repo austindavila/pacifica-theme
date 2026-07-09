@@ -1,0 +1,2809 @@
+[ku-container] a,
+[ku-container] p,
+[ku-container] div,
+[ku-container] ul li {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 130%;
+  text-decoration: none;
+  font-weight: normal;
+}
+[ku-container] * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: top;
+}
+/* Base Classes */
+.kuBase {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container],
+[ku-block] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+/* main Container */
+[ku-container][data-container-role="main"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+  width: 100% !important;
+  margin: 0 auto;
+}
+/*==========
+---Header--- 
+============*/
+/* main Header */
+[ku-container][data-container-role="header"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="subPanel"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="banner"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="navigation"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+/*=================== 
+---Result Wrapper---
+=====================*/
+.kuResultContent {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+.kuResultContent [ku-container]:empty {
+  display: none !important;
+  width: 0px !important;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* Results container 
+--------------------- */
+[ku-container][data-container-role="content"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+[ku-container][data-container-role="content"] [ku-block]:empty {
+  display: none !important;
+  width: 0px !important;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+[ku-block][ku-empty],
+[ku-container][ku-empty] {
+  display: none !important;
+  width: 0px !important;
+  padding: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+/* results left 
+----------------- */
+[ku-container][data-container-role="left"] {
+  display: table-cell;
+  width: 22%;
+  height: auto;
+  max-width: 275px;
+}
+/* results right
+------------------ */
+[ku-container][data-container-role="right"] {
+  display: table-cell;
+  width: 22%;
+  height: auto;
+  max-width: 275px;
+}
+/* results main center body 
+---------------------------- */
+[ku-container][data-container-role="content"] [ku-container][data-container-role="results"] {
+  display: table-cell;
+  width: auto;
+  height: auto;
+}
+[ku-container][data-container-role="content"]:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+[ku-block]:empty {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+  min-height: 0px !important;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/*==========
+---footer--- 
+============*/
+/* main Footer */
+/*==========
+---Responsive--- 
+============*/
+@media only screen and (max-width: 1100px) {
+  .kuResults ul li {
+    width: 33%;
+    padding: 5px;
+  }
+  .kuFilterBox .kuFilterNames ul li a span.kufacet-text {
+    max-width: 60%;
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  [ku-container][data-container-role="left"],
+  [ku-container][data-container-role="right"] {
+    width: 32%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  [ku-container][data-container-role="content"],
+  [ku-container][data-container-role="content"] [ku-container][data-container-role="results"],
+  [ku-container][data-container-role="left"],
+  [ku-container][data-container-role="right"] {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .kuContainer .kuTabs a {
+    display: inline-block;
+  }
+  .kuContainer .kuTabs a:hover {
+    border-bottom: 0px solid #dddddd;
+    text-decoration: none;
+    background: #f5f5f5;
+  }
+  .kuContainer a.kuTabSelected {
+    border-bottom: 0px solid #dddddd;
+    background: #f5f5f5;
+  }
+  .kuLandingNoResultsMessage {
+    font-size: 15px;
+    line-height: 1.2em;
+    padding: 10px 5%;
+    text-align: center;
+  }
+  .kuFilterBox {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}
+/* Rating */
+.klevu-stars-small-l2 {
+  height: 13px;
+  display: inline-block;
+  vertical-align: bottom;
+  background: transparent url(https://js.klevu.com/klevu-js-v1/img-1-1/star-gray.png) top left repeat-x;
+  width: 65px;
+  margin-top: 5px;
+}
+.klevu-stars-small-l2 .klevu-rating-l2 {
+  background: transparent url(https://js.klevu.com/klevu-js-v1/img-1-1/star-yellow.png) top left repeat-x;
+  height: 13px;
+  display: inline-block;
+}
+.klevuRatingCount {
+  display: inline-block;
+  margin-top: 3px;
+  margin-left: 1px;
+}
+/* With personalized search*/
+.kuQuickSearchFacetedLayout > div,
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled > div {
+  width: 100% !important;
+  max-width: 550px !important;
+}
+.kuQuickSearchFacetedLayout [ku-container][data-container-role="left"],
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="left"] {
+  /* width: 100% !important; */
+  padding-right: 2%;
+}
+.kuQuickSearchFacetedLayout [ku-container][data-container-role="right"],
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="right"] {
+  width: Calc(65%);
+}
+.kuQuickSearchFacetedLayout [ku-container][data-container-role="left"] {
+  width: 100% !important;
+  padding-right: 0px;
+}
+.kuQuickSearchFacetedLayout [ku-container][data-container-role="right"] {
+  wwidth: 100% !important;
+}
+.kuQuickSearchFacetedLayout .kuQuickResultsListContainer {
+  position: relative;
+  height: 360px;
+  overflow: auto;
+}
+.kuQuickSearchFacetedLayout .kuPagination {
+  padding: 10px 20px;
+  text-align: right;
+}
+.kuQuickSearchFacetedLayout .kuPagination a {
+  margin: 0px;
+  position: relative;
+  display: inline-block;
+  padding-left: 0px;
+  padding-right: 10px;
+  color: #333333;
+  cursor: pointer;
+  text-decoration: none;
+  border-right: 1px solid #dddddd;
+  font-size: 14px;
+}
+.kuQuickSearchFacetedLayout .kuPagination a:hover {
+  color: #333333;
+}
+.kuQuickSearchFacetedLayout .kuPagination a:last-child {
+  border-right: none;
+}
+.kuQuickSearchFacetedLayout .kuPagination a.kuCurrent {
+  background: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct {
+  width: 32% !important;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  display: inline-block;
+  float: left;
+  min-height: 200px;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct .klevu-desc-l2 {
+  display: none;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:hover {
+  background-color: #f8f8f8;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:hover .klevuQuickAddtoCart {
+  opacity: 1;
+  visibility: visible;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(1) {
+  border-top: 0px;
+  border-top: 0;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(2) {
+  border-top: 0px;
+  border-top: 0;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(3) {
+  border-top: 0px;
+  border-top: 0;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-last-child(1) {
+  border-bottom: 1px solid #e2e2e2;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-last-child(2) {
+  border-bottom: 1px solid #e2e2e2;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-last-child(3) {
+  border-bottom: 1px solid #e2e2e2;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(3n+3) {
+  border-right: none;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuResultsBlock .klevuQuickSearchResults .klevuProductItemTop {
+  width: 100%;
+  float: none;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuResultsBlock .klevuQuickSearchResults .klevuProductItemBottom {
+  width: 100%;
+  float: none;
+}
+.kuQuickSearchFacetedLayout [data-result-view='grid'].klevuQuickSearchResults .klevuQuickAddtoCart {
+  margin: 0 auto;
+  position: absolute;
+  display: inline-block;
+  bottom: auto;
+  width: auto;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.kuQuickSearchFacetedLayout .klevuResultsBlock [data-result-view='grid'].klevuQuickSearchResults .klevuProductItemBottom {
+  width: 100%;
+  float: none;
+}
+.kuQuickSearchFacetedLayout .klevuResultsBlock [data-result-view='grid'].klevuQuickSearchResults .klevuProductItemTop {
+  width: 100%;
+  float: none;
+}
+.kuQuickSearchFacetedLayoutRightSideFilters .kuPagination {
+  text-align: left;
+}
+.klevuTarget.klevu-fluid.kuQuickSearchFacetedLayout > div {
+  min-width: 54%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .klevuTarget.klevu-fluid.kuQuickSearchFacetedLayout > div {
+    min-width: 66%;
+    max-width: 100%;
+  }
+  .kuQuickSearchFacetedLayout [ku-container][data-container-role="left"] {
+    width: 38%;
+  }
+  .kuQuickSearchFacetedLayout [ku-container][data-container-role="right"] {
+    width: 38%;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct {
+    width: 49% !important;
+    border-top: 0px;
+    min-height: 230px;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(3) {
+    border-top: 1px solid #e2e2e2;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-last-child(1) {
+    border-top: none;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(2n+2) {
+    border-right: none;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(odd) {
+    border-right: 1px solid #e2e2e2;
+    border-top: 0px;
+  }
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="left"] {
+    width: 38%;
+    padding-right: 2%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .kuQuickSearchFacetedLayout [ku-container][data-container-role="left"] {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+  .kuQuickSearchFacetedLayout [ku-container][data-container-role="right"] {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+  .kuQuickSearchFacetedLayout .kuFilterBox .kuFilterHead {
+    font-weight: bold;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct {
+    width: 49% !important;
+    border-top: 0px;
+    min-height: 230px;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(3) {
+    border-top: 1px solid #e2e2e2;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-last-child(1) {
+    border-top: none;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(2n+2) {
+    border-right: none;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:nth-child(odd) {
+    border-right: 1px solid #e2e2e2;
+    border-top: 0px;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'] .klevuProduct:hover .klevuQuickAddtoCart {
+    opacity: 1;
+    visibility: visible;
+  }
+  .kuQuickSearchFacetedLayout [data-result-view='grid'].klevuQuickSearchResults .klevuQuickAddtoCart {
+    position: relative;
+    display: inline-block;
+    bottom: 15px;
+    width: auto;
+    top: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 10px;
+  }
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="left"] {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="right"] {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+}
+.kuCarousel {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 210px;
+}
+.kuCarousel *:before {
+  box-sizing: border-box;
+}
+.kuCarousel *:after {
+  box-sizing: border-box;
+}
+.kuCarousel .kuCarousel-content {
+  position: relative;
+  overflow: hidden;
+  transition: width 0.4s;
+  height: 100%;
+}
+.kuCarousel .kuSlide {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  transition: left 0.4s cubic-bezier(0.47, 0.13, 0.15, 0.89);
+}
+.kuCarousel .nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -8%;
+  background-color: #FFF;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: white;
+  -webkit-user-select: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+}
+.kuCarousel .nav-left {
+  left: -5px;
+  background-image: url(https://js.klevu.com/klevu-js-v1/img-1-1/icon-prev.png);
+}
+.kuCarousel .nav-right {
+  right: -5px;
+  background-image: url(https://js.klevu.com/klevu-js-v1/img-1-1/icon-next.png);
+}
+.kuCarousel .kuCarousel-arrow-icon-left {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.kuCarousel .kuCarousel-arrow-icon-right {
+  margin-left: 7px;
+  margin-top: 2px;
+}
+.kuFilterNames {
+  height: 118px;
+  overflow: hidden;
+}
+.kuFilterNames ul {
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterNames ul li {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterNames ul li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  font-style: normal;
+  color: #333333;
+  background: none;
+  margin: 2px;
+  margin-left: 5px;
+}
+.kuFilterNames ul li a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.kuFilterNames ul li a span.kufacet-text {
+  max-width: 74%;
+  width: 74%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+}
+.kuFilterNames ul li a span.kuFilterIcon {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+.kuFilterNames ul li a:hover {
+  cursor: pointer;
+}
+.kuFilterNames ul li a:hover span.kuFilterIcon:before {
+  background: #FFFFFF;
+}
+.kuFilterNames ul li a:hover span.kuFilterIcon:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #333333;
+  top: 5px;
+  left: 5px;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+}
+.kuFilterNames ul li a span.kuFilterTotal {
+  float: right;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterNames ul li a span.kuFilterCancel {
+  float: right;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterNames ul li .klevuFacetStars {
+  height: 14px;
+  display: inline-block;
+  vertical-align: bottom;
+  background: transparent url(https://js.klevu.com/klevu-js-v1/img-1-1/star-gray.png) top left repeat-x;
+  width: 65px;
+}
+.kuFilterNames ul li .klevuFacetStars .klevuFacetRating {
+  background: transparent url(https://js.klevu.com/klevu-js-v1/img-1-1/star-yellow.png) top left repeat-x;
+  height: 14px;
+  display: inline-block;
+}
+.kuFilterNames ul li.kuSelected a {
+  color: #333333;
+}
+.kuFilterNames ul li.kuSelected span.kuFilterIcon:before {
+  background: #FFFFFF;
+}
+.kuFilterNames ul li.kuSelected span.kuFilterIcon:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #333333;
+  top: 5px;
+  left: 5px;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  border-color: #333333;
+}
+.kuFilterNames ul li.kuSelected:hover span.kuFilterIcon:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-color: #333333;
+}
+.kuFilterNames.kuFilterShowAll {
+  height: auto;
+  overflow: unset;
+}
+.kuFilterHead {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px;
+  color: #333333;
+  display: block;
+  line-height: 1.8;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EEEEEE;
+  background: none;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.kuShowOpt {
+  padding: 0px 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -5px;
+}
+.kuShowOpt a {
+  color: #333333;
+  text-decoration: none;
+}
+.kuHideOpt a {
+  color: #333333;
+  text-decoration: none;
+}
+.kuFilterDot {
+  height: 5px;
+  width: 5px;
+  background-color: #333333;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}
+.kuFilterIcon:before {
+  content: '';
+  border: 2px solid #DDDDDD;
+  border-radius: 50%;
+  margin: 0px;
+  margin-right: 6px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  color: #DDDDDD;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: background 200ms;
+  -webkit-transition: background 200ms;
+  -moz-transition: background 200ms;
+  -webkit-transition: border-color 200ms;
+  -moz-transition: border-color 200ms;
+  transition: border-color 200ms;
+}
+.kuMulticheck .kuFilterIcon:before {
+  content: '';
+  border: 1px solid #DDDDDD;
+  border-radius: 0px;
+  margin: 0px;
+  margin-right: 8px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  color: #DDDDDD;
+  position: relative;
+}
+.kuMulticheck .kuFilterNames ul li a:hover span.kuFilterIcon:before {
+  background: #FFFFFF;
+  border: 1px solid #333333;
+}
+.kuMulticheck .kuFilterNames ul li a:hover span.kuFilterIcon:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  top: 5px;
+  left: 4px;
+  border: 2px solid #333333;
+  border-top: none;
+  border-right: none;
+  border-radius: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.kuMulticheck .kuFilterNames ul li.kuSelected span.kuFilterIcon:before {
+  background: #FFFFFF;
+  border: 1px solid #333333;
+}
+.kuMulticheck .kuFilterNames ul li.kuSelected span.kuFilterIcon:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 4px;
+  border: 2px solid #DDDDDD;
+  border-top: none;
+  border-right: none;
+  border-radius: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.kuMulticheck .kuFilterNames ul li.kuSelected:hover span.kuFilterIcon:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-color: #333333;
+}
+.kuQuickSearchFacetedLayout .kuFilters,
+.kuSearchResultsPageContainer .kuFilters {
+  padding: 10px;
+}
+.kuQuickSearchFacetedLayout .kuFilterBox .kuFilterNames ul li a span.kufacet-text,
+.kuSearchResultsPageContainer .kuFilterBox .kuFilterNames ul li a span.kufacet-text {
+  max-width: 70%;
+  width: 70%;
+}
+.kuQuickSearchFacetedLayout [data-block-id="ku_quick_left_facets"] {
+  background-color: #ffffff;
+  overflow: auto;
+  max-height: 400px;
+  text-align: left;
+}
+.kuQuickSearchFacetedLayout [data-block-id="ku_quick_right_facets"] {
+  background-color: #ffffff;
+  overflow: auto;
+  max-height: 400px;
+  text-align: left;
+}
+.kuFilterBox {
+  margin-bottom: 12px;
+  background: none;
+  padding-bottom: 12px;
+  position: relative;
+}
+.kuFilterBox .kuFilterHead {
+  padding: 5px 0px;
+  color: #333333;
+  display: block;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dddddd;
+  background: none;
+  margin-bottom: 0px;
+}
+.kuFilterBox .kuFilterNames {
+  height: 125px;
+  overflow: hidden;
+}
+.kuFilterBox .kuFilterNames ul {
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterBox .kuFilterNames ul li {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+.kuFilterBox .kuFilterNames ul li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #333333;
+  background: none;
+  margin: 2px 5px 2px 0px;
+}
+.kuFilterBox .kuFilterNames ul li a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.kuFilterBox .kuFilterNames ul li a span.kufacet-text {
+  max-width: 75%;
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+}
+.kuFilterBox .kuFilterNames ul li a span.kuFilterIcon {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+.kuFilterBox .kuFilterNames ul li a:hover span.kuFilterIcon:before {
+  background: #ffffff;
+}
+.kuFilterBox .kuFilterNames ul li a:hover span.kuFilterIcon:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  left: 5px;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  background: #dddddd;
+}
+.kuFilterBox .kuFilterNames ul li.kuSelected a {
+  color: #333333;
+}
+.kuFilterBox .kuFilterNames ul li.kuSelected span.kuFilterIcon:before {
+  background: #ffffff;
+}
+.kuFilterBox .kuFilterNames ul li.kuSelected span.kuFilterIcon:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  left: 5px;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  background: #dddddd;
+  border-color: #333333 !important;
+}
+.kuFilterBox .kuFilterNames ul li.kuSelected:hover span.kuFilterIcon:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-color: #333333;
+}
+.kuFilterBox .kuFilterNames.sliderFilterNames {
+  height: 90px;
+}
+.kuFilterBox .kuFilterIcon:before {
+  content: "";
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  margin: 0px;
+  margin-right: 8px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  color: #cccccc;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: background 200ms;
+  -webkit-transition: background 200ms;
+  -moz-transition: background 200ms;
+  -webkit-transition: border-color 200ms;
+  -moz-transition: border-color 200ms;
+  transition: border-color 200ms;
+}
+.kuFilterBox .kuFilterNames.kuFilterCollapse {
+  height: 0;
+  overflow: hidden;
+}
+.kuFilterBox .kuFilterNames.kuFilterCollapse .kuShowOpt {
+  display: none;
+}
+.kuFilterBox .kuFilterNames.kuFilterShowAll {
+  height: auto;
+  overflow: unset;
+}
+.kuFilterBox .kuShowOpt {
+  padding: 0px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -12px;
+}
+.kuFilterBox .kuShowOpt a {
+  color: #4d7abf;
+  text-decoration: none;
+}
+.kuFilterBox .kuShowOpt .kuFilterDot {
+  height: 5px;
+  width: 5px;
+  background-color: #888888;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}
+.kuFilterBox .kuExpand {
+  position: relative !important;
+  transition: all 0.3s ease;
+}
+.kuFilterBox .kuCollapse {
+  position: relative !important;
+  transition: all 0.3s ease;
+}
+.kuFilterBox .kuFilterHead.kuCollapse {
+  margin-bottom: 10px;
+}
+.kuFilterBox .kuFilterHead.kuCollapse::after {
+  border-color: #333333;
+  border-image: none;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  content: "";
+  display: inline-block;
+  padding: 4px;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  transition: all 0.3s ease;
+}
+.kuFilterBox .kuFilterHead.kuExpand::after {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #333333;
+  border-image: none;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  content: "";
+  display: inline-block;
+  padding: 4px;
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 0.3s ease 0s;
+}
+.kuFilterBox.kuMulticheck .kuFilterIcon:before {
+  content: "";
+  border: 1px solid #cccccc;
+  border-radius: 0px;
+}
+.kuFilterBox.kuMulticheck .kuFilterNames ul li a:hover span.kuFilterIcon:after {
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 4px;
+  border: 2px solid #dddddd;
+  border-top: none;
+  border-right: none;
+  border-radius: 0px;
+}
+.kuFilterBox.kuMulticheck .kuFilterNames ul li a:hover span.kuFilterIcon:before {
+  background: #ffffff;
+  border: 1px solid #333333;
+}
+.kuFilterBox.kuMulticheck .kuFilterNames ul li.kuSelected span.kuFilterIcon:after {
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 4px;
+  border: 2px solid #dddddd;
+  border-top: none;
+  border-right: none;
+  border-radius: 0px;
+}
+.kuFilterBox.kuMulticheck .kuFilterNames ul li.kuSelected span.kuFilterIcon:before {
+  background: #ffffff;
+  border: 1px solid #333333;
+}
+.kuFilterBox.kuMulticheck .kuFilterNames ul li.kuSelected:hover span.kuFilterIcon:after {
+  border-color: #333333;
+}
+/*! nouislider - 8.2.1 - 2015-12-02 21:43:15 */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-target {
+  position: relative;
+  direction: ltr;
+}
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+.noUi-stacking .noUi-handle {
+  z-index: 10;
+}
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+.noUi-base {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.noUi-horizontal {
+  height: 12px;
+}
+.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  left: -17px;
+  top: -7px;
+  border-radius: 100%;
+}
+.noUi-vertical {
+  width: 18px;
+}
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  left: -6px;
+  top: -17px;
+}
+.noUi-background {
+  background: #fafafa;
+  box-shadow: inset 0 1px 1px #f0f0f0;
+}
+.noUi-connect {
+  background: #333333;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+.noUi-origin {
+  border-radius: 2px;
+}
+.noUi-target {
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
+}
+.noUi-target.noUi-connect {
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #bbb;
+}
+.noUi-draggable {
+  cursor: w-resize;
+}
+.noUi-vertical .noUi-draggable {
+  cursor: n-resize;
+}
+.noUi-handle {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  cursor: default;
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
+  cursor: pointer;
+}
+.noUi-active {
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+}
+.noUi-handle:after,
+.noUi-handle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #e4e1e1;
+  left: 8px;
+  top: 4px;
+}
+.noUi-handle:after {
+  left: 12px;
+}
+.noUi-vertical .noUi-handle:after,
+.noUi-vertical .noUi-handle:before {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+.noUi-vertical .noUi-handle:after {
+  top: 17px;
+}
+[disabled] .noUi-connect,
+[disabled].noUi-connect {
+  background: #b8b8b8;
+}
+[disabled] .noUi-handle,
+[disabled].noUi-origin {
+  cursor: not-allowed;
+}
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+.noUi-value {
+  width: 40px;
+  position: absolute;
+  text-align: center;
+}
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+.noUi-marker {
+  position: absolute;
+  background: #ccc;
+}
+.noUi-marker-large,
+.noUi-marker-sub {
+  background: #aaa;
+}
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 50px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.noUi-value-horizontal {
+  margin-left: -20px;
+  padding-top: 20px;
+}
+.noUi-value-horizontal.noUi-value-sub {
+  padding-top: 15px;
+}
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+.noUi-value-vertical {
+  width: 15px;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  background: #fff;
+  padding: 5px;
+  text-align: center;
+  width: max-content;
+}
+.noUi-horizontal .noUi-handle-lower .noUi-tooltip {
+  bottom: -32px;
+}
+.noUi-horizontal .noUi-handle-upper .noUi-tooltip {
+  bottom: -32px;
+  right: 0px;
+}
+.noUi-vertical .noUi-handle-lower .noUi-tooltip {
+  left: 120%;
+}
+.noUi-vertical .noUi-handle-upper .noUi-tooltip {
+  right: 120%;
+}
+.klevu-fluid,
+.klevu-fluid *,
+.klevuTarget,
+.klevuTarget *,
+.kuContainer * {
+  font-family: inherit;
+}
+/*========Common Style============= */
+[ku-container] a,
+[ku-container] p,
+[ku-container] div,
+[ku-container] ul li {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 130%;
+  text-decoration: none;
+  font-weight: normal;
+}
+[ku-container] * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: top;
+}
+.kuClearLeft {
+  clear: left;
+}
+.kuClearRight {
+  clear: right;
+}
+.kuClearBoth,
+.kuClearBoth:after {
+  clear: both;
+}
+.kuGreen {
+  color: #009b46 !important;
+}
+.kuBlack {
+  color: #333333 !important;
+}
+.kuClipped {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.kuClippedOne {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.kuClippedTwo {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.klevuTarget * {
+  box-sizing: border-box;
+}
+.kuBtn {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 11px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 5px 5px 5px 0px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  text-align: center;
+}
+.kuBtnDark {
+  background: #FF8EA0 !important;
+  color: black !important;
+  border-color: #FF8EA0 !important;
+  border-radius:0 !important;
+  font-weight: 500 !important;
+}
+.kuBtnLight {
+  background: #ddd;
+  color: #333333;
+  border-color: #dedede;
+}
+.kuBtnDarkOutline {
+  background: transparent;
+  color: #333333;
+  border: 2px solid #333333;
+}
+.kuBtnLightOutline {
+  background: transparent;
+  color: #dddddd;
+  border: 2px solid #dddddd;
+}
+.kuBtnDark:hover,
+.kuBtnLight:hover,
+.kuBtnDarkOutline:hover,
+.kuBtnLightOutline:hover {
+  background: #757575;
+  color: #ffffff;
+  border-color: #757575;
+}
+.klevuTarget.klevu-fluid > div {
+  position: absolute;
+  z-index: 20000000000;
+  width: 35%;
+  max-width: 450px;
+  font-family: inherit;
+  font-size: 13px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  color: #333333;
+}
+/* Base Classes */
+.kuBase {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container],
+[ku-block] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+/* main Container */
+[ku-container][data-container-role="main"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+/*==========
+---Header--- 
+============*/
+/* main Header */
+[ku-container][data-container-role="header"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="subPanel"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="banner"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+[ku-container][data-container-role="header"] [ku-block][data-container-role="navigation"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+/*=================== 
+---Result Wrapper---
+=====================*/
+.kuResultContent {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+}
+.kuResultContent [ku-container]:empty {
+  display: none !important;
+  width: 0px !important;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* Results container 
+--------------------- */
+[ku-container][data-container-role="content"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+  display: block !important;
+  width: 100%;
+}
+[ku-container][data-container-role="content"] [ku-block]:empty {
+  display: none !important;
+  width: 0px !important;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+[ku-block][ku-empty],
+[ku-container][ku-empty] {
+  display: none !important;
+  width: 0px !important;
+  padding: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.klevuQuickSearchingArea {
+  width: 100%;
+  max-width: 100%;
+  border-radius:0;
+  box-shadow: none !important;
+}
+.klevuQuickSearchingArea .klevuLoader img {
+  display: inline-block;
+  width: 22px !important;
+}
+.klevuQuickSearchingArea span.klevuLoader img {
+  margin-right: 10px;
+}
+.klevuQuickSearchingArea .kuFacetedLayoutMinCharText {
+  padding: 10px;
+  line-height: 35px;
+}
+.klevuSuggestionsBlock {
+  position: relative;
+}
+.klevuSuggestionsBlock .klevuLoader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 6px 10px;
+}
+.klevuSuggestionHeading {
+  text-transform: uppercase;
+  padding: 10px 5px;
+}
+.klevuHeadingText {
+  color: #333333;
+  display: inline-block;
+}
+.klevuHeadingText a {
+  float: right;
+  margin-right: 10px;
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+}
+.klevuHeadingText a:hover {
+  text-decoration: underline;
+}
+.klevuAutoSuggestionsWrap {
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 10px;
+}
+.klevuAutoSuggestionsWrap ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+.klevuAutoSuggestionsWrap ul li {
+  display: block;
+  list-style: none;
+  margin: 0px;
+  cursor: default;
+  text-align: left;
+}
+.klevuAutoSuggestionsWrap ul li a {
+  display: block;
+  padding: 5px;
+  line-height: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+.klevuAutoSuggestionsWrap ul li:hover {
+  background-color: #f5f5f5;
+}
+.klevuAutoSuggestionsWrap ul li:focus {
+  background-color: #f5f5f5;
+}
+.klevuAutoSuggestionsWrap ul li ul li a {
+  padding-left: 35px;
+}
+.klevuAutoSuggestionsWrap ul li strong {
+  color: #333333;
+}
+.klevuAutoSuggestionsWrap ul li.klevu-hovered {
+  background-color: #f5f5f5;
+}
+.klevuResultsBlock .klevuSuggestionHeading {
+  padding: 12px 15px;
+}
+.klevuResultsBlock .klevuProductsViewAll {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.klevuResultsBlock .klevuProductsViewAll a {
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid #ccc;
+  padding: 2px 0px;
+}
+.klevuResultsBlock .klevuQuickSearchResults {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul {
+  margin: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: auto;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li a.klevuQuickProductInnerBlock {
+  text-decoration: none;
+  color: #333333;
+  outline: none;
+  display: block;
+  padding: 8px;
+  height: auto;
+  line-height: 20px;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickProductDescBlock {
+  float: left;
+  width: 100%;
+  margin-left: 8px;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickProductName {
+  font-weight: 500 !important;
+  color: black !important;
+  word-wrap: break-word;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickPriceGreyText {
+  font-weight: normal !important;
+  color: #393939 !important;
+  font-size: 11px !important;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickProductDesc {
+  color: #333333;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickSalePrice {
+  font-weight: 500 !important;
+  color: black !important;
+  margin-bottom: 5px;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li .klevuQuickOrigPrice {
+  margin-right: 5px;
+  text-decoration: line-through;
+  color: #333333;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li:hover {
+  background-color: #f5f5f5;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li:hover .klevuQuickSearchResults ul li div {
+  color: #ffffff !important;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li:focus {
+  background-color: #f5f5f5;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul li:focus .klevuQuickSearchResults ul li div {
+  color: #ffffff !important;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuProductItemTop {
+  margin: 0px;
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 20%;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuProductItemBottom {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  min-height: 60px;
+  float: left;
+  width: 80%;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuProductItemBottom .klevu-desc-l2 {
+  color: #8a8a8a;
+  font-size: 13px;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickImgWrap {
+  float: none;
+  overflow: hidden;
+  width: 100% !important;
+  height: 70px !important;
+  text-align: center;
+}
+.klevuResultsBlock .klevuQuickSearchResults img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  display: inline-block;
+  margin: 0 auto;
+  opacity: 1;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickDiscountBadge {
+  background: #ffcc01;
+  padding: 0px 5px;
+  color: #333333;
+  font-size: 9px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickDiscountBadge strong {
+  color: #333333;
+}
+.klevuResultsBlock .klevuQuickNoResults {
+  text-align: center;
+  font-size: 13px;
+  padding: 0px;
+}
+.klevuResultsBlock .klevuQuickNoResults .klevuQuickNoResultsInner {
+  padding: 15px;
+  margin: 0px;
+}
+.klevuResultsBlock .klevuQuickNoResultsMessage {
+  background: transparent;
+  font-size: 13px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+}
+@media only screen and (max-width: 1024px) {
+  .klevuTarget.klevu-fluid > div {
+    width: 50%;
+  }
+  .klevuQuickSearchResults .klevuQuickImgWrap {
+    height: 55px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .klevuTarget.klevu-fluid > div {
+    max-width: 400px;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .klevuTarget.klevu-fluid > div {
+    width: 98%;
+    left: 1% !important;
+  }
+  .klevu-fluid .klevuQuickSearchResults ul li .klevuQuickProductDesc {
+    display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .klevuTarget.klevu-fluid > div {
+    max-width: 100%;
+  }
+}
+.searchRequestLoading .klevuQuickSearchingArea {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.searchRequestLoading .klevuQuickSearchingArea::after {
+  content: url("https://js.klevu.com/klevu-js-v1/img/klevu-loader.GIF");
+  position: absolute;
+  margin-left: 45%;
+  top: 12px;
+}
+/* Without personalized search*/
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer [ku-container][data-container-role="left"] {
+  width: 100%;
+  max-width: 100%;
+}
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer .kuPopularSearchesBlock {
+  margin-bottom: 8px;
+}
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer .kuRecentSearchesBlock {
+  margin-bottom: 8px;
+}
+.kuRecommendationSlider {
+  display: none;
+}
+.kuRecommendationSlider .klevuProductItemTop .klevuQuickImgWrap {
+  float: none;
+  overflow: hidden;
+  width: 100% !important;
+  height: 155px !important;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid #eee;
+  max-height: 155px !important;
+}
+.kuEmptySearchBox.kuPersonalizedSearchRecsEnabled .kuRecommendationSlider {
+  display: block;
+}
+.kuSearchPersonalizationsContainer {
+  height: 40px;
+}
+.kuSearchPersonalizationsContainer * {
+  visibility: hidden;
+}
+.kuEmptySearchBox .kuSearchPersonalizationsContainer {
+  height: auto;
+}
+.kuEmptySearchBox .kuSearchPersonalizationsContainer * {
+  visibility: unset;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .klevuQuickSearchingArea {
+  padding: 6px 9px;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .klevuProductItemTop {
+  width: 100%;
+  display: block;
+  float: none;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .klevuProductItemBottom {
+  width: 100%;
+  display: block;
+  float: none;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .klevuResultsBlock .klevuSuggestionHeading {
+  padding: 10px 3px;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .klevuResultsBlock .klevuProductItemBottom {
+  font-size: 12px;
+  color: #666;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .kuRecentSearchTerms {
+  border: none;
+}
+.kuEmptySearchBox.klevuTarget.kuPersonalizedSearchRecsEnabled .kuPopularSearchTerms {
+  border: none;
+}
+@media only screen and (max-width: 767px) {
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="left"] {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled [ku-container][data-container-role="right"] {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled > div {
+    max-width: 85%;
+  }
+}
+.klevuTarget.klevu-fluid.kuEmptySearchBox > div {
+  min-width: 38% !important;
+}
+.kuDropdown.kuQuickFacetedLayoutSort {
+  display: inline-block;
+  float: right;
+  min-width: 75px;
+  padding-top: 10px;
+  text-align: center;
+}
+.klevuResultsBlock .klevuQuickSearchResults ul:before {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 0px;
+  background: none;
+}
+.kuQuickSearchResultsContainer .kuResultsHeadingTitleContainer {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.klevu-banner-ad {
+  clear: both;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.klevu-banner-ad img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.kuPopularSearchTerms ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+.kuPopularSearchTerms li {
+  display: block;
+  list-style: none;
+  margin: 0px;
+  text-transform: capitalize;
+  cursor: default;
+  text-align: left;
+}
+.kuPopularSearchTerms li a {
+  display: block;
+  padding: 5px;
+  line-height: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+.kuPopularSearchTerms li:hover {
+  background-color: #f5f5f5;
+}
+.kuRecentSearchTerms {
+  /* border-bottom: 1px solid #dddddd;
+    padding: 5px 10px; */
+}
+.kuRecentSearchTerms ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+.kuRecentSearchTerms li {
+  display: block;
+  list-style: none;
+  margin: 0px;
+  text-transform: capitalize;
+  cursor: default;
+  text-align: left;
+}
+.kuRecentSearchTerms li a {
+  display: block;
+  padding: 5px;
+  line-height: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+.kuRecentSearchTerms li:hover {
+  background-color: #f5f5f5;
+}
+.kuQuickSearchNoRecordFound {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  color: #333333;
+  font-size: 13px;
+  background: #FFF;
+  display: block;
+}
+.kuQuickSearchNoRecordFound .klevuQuickPriceGreyText {
+  font-weight: normal !important;
+  color: #393939 !important;
+  font-size: 11px !important;
+}
+.kuQuickSearchNoRecordFound .kuQuickNoResults {
+  max-width: 90%;
+  margin: auto;
+  text-align: justify;
+}
+.kuQuickSearchNoRecordFound .kuQuickNoResultsMessage {
+  display: block;
+  text-align: center;
+  line-height: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+.kuQuickSearchNoRecordFound .kuDividerLine {
+  margin: 10px 0;
+  border-bottom: #ccc 1px solid;
+  width: 100%;
+}
+.kuQuickSearchNoRecordFound .klevu-no-results-banner-ad-quick {
+  clear: both;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.kuQuickSearchNoRecordFound .klevu-no-results-banner-ad-quick img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuPopularProductsViewAll {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchHeading {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuPopularProductsViewAll a {
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid #CCC;
+  padding: 2px 0px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul {
+  margin: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li a.klevuQuickPopularProductInnerBlock {
+  text-decoration: none;
+  color: #333333;
+  outline: none;
+  display: block;
+  padding: 8px;
+  height: auto;
+  line-height: 20px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li .klevuQuickPopularProductDescBlock {
+  float: left;
+  width: 100%;
+  margin-left: 8px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li .klevuQuickProductName {
+  font-weight: bold;
+  color: #333333;
+  word-wrap: break-word;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li .klevuQuickProductDesc {
+  color: #333333;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li .klevuQuickSalePrice {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333333;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li .klevuQuickOrigPrice {
+  margin-left: 5px;
+  text-decoration: line-through;
+  color: #333333;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li:hover {
+  background-color: #f5f5f5;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular ul li:hover .klevuQuickSearchNoResultsPopular ul li div {
+  color: #FFFFFF !important;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuPopularProductItemTop {
+  margin: 0px;
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 20%;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuPopularProductItemBottom {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  min-height: 60px;
+  float: left;
+  width: 80%;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuPopularProductItemBottom .klevu-desc-l2 {
+  color: #8a8a8a;
+  font-size: 13px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuQuickImgWrap {
+  float: none;
+  overflow: hidden;
+  width: 100% !important;
+  height: 70px !important;
+  text-align: center;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  display: inline-block;
+  margin: 0 auto;
+  opacity: 1;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuQuickDiscountBadge {
+  background: #ffcc01;
+  padding: 0px 5px;
+  color: #333333;
+  font-size: 9px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickSearchNoResultsPopular .klevuQuickDiscountBadge strong {
+  color: #333333;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickNoResults {
+  text-align: center;
+  font-size: 13px;
+  padding: 0px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickNoResults .klevuQuickNoResultsInner {
+  padding: 15px;
+  margin: 0px;
+}
+.kuQuickSearchNoRecordFound .klevuNoResultsProductsBlock .klevuQuickNoResultsMessage {
+  background: transparent;
+  font-size: 13px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+}
+.kuQuickSearchNoRecordFound .searchRequestLoading .klevuQuickSearchingArea {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.kuQuickSearchNoRecordFound .klevuPopularProductsHeading {
+  text-align: left;
+  padding: 8px 15px;
+  text-transform: uppercase;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsContainer {
+  max-width: 100%;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchesBlock {
+  padding: 10px;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchTerms ul {
+  margin: 0px;
+  padding: 0px 3px;
+  text-align: left;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchTerms li {
+  display: block;
+  list-style: none;
+  margin: 0px;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: left;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchTerms li:hover {
+  background-color: #f5f5f5;
+}
+.kuQuickSearchNoRecordFound .kuNoResultsPopularSearchTerms li a {
+  display: block;
+  padding: 5px;
+  line-height: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+@media only screen and (max-width: 1024px) {
+  .kuQuickSearchNoRecordFound .klevuTarget.klevu-fluid > div {
+    width: 50%;
+  }
+  .kuQuickSearchNoRecordFound .klevuQuickSearchNoResultsPopular .klevuQuickImgWrap {
+    height: 55px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .kuQuickSearchNoRecordFound .klevuTarget.klevu-fluid > div {
+    max-width: 400px;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .kuQuickSearchNoRecordFound .klevuTarget.klevu-fluid > div {
+    width: 98%;
+    left: 1% !important;
+  }
+  .kuQuickSearchNoRecordFound .klevu-fluid .klevuQuickSearchNoResultsPopular ul li .klevuQuickProductDesc {
+    display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .kuQuickSearchNoRecordFound .klevuTarget.klevu-fluid > div {
+    max-width: 100%;
+  }
+}
+.kuCaptionStockIn {
+  font-size: 11px;
+  color: green;
+  display: inline-block;
+  padding: 0px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2px 0px;
+}
+.kuQuickCaptionStockOut {
+  font-size: 11px;
+  color: Red;
+  display: inline-block;
+  padding: 0px;
+  float: left;
+  min-height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2px 0px;
+}
+.kuQuickSearchResultsContainer .kuCaptionVat {
+  display: block;
+  font-size: 11px;
+  color: #767676;
+  width: 100%;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 2px 0px;
+}
+.kuQuickSearchFacetedLayout .kuSort {
+  display: inline-block;
+  margin: 0px;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat !important;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickRelSort {
+  background: url(https://js.klevu.com/klevu-js-v1/img-1-1/klevu-relevance.png) no-repeat 0 0;
+  cursor: pointer;
+  margin-right: 2px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickRelSort:hover {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuActiveSort {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickLTHSort {
+  background: url(https://js.klevu.com/klevu-js-v1/img-1-1/klevu-p-low-to-high.png) no-repeat 0 0;
+  cursor: pointer;
+  margin-right: -4px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickHTLSort {
+  background: url(https://js.klevu.com/klevu-js-v1/img-1-1/klevu-p-high-to-low.png) no-repeat 0 0;
+  cursor: pointer;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickHTLSort.kuActiveSort {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickHTLSort.kuActiveSort:hover {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickLTHSort.kuActiveSort {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort.kuQuickLTHSort.kuActiveSort:hover {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuSort:hover {
+  background-position: 0 -17px;
+}
+.kuQuickSearchFacetedLayout .kuQuickResultsViewSwitchContainer {
+  display: inline-block;
+  float: left;
+}
+.kuQuickSearchFacetedLayout .kuDropdown.kuQuickFacetedLayoutSort {
+  float: left;
+  display: inline-block;
+  float: right;
+}
+.kuQuickResultsViewSwitchContainer {
+  position: relative;
+  display: inline-block;
+  z-index: 11;
+  width: auto;
+  padding: 10px 5px;
+}
+.kuQuickResultsViewSwitchContainer a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 4px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.kuQuickResultsViewSwitchContainer a.kuCurrent {
+  background-position: 0 -25px;
+  text-decoration: none;
+}
+.kuQuickResultsViewSwitchContainer .kuGridViewBtn {
+  background: url(https://js.klevu.com/klevu-js-v1/img-1-1/ku-gridview.png) no-repeat 0 0;
+  cursor: pointer;
+}
+.kuQuickResultsViewSwitchContainer .kuListViewBtn {
+  background: url(https://js.klevu.com/klevu-js-v1/img-1-1/ku-listview.png) no-repeat 0 0;
+  cursor: pointer;
+}
+[data-result-view='list'] .klevuProduct {
+  width: 100% !important;
+}
+[data-result-view='list'] .klevuProduct:hover .kuProdAdditional {
+  box-shadow: none !important;
+}
+[data-result-view='list'] .klevuProduct main {
+  display: inline-block;
+  width: 30%;
+}
+[data-result-view='list'] .klevuProduct footer {
+  display: inline-block;
+  width: 69%;
+}
+[data-result-view='list'] .klevuProduct .kuProdAdditional {
+  position: relative !important;
+  visibility: unset !important;
+  border: 0px !important;
+}
+[data-result-view='list'] .klevuProduct .kuAddtocart .kuBtn {
+  display: inline-block;
+}
+@media only screen and (max-width: 576px) {
+  [data-result-view='list'] .klevuProduct main {
+    width: 100%;
+  }
+  [data-result-view='list'] .klevuProduct footer {
+    width: 100%;
+  }
+  [data-result-view='list'] .klevuProduct .kuAddtocart .kuBtn {
+    display: block;
+  }
+}
+.kuQuickSearchFacetedLayout .productListActive [data-content="cmsCompressed"] {
+  display: none !important;
+}
+.kuQuickSearchFacetedLayout .cmsCompressedActive [data-content="productList"] {
+  display: none !important;
+}
+.kuQuickSearchFacetedLayout .kuContainer {
+  width: 100%;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: 12px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100% !important;
+  padding: 0px !important;
+}
+.kuQuickSearchFacetedLayout .kuContainer .kuTabs {
+  margin: 0 auto !important;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+}
+.kuQuickSearchFacetedLayout .kuContainer .kuTabs a {
+  padding: 8px;
+  cursor: pointer;
+  margin-right: 5px;
+  color: #333333;
+  display: inline-block;
+  position: relative;
+}
+.kuQuickSearchFacetedLayout .kuContainer .kuTabs a:hover {
+  border-bottom: 3px solid #dddddd;
+  text-decoration: none;
+}
+.kuQuickSearchFacetedLayout .kuContainer .kuTabs a.kuTabSelected {
+  border-bottom: 3px solid #dddddd;
+}
+.kuQuickSearchFacetedLayout .kuContainer .kuTabs a.kuTabSelected:hover {
+  background: none;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickAddtoCart {
+  margin: 0px;
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  right: 5px;
+  width: auto;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickAddtoCart .kuBtn {
+  padding: 3px 6px;
+  font-size: 9px !important;
+}
+.klevuResultsBlock .klevuQuickSearchResults .klevuQuickAddtoCart img {
+  max-width: 80px !important;
+  height: auto;
+  max-height: 45px !important;
+}
+.klevuQuickSearchNoResultsPopular .klevuQuickAddtoCart {
+  margin: 0px;
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  right: 5px;
+  width: auto;
+}
+.klevuQuickSearchNoResultsPopular .klevuQuickAddtoCart .kuBtn {
+  padding: 3px 6px;
+  font-size: 9px !important;
+}
+.klevuQuickSearchNoResultsPopular .klevuQuickAddtoCart img {
+  max-width: 80px !important;
+  height: auto;
+  max-height: 45px !important;
+}
+.kuQuickSearchFacetedLayout .klevuQuickSearchResults .klevuQuickAddtoCart {
+  margin: 0px;
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  right: 5px;
+  width: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+.kuQuickSearchFacetedLayout .klevuResultsBlock .klevuQuickSearchResults ul li:hover .klevuQuickAddtoCart {
+  visibility: visible;
+  opacity: 1;
+}
+.kuQuickSearchFacetedLayout .kuPriceSlider {
+  width: auto;
+  min-width: 190px;
+  max-width: 98%;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.kuQuickSearchFacetedLayout .kuPriceSlider .noUi-tooltip {
+  font-size: 90%;
+}
+.kuQuickSearchFacetedLayout .sliderFilterNames {
+  height: 90px;
+}
+.kuQuickSearchFacetedLayout .kuInfiniteScrollContainer {
+  text-align: center;
+}
+.kuQuickSearchFacetedLayout .kuInfiniteScrollContainer .kuLoadMoreBtn {
+  width: 100%;
+  margin: 12px 0px;
+  height: 34px;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.kuQuickSearchFacetedLayout .kuInfiniteScrollContainer .kuLoadMoreBtn.hide {
+  display: none !important;
+}
+.kuQuickSearchFacetedLayout .klevuProductLoadMore {
+  width: 100% !important;
+  min-height: 40px !important;
+  border: none !important;
+}
+.kuQuickSearchFacetedLayout .klevuProductLoadMore:hover {
+  background-color: transparent !important;
+}
+.kuQuickSearchFacetedLayout .klevuProductLoadMore.hide {
+  display: none !important;
+}
+.kuImageSearchSelector {
+  cursor: pointer;
+}
+.kuImageSearchSelector::before {
+  content: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2214%22%20viewBox%3D%220%200%2016%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M11.7692%203.18182L11.0154%201.6C10.8538%201.21818%2010.4769%201%2010.0462%201H6.00769C5.57692%201%205.2%201.21818%205.03846%201.6L4.23077%203.18182H2.07692C1.48462%203.18182%201%203.67273%201%204.27273V11.9091C1%2012.5091%201.48462%2013%202.07692%2013H13.9231C14.5154%2013%2015%2012.5091%2015%2011.9091V4.27273C15%203.67273%2014.5154%203.18182%2013.9231%203.18182H11.7692Z%22%20stroke%3D%22%23666666%22%20stroke-miterlimit%3D%2210%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M8.00006%2010.8182C9.78436%2010.8182%2011.2308%209.35291%2011.2308%207.54543C11.2308%205.73795%209.78436%204.27271%208.00006%204.27271C6.21575%204.27271%204.76929%205.73795%204.76929%207.54543C4.76929%209.35291%206.21575%2010.8182%208.00006%2010.8182Z%22%20stroke%3D%22%23666666%22%20stroke-miterlimit%3D%2210%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M2.07703%204.81812H3.69241%22%20stroke%3D%22%23666666%22%20stroke-miterlimit%3D%2210%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E);
+  display: inline-block;
+  width: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.klevuTarget.klevu-fluid.kuEmptySearchBox .kuQuickImageSearchWrap,
+.klevuTarget.kuQuickSearchFacetedLayout .kuQuickImageSearchWrap,
+.klevuTarget.kuQuickSearchResultsContainer .kuQuickImageSearchWrap,
+.klevuTarget.kuPersonalizedSearchRecsEnabled .kuQuickImageSearchWrap,
+.kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled .kuQuickImageSearchWrap,
+.klevuTarget .kuQuickImageSearchWrap {
+  max-width: 400px !important;
+  min-width: auto !important;
+  width: 100% !important;
+}
+.kuQuickSearchImageUploadContainer {
+  max-width: 400px !important;
+}
+.kuQuickSearchImageUploadContainer .klevuQuickSearchingArea {
+  padding: 1rem !important;
+}
+.kuQuickSearchImageUploadContainer .kuImageUploadErrorMsgContainer p {
+  color: red;
+  margin: 0px;
+  font-size: 12px;
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn {
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+  padding: 10px;
+  border-width: 0px;
+  background-color: #343420;
+  color: #ffffff;
+  cursor: pointer;
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn .kuUploadText::before {
+  display: inline-block;
+  width: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn .kuUploadText.upload::before {
+  content: url(data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2211%22%20viewBox%3D%220%200%2010%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.333333%207.95508C0.149%207.95508%200%208.10441%200%208.28841V10.3327C0%2010.5167%200.149%2010.6661%200.333333%2010.6661H9.66667C9.851%2010.6661%2010%2010.5167%2010%2010.3327V8.28841C10%208.10441%209.851%207.95508%209.66667%207.95508C9.48233%207.95508%209.33333%208.10441%209.33333%208.28841V9.99941H0.666667V8.28841C0.666667%208.10441%200.517667%207.95508%200.333333%207.95508Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M5.01445%208.62233C5.19878%208.62233%205.34778%208.473%205.34778%208.289V1.119L7.46211%203.16133C7.52645%203.224%207.61011%203.255%207.69345%203.255C7.78078%203.255%207.86778%203.221%207.93311%203.15333C8.06111%203.021%208.05745%202.81%207.92511%202.682L5.25078%200.0983334C5.25045%200.098%205.25045%200.0980001%205.25011%200.0976667L5.24578%200.0936667C5.23378%200.082%205.21878%200.077%205.20578%200.0676667C5.18445%200.0523334%205.16478%200.0353334%205.14045%200.0253334C5.10245%200.00966674%205.06211%200.00233355%205.02145%200.00133355C5.01911%200.00133355%205.01678%200%205.01445%200C5.01211%200%205.00978%200.00133355%205.00745%200.00133355C4.96678%200.00233355%204.92678%200.00966674%204.88845%200.0253334C4.86411%200.0353334%204.84445%200.0523335%204.82312%200.0673335C4.81012%200.0770002%204.79511%200.082%204.78311%200.0936667L4.77911%200.0973333C4.77878%200.0976666%204.77878%200.0976669%204.77845%200.0980002L2.10412%202.68167C1.97178%202.80967%201.96812%203.02067%202.09612%203.153C2.22345%203.28533%202.43545%203.28933%202.56711%203.161L4.68145%201.11867V8.28867C4.68111%208.473%204.83011%208.62233%205.01445%208.62233Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E);
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn .kuUploadText.processing::before {
+  position: absolute;
+  margin-left: -20px;
+  content: url(data:image/svg+xml,%0A%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8%204.5C7.8674%204.5%207.74023%204.44732%207.64645%204.35355C7.55268%204.25977%207.5%204.1326%207.5%204V1C7.5%200.867392%207.55268%200.740215%207.64645%200.646447C7.74023%200.552677%207.8674%200.5%208%200.5C8.1326%200.5%208.25977%200.552677%208.35355%200.646447C8.44732%200.740215%208.5%200.867392%208.5%201V4C8.5%204.1326%208.44732%204.25977%208.35355%204.35355C8.25977%204.44732%208.1326%204.5%208%204.5Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M10.82%205.68005C10.7209%205.68013%2010.624%205.65075%2010.5416%205.59568C10.4593%205.54058%2010.3951%205.46225%2010.3573%205.37063C10.3196%205.27903%2010.3099%205.17825%2010.3295%205.0811C10.3491%204.98395%2010.3971%204.89485%2010.4675%204.82505L12.595%202.69755C12.6414%202.6511%2012.6966%202.61425%2012.7573%202.5891C12.818%202.56398%2012.883%202.55103%2012.9487%202.55103C13.0144%202.55103%2013.0795%202.56398%2013.1402%202.5891C13.2009%202.61425%2013.256%202.6511%2013.3025%202.69755C13.3489%202.744%2013.3858%202.79915%2013.4109%202.85985C13.4361%202.92055%2013.449%202.9856%2013.449%203.0513C13.449%203.117%2013.4361%203.18205%2013.4109%203.24275C13.3858%203.30345%2013.3489%203.3586%2013.3025%203.40505L11.175%205.53255C11.1285%205.57935%2011.0732%205.61648%2011.0122%205.64178C10.9513%205.6671%2010.886%205.6801%2010.82%205.68005Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M15%208.5H12C11.8674%208.5%2011.7402%208.44732%2011.6465%208.35355C11.5527%208.25977%2011.5%208.1326%2011.5%208C11.5%207.8674%2011.5527%207.74023%2011.6465%207.64645C11.7402%207.55268%2011.8674%207.5%2012%207.5H15C15.1326%207.5%2015.2598%207.55268%2015.3535%207.64645C15.4473%207.74023%2015.5%207.8674%2015.5%208C15.5%208.1326%2015.4473%208.25977%2015.3535%208.35355C15.2598%208.44732%2015.1326%208.5%2015%208.5Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M12.9501%2013.4499C12.8841%2013.45%2012.8188%2013.437%2012.7578%2013.4117C12.6969%2013.3864%2012.6416%2013.3492%2012.5951%2013.3024L10.4676%2011.1749C10.3738%2011.0811%2010.321%2010.9539%2010.321%2010.8212C10.321%2010.6885%2010.3738%2010.5613%2010.4676%2010.4674C10.5614%2010.3736%2010.6886%2010.3209%2010.8213%2010.3209C10.954%2010.3209%2011.0813%2010.3736%2011.1751%2010.4674L13.3026%2012.5949C13.3729%2012.6647%2013.421%2012.7538%2013.4406%2012.851C13.4602%2012.9481%2013.4505%2013.0489%2013.4127%2013.1405C13.375%2013.2321%2013.3108%2013.3105%2013.2284%2013.3656C13.1461%2013.4206%2013.0492%2013.45%2012.9501%2013.4499Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M8%2015.5C7.8674%2015.5%207.74023%2015.4473%207.64645%2015.3535C7.55268%2015.2598%207.5%2015.1326%207.5%2015V12C7.5%2011.8674%207.55268%2011.7402%207.64645%2011.6465C7.74023%2011.5527%207.8674%2011.5%208%2011.5C8.1326%2011.5%208.25977%2011.5527%208.35355%2011.6465C8.44732%2011.7402%208.5%2011.8674%208.5%2012V15C8.5%2015.1326%208.44732%2015.2598%208.35355%2015.3535C8.25977%2015.4473%208.1326%2015.5%208%2015.5Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M3.04997%2013.4499C2.95087%2013.45%202.85397%2013.4206%202.77159%2013.3656C2.68922%2013.3105%202.62509%2013.2321%202.58732%2013.1405C2.54954%2013.0489%202.53984%2012.9481%202.55944%2012.851C2.57907%2012.7538%202.62709%2012.6647%202.69747%2012.5949L4.82497%2010.4674C4.87142%2010.421%204.92657%2010.3841%204.98727%2010.359C5.04797%2010.3339%205.11302%2010.3209%205.17872%2010.3209C5.24442%2010.3209%205.30947%2010.3339%205.37017%2010.359C5.43087%2010.3841%205.48602%2010.421%205.53247%2010.4674C5.57892%2010.5139%205.61577%2010.569%205.64092%2010.6297C5.66604%2010.6904%205.67899%2010.7555%205.67899%2010.8212C5.67899%2010.8869%205.66604%2010.9519%205.64092%2011.0126C5.61577%2011.0733%205.57892%2011.1285%205.53247%2011.1749L3.40497%2013.3024C3.35844%2013.3492%203.30314%2013.3864%203.24222%2013.4117C3.18127%2013.437%203.11594%2013.45%203.04997%2013.4499Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M4%208.5H1C0.867392%208.5%200.740215%208.44732%200.646447%208.35355C0.552677%208.25977%200.5%208.1326%200.5%208C0.5%207.8674%200.552677%207.74023%200.646447%207.64645C0.740215%207.55268%200.867392%207.5%201%207.5H4C4.1326%207.5%204.25977%207.55268%204.35355%207.64645C4.44732%207.74023%204.5%207.8674%204.5%208C4.5%208.1326%204.44732%208.25977%204.35355%208.35355C4.25977%208.44732%204.1326%208.5%204%208.5Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M5.18005%205.68005C5.11407%205.6801%205.04872%205.6671%204.9878%205.64178C4.92687%205.61648%204.87155%205.57935%204.82505%205.53255L2.69755%203.40505C2.65108%203.3586%202.61423%203.30345%202.5891%203.24275C2.56395%203.18205%202.55103%203.117%202.55103%203.0513C2.55103%202.9856%202.56395%202.92055%202.5891%202.85985C2.61423%202.79915%202.65108%202.744%202.69755%202.69755C2.744%202.6511%202.79915%202.61425%202.85985%202.5891C2.92055%202.56398%202.9856%202.55103%203.0513%202.55103C3.117%202.55103%203.18205%202.56398%203.24275%202.5891C3.30342%202.61425%203.35857%202.6511%203.40505%202.69755L5.53255%204.82505C5.6029%204.89485%205.65095%204.98395%205.67055%205.0811C5.69017%205.17825%205.68047%205.27903%205.6427%205.37063C5.60492%205.46225%205.54077%205.54058%205.4584%205.59568C5.37602%205.65075%205.27915%205.68013%205.18005%205.68005Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn img,
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn svg {
+  margin-right: 5px;
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadImageBtn:disabled {
+  cursor: default;
+  opacity: 0.95;
+}
+.kuQuickSearchImageUploadContainer .kuQuickUploadHeaderTitle {
+  font-size: 1.3em;
+  display: block;
+}
+.kuQuickSearchImageUploadContainer .kuQuickImageSearchForm {
+  display: none !important;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchPrivacyNote {
+  position: relative;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchPrivacyNote .kuImgSearchPrivacyNoteInfo {
+  padding-left: 24px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchPrivacyNote .kuImgSearchPrivacyNoteInfo::before {
+  content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%3E%0A%3Cg%20id%3D%22surface1%22%3E%0A%3Cpath%20style%3D%22%20stroke%3Anone%3Bfill-rule%3Anonzero%3Bfill%3Argb%2860%25%2C60%25%2C60%25%29%3Bfill-opacity%3A1%3B%22%20d%3D%22M%206.832031%206%20L%207.167969%206%20C%207.351562%206%207.5%206.183594%207.5%206.332031%20L%207.5%2010.332031%20C%207.5%2010.515625%207.351562%2010.664062%207.167969%2010.664062%20L%206.832031%2010.664062%20C%206.648438%2010.664062%206.5%2010.480469%206.5%2010.332031%20L%206.5%206.332031%20C%206.5%206.148438%206.648438%206%206.832031%206%20Z%20M%206.832031%206%20%22%2F%3E%0A%3Cpath%20style%3D%22%20stroke%3Anone%3Bfill-rule%3Anonzero%3Bfill%3Argb%2860%25%2C60%25%2C60%25%29%3Bfill-opacity%3A1%3B%22%20d%3D%22M%206.832031%203.671875%20L%207.167969%203.671875%20C%207.351562%203.671875%207.5%203.855469%207.5%204.003906%20L%207.5%204.671875%20C%207.5%204.855469%207.351562%205.003906%207.167969%205.003906%20L%206.832031%205.003906%20C%206.648438%205.003906%206.5%204.820312%206.5%204.671875%20L%206.5%204.003906%20C%206.5%203.820312%206.648438%203.671875%206.832031%203.671875%20Z%20M%206.832031%203.671875%20%22%2F%3E%0A%3Cpath%20style%3D%22%20stroke%3Anone%3Bfill-rule%3Anonzero%3Bfill%3Argb%2860%25%2C60%25%2C60%25%29%3Bfill-opacity%3A1%3B%22%20d%3D%22M%207%2012.992188%20C%208.589844%2012.992188%2010.113281%2012.363281%2011.238281%2011.238281%20C%2012.363281%2010.113281%2012.992188%208.589844%2012.992188%207%20C%2012.992188%205.410156%2012.363281%203.886719%2011.238281%202.761719%20C%2010.113281%201.636719%208.589844%201.007812%207%201.007812%20C%205.410156%201.007812%203.886719%201.636719%202.761719%202.761719%20C%201.636719%203.886719%201.007812%205.410156%201.007812%207%20C%201.007812%208.589844%201.636719%2010.113281%202.761719%2011.238281%20C%203.886719%2012.363281%205.410156%2012.992188%207%2012.992188%20Z%20M%207%2013.992188%20C%205.144531%2013.992188%203.367188%2013.257812%202.054688%2011.945312%20C%200.742188%2010.632812%200.0078125%208.855469%200.0078125%207%20C%200.0078125%205.144531%200.742188%203.367188%202.054688%202.054688%20C%203.367188%200.742188%205.144531%200.0078125%207%200.0078125%20C%208.855469%200.0078125%2010.632812%200.742188%2011.945312%202.054688%20C%2013.257812%203.367188%2013.992188%205.144531%2013.992188%207%20C%2013.992188%208.855469%2013.257812%2010.632812%2011.945312%2011.945312%20C%2010.632812%2013.257812%208.855469%2013.992188%207%2013.992188%20Z%20M%207%2013.992188%20%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A);
+  display: inline-block;
+  width: 16px;
+  position: absolute;
+  left: 0px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks {
+  position: relative;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-label {
+  cursor: pointer;
+  position: relative;
+  padding-right: 18px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-label::after {
+  content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%228px%22%20height%3D%2213px%22%20viewBox%3D%220%200%208%2012%22%20version%3D%221.1%22%3E%0A%3Cg%20id%3D%22surface1%22%3E%0A%3Cpath%20style%3D%22%20stroke%3Anone%3Bfill-rule%3Anonzero%3Bfill%3Argb%2860%25%2C60%25%2C60%25%29%3Bfill-opacity%3A1%3B%22%20d%3D%22M%207.136719%206.398438%20L%202.277344%2010.953125%20C%202.042969%2011.171875%201.664062%2011.171875%201.429688%2010.953125%20L%200.863281%2010.421875%20C%200.628906%2010.203125%200.628906%209.847656%200.863281%209.625%20L%204.710938%206%20L%200.863281%202.375%20C%200.628906%202.152344%200.628906%201.796875%200.863281%201.578125%20L%201.429688%201.046875%20C%201.664062%200.828125%202.042969%200.828125%202.277344%201.046875%20L%207.136719%205.601562%20C%207.371094%205.820312%207.371094%206.179688%207.136719%206.398438%20Z%20M%207.136719%206.398438%20%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A);
+  position: absolute;
+  right: 0px;
+  top: 1px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-content {
+  display: none;
+  position: relative;
+  background-color: #F5F6F4;
+  padding: 10px;
+  margin-top: 8px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-content p {
+  margin: 0px;
+  padding-left: 64px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-content .img1::before {
+  content: url(data:image/svg+xml,%0A%3Csvg%20width%3D%2226%22%20height%3D%2229%22%20viewBox%3D%220%200%2026%2029%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1%207.65073V21.0515L13%2027.8015L25%2021.0515V7.65073L13%201L1%207.65073Z%22%20stroke%3D%22%23999999%22%20stroke-miterlimit%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M1%208.14697L13%2014.897L25%208.14697%22%20stroke%3D%22%23999999%22%20stroke-miterlimit%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M13%2027.8014V14.897%22%20stroke%3D%22%23999999%22%20stroke-miterlimit%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+  width: 16px;
+  position: absolute;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks .accordion-content .img2::before {
+  content: url(data:image/svg+xml,%0A%3Csvg%20width%3D%2218%22%20height%3D%2225%22%20viewBox%3D%220%200%2018%2025%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%227%22%20height%3D%226%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%229.5%22%20width%3D%227%22%20height%3D%226%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%2218.5%22%20width%3D%227%22%20height%3D%226%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%220.5%22%20width%3D%227%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.25%22%20y%3D%223.25%22%20width%3D%227.5%22%20height%3D%220.5%22%20stroke%3D%22%23999999%22%20stroke-width%3D%220.5%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%225.5%22%20width%3D%224%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%229.5%22%20width%3D%227%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.25%22%20y%3D%2212.25%22%20width%3D%227.5%22%20height%3D%220.5%22%20stroke%3D%22%23999999%22%20stroke-width%3D%220.5%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%2214.5%22%20width%3D%224%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%2218.5%22%20width%3D%227%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3Crect%20x%3D%2210.25%22%20y%3D%2221.25%22%20width%3D%227.5%22%20height%3D%220.5%22%20stroke%3D%22%23999999%22%20stroke-width%3D%220.5%22%2F%3E%0A%3Crect%20x%3D%2210.5%22%20y%3D%2223.5%22%20width%3D%224%22%20height%3D%221%22%20stroke%3D%22%23999999%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+  width: 16px;
+  position: absolute;
+  margin-left: 34px;
+  margin-top: 3px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks input:checked ~ .accordion-label::after {
+  content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2212px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2012%2013%22%20version%3D%221.1%22%3E%0A%3Cg%20id%3D%22surface1%22%3E%0A%3Cpath%20style%3D%22%20stroke%3Anone%3Bfill-rule%3Anonzero%3Bfill%3Argb%2860%25%2C60%25%2C60%25%29%3Bfill-opacity%3A1%3B%22%20d%3D%22M%205.546875%209.6875%20L%200.339844%204.75%20C%200.0898438%204.511719%200.0898438%204.128906%200.339844%203.890625%20L%200.945312%203.3125%20C%201.199219%203.078125%201.605469%203.074219%201.855469%203.3125%20L%206%207.222656%20L%2010.144531%203.3125%20C%2010.394531%203.074219%2010.800781%203.078125%2011.054688%203.3125%20L%2011.660156%203.890625%20C%2011.910156%204.128906%2011.910156%204.511719%2011.660156%204.75%20L%206.453125%209.6875%20C%206.203125%209.925781%205.796875%209.925781%205.546875%209.6875%20Z%20M%205.546875%209.6875%20%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+  position: absolute;
+  right: 0px;
+  top: 1px;
+}
+.kuQuickSearchImageUploadContainer .kuImgSearchHowItWorks input:checked ~ .accordion-content {
+  display: block;
+}
+@media screen and (max-width: 640px) {
+  .klevuTarget.klevu-fluid.kuEmptySearchBox .kuQuickImageSearchWrap,
+  .klevuTarget.kuQuickSearchFacetedLayout .kuQuickImageSearchWrap,
+  .klevuTarget.kuQuickSearchResultsContainer .kuQuickImageSearchWrap,
+  .klevuTarget.kuPersonalizedSearchRecsEnabled .kuQuickImageSearchWrap,
+  .kuEmptySearchBox.klevuTarget.kuQuickSearchResultsContainer.kuPersonalizedSearchRecsEnabled .kuQuickImageSearchWrap,
+  .klevuTarget .kuQuickImageSearchWrap {
+    position: fixed !important;
+    top: 15% !important;
+    max-width: 80% !important;
+    left: 10% !important;
+    right: auto !important;
+    z-index: 1000000;
+    margin-left: 0px;
+    width: 80% !important;
+  }
+  .klevuTarget.klevu-fluid > div.kuQuickImageSearchWrap {
+    left: 10% !important;
+    width: 80% !important;
+    z-index: 1000000 !important;
+  }
+  .kuImageSearchWrapBackDrop {
+    z-index: 1000 !important;
+  }
+  .kuImageSearchWrapBackDrop::before {
+    content: '';
+    height: 100% !important;
+    width: 100% !important;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .kuQuickUploadHeaderTitle {
+    text-align: center;
+  }
+  .kuImgSearchHowItWorks {
+    text-align: center;
+  }
+  .kuImgSearchHowItWorks .accordion-content {
+    text-align: left;
+  }
+}
+
+/* new */
+[data-results-view="list"] .kuSearchResultsPageContainer .kuResults ul li .kuProdWrap {
+  border: none !important
+}
+.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdTop .klevuImgWrap{
+  width:100% !important;
+  height:auto !important;
+}
+.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdTop .klevuImgWrap a img {
+  max-width:none !important;
+  max-height:none !important;
+}
+.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdTop .klevuImgWrap{
+  width: 100%!important;
+  height: 250px!important;
+}
+
+.kuSearchResultsPageContainer .kuDropdown {
+  z-index: 0 !important;
+}
+
+.kuLandingResultsViewSwitchContainer {
+  z-index: 0 !important;
+}
+
+.kuDropSortBy, .kuDropItemsPerpage{
+  display: none !important;
+}
+
+.kuLandingResultsViewSwitchContainer{
+  display: none !important;
+}
+.klevuHeadingText{
+  font-weight: 500!important;
+}
+.klevuSuggestionHeading{
+  padding-bottom:5px !important;
+}
+.kuRecommendationSlider .klevuProductItemTop .klevuQuickImgWrap{
+  border:none !important;
+}
+.kuProdBottom{
+  text-align: center;
+}
+.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap{
+  /* border: none !important;; */
+}
+.klevuNoResultsRecs-itemPrice .kuOrigPrice, .productQuick-Price .kuOrigPrice, .kuPrice .kuOrigPrice{
+  font-size:13px !important;
+  float:none !important;
+  text-align: center !important;
+}
+.kuPrice .klevuQuickPriceGreyText{
+  font-size:13px !important;
+}
+.kuContainer{
+  margin:auto !important;
+  max-width: 1600 !important;
+}
+
+.kuContainer {
+  width: 100% !important;
+  max-width: 1600px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+/* .kuPrice, .kuSalePrice{
+  text-align: center !important;
+  float: none !important;
+} */
+.kuProdTop{
+  padding:0 !important;
+}
+.kuSearchResultsPageContainer .kuResults ul li .kuProdWrap .kuProdAdditional{
+  z-index:1 !important;
+}
+@media only screen and (max-width: 991px) {
+  .kuContainer {
+    width: 100% !important;
+    max-width: 1600px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.kuProdBottom {
+  height: auto !important;
+}
+
+.kuPrice .kuClippedOne{
+  display:inline !important;
+}
+.kuProdBottom .kuPrice{
+  text-align: center !important;
+}
+.kuPrice .kuSalePrice{
+  text-align: center !important;
+}
+
+/* .kuPrice, .kuSalePrice{text-align: center !important;float: none !important;} */
+
+/* @media only screen and (max-width: 576px) {
+  .kuSearchResultsPageContainer .kuResults ul li{
+    width:50% !important;
+  }
+} */
+
+
+
+/* https://docs.klevu.com/template-js/styling-css */

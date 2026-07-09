@@ -1,0 +1,129 @@
+<div
+  class="product-complementary-recommendations"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=2&intent=complementary">
+  {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+    {% if recommendations.intent == 'related' %}
+      <h2>You may also like</h2>
+    {% elsif recommendations.intent == 'complementary' %}
+      <h2 class="heading heading--small" style="border-top: 1px solid #ddd; padding: 15px 0 0 0;">Use it with</h2>
+    {% endif %}
+
+    <div class="complementary-wrapper">
+      {%- for product in recommendations.products limit:2 -%}
+      <div class="complementary-item">
+        <div class="complementary-image">
+          <a href="{{ product.url }}">
+            <img
+              src="{{ product.featured_image | image_url: width: 130, height: 130 }}"
+              alt="{{ product.featured_image.alt }}"
+            />
+          </a>
+        </div>
+
+        <div class="complementary-details">
+          <a href="{{ product.url }}">
+            <h3 class="heading heading--small" style="margin-bottom:0; text-transform:none; font-weight:normal; letter-spacing:normal;">
+              {% if product.metafields.custom_fields["title_product_family"] != blank %}
+                <span class="text--uppercase"  style="display:block;">{{ product.metafields.custom_fields["title_product_family"] }} </span>
+              {% endif %}
+      
+              {% if product.metafields.custom_fields["title_product_name"] != blank %}
+                  <span class="" style="display:block;">{{ product.metafields.custom_fields["title_product_name"] }}</span>
+              {% endif %}
+
+              {% if product.metafields.custom_fields["title_product_family"] == blank %}
+                {{ product.title }}
+              {% endif %}
+            </h3>
+            <p>{{ product.price | money_without_trailing_zeros }}</p>
+          </a>
+          {% comment %} <a href="{{ product.url }}" class=""><i class="fa-regular fa-arrow-right"></i> SHOP NOW</a> {% endcomment %}
+          {% comment %} <a href="{{ product.url }}" class="button button--small button--text button--outline button--full button--tiny">SHOP NOW</a>  {% endcomment %}
+          {%- form 'product', product, is: 'product-form' -%}
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+            <button type="submit" class="button button--small button--text button--outline button--full button--tiny">ADD TO CART</button>
+          {%- endform -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+
+  {%- endif -%}
+</div>
+
+<style>
+  .complementary-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .complementary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    flex: 1 1 calc(50% - 20px); /* 50% width for desktop, with gap adjustment */
+  }
+
+  .complementary-image img {
+    width: 130px;
+    height: auto;
+  }
+
+  .complementary-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .complementary-details h3,
+  .complementary-details p {
+    margin: 0 0 10px;
+  }
+
+  @media (min-width: 999px) {
+    {% comment %} .complementary-item {
+      flex: 1 1 100%; /* 100% width for mobile */
+      flex-direction: column;
+      align-items: flex-start;
+    } {% endcomment %}
+
+    .complementary-wrapper {
+      flex-direction: row;
+    } 
+  }
+</style>
+
+<script>
+  const handleIntersection = (entries, observer) => {
+    if (!entries[0].isIntersecting) return;
+
+    observer.unobserve(productRecommendationsSection);
+
+    const url = productRecommendationsSection.dataset.url;
+
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+        const html = document.createElement('div');
+        html.innerHTML = text;
+        const recommendations = html.querySelector('.product-complementary-recommendations');
+
+        if (recommendations && recommendations.innerHTML.trim().length) {
+          productRecommendationsSection.innerHTML = recommendations.innerHTML;
+        }
+      })
+      .catch(e => {
+        console.error(e);
+      });
+  };
+
+  const productRecommendationsSection = document.querySelector('.product-complementary-recommendations');
+  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
+
+  observer.observe(productRecommendationsSection);
+</script>

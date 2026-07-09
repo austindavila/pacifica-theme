@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "1648759066b0948c72": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/FUTURE_YOUTH_ABUNDANCE_1X1_dd4447d1-40fb-4308-829a-2fed1211aa85.jpg",
+        "subheading": "",
+        "title": "Future-Proof Your Review",
+        "content": "<p>We’re so excited for you to share your experience with Future Youth. Future Youth is our most advanced formula yet, where biotechnology meet nature. Thank you for being part of our community!</p><p>Please select the product(s) you wish to leave a review for below!</p>",
+        "button_text": "",
+        "button_link": "shopify://blogs/kind-beauty-blog",
+        "background_type": "full_width",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "701b0c48-6a13-4df5-bc55-97adc22385b2": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "show_collection_image": false,
+        "section_height": "medium",
+        "image": "shopify://shop_images/FUTURE_YOUTH_ABUNDANCE_1X1_dd4447d1-40fb-4308-829a-2fed1211aa85.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<div style=\"background-color:white; padding:20px;\">Future Youth Reviews<br><div class=\"text--small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis faucibus libero, at imperdiet eros condimentum ut.</div>\n</div>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#000000",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0
+      }
+    },
+    "1648763447d7eb8673": {
+      "type": "multi-column",
+      "blocks": {
+        "16487634474efb1e26-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_FUTURE_YOUTH_TIME_SHIFT_EYE_SERUM.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Future Youth",
+            "content": "Time Shift Eye Serum",
+            "link_text": "Review This Product",
+            "link_url": "https://display.ugc.bazaarvoice.com/static/pacificabeauty/main_site/en_US/container.htm?bvaction=rr_submit_review&bvproductId=7363987112024&bvcampaignId=Future_Youth_CRM_Reviews&bvinjecteddata=%7B%22IncentivizedReview%22%3A%22True%22%7D",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_FUTURE_YOUTH_FOAMING_CLEANSING_GEL.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Future Youth",
+            "content": "Foam Cleansing Gel",
+            "link_text": "Review This Product",
+            "link_url": "https://display.ugc.bazaarvoice.com/static/pacificabeauty/main_site/en_US/container.htm?bvaction=rr_submit_review&bvproductId=7363998482520&bvcampaignId=Future_Youth_CRM_Reviews&bvinjecteddata=%7B%22IncentivizedReview%22%3A%22True%22%7D",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16487634474efb1e26-0",
+        "16487634474efb1e26-3"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": true,
+        "show_background_on_links": true,
+        "subheading": "",
+        "title": "",
+        "content": "<div style=\"padding-top:10px;\"></div>",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "normal",
+        "background": "#ffffff",
+        "text_color": "#333333"
+      }
+    },
+    "c2d56472-e8f8-4a46-99ba-c014d1c11a1f": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14673007575128__c2d56472-e8f8-4a46-99ba-c014d1c11a1f-168549649108116b9a-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_FUTURE_YOUTH_GRAVITY_REBOUND_SERUM.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Future Youth",
+            "content": "<div style=\"min-height:50px;\">Gravity Rebound Serum</div>",
+            "link_text": "Review this product",
+            "link_url": "https://display.ugc.bazaarvoice.com/static/pacificabeauty/main_site/en_US/container.htm?bvaction=rr_submit_review&bvproductId=7363994648664&bvcampaignId=Future_Youth_CRM_Reviews&bvinjecteddata=%7B%22IncentivizedReview%22%3A%22True%22%7D",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "template--14673007575128__c2d56472-e8f8-4a46-99ba-c014d1c11a1f-168549649108116b9a-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PAC_FUTURE_YOUTH_DAILY_TURNAROUND_HYDRATING_MOISTURIZER.jpg",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Future Youth",
+            "content": "<div style=\"min-height:50px;\">Daily Turnaround Hydrating <br>Moisturizer SPF 50</div>",
+            "link_text": "Review this product",
+            "link_url": "https://display.ugc.bazaarvoice.com/static/pacificabeauty/main_site/en_US/container.htm?bvaction=rr_submit_review&bvproductId=7363995107416&bvcampaignId=Future_Youth_CRM_Reviews&bvinjecteddata=%7B%22IncentivizedReview%22%3A%22True%22%7D",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14673007575128__c2d56472-e8f8-4a46-99ba-c014d1c11a1f-168549649108116b9a-0",
+        "template--14673007575128__c2d56472-e8f8-4a46-99ba-c014d1c11a1f-168549649108116b9a-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": true,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1648759066b0948c72",
+    "701b0c48-6a13-4df5-bc55-97adc22385b2",
+    "1648763447d7eb8673",
+    "c2d56472-e8f8-4a46-99ba-c014d1c11a1f"
+  ]
+}

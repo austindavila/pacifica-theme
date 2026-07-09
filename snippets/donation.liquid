@@ -1,0 +1,55 @@
+{% comment %}
+{% endcomment %}
+
+{% assign product = all_products[settings.donation_product] %}
+
+<div id="donation_module" {% if round_up_found == true %}style="display: none";{% endif %}>
+
+  <button is="toggle-button" class="collapsible-toggle" aria-controls="block-donation" aria-expanded="false">
+    
+    {% assign round_up_amount = cart.total_price | money_without_currency | ceil %}
+    {% comment %}{{ round_up_amount }}{% endcomment %}
+    {% assign cart_total_price = cart.total_price | money_without_currency %}
+    {% comment %}{{ cart_total_price }}{% endcomment %}
+    {% assign round_up_difference = round_up_amount | minus: cart_total_price | times: 100 %}
+    {% comment %}{{ round_up_difference }}{% endcomment %}
+    {% if round_up_difference == 0 %}
+        {% assign round_up_final = 100 %}
+      {% else %}
+        {% assign round_up_final = round_up_difference %}
+    {% endif %}
+
+    <div class="text--small" id="ProductSelect-donation" name='id'>Round Up {{ round_up_final | money }} for {{ settings.donation_title }}</div>
+
+    <input type="hidden" name="id" id="ProductSelect-donationID" value="{{ product.variants.first.id }}" data-round-up="{{ round_up_final | round | plus: 0 }}" /> 
+
+    <span class="animated-plus"></span>
+
+  </button>
+
+<collapsible-content id="block-donation" class="collapsible anchor">
+    <div class="collapsible__content text-container">
+      <div class="row middle-xs">
+
+       <div class="col-xs-3 text--center" style="padding-top:10px;">
+          <img src="{{ product.featured_image | image_url: width: 75 }}" alt="Donation">
+        </div>
+
+       <div class="col-xs-9">
+        <p><span class="text--small" style="display: inline-block; padding-top:10px; line-height:normal;">{{ product.description }}</span></p>
+      </div>
+
+      {% comment %} TODO: Put in languages file - both button and title above {% endcomment %}
+        <div class="col-xs-12">
+            <div id="donateButton" role="button" class="button button--primary">Donate {{ round_up_final | money }}</div>
+        </div>
+
+    </div>
+  </div>
+</collapsible-content>
+
+</div>
+
+
+
+

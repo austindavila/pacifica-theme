@@ -1,0 +1,308 @@
+
+/**
+ * ----------------------------------------------------------------------------
+ * LOYALTY - ALL TEMPORARY FOR QUICK LAUNCH
+ * ----------------------------------------------------------------------------
+ */
+
+ #RewardsPage .bg-img{
+  min-height: 600px;
+  width:100%;
+}
+
+#RewardsPage .fa-tag{
+  font-size: 30px;
+}
+
+#RewardsPage .fa-star{
+  font-size: 30px;
+}
+
+#RewardsPage .fa-user-friends{
+  font-size: 30px;
+}
+
+#RewardsPage .fa-credit-card{
+  font-size: 30px;
+}
+
+#RewardsPage .fa-user-circle{
+  font-size: 30px;
+}
+
+#RewardsPage .fab{
+  font-size: 30px;
+}
+
+
+
+
+#RewardsPage  .big-dot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 50px;
+/*   color: #fff; */
+  line-height: 100px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#RewardsPage .items{
+  padding: 60px 15px 60px 15px;
+}
+
+#RewardsPage .icons .svg-inline--fa{
+  font-size: 50px;
+}
+
+
+#RewardsPage .circle-img img{
+    width: 150px;
+    padding: 20px 0 0 0;
+}
+
+/* compare benefits */
+
+.benefits-tier-compare {
+  margin-top: 40px;
+}
+
+
+.benefits-tier-compare table {
+  width: 1000px;
+}
+
+.benefits-tier-compare .td-dot, .re-level{
+  text-align: center;
+}
+
+.benefits-tier-compare .re-level{
+  padding: 10px 0;
+}
+
+.benefits-tier-compare i{
+  padding-top: 20px;
+  padding-bottom:10px;
+}
+
+.benefits-tier-compare .re-title{
+  padding: 15px 0 15px 15px;
+}
+
+.benefits-tier-compare .master-col{
+  width: 400px;
+  @media screen and (min-width: 1000px)} {
+    width: 300px;
+  }
+}
+
+.benefits-tier-compare .sub-col{
+  width: 100px;
+  @media screen and (min-width: 1000px;) {
+    width: 200px;
+  }
+}
+
+.benefits-tier-compare td{
+  /* font-size: 16px; */
+  line-height: 16px;
+}
+
+.benefits-tier-compare .shading{
+  background-color: #f0f9ff;
+}
+
+
+/* OVERWRITE LL STYLES */
+
+/*   // buttons */
+  .lion-action-button{
+      min-width: 200px;
+      padding: 10px 30px !important;
+      margin: auto !important;
+  }
+
+/*   //more points needed progress bar */
+  .lion-reward-item__fill{
+    background-color: #B8D8EB;
+    z-index: 3;
+  }
+
+
+/*   //disabled - more points needed */
+  .lion-action-button.lion-reward-item__redeem-button--disabled{
+    border-color: #e6e6e6;
+    border-radius:0;
+    pointer-events: none;
+  }
+
+/*   //disabled xx number of days */
+  .lion-action-button.lion-rule-item__button--disabled{
+    border:none;
+    border-radius:0;
+    pointer-events: none;
+  }
+
+
+  .lion-rule-item__title{
+    text-align:center;
+  }
+
+  .lion-rules-list, .lion-reward-item{
+    color:#333333;
+  }
+  .lion-rule-item--style-1 .lion-rule-item__points .text{
+    color:#333333;
+  }
+  .lion-rule-item--style-1 .lion-rule-item__points .value{
+     color:#333333;
+  }
+
+  /* //boxes around rewards */
+  .lion-rule-item__content, .lion-reward-item__content{
+    border:none;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  .lion-reward-item__content{
+    box-shadow: none;
+  }
+  .lion-rule-item{
+    width:30%;
+  }
+
+  /* //checkmark */
+  .lion-rule-item--style-1 .lion-rule-item__completed-forever{
+    color:#333333;
+  }
+
+  /* //claimed rewards */
+  .lion-claimed-reward-item{
+    border: none;
+  }
+  .lion-claimed-reward-item__title, .lion-claimed-reward-item__date{
+    color: #333333;
+    font-size: 14px
+  }
+  .lion-claimed-reward-item:nth-child(even) {
+    background-color: #f0f9ff;
+  }
+
+  /* //modals */
+ #loyaltylion .lion-referral-widget-panels {
+  font-family: "Gotham A", "Gotham B", sans-serif !important;
+  }
+
+  /* //earn points */
+  .lion-rule-item__title, .lion-reward-item__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+  }
+/*   .lion-rule-item--style-1 .lion-rule-item__limit-reached, .lion-rule-item--style-1 .lion-rule-item__limit-reached:after, .lion-reward-item__cost  {
+    color:#333333;
+  } */
+  .lion-rule-item--style-1 .lion-rule-item__points{
+    padding-bottom: 5px;
+  }
+
+
+  /* // redeem rewards */
+  .lion-rewards-list{
+    justify-content: center;
+  }
+  .lion-reward-item_cost{
+    .lion-reward-item__cost{
+      padding-bottom:5px;
+    }
+  }
+  .lion-reward-item__content{
+      margin-bottom: 15px;
+      background:none;
+  }
+  .lion-reward-item__meta{
+    margin-top:0;
+    margin-bottom:5px;
+  }
+  .lion-reward-item__title{
+    margin-top:5px;
+  }
+
+
+  /* //history table */
+  .lion-history-table{
+    margin:40px 0;
+  }
+  .lion-history-table__header-cell{
+    background-color: #f0f9ff;
+  }
+  .lion-history-table__row:nth-child(even) {
+    background-color: #f0f9ff;
+  }
+
+  /* //claimed rewards */
+  .lion-claimed-rewards-list--empty {
+    font-size: 16px;
+    text-align: center;
+  }
+
+ 
+   /* overwrite buttons */
+  .lion-action-button{
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    background:#afc5ec;
+  }
+  .lion-action-button:hover{
+    color: black;
+    background: #afc5ec;
+  }
+  .lion-action-button--disabled{
+    background: #e7edf8;
+  }
+  .lion-action-button--disabled: :hover{
+    background: #e7edf8;
+  }
+  .lion-action-button, #loyaltylion .lion-action-button{
+    border-radius: 0 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    color: black !important;
+    text-align: center !important;
+    background:#afc5ec !important;
+    margin: 5px !important;
+  }
+  .lion-rule-item--style-1.lion-rule-item--actionable:hover .lion-rule-item__content {
+      border: 1px solid #999999;
+  }
+
+  .header-copy{
+    padding: 40px 20px !important;
+  }
+
+  .icons .col-xs-6{
+    margin-bottom: 15px;
+  }
+
+  .dots h3{
+    margin: 0;
+  }
+  .dots p{
+    margin: 0;
+  }
+  .dots{
+    margin-bottom: 20px;
+  }
+
+ /*  .header-copy{
+    min-height:  200px;
+    @media screen and (min-width: 1000px;) {
+      min-height: none;
+    }
+  } */
+

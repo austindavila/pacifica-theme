@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_gWzgnM": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "{{ article.metafields.custom.author.value }}",
+        "liquid": "{{ article.tags }}\n{{article.title }}\n{{article.created_at | date }}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1648846720a47a16be": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<p></p><h1>\n<span class=\"font-mediaanitalic\" style=\"font-size:42px;\">Kind Beauty</span> <span style=\"font-size:42px; font-weight:normal;\">Blog</span>\n</h1><p></p>",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "165946541243343275": {
+      "type": "multi-column",
+      "blocks": {
+        "165946541205ce834d-0": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "FROM BROOK",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/brook",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "165946541205ce834d-1": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "TUTORIALS",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/tutorials",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "165946541205ce834d-2": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "EDUCATION",
+            "link_url": "https://www.pacificabeauty.com/blogs/pacifica-beauty-blog/tagged/education",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "165946541205ce834d-0",
+        "165946541205ce834d-1",
+        "165946541205ce834d-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "small",
+        "desktop_item_size": "small",
+        "spacing": "tight",
+        "background": "#000000",
+        "text_color": "#ffffff"
+      }
+    },
+    "165946903756293c28": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "custom_css": [
+        ".article__title,.image-overlay__content a {display: none;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "show_collection_image": false,
+        "section_height": "medium",
+        "image": "shopify://shop_images/Activist-Blog-Temp-Wide2.jpg",
+        "subheading": "Subheading",
+        "title": "Image with text overlay",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "bottom_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 12
+      }
+    },
+    "blog-post-banner": {
+      "type": "blog-post-banner",
+      "disabled": true,
+      "settings": {
+        "show_category": false,
+        "blog_header_background": "#edf8ff",
+        "blog_header_text_color": "#282828"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "custom_css": [
+        ".article__content p{margin-bottom:14px;line-height:1.5}",
+        ".article__content h2{margin:24px 0 8px;font-size:20px}",
+        ".article__content ul{padding-left:20px;margin-bottom:18px}",
+        ".article__content li{margin-bottom:6px}",
+        ".article__image{margin:20px 0}",
+        ".article__image img{width:100%;height:auto}",
+        ".article__pull-quote{margin:20px 0;padding:10px 16px;border-radius:16px;background:#f0cad7;color:#fff}"
+      ],
+      "settings": {
+        "show_on_scroll_navigation": true,
+        "show_author": true,
+        "show_date": true,
+        "show_share_buttons": true
+      }
+    },
+    "featured_collections_Dqjdan": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_33fAYM": {
+          "type": "collection",
+          "settings": {
+            "collection": "{{ article.metafields.custom.collection.value }}",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_33fAYM"
+      ],
+      "settings": {
+        "subheading": "{{ article.metafields.custom.collection_title.value }}",
+        "title": "",
+        "content": "",
+        "products_count": 16,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "show_minis": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "blog-post-prev-next": {
+      "type": "blog-post-prev-next",
+      "settings": {}
+    },
+    "blog-post-comments": {
+      "type": "blog-post-comments",
+      "settings": {
+        "show_gravatar": false
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_gWzgnM",
+    "1648846720a47a16be",
+    "165946541243343275",
+    "165946903756293c28",
+    "blog-post-banner",
+    "main",
+    "featured_collections_Dqjdan",
+    "blog-post-prev-next",
+    "blog-post-comments"
+  ]
+}

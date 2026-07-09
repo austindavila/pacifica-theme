@@ -1,0 +1,273 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "large"
+      }
+    },
+    "06d2617c-986d-4112-89c6-791434f1b72d": {
+      "type": "rich-text",
+      "custom_css": [
+        ".container {padding-top: 20px; padding-bottom: 30px;}",
+        "h1 {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "<h1 class=\"heading h1 text--center font-awesome-extratall-italic\">beauty activists <br class=\"hidden-tablet-and-up\">since 1996</h1><p class=\"text--center heading h5\" style=\"line-height:1.4em;\">For nearly 30 years, our grounding core value has always been compassion—for the planet, animals, and you.</p>",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#f7f8fc",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "19997854-e48b-485f-abe6-e43a05831f09": {
+      "type": "image-with-text-block",
+      "custom_css": [
+        ".image-with-text-block__content:not(.image-with-text-block__content--tight) {padding: 30px;}",
+        ".image-with-text-block__content {background: transparent;}",
+        "h2 {font-weight: 500;}",
+        "p {margin: 0;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/about_us_mockup_banner-10-03.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<h2>Pacifica</h2><p><em>[ Pa`ci´fi`ca]</em> means peaceful.</p><p>Recalls the natural beauty of the pacific coastline.</p><p>Inspired by a lyric by Joao and Astrud Gilberto, a song that played during Pacifica's envisioning.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "09d65fc7-09b4-4fe9-92f9-8fb18f11ba42": {
+      "type": "rich-text",
+      "custom_css": [
+        ".vertical-breather--extra-tight {padding-top: 50px; padding-bottom: 80px;}",
+        ".font-tan-nimbus {font-family: \"tannimbus\";}"
+      ],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p>\n<span class=\"font-awesome-extratall-italic\" style=\"font-size:22px;\">our story began</span> with a vision to create high-performance, science backed formulas at an incredible value that make your skin, mind, and conscience feel good (oh, and they smell good too). With our core commitment to compassion towards you, animals, and our planet, we believe that everyone deserves effective products that use the highest quality 100% vegan and cruelty-free ingredients, wrapped in climate-conscious packaging at accessible prices.\n<br><br>\nAs the godmother of ethically natural beauty, Pacifica Beauty takes pride in our role as trailblazer. Being at the forefront of compassionism<sup>TM</sup> since day one, we advocate for transparency and the importance of making conscious choices when it comes to your beauty products. By frequently conducting consumer and clinical studies, we never lose sight of our service to our community to find effective formulas they love. <br><br>\nMore than just a beauty brand, Pacifica Beauty is a movement that empowers people to embrace their natural beauty and make choices that align with their values. Join our movement to redefine beauty, one conscious choice at a time.\n</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6e22645c-2300-482a-89b3-b2803ec5c98a": {
+      "type": "rich-text",
+      "custom_css": [],
+      "settings": {
+        "show_ticker": false,
+        "subheading": "",
+        "title": "Interviews with Founder <br class=\"hidden-lap-and-up\">Brook Harvey-Taylor",
+        "content": "<iframe src=\"https://art19.com/shows/breaking-beauty/embed?playlist_type=latest\" style=\"width: 100%; height: 200px; border: 0 none;\" scrolling=\"no\"></iframe>\n<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/2mHaEULVh66Vv2PKdfKFQh?utm_source=generator\" width=\"100%\" height=\"152\" frameborder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>\n<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/5UobQi1gzCcqQdgtsobWN6?utm_source=generator\" width=\"100%\" height=\"200\" frameborder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "0cac3cc9-4451-4eff-8cab-fe1455cbcde5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__0cac3cc9-4451-4eff-8cab-fe1455cbcde5-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/about_us_mockup_beyond_clean.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "beyond clean",
+            "content": "<p>We believe that what we put on our skin is as important as what we put in our bodies and into the environment. </p><p>Built to defy the industry’s notion that beauty cannot be both clean and effective, Pacifica Beauty proves that nature and science can coalesce in our high performance, 100% vegan<strong> </strong>and<strong> </strong>cruelty-free formulas<strong> </strong>made with intentional ingredients for real results. </p><p>We abide by our strict Compassion Standards™, which include over 1,800 ingredients we will never use. </p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__0cac3cc9-4451-4eff-8cab-fe1455cbcde5-item-1"
+      ],
+      "custom_css": [
+        ".container {padding-top: 60px;}",
+        "h3 {font-family: \"awesome-extra-tall-italic\"; font-size: 28px;}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "#ffbf8e",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "cccee4cf-c82f-46c3-81f7-56bb5babbf48": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__cccee4cf-c82f-46c3-81f7-56bb5babbf48-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/about_us_mockup_purpose_driven.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "beauty with a higher purpose™",
+            "content": "<p>As a leader in ethical beauty, it’s important that we use our platform and voice to advocate for positive change. </p><p>Over the years, Brook has carefully chosen which causes and brands to align with; we’ve built a thriving community of like-minded individuals and organizations who share our standards, including the Gentle Barn™, Santa Barbara Wildlife Care Network™, and the ACLU.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__cccee4cf-c82f-46c3-81f7-56bb5babbf48-item-1"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"awesome-extra-tall-italic\"; font-size: 28px;}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "#ffbf8e",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "255706b7-e5a9-4d29-ab14-214fb16678e1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__255706b7-e5a9-4d29-ab14-214fb16678e1-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/about_us_mockup_climate_conscious.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "climate conscious",
+            "content": "<p>We use PCR (post-consumer recycled plastic), glass, and/or aluminum, and our outer cartons are made from sustainably sourced paper certified by the Forest Stewardship Council™. </p><p>In partnership with Plastic Collective™, Pacifica Beauty provides funds to help support the development of plastic recycling social enterprises and address plastic waste in territories with high environmental leakage. </p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__255706b7-e5a9-4d29-ab14-214fb16678e1-item-1"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"awesome-extra-tall-italic\"; font-size: 28px;}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "cycle_speed": 3,
+        "accent_background": "#ffbf8e",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "66714a7f-efef-4541-aeb8-d6bb7508e87f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14999367319640__66714a7f-efef-4541-aeb8-d6bb7508e87f-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/about_us_mockup_plastic_collective.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "100% plastic collection plan",
+            "content": "<p>Each year, we partner with Plastic Collective on projects that collect and recycle the plastic equivalent to the total amount of plastic used in Pacifica Beauty products. </p><p>Learn more about the plastic collective <a href=\"https://www.plasticcollective.co/\" target=\"_blank\" title=\"https://www.plasticcollective.co/\">here</a>.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14999367319640__66714a7f-efef-4541-aeb8-d6bb7508e87f-item-1"
+      ],
+      "custom_css": [
+        ".container {padding-bottom: 60px;}",
+        "h3 {font-family: \"awesome-extra-tall-italic\"; font-size: 28px;}",
+        "p {line-height: 1.4em;}",
+        ".image-with-text__wrapper {grid-gap: 30px;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "cycle_speed": 8,
+        "accent_background": "#ffbf8e",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "06d2617c-986d-4112-89c6-791434f1b72d",
+    "19997854-e48b-485f-abe6-e43a05831f09",
+    "09d65fc7-09b4-4fe9-92f9-8fb18f11ba42",
+    "6e22645c-2300-482a-89b3-b2803ec5c98a",
+    "0cac3cc9-4451-4eff-8cab-fe1455cbcde5",
+    "cccee4cf-c82f-46c3-81f7-56bb5babbf48",
+    "255706b7-e5a9-4d29-ab14-214fb16678e1",
+    "66714a7f-efef-4541-aeb8-d6bb7508e87f"
+  ]
+}

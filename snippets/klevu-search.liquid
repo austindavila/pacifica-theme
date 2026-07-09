@@ -1,0 +1,22 @@
+<drawer-content append-body {% if section.settings.header_layout != 'logo_center_search_open' %}reverse-breakpoint="screen and (min-width: 1200px)"{% endif %} id="search-drawer" initial-focus-selector="#search-drawer [name='q']" class="predictive-search drawer drawer--large drawer--from-left">
+  <span class="drawer__overlay"></span>
+
+  <header class="drawer__header">
+    <form id="predictive-search-form" class="predictive-search__form">
+      {%- render 'icon' with 'header-search' -%}
+
+      <input id="predictive-search-input" class="search__input" type="text" name="q" aria-label="{{ 'search.general.title' | t }}" placeholder="{{ 'search.general.search_placeholder' | t }}">
+    </form>
+
+    <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+      {%- render 'icon' with 'close' -%}
+    </button>
+  </header>
+
+  <div class="drawer__content" id="klevu-drawer__content">
+   
+  </div>
+
+
+
+</drawer-content>

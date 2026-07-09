@@ -1,0 +1,130 @@
+{% comment %}
+MINI CHOOSER FOR MINI CART
+{% endcomment %} 
+
+{% assign chooser_free_gift_threshold = settings.chooser_free_gift_threshold | times: 100 %}
+
+{%- capture chooser_remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: chooser_free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+
+{% if cart.total_price >= chooser_free_gift_threshold %}
+  {% assign reached_threshold = true %}
+{% else %}
+  {% assign reached_threshold = false %}
+{% endif %}
+
+{% comment %}======COLLAPSIBLE VERSION======={% endcomment %}
+{% comment %}{% endcomment %}
+<div class="mini-cart__free-mini-chooser" {% if free_mini_in_cart %}style="display:none;"{% endif %}>
+
+  <div class="mini-cart__free-mini-header" {% if free_mini_in_cart %}style="background-color:white;"{% endif %}>
+    <button is="toggle-button" class="collapsible-toggle" aria-controls="block-free-mini" {% if free_mini_in_cart %}aria-expanded="false"{% else %}aria-expanded="true"{% endif %}>
+
+      {%- if reached_threshold != true -%}
+
+        {%- capture remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: settings.chooser_free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+        <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">Spend {{chooser_remaining_amount}} more and choose a FREE GIFT</a></p>
+
+      {%- else -%}
+
+        {%- if section.settings.free_gift_title != blank -%}
+          <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">{% if free_mini_in_cart %}FREE GIFT OVER $40{% else %}{{ section.settings.free_gift_title | escape }}{% endif %}</p>
+        {%- endif -%}
+
+    {%- endif -%}
+
+      <span class="animated-plus"></span>
+
+    </button>
+</div>
+
+  <collapsible-content {% unless free_mini_in_cart %}open{% endunless %} id="block-free-mini" class="collapsible anchor">
+    <div class="collapsible__content text-container">
+       <div class="mini-cart__free-mini-list row">
+
+          <!-- check if all three products are defined -->
+          {% for i in (1..4) %}
+
+            {% if i == 1 %}
+              {%- assign current_product = section.settings.free_gift_product_one -%}
+            {% elsif i == 2 %}
+              {%- assign current_product = section.settings.free_gift_product_two -%}
+            {% elsif i == 3 %}
+              {%- assign current_product = section.settings.free_gift_product_three -%}
+            {% elsif i == 4 %}
+              {%- assign current_product = section.settings.free_gift_product_four -%}
+            {% endif %}    
+
+            {% if current_product.title != null %}
+            <div class="col-xs-6">
+              {% comment %} if there is more than one variant, assume it's a mini and second variant image should be shown {% endcomment %}
+              {% if current_product.variants.size > 1 %}
+                {%- render 'product-item', product: current_product, reduced_content: true, reduced_font_size: true, hide_secondary_image: true, show_second_variant: true, prevent_link:true, is_mini_cart_gwp: true, reached_threshold: reached_threshold, hide_price:true, sizes_attribute: '(max-width: 740px) 65px, 92px' -%}
+              {% else %}
+                {%- render 'product-item', product: current_product, reduced_content: true, reduced_font_size: true, hide_secondary_image: true, show_second_variant: false,  prevent_link:true, is_mini_cart_gwp: true, reached_threshold: reached_threshold, hide_price:true, sizes_attribute: '(max-width: 740px) 65px, 92px' -%}
+              {% endif %}              
+            </div>
+            {% endif %} 
+
+          {%- endfor -%}
+
+        </div>
+    </div>
+  </collapsible-content>
+
+</div>
+
+
+
+{% comment %}
+<!-- to open or close the collapsible menu -->
+<script type="javascript">
+  document.getElementById('block-free-mini').open = true;
+</script>
+{% endcomment %}
+{% comment %}
+<div class="mini-cart__free-mini-chooser">
+
+  <div class="mini-cart__free-mini-header">
+  
+      {%- if reached_threshold != true -%}
+
+        {%- capture remaining_amount -%}<span data-money-convertible>{{ cart.total_price | minus: settings.chooser_free_gift_threshold | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+        <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">Spend {{ chooser_remaining_amount }} more and choose a FREE MINI</a></p>
+
+      {%- else -%}
+
+        {%- if section.settings.free_gift_title != blank -%}
+          <p class="mini-cart__recommendations-heading heading heading--xsmall text--strong">{{ section.settings.free_gift_title | escape }}</p>
+        {%- endif -%}
+
+    {%- endif -%}
+
+  </div>
+
+  <div class="mini-cart__free-mini-list row">
+
+    <!-- check if all three products are defined -->
+    {% for i in (1..4) %}
+
+      {% if i == 1 %}
+        {%- assign current_product = section.settings.free_gift_product_one -%}
+      {% elsif i == 2 %}
+        {%- assign current_product = section.settings.free_gift_product_two -%}
+      {% elsif i == 3 %}
+        {%- assign current_product = section.settings.free_gift_product_three -%}
+      {% elsif i == 4 %}
+        {%- assign current_product = section.settings.free_gift_product_four -%}
+      {% endif %}    
+
+      {% if current_product.title != null %}
+      <div class="col-xs-6">
+          {%- render 'product-item', product: current_product, reduced_content: true, reduced_font_size: true, hide_secondary_image: true, show_second_variant: true, reached_threshold: reached_threshold, hide_sale_messages:true,  hide_price: true, sizes_attribute: '(max-width: 740px) 65px, 92px' -%}
+      </div>
+      {% endif %} 
+
+    {%- endfor -%}
+
+  </div>
+
+</div>
+{% endcomment %}

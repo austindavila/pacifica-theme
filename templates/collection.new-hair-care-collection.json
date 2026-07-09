@@ -1,0 +1,385 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "custom_css": [
+        ".breadcrumb__list {display: none;}"
+      ],
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_collection_title": true,
+        "text_width": "large",
+        "image_text_color": "#000000",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 50,
+        "quick_links": ""
+      }
+    },
+    "ss_media_grid_2_CkxrMi": {
+      "type": "ss-media-grid-2",
+      "blocks": {
+        "item_iYMFqa": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/HAIRCARE_COLLECTION_PAGE-2.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h2>HAIRCARE THAT SMELLS AS AMAZING AS IT WORKS</h2>",
+            "text": "",
+            "button": "",
+            "url": "",
+            "content_align": "middle-center",
+            "content_align_mobile": "middle-center",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "item_MWbFQQ": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/SOLAR_FLOWER_HAIR_PERFUME__01.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h3>Hair Perfume</h3>",
+            "text": "",
+            "button": "SHOP",
+            "url": "shopify://collections/hair-body-mist",
+            "content_align": "top-left",
+            "content_align_mobile": "top-left",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "item_Bn63ec": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/images_brook_9.jpg",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h3>Shampoo & Conditioner.</h3><h3>Smells amazing. </h3><h3>Works hard.</h3>",
+            "text": "",
+            "button": "SHOP",
+            "url": "shopify://collections/new-shampoo-conditioners",
+            "content_align": "top-left",
+            "content_align_mobile": "top-right",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "item_XapFeX": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/Untitled_design-147.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h3>Hydrate & Detangle</h3>",
+            "text": "",
+            "button": "SHOP",
+            "url": "shopify://products/coconut-milk-detangle-elixir",
+            "content_align": "top-left",
+            "content_align_mobile": "top-left",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "item_ktzXcf": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/Untitled_design-149.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h3>Define</h3><h3>your curls</h3>",
+            "text": "",
+            "button": "SHOP",
+            "url": "shopify://products/pineapple-swirl-curl-defining-cream",
+            "content_align": "middle-center",
+            "content_align_mobile": "bottom-right",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "item_tiYAPW": {
+          "type": "item",
+          "settings": {
+            "column_width": 1,
+            "row_width": 2,
+            "image": "shopify://shop_images/7_55cc0b65-713f-49dc-961a-c9def892375f.png",
+            "bg_overlay": 5,
+            "collection": "",
+            "sub_heading": "",
+            "title": "<h3>Scalp</h3><h3>Care</h3>",
+            "text": "",
+            "button": "SHOP",
+            "url": "shopify://collections/purify",
+            "content_align": "middle-center",
+            "content_align_mobile": "middle-center",
+            "sub_heading_color": "#ffffff",
+            "title_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_hover_color": "#000000",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#f8eedd",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "item_iYMFqa",
+        "item_MWbFQQ",
+        "item_Bn63ec",
+        "item_XapFeX",
+        "item_ktzXcf",
+        "item_tiYAPW"
+      ],
+      "name": "SS - Media Grid #2",
+      "settings": {
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 26,
+        "heading_size_mobile": 26,
+        "heading_height": 100,
+        "heading_align": "left",
+        "heading_align_mobile": "left",
+        "items_columns": 3,
+        "items_columns_mobile": "1",
+        "items_gap": 20,
+        "items_gap_mobile": 20,
+        "items_mt": 20,
+        "row_height": 400,
+        "row_height_mobile": 200,
+        "item_radius": 16,
+        "item_border_thickness": 0,
+        "item_shadow": false,
+        "content_padding_vertical": 16,
+        "content_padding_vertical_mobile": 16,
+        "content_padding_horizontal": 16,
+        "content_padding_horizontal_mobile": 16,
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 14,
+        "sub_heading_size_mobile": 14,
+        "sub_heading_height": 100,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 22,
+        "title_size_mobile": 20,
+        "title_height": 100,
+        "title_mt": 10,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 100,
+        "text_mt": 10,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 14,
+        "button_size_mobile": 14,
+        "button_height": 100,
+        "button_mt": 12,
+        "button_padding_vertical": 10,
+        "button_padding_vertical_mobile": 10,
+        "button_padding_horizontal": 16,
+        "button_padding_horizontal_mobile": 16,
+        "button_radius": 14,
+        "button_border_thickness": 1,
+        "button_style": "outline",
+        "item_border_color": "#000000",
+        "item_shadow_color": "#000000",
+        "heading_color": "#000000",
+        "overlay_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 160,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_sort_by": true,
+        "show_collection": true,
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "bottom",
+        "promotion_height": "medium"
+      }
+    },
+    "faq_k7Nmdh": {
+      "type": "faq",
+      "blocks": {
+        "question_kJ4e7E": {
+          "type": "question",
+          "settings": {
+            "title": "What does a complete haircare routine include?",
+            "answer": "<p>A complete haircare routine starts with a shampoo to cleanse the scalp, followed by a conditioner to hydrate, soften, and detangle<strong> </strong>plus targeted treatments and styling products. Pacifica Beauty haircare includes everything you need to build a full routine, from gentle cleansing to scalp care, curl styling, and hair perfume.</p><p>Explore essentials like <a href=\"/collections/shampoo\" title=\"Vegan Shampoo\">vegan shampoos</a> and <a href=\"/collections/conditioner\" title=\"Vegan Conditioner\">vegan conditioners</a> as the foundation of your routine.</p>"
+          }
+        },
+        "question_e6zdha": {
+          "type": "question",
+          "settings": {
+            "title": "What hair concerns do Pacifica Beauty haircare products target?",
+            "answer": "<p>Pacifica Beauty haircare is designed to support a healthy scalp and visibly improved hair by targeting dryness, frizz, tangles, breakage, and lack of definition. Explore the <a href=\"/collections/hair\" title=\"Vegan Haircare Products for Healthy, Beautiful Hair\">haircare collection</a> featuring targeted solutions like the <a href=\"/products/scalp-love-rosemary-mint-serum\" title=\"Scalp Love Rosemary Mint Serum\">Scalp Love Rosemary Mint Serum</a>, <a href=\"/products/coconut-milk-detangle-elixir\" title=\"Coconut Milk Detangle Elixir\">Coconut Milk Detangle Elixir</a>, <a href=\"/products/pineapple-swirl-curl-defining-cream\" title=\"Pineapple Swirl Curl Defining Cream\">Pineapple Swirl Curl Defining Cream</a>, and refreshing <a href=\"/collections/hair-body-mist\" title=\"Hair & Body Mist\">Hair & Body Mists</a>.</p>"
+          }
+        },
+        "question_X7eQnM": {
+          "type": "question",
+          "settings": {
+            "title": "What is the best shampoo and conditioner for healthy hair?",
+            "answer": "<p>The best shampoo and conditioner work together to gently cleanse the scalp while keeping hair soft, balanced, and hydrated without stripping moisture. Pacifica Beauty offers vegan shampoo and conditioner duos designed for different hair needs, so you can build a routine that supports healthy-looking hair from root to tip. </p><p>Explore options like <a href=\"/collections/shampoo\" title=\"Vegan Shampoo\">vegan shampoos</a> and <a href=\"/collections/conditioner\" title=\"Vegan Conditioner\">vegan conditioners</a> from Pacifica Beauty, including nourishing blends like <a href=\"/collections/coconut-vanilla\" title=\"Coconut Vanilla\">Coconut Vanilla</a> for softness and hydration, <a href=\"/collections/rosemary-purify\" title=\"Exfoliating Rosemary Scalp Treatment for Dry Scalp\">Rosemary Mint</a> for scalp refresh, and <a href=\"/collections/pineapple-hair\" title=\"Pineapple Curly Hair Products\">Pineapple Papaya</a> for curl support.</p>"
+          }
+        },
+        "question_8NTxMJ": {
+          "type": "question",
+          "settings": {
+            "title": "What does a scalp serum do?",
+            "answer": "<p>A scalp serum helps support the scalp environment, which is the foundation of healthy-looking hair. The <a href=\"/products/scalp-love-rosemary-mint-serum\" title=\"Scalp Love Rosemary Mint Serum\">Scalp Love Rosemary Mint Serum</a> is designed to refresh, detox and balance the scalp as part of your routine.</p>"
+          }
+        },
+        "question_qBnrtL": {
+          "type": "question",
+          "settings": {
+            "title": "How do I detangle hair without breakage?",
+            "answer": "<p>To reduce breakage and improve manageability, use a leave-in detangler on damp hair. The <a href=\"/products/coconut-milk-detangle-elixir\" title=\"Coconut Milk Detangle Elixir\">Coconut Milk Detangle Elixir </a>helps soften strands and make detangling easier.</p>"
+          }
+        },
+        "question_NUmeyB": {
+          "type": "question",
+          "settings": {
+            "title": "What products help define curls?",
+            "answer": "<p>Curl creams help enhance natural texture, reduce frizz, and improve definition. The <a href=\"/products/pineapple-swirl-curl-defining-cream\" title=\"Pineapple Swirl Curl Defining Cream\">Pineapple Swirl Curl Defining Cream</a> is designed to shape curls while keeping hair soft and touchable.</p>"
+          }
+        },
+        "question_r6ra98": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use hair perfume or hair and body mist every day?",
+            "answer": "<p>Yes, hair perfume and hair and body mists can be used daily to refresh hair, add a light scent, and boost confidence without heaviness or buildup. Pacifica Beauty offers refreshing fragrance options designed to be worn on both hair and skin for an effortless, all-day scent experience.</p><p>Explore the <a href=\"/collections/hair-body-mist\" title=\"Hair & Body Mist\">Hair & Body Mist collection</a> from Pacifica Beauty for vegan, cruelty-free fragrance mists that leave hair lightly scented and feeling fresh throughout the day.</p>"
+          }
+        },
+        "question_6cmBi3": {
+          "type": "question",
+          "settings": {
+            "title": "Is Pacifica Beauty haircare vegan and cruelty-free?",
+            "answer": "<p>Yes, all Pacifica Beauty haircare products are vegan and cruelty-free, designed to deliver effective results while aligning with ethical beauty values.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_kJ4e7E",
+        "question_e6zdha",
+        "question_X7eQnM",
+        "question_8NTxMJ",
+        "question_qBnrtL",
+        "question_NUmeyB",
+        "question_r6ra98",
+        "question_6cmBi3"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "show_navigation": false,
+        "use_metafields": false,
+        "title": "Haircare Questions & Answers",
+        "content": "<p>Have questions about haircare products and routines? Find answers to build healthier-looking hair.</p>",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16397758758c69c057": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{% if collection.metafields.custom_fields[\"footer_heading\"] != blank %}\n    <h2 class=\"text--center\">{{ collection.metafields.custom_fields[\"footer_heading\"] }}</h2>\n    {% endif %}\n    {% if collection.metafields.custom_fields[\"footer_description\"] != blank %}\n    <div> {{ collection.metafields.custom_fields[\"footer_description\"] }}</div>\n    {% endif %}",
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "ss_media_grid_2_CkxrMi",
+    "main",
+    "faq_k7Nmdh",
+    "16397758758c69c057"
+  ]
+}

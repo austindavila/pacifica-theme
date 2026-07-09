@@ -1,0 +1,275 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "large"
+      }
+    },
+    "1743448116b303ab79": {
+      "type": "apps",
+      "blocks": {
+        "gsc_countdown_timer_countdown_hqabEm": {
+          "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "settings": {
+            "widget_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "gsc_countdown_timer_countdown_hqabEm"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "1648759066b0948c72": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify://shop_images/Destiny-MM.jpg",
+        "subheading": "",
+        "title": "Welcome to the Blog",
+        "content": "<p>Featured blog post or link to the blog index page. </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis faucibus libero, at imperdiet eros condimentum ut.</p>",
+        "html_content": "<p></p>",
+        "button_text": "Read Now",
+        "button_link": "shopify://blogs/kind-beauty-blog",
+        "background_type": "full_width",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1648763447d7eb8673": {
+      "type": "multi-column",
+      "blocks": {
+        "16487634474efb1e26-0": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Brook's Corner",
+            "link_url": "/blogs/kind-beauty-blog/tagged/brooks-corner",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-1": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Behind the Scenes",
+            "link_url": "/blogs/kind-beauty-blog/tagged/behind-the-scenes",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-2": {
+          "type": "item",
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Brand Education",
+            "link_url": "/blogs/kind-beauty-blog/tagged/brand-education",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        },
+        "16487634474efb1e26-3": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "Clean Ingredients",
+            "link_url": "shopify://blogs/brooks-blog",
+            "link_style": "link",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16487634474efb1e26-0",
+        "16487634474efb1e26-1",
+        "16487634474efb1e26-2",
+        "16487634474efb1e26-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": true,
+        "show_background_on_links": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#f6eff0",
+        "text_color": "#333333"
+      }
+    },
+    "1648757823355c9abd": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "kind-beauty-blog",
+        "subheading": "TRENDING",
+        "title": "Most Recent Posts",
+        "articles_count": 4,
+        "stack_mobile": true,
+        "show_category": false,
+        "show_excerpt": false,
+        "background": "#ffffff",
+        "text_color": "#000000"
+      }
+    },
+    "1648759285e853a549": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648759285192f5bfc-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/About-Us-Brook-Bike_fb992291-19cb-474b-b591-f758e84a55fd.jpg",
+            "tab_label": "",
+            "subheading": "BEHIND THE SCENES",
+            "title": "Why I Created Vegan Ceramide",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read now",
+            "button_link": "shopify://blogs/kind-beauty-blog/why-i-created-vegan-ceramide"
+          }
+        }
+      },
+      "block_order": [
+        "1648759285192f5bfc-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#b6e5e6",
+        "button_text_color": "#000000"
+      }
+    },
+    "164875781804708d05": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "brooks-blog",
+        "subheading": "",
+        "title": "More From Brook",
+        "articles_count": 3,
+        "stack_mobile": true,
+        "show_category": true,
+        "show_excerpt": true,
+        "background": "#ffffff",
+        "text_color": "#000000"
+      }
+    },
+    "1648761582a1c0c3dd": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648761582c1bc712c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Reusable-Masks-Underye_Eyebrow.jpg",
+            "tab_label": "",
+            "subheading": "BE KIND TO THE EARTH",
+            "title": "Reusable Masks",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read more",
+            "button_link": "shopify://blogs/kind-beauty-blog/reduce-recharge-repeat"
+          }
+        }
+      },
+      "block_order": [
+        "1648761582c1bc712c-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "164876166912ec0545": {
+      "type": "image-with-text",
+      "blocks": {
+        "164876166913d1ddc7-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Destiny_Plumping_Gloss_1523.jpg",
+            "tab_label": "",
+            "subheading": "HOW IT WORKS",
+            "title": "Lip Plumping Gloss",
+            "content": "<p>Etiam eu pulvinar sem. Nullam eu ipsum consectetur, scelerisque turpis non, finibus magna.</p>",
+            "button_text": "read more",
+            "button_link": "shopify://blogs/kind-beauty-blog/why-vegan-collagen"
+          }
+        }
+      },
+      "block_order": [
+        "164876166913d1ddc7-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "text_left": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1743448116b303ab79",
+    "1648759066b0948c72",
+    "1648763447d7eb8673",
+    "1648757823355c9abd",
+    "1648759285e853a549",
+    "164875781804708d05",
+    "1648761582a1c0c3dd",
+    "164876166912ec0545"
+  ]
+}

@@ -1,0 +1,116 @@
+{% comment %}
+NEW PRODUCT TABS FOR PDP
+{% endcomment %} 
+
+
+{% comment %} TRUST ICONS {% endcomment %}
+{% comment %} <i class="fa-light fa-badge-check"></i><span style="font-size:12px;"> Easy <a href="/pages/returns-exchanges" style="text-decoration:underline;">Returns Process</a></span> {% endcomment %}
+
+
+{% unless product.tags contains 'coming-soon' or product.tags contains 'gift-card'%}
+{% comment %} NARVAR EDD CALCULATOR {% endcomment %}
+{% comment %} <span data-narvar-feature="eddCalculator"></span>
+<script src="https://js.narvar.com/pacificabeauty/PDP_Standard.js"></script>
+<script>
+  window.narvar('eddCalculator', {
+    originZip: '46075', // Remove complete strings and please change it to the zipcode of the fulfillment facility center, e.g; 94105
+    originCountry: 'US', // US is added as the default origin country, please change it to the origin country of the fulfillment facility center
+    localeLanguage: 'en', //  en is added as the default language, edit it and provide the appropriate language wherever necessary
+    localeCountry: 'US' // US is added as the default origin country, edit it and provide the appropriate country wherever necessary
+  });
+</script> {% endcomment %}
+{% endunless %}
+
+{% if product.tags contains 'the-little-mermaid' %}
+<div style="padding-top:10px;">
+  <img width="80" height="16" src="https://cdn.shopify.com/s/files/1/1515/0462/files/disney-copyright.jpg?v=1683554523" alt="copyright disney 2023">
+</div>
+{% endif %}
+
+<div id="pdp-tabs">
+
+  {% comment %} DETAILS {% endcomment %}
+  {% if product.metafields.sf_product_tabs["tab_1_content"] %}
+    <div class="pdp-tabs__details product-tabs__tab-item-wrapper">
+      <button is="toggle-button" class="collapsible-toggle heading heading--small" aria-controls="block-pdp-details" aria-expanded="false">
+        DETAILS 
+        <span class="animated-plus"></span>
+      </button>
+    </div>
+
+    <collapsible-content id="block-pdp-details" class="collapsible anchor">
+      <div class="product-tabs__tab-item-content rte">
+        <div>{{ product.metafields.sf_product_tabs["tab_1_content"] }}</div>
+      </div>
+    </collapsible-content>
+  {% endif %}
+
+    {% comment %} INGREDIENTS {% endcomment %}
+    {% if product.metafields.sf_product_tabs["tab_3_content"] %}
+      <div id="pdp-ingredients-tab" style="display: block; width: 100%;" class="anchor" class="anchor"></div>
+      <div class="pdp-tabs__ingredients product-tabs__tab-item-wrapper">
+        <button is="toggle-button" class="collapsible-toggle heading heading--small" aria-controls="block-pdp-ingredients" aria-expanded="false">
+          INGREDIENTS 
+          <span class="animated-plus">
+          </span>
+        </button>
+      </div>
+  
+      <collapsible-content id="block-pdp-ingredients" class="collapsible anchor">
+        <div class="product-tabs__tab-item-content rte">
+            <div>
+             {% comment %} INGREDIENTS WE LOVE {% endcomment %}     
+              {% if product.metafields.custom_fields["ingredients_we_love"] != blank %}
+                  {{ product.metafields.custom_fields ["ingredients_we_love"]}}
+              {% endif %}         
+
+              {% comment %} FULL INGREDIENTS LIST {% endcomment %}
+              {% if product.metafields.sf_product_tabs["tab_3_content"] != blank %}
+                {{ product.metafields.sf_product_tabs["tab_3_content"] }}
+                <span style="font-style:italic;">We occasionally update formulas to make sure we are as clean and effective as possible. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.</span>
+                {% if product.type == "Perfume" %}<span style="font-style:italic;">Color may vary due to the proprietary blend of natural ingredients in our perfumes.</span>{% endif %}
+              {% endif %}
+            </div>
+        </div>
+      </collapsible-content>
+    {% endif %}
+
+  {% comment %} DIRECTIONS {% endcomment %}
+  {% if product.metafields.sf_product_tabs["tab_2_content"] %}
+    <div class="pdp-tabs__directions product-tabs__tab-item-wrapper">
+      <button is="toggle-button" class="collapsible-toggle heading heading--small" aria-controls="block-pdp-directions" aria-expanded="false">
+        DIRECTIONS 
+        <span class="animated-plus"></span>
+      </button>
+    </div>
+
+    <collapsible-content id="block-pdp-directions" class="collapsible anchor">
+      <div class="product-tabs__tab-item-content rte">
+        <div>{{ product.metafields.sf_product_tabs["tab_2_content"] }}</div>
+      </div>
+    </collapsible-content>
+  {% endif %}
+
+
+    {% comment %} PACKAGING {% endcomment %}
+    {% if product.metafields.custom_fields["how_to_recycle"] %}
+      <div class="pdp-tabs__directions product-tabs__tab-item-wrapper">
+        <button is="toggle-button" class="collapsible-toggle heading heading--small" aria-controls="block-pdp-packaging" aria-expanded="false">
+          PACKAGING
+          <span class="animated-plus"></span>
+        </button>
+      </div>
+  
+      <collapsible-content id="block-pdp-packaging" class="collapsible anchor">
+        <div class="product-tabs__tab-item-content rte">
+          <div>{{ product.metafields.custom_fields["how_to_recycle"] }}</div>
+        </div>
+      </collapsible-content>
+    {% endif %}
+
+
+</div>
+
+{% comment %} TRUST ICONS {% endcomment %}
+{% comment %} <i class="fa-light fa-badge-check"></i> Easy <a href="/pages/returns-exchanges" style="text-decoration:underline;">Returns Process</a> {% endcomment %}
+

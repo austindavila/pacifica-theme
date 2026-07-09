@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "NHG-Black";
+    src: url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskTXPro-75Bd.otf?v=1748966292') format('opentype'),
+         url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskTXPro-75Bd.ttf?v=1748966293') format('truetype');
+}
+@font-face {
+    font-family: "NHG-Bold";
+    src: url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskTXPro-65Md.otf?v=1748966292') format('opentype');
+}
+@font-face {
+    font-family: "NHG-Thin";
+    src: url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskDSPro-55Rg.otf?v=1748966291') format('opentype'),
+         url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskTXPro-55Rg.ttf?v=1748966293') format('truetype');
+}
+@font-face {
+    font-family: "NHG-Light";
+    src: url('https://cdn.shopify.com/s/files/1/1515/0462/files/NHaasGroteskDSPro-25Th.otf?v=1748966292') format('opentype');
+}
+:root {
+  --heading-font-family: "NHG-Black" !important;
+  --text-font-family: "NHG-thin" !important;
+}
+.heading, .blockquote, .rte h1, .rte h2, .rte h3, .rte h4, .rte h5, .rte h6, .rte blockquote {
+  font-family: var(--heading-font-family) !important;
+}
