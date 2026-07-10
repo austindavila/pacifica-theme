@@ -467,12 +467,13 @@ amzn("setRegion", "NA"); amzn("addTag", "c0b9f228-7eda-4977-b4cd-ef1e0a4856fd");
 <!-- PORTED OVER FROM THE OLD THEME -->
 
 <!--2018 google dynamic remarketing -->
-<!-- Global site tag (gtag.js) - AdWords: 1042677772-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1042677772"></script> 
-<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1042677772'); 
-</script>
+<!-- Redundant gtag.js loader removed 2026-07-09: Google Ads conversion tracking for
+     AW-1042677772 is already handled natively by the Shopify Google & YouTube app's
+     Conversion measurement settings (Checkout completed/started, Added to cart, etc.
+     each mapped to their own conversion label). This block duplicated that tracking
+     with an unconsented, ungated gtag.js load. See tracker row 081. -->
 
-{% if template.name == 'product' %}   
+{% if template.name == 'product' %}
 
     <!-- Google Code for Remarketing Tag -->
     <script type="text/javascript">
@@ -482,17 +483,6 @@ amzn("setRegion", "NA"); amzn("addTag", "c0b9f228-7eda-4977-b4cd-ef1e0a4856fd");
       ecomm_totalvalue: {{ product.price_min | money_without_currency | remove: ',' }}
       };
      </script>
-
-    <!-- https://support.google.com/tagmanager/answer/6106960?hl=en -->
-    <!--google dynamic remarketing-->
-    <script> 
-      gtag('event', 'page_view', { 
-      'send_to': 'AW-1042677772', 
-      'ecomm_pagetype':  '{{ template }}', 
-        'ecomm_prodid': 'shopify_US_{{ product.id }}_{{ product.variants.first.id }}',
-        'ecomm_totalvalue': {{ product.price_min | money_without_currency | remove: ',' }}
-    }); 
-    </script> 
 
   {% endif %}
 
