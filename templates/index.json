@@ -181,7 +181,7 @@
         "bg_image": "shopify://shop_images/OFFERS_PAGE_GWP_DESKTOP_924ba509-c21c-49fb-810a-506d9a22ef29.png",
         "bg_image_mobile": "shopify://shop_images/OFFERS_PAGE_GWP_MOBILE_9952195e-0bc4-4fe8-b0f8-6ae41ba9ae65.png",
         "bg_video_url": "",
-        "bg_overlay": 0.4,
+        "bg_overlay": 0,
         "bg_overlay_color": "#ffffff",
         "background_style": "solid",
         "background_color": "#121212",
