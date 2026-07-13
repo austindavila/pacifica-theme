@@ -614,7 +614,10 @@ amzn("setRegion", "NA"); amzn("addTag", "c0b9f228-7eda-4977-b4cd-ef1e0a4856fd");
 
     {% comment %} SHOPMY TRACKING CODE {% endcomment %}
     <script type="text/plain" class="pieeye-category-targeting-analytics" defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack.js"></script>
-    
+
+    {% comment %} GORGIAS - moved out of GTM so it loads for all visitors on functional consent {% endcomment %}
+    <script type="text/plain" class="pieeye-category-functional" id="gorgias-chat-widget-install-v3" src="https://config.gorgias.chat/bundle-loader/01HBEWF227MFP4R4X8JFPQWXEB"></script>
+
   {%- render "ecom_footer"-%}
     {%- render 'powerreviews' -%}
 </body>
