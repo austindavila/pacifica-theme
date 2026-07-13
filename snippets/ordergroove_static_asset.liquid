@@ -4,7 +4,7 @@ This file can be re-written at any time.
 Last updated at: 2022-09-14T00:11:02.885Z / Version: 2.2.1
 {%- render 'ordergroove_static_asset' -%}
 {% endcomment %}
-<script type="text/javascript" src="https://static.ordergroove.com/0d813216129111edb5810263e03c9e05/main.js" data-shopify-selling-plans {% if customer -%}
+<script type="text/plain" class="pieeye-category-functional" src="https://static.ordergroove.com/0d813216129111edb5810263e03c9e05/main.js" data-shopify-selling-plans {% if customer -%}
 {%- assign secret_key = "5c386862a3f89e6f22ea6177c1e8c5933d41fc3b" -%}
 {%- assign timestamp = "now" | date: "%s" -%}
 {%- assign signature = customer.id | append: "|" | append: timestamp | hmac_sha256: secret_key -%}
