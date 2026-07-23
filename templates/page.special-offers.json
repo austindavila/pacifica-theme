@@ -621,40 +621,6 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "image_with_text_Rk9YG8": {
-      "type": "image-with-text",
-      "blocks": {
-        "item_QrbaBE": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/gwp_offers_page.jpg",
-            "tab_label": "",
-            "subheading": "",
-            "title": "",
-            "content": "<h2>Free Gift With Purchase</h2><p>Spend $50+ and receive a FREE <a href=\"/products/3955581059160\">Glow Baby Booster Serum Mini</a>. Spend $75+ and choose your free gift: <a href=\"/products/7344572989528\">Chill Baby Cooling Cryo Globes</a> or <a href=\"/products/7555715563608\">Dream Moon Spray Perfume</a>. Free gifts automatically added to your cart at checkout. </p><p><em>Offer based on pre-discount subtotal. Available for a limited time only.</em></p>",
-            "button_text": "Shop Now",
-            "button_link": "shopify://collections/best-selling-skincare"
-          }
-        }
-      },
-      "block_order": [
-        "item_QrbaBE"
-      ],
-      "disabled": true,
-      "name": "GWP - GBMINI + CRYO",
-      "settings": {
-        "reveal_on_scroll": false,
-        "text_left": true,
-        "background_type": "full_width",
-        "background_overlap": "image",
-        "image_position": "right",
-        "cycle_speed": 8,
-        "accent_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
     "image_with_text_tzfLj3": {
       "type": "image-with-text",
       "blocks": {
@@ -965,7 +931,6 @@
     "main",
     "349d714c-4dc7-4075-bec3-2bea08fba7c4",
     "image_with_text_HjWHig",
-    "image_with_text_Rk9YG8",
     "image_with_text_tzfLj3",
     "7d3c202f-87aa-4453-9287-275044517694",
     "1b4f1e80-f776-49f2-bdd7-b81ba89ece70",
