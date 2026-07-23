@@ -47,7 +47,7 @@
         "text_PVkEDL": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"https://www.pacificabeauty.com/products/3955581059160\" target=\"_blank\"><strong>Glow Baby Booster Serum Mini</strong></a></p><p><a href=\"https://www.pacificabeauty.com/products/7344572989528\" target=\"_blank\"><strong>Chill Baby Cooling Cryo Globes</strong></a></p><p><a href=\"https://www.pacificabeauty.com/products/7555715563608\" target=\"_blank\"><strong>Dream Moon Spray Perfume</strong></a></p>",
+            "text": "<p><a href=\"/products/glow-baby-booster-serum\" target=\"_blank\" title=\"Glow Baby Booster Serum\"><strong>Glow Baby Booster Serum Mini</strong></a></p><p><a href=\"/products/chill-baby-cooling-cryo-globes\" target=\"_blank\" title=\"Chill Baby Cooling Cryo Globes\"><strong>Chill Baby Cooling Cryo Globes</strong></a></p><p><a href=\"/products/dream-moon-spray-perfume\" target=\"_blank\" title=\"Dream Moon Spray Perfume\"><strong>Dream Moon Spray Perfume</strong></a></p>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 20,
