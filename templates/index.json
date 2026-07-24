@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "custom_html_aHxTfB": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<style>\n  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');\n\n  .gwp-wrap {\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 100vw;\n    max-width: 100vw;\n    overflow-x: hidden;\n  }\n  .gwp-unit { position: relative; width: 100%; }\n  .gwp-img { display: block; width: 100%; height: auto; }\n  .gwp-unit--mob { display: none; }\n\n  /* ---------- Desktop ---------- */\n  .gwp-copy {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 42%;\n    height: 100%;\n    box-sizing: border-box;\n    padding: 6% 4% 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n  }\n  .gwp-headline {\n    margin: 0;\n    font-family: 'NHG-thin', sans-serif;\n    font-weight: 700;\n    text-transform: none;\n    font-size: 72px;\n    line-height: 72px;\n    letter-spacing: normal;\n    color: #121212;\n  }\n  .gwp-sub {\n    margin: 24px 0 0;\n    font-family: 'NHG-thin', sans-serif;\n    font-weight: 700;\n    text-transform: none;\n    font-size: 40px;\n    line-height: 36px;\n    letter-spacing: normal;\n    color: #121212;\n  }\n  .gwp-list {\n    margin: 16px 0 0;\n    padding: 0;\n    list-style: none;\n  }\n  .gwp-list li { margin: 2px 0 0; }\n  .gwp-list a {\n    font-family: 'NHG-thin', sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 24.27px;\n    color: #121212;\n    text-decoration: underline;\n    text-underline-offset: 2px;\n  }\n  .gwp-disc {\n    margin-top: 1.5vw;\n    font-family: 'DM Mono', monospace;\n    font-size: 0.65vw;\n    line-height: 1.45;\n    color: #555555;\n    max-width: 92%;\n  }\n\n  /* ---------- Mobile ---------- */\n  .gwp-copy--mob {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 62%;\n    box-sizing: border-box;\n    padding: 6% 5% 0;\n  }\n  .gwp-copy--mob .gwp-headline { font-size: 26px; line-height: 26px; }\n  .gwp-copy--mob .gwp-sub { font-size: 16px; line-height: 18px; margin-top: 12px; }\n  .gwp-copy--mob .gwp-list { margin-top: 8px; }\n  .gwp-copy--mob .gwp-list li { margin-top: 2px; }\n  .gwp-copy--mob .gwp-list a { font-size: 12px; line-height: 20px; }\n  .gwp-copy--mob .gwp-disc { font-size: 9px; margin-top: 12px; }\n\n  @media (max-width: 767px) {\n    .gwp-unit--desk { display: none; }\n    .gwp-unit--mob { display: block; }\n  }\n</style>\n\n<div class=\"gwp-wrap\">\n\n  <!-- Desktop -->\n  <div class=\"gwp-unit gwp-unit--desk\">\n    <img class=\"gwp-img\" src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/OFFERS_PAGE_GWP_DESKTOP_924ba509-c21c-49fb-810a-506d9a22ef29.png\" alt=\"Choose 2 Free Gifts With $50\">\n    <div class=\"gwp-copy\">\n      <h2 class=\"gwp-headline\">Choose 2<br>Free Gifts<br>With $50</h2>\n      <p class=\"gwp-sub\">Pick Any 2 In Cart:</p>\n      <ul class=\"gwp-list\">\n        <li><a href=\"https://www.pacificabeauty.com/products/glow-baby-booster-serum\">Glow Baby Booster Serum Mini</a></li>\n        <li><a href=\"https://www.pacificabeauty.com/products/chill-baby-cooling-cryo-globes\">Chill Baby Cooling Cryo Globes</a></li>\n        <li><a href=\"https://www.pacificabeauty.com/products/dream-moon-spray-perfume\">Dream Moon Spray Perfume</a></li>\n      </ul>\n      <p class=\"gwp-disc\">*Offer based on post-discount subtotal. Available for a limited time only.</p>\n    </div>\n  </div>\n\n  <!-- Mobile -->\n  <div class=\"gwp-unit gwp-unit--mob\">\n    <img class=\"gwp-img\" src=\"https://cdn.shopify.com/s/files/1/1515/0462/files/OFFERS_PAGE_GWP_MOBILE_9952195e-0bc4-4fe8-b0f8-6ae41ba9ae65.png\" alt=\"Choose 2 Free Gifts With $50\">\n    <div class=\"gwp-copy--mob\">\n      <h2 class=\"gwp-headline\">Choose 2<br>Free Gifts<br>With $50</h2>\n      <p class=\"gwp-sub\">Pick Any 2 In Cart:</p>\n      <ul class=\"gwp-list\">\n        <li><a href=\"https://www.pacificabeauty.com/products/glow-baby-booster-serum\">Glow Baby Booster Serum Mini</a></li>\n        <li><a href=\"https://www.pacificabeauty.com/products/chill-baby-cooling-cryo-globes\">Chill Baby Cooling Cryo Globes</a></li>\n        <li><a href=\"https://www.pacificabeauty.com/products/dream-moon-spray-perfume\">Dream Moon Spray Perfume</a></li>\n      </ul>\n      <p class=\"gwp-disc\">*Offer based on post-discount subtotal. Available for a limited time only.</p>\n    </div>\n  </div>\n\n</div>\n\n<script>\n(function(){\n  var wrap = document.querySelector('.gwp-wrap');\n  if (wrap) {\n    var section = wrap.closest('section');\n    if (section) section.style.setProperty('margin-top', '0', 'important');\n  }\n})();\n</script>",
+        "no_padding_margin": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
     "ss_hero_pro_FhxzKV": {
       "type": "ss-hero-pro",
       "blocks": {
@@ -909,31 +922,6 @@
         "content_width": 160,
         "border_thickness": 0,
         "lazy": true
-      }
-    },
-    "image_with_text_overlay_YEDXwC": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
-      "name": "Image with text overlay",
-      "settings": {
-        "reveal_on_scroll": true,
-        "show_collection_image": false,
-        "section_height": "auto",
-        "image": "shopify://shop_images/gwp_04-29-26.png",
-        "subheading": "FREE GIFT",
-        "title": "SPEND $50 AND GET 2 FREE PRODUCTS!",
-        "content": "<p>At cart, you get to choose 2 free products!  YAY!</p>",
-        "button_text": "",
-        "button_link": "",
-        "link_style": "link",
-        "background_type": "full_width",
-        "text_width": "medium",
-        "text_position": "middle_right",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#000000",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
       }
     },
     "ss_media_grid_2_bmCXBW": {
@@ -2639,13 +2627,13 @@
     }
   },
   "order": [
+    "custom_html_aHxTfB",
     "ss_hero_pro_FhxzKV",
     "ss_hero_pro_eiidPk",
     "ss_animated_text_j8EtkL",
     "ss_feature_43_e4i7ih",
     "ss_hero_1_hthbhM",
     "ss_media_grid_2_3dwLLk",
-    "image_with_text_overlay_YEDXwC",
     "ss_media_grid_2_bmCXBW",
     "ss_media_grid_2_wVKQVr",
     "ss_image_with_text_14_qbn7Pz",
