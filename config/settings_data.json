@@ -640,6 +640,11 @@
           "atc_selector": "",
           "enable_repete_buy_button": "true"
         }
+      },
+      "7313114205116804392": {
+        "type": "shopify://apps/propel-replays-heatmaps/blocks/app-embed/64fbaaa3-2d4a-49f3-aba7-86e92e44999f",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
