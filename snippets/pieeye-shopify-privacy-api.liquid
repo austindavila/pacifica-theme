@@ -96,8 +96,8 @@
     // Canada - Quebec requires explicit consent
     if (country === "CA" && region === "CA-QC") return false;
 
-    // US - California requires explicit consent
-    if (country === "US" && region === "US-CA") return false;
+    // US - California, Florida requires explicit consent
+    if (country === "US" && ["US-CA", "US-FL"].includes(region)) return false;
 
     // Default: implicit consent allowed
     return true;
