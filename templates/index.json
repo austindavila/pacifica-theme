@@ -742,7 +742,6 @@
         "slide_TDtBxy",
         "slide_7fyxXT"
       ],
-      "disabled": true,
       "custom_css": [
         ".ab-banner-image--mobile {width: 100vw !important; max-width: 100% !important;}"
       ],
@@ -2637,9 +2636,9 @@
     "ss_hero_1_hthbhM",
     "ss_media_grid_2_3dwLLk",
     "ss_media_grid_2_bmCXBW",
-    "ss_media_grid_2_nYkzA6",
-    "ss_image_with_text_14_qbn7Pz",
     "ss_media_grid_2_wVKQVr",
+    "ss_image_with_text_14_qbn7Pz",
+    "ss_media_grid_2_nYkzA6",
     "ss_scrolling_text_8_tXT3qY",
     "ss_video_with_text_W8Kmrb",
     "ss_collection_9_VP6YKX",
