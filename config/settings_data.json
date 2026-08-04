@@ -643,7 +643,7 @@
       },
       "12439146293631897289": {
         "type": "shopify://apps/blockify-fraud-filter/blocks/app_embed/2e3e0ba5-0e70-447a-9ec5-3bf76b5ef12e",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
