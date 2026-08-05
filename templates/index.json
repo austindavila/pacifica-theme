@@ -2067,6 +2067,7 @@
         },
         "collection_ezQ8X7": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "new-mood-boosting-spray-perfume",
             "label": "MOOD-BOOSTING SCENTS",
