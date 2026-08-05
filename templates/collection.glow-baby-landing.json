@@ -519,7 +519,7 @@
         "mobile_item_size": "medium",
         "desktop_item_size": "medium",
         "spacing": "normal",
-        "background": "#bcfafd",
+        "background": "#DDF1F4",
         "text_color": "rgba(0,0,0,0)"
       }
     },
@@ -747,7 +747,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nI love this product so so much! It makes my skin so glowy and even – I feel so confident when wearing it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">ABBIE</div>\n\n</div>\n</div>",
             "author": "Glow Baby Booster Serum",
-            "background": "#bcfafd",
+            "background": "#FC7A91",
             "text_color": "#000000"
           }
         },
@@ -758,7 +758,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nThis cream has made a huge difference in my under eye area. I put it on every morning. I love it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">MARISOL</div>\n\n</div>\n</div>",
             "author": "Glow Baby Eye Bright Cream",
-            "background": "#bcfafd",
+            "background": "#FC7A91",
             "text_color": "#000000"
           }
         },
@@ -769,7 +769,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nSince switching to the Glow Baby line my skin is more beautiful than ever. I have received more compliments on my skin in the last year than I have my entire life!\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">CARA B</div>\n\n</div>\n</div>",
             "author": "Glow Baby Face Wash",
-            "background": "#bcfafd",
+            "background": "#FC7A91",
             "text_color": "#000000"
           }
         },
@@ -824,23 +824,23 @@
         "image_7RzBfJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GLOW_BABY_BRIGHTENING_SETTING_MIST_SKY_MIRROR_ORANGES.jpg",
+            "image": "shopify://shop_images/2_48185745-192b-403b-a314-1d00306a2218.png",
             "smaller_columns": false,
             "show_extra_padding": false,
             "show_extra_column_padding": false,
             "column_reverse": false,
             "column_reverse_mobile": false,
-            "show_gradient": true,
+            "show_gradient": false,
             "gradient_name": "bg-glowphoria-light-radial",
             "text_position": "middle_left",
             "title": "",
-            "body_copy": "<div class=\"slideshow-body-copy\" style=\"text-align:center; padding-bottom:20px;\">\n<i class=\"fa-sharp fa-regular fa-leaf fa-2x\"></i>\n<i class=\"fa-regular fa-rabbit fa-2x\"></i>\n<i class=\"fa-sharp fa-solid fa-earth-americas fa-2x\"></i>\n</div>\n\n<div class=\"slideshow-body-copy\"> \n\n<p>Compassionism<sup><small>TM</small></sup> has been our grounding core value since day 1. We’ve always been committed to creating 100% vegan + cruelty-free beauty that’s safe for the planet, animals, and you. This imperative shapes everything we do at Pacifica Beauty, from our skintentional, high-performance products at fair prices to our stance on animal and human rights and climate-conscious practices. </p>\n<p>Glow Baby embodies our dedication to effective, conscious, and affordable skincare, where science-meets nature for radically positive changes to your skin, body, and mind (oh, and they smell good too).</p>\n\n<p style=\"font-weight:500;\">– Brook Harvey-Taylor<br>Founder, CEO, and Chief Scentologist</p>\n</div>",
+            "body_copy": "<div class=\"slideshow-body-copy\" style=\"text-align:center; padding-bottom:20px;\">\n<i class=\"fa-sharp fa-regular fa-leaf fa-2x\"></i>\n<i class=\"fa-regular fa-rabbit fa-2x\"></i>\n<i class=\"fa-sharp fa-solid fa-earth-americas fa-2x\"></i>\n</div>\n\n<div class=\"slideshow-body-copy\"> \n\n<p>Compassionism<sup><small>TM</small></sup> has been our grounding core value since day 1. We’ve always been committed to creating 100% vegan + cruelty-free beauty that’s safe for the planet, animals, and you. This imperative shapes everything we do at Pacifica Beauty, from our skintentional, high-performance products at fair prices to our stance on animal and human rights and climate-conscious practices. </p>\n<p>Glow Baby embodies our dedication to effective, conscious, and affordable skincare, where science-meets nature for radically positive changes to your skin, body, and mind (oh, and they smell good too).</p>\n\n<p style=\"font-weight:500;\">– Brook Harvey-Taylor<br>Founder</p>\n</div>",
             "subheading": "",
             "button_1_text": "",
             "button_1_link": "",
             "button_2_text": "",
             "button_2_link": "",
-            "background_color": "#fef7f1",
+            "background_color": "#DDF1F4",
             "text_color": "#000000",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -873,23 +873,23 @@
         "image_Y8XBxf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_45dd04d5-b271-4671-af81-747046f388fe.jpg",
+            "image": "shopify://shop_images/Untitled_design_7_abf46b85-4844-4a10-8cb9-07dc5f00c3cd.png",
             "smaller_columns": false,
             "show_extra_padding": false,
             "show_extra_column_padding": false,
             "column_reverse": true,
             "column_reverse_mobile": false,
-            "show_gradient": true,
+            "show_gradient": false,
             "gradient_name": "bg-glowphoria-light-radial",
             "text_position": "middle_center",
             "title": "",
-            "body_copy": "<div class=\"slideshow-body-copy\"> <h3 class=\"font-california-coast heading heading--large\">body care is skincare</h3>\n<p>Body care is essential for maintaining glowing skin from head to toe. Your skin is the largest organ and needs proper cleansing, exfoliating, and moisturizing to stay vibrant, smooth, and radiant. Give it the love and hydration it craves with our 5 piece 7-Day Vitamin C\nGlow Skin Bundle. \n</p>\n</div>",
+            "body_copy": "<div class=\"slideshow-body-copy\"> <h3 class=\"font-california-coast heading heading--large\">body care is skincare</h3>\n<p>Your skin is the largest organ and needs proper cleansing, exfoliating, and moisturizing to stay vibrant, smooth, and radiant. Give it the love and hydration it craves with our 5 piece 7-Day Vitamin C\nGlow Skin Bundle. \n</p>\n</div>",
             "subheading": "",
             "button_1_text": "SHOP GLOW SKIN BUNDLE • SAVE $16",
-            "button_1_link": "shopify://products/glow-baby-body-trio",
+            "button_1_link": "shopify://products/glow-baby-complete-skincare-bundle",
             "button_2_text": "",
             "button_2_link": "",
-            "background_color": "rgba(0,0,0,0)",
+            "background_color": "#DDF1F4",
             "text_color": "#ffffff",
             "button_background": "#000000",
             "button_text_color": "#ffffff",
@@ -914,7 +914,7 @@
         "transition_type": "sweep",
         "autoplay": false,
         "cycle_speed": 5,
-        "background": "#fff0f0"
+        "background": "#DDF1F4"
       }
     },
     "41b85dbe-2da2-40be-9641-3edff5b5d754": {
