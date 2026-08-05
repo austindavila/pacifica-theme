@@ -519,7 +519,7 @@
         "mobile_item_size": "medium",
         "desktop_item_size": "medium",
         "spacing": "normal",
-        "background": "#DDF1F4",
+        "background": "#ddf1f4",
         "text_color": "rgba(0,0,0,0)"
       }
     },
@@ -747,7 +747,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nI love this product so so much! It makes my skin so glowy and even – I feel so confident when wearing it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">ABBIE</div>\n\n</div>\n</div>",
             "author": "Glow Baby Booster Serum",
-            "background": "#FC7A91",
+            "background": "#fc7a91",
             "text_color": "#000000"
           }
         },
@@ -758,7 +758,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nThis cream has made a huge difference in my under eye area. I put it on every morning. I love it.\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">MARISOL</div>\n\n</div>\n</div>",
             "author": "Glow Baby Eye Bright Cream",
-            "background": "#FC7A91",
+            "background": "#fc7a91",
             "text_color": "#000000"
           }
         },
@@ -769,7 +769,7 @@
             "subheading": "★★★★★",
             "content": "<div class=\"row center-xs middle-xs\">\n\n<div class=\"col-xs-12\">\n\nSince switching to the Glow Baby line my skin is more beautiful than ever. I have received more compliments on my skin in the last year than I have my entire life!\n\n<hr style=\"width: 20%; border: 1px solid black; text-align:center; margin-top:15px;\">\n\n<div style=\"padding-top:10px; font-weight:500;\">CARA B</div>\n\n</div>\n</div>",
             "author": "Glow Baby Face Wash",
-            "background": "#FC7A91",
+            "background": "#fc7a91",
             "text_color": "#000000"
           }
         },
@@ -840,7 +840,7 @@
             "button_1_link": "",
             "button_2_text": "",
             "button_2_link": "",
-            "background_color": "#DDF1F4",
+            "background_color": "#ddf1f4",
             "text_color": "#000000",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -889,7 +889,7 @@
             "button_1_link": "shopify://products/glow-baby-complete-skincare-bundle",
             "button_2_text": "",
             "button_2_link": "",
-            "background_color": "#DDF1F4",
+            "background_color": "#ddf1f4",
             "text_color": "#ffffff",
             "button_background": "#000000",
             "button_text_color": "#ffffff",
@@ -914,7 +914,7 @@
         "transition_type": "sweep",
         "autoplay": false,
         "cycle_speed": 5,
-        "background": "#DDF1F4"
+        "background": "#ddf1f4"
       }
     },
     "41b85dbe-2da2-40be-9641-3edff5b5d754": {
@@ -1038,7 +1038,7 @@
         "p {margin-top: 0;}"
       ],
       "settings": {
-        "background": "#bcfafd",
+        "background": "#FBF9F6",
         "text_color": "rgba(0,0,0,0)"
       }
     }
